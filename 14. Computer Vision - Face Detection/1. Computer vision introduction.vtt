@@ -1,0 +1,157 @@
+WEBVTT
+
+00:01.020 --> 00:04.920
+In this chapter we are going to talk about computer vision.
+
+00:05.010 --> 00:09.390
+OK we are going to focus on how to detect human faces.
+
+00:09.450 --> 00:14.610
+But basically with the help of these approaches we can detect the objects we want.
+
+00:14.610 --> 00:17.450
+For example we are able to detect cars.
+
+00:17.550 --> 00:19.580
+We are able to detect animals.
+
+00:19.710 --> 00:23.790
+We are able to detect horses pedestrians and so on.
+
+00:23.790 --> 00:27.400
+So this is why computer vision is extremely important.
+
+00:27.570 --> 00:32.760
+And basically self-driving cars relies heavily on computer wisdom.
+
+00:32.790 --> 00:39.420
+So far we have been dealing with known datasets no matter we have been talking about linear regression
+
+00:39.630 --> 00:44.310
+logistic regression Navy based classifiers or supporting actor machines.
+
+00:44.430 --> 00:47.070
+We knew the underlying data sets.
+
+00:47.100 --> 00:54.120
+For example when dealing with hand with 10 digits we have these missed dataset and we know that there
+
+00:54.120 --> 00:57.350
+are 28 by 28 big solids images.
+
+00:57.420 --> 01:01.050
+We know that these are going to be handwritten digits.
+
+01:01.080 --> 01:03.630
+So there are 10 output clauses.
+
+01:03.750 --> 01:06.600
+0 1 2 3 up to 9.
+
+01:06.600 --> 01:09.510
+So basically we know what are we looking for.
+
+01:09.510 --> 01:13.800
+We have a data set with 28 by 28 big source images.
+
+01:13.800 --> 01:20.850
+We have 10 output classes and we know for certain that within this dataset there are going to be hands
+
+01:20.850 --> 01:22.140
+with 10 digits.
+
+01:22.140 --> 01:25.270
+These are not going to be hand written characters.
+
+01:25.290 --> 01:32.190
+These are not going to be images of cars or animals for example where we know the underlying data set.
+
+01:32.310 --> 01:39.270
+It is the same when dealing we face recognition so not face detection but face recognition we have this
+
+01:39.360 --> 01:48.360
+Olivetti data set containing 64 by 64 pixels images and we know for certain that these images are human
+
+01:48.360 --> 01:55.650
+faces and the aim is to learn the most relevant features of these given faces in order to be able to
+
+01:55.650 --> 01:56.940
+recognize them.
+
+01:56.940 --> 02:03.390
+So that's the main difference between supervised learning algorithms and a computer vision that as far
+
+02:03.390 --> 02:10.410
+as computer vision is concerned we are after a general solution if we have a given image we want to
+
+02:10.410 --> 02:14.730
+make sure the algorithm is able to detect and recognize objects.
+
+02:14.850 --> 02:18.750
+For example human faces cars or horses.
+
+02:18.780 --> 02:25.320
+So what is the main difference if we have nice data set we know for certain that these are going to
+
+02:25.320 --> 02:26.320
+be digits.
+
+02:26.340 --> 02:32.300
+So we are able to tune in machine learning algorithms or now Real Networks accordingly.
+
+02:32.460 --> 02:36.630
+We know for certain that these are going to be handwritten digits.
+
+02:36.870 --> 02:42.760
+If we take a look at the second image the aim of the algorithm is to detect human faces.
+
+02:42.900 --> 02:47.550
+But this image doesn't contain human faces exclusivity.
+
+02:47.550 --> 02:50.820
+There are several boatloads of mineral water.
+
+02:50.900 --> 02:51.330
+OK.
+
+02:51.340 --> 02:55.370
+There's some cable there's a microphone in the center of the image.
+
+02:55.410 --> 03:03.120
+So there are lots of lots of objects that are not faces as you can see as far as handwritten digit recognition
+
+03:03.120 --> 03:04.010
+is concerned.
+
+03:04.080 --> 03:09.950
+We know for certain that this data set is not going to contain different objects.
+
+03:10.080 --> 03:13.140
+This dataset is about handwritten digits.
+
+03:13.260 --> 03:19.830
+On the other hand when dealing with computer vision where we are after a human faces but the given image
+
+03:19.860 --> 03:22.610
+can contain other objects as well.
+
+03:22.680 --> 03:29.370
+So basically we have to know that OK a given region of the image contains a human face.
+
+03:29.510 --> 03:35.200
+And we have to know that other parts of the image do not contain human faces.
+
+03:35.370 --> 03:42.630
+OK so that's why computer region and object detection is a much harder problem than supervised learning
+
+03:42.630 --> 03:43.160
+algorithm.
+
+03:43.160 --> 03:45.330
+We have been discussing so far.
+
+03:45.330 --> 03:48.660
+So this is what we are going to talk about in the next lectures.
+
+03:48.660 --> 03:49.510
+Thanks for watching.

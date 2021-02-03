@@ -1,0 +1,130 @@
+WEBVTT
+
+00:01.440 --> 00:08.220
+In the previous lecture we have been talking about long short term memory or Alice DMH and we have come
+
+00:08.220 --> 00:15.270
+to the conclusion that okay it is working fine but there are lots of lots of way to matrices hands in
+
+00:15.270 --> 00:16.740
+the training procedure.
+
+00:16.740 --> 00:24.060
+We have to make lots of lots of updates and that's why they to be current units or Groos came to be
+
+00:24.120 --> 00:28.080
+because these units are a simplified Alice T.M. block.
+
+00:28.230 --> 00:32.950
+So all the gates are included in a single Aberdare gate.
+
+00:33.090 --> 00:41.580
+OK so if you may recall for honesty YEM there has been three gates forget gate input gate and out to
+
+00:41.580 --> 00:46.070
+the gate as far as gate it will be current units are concerned.
+
+00:46.110 --> 00:48.560
+We just have a single update gate.
+
+00:48.630 --> 00:49.170
+OK.
+
+00:49.180 --> 00:56.040
+Again one easy to revisable to use Drewes in order to cope with the vanishing gradient problem.
+
+00:56.040 --> 00:59.170
+So this is why we have to deal with ls TGM.
+
+00:59.220 --> 01:04.910
+This is why we have to deal with grues in order to cope with the banishing gradient problem.
+
+01:04.920 --> 01:11.900
+What's very important that gayeties with current unit control the flow of information light unless the
+
+01:12.050 --> 01:15.340
+unit but without having to use a memory unit.
+
+01:15.450 --> 01:19.350
+So in this case we don't have memory source at all.
+
+01:19.350 --> 01:26.950
+It just exposes the full hidden content without any control and because it is a simple model.
+
+01:27.030 --> 01:31.060
+It is more efficient because the architecture is simple.
+
+01:31.090 --> 01:34.460
+There's not going to be several educates to update.
+
+01:34.560 --> 01:38.670
+And that's why the training procedure is going to be much faster.
+
+01:38.670 --> 01:43.230
+So as far as the architecture is concerned no memory sounds at all.
+
+01:43.230 --> 01:50.190
+As you can see and if you just had an update gate that controls the imported South okay as far as the
+
+01:50.190 --> 01:57.830
+input is concerned there's remember a gate that controls how much previous stops impact the new stop.
+
+01:57.840 --> 02:05.730
+But anyways the most relevant gate is the update gate that's going to decide what input to use and what's
+
+02:05.730 --> 02:06.000
+not.
+
+02:06.000 --> 02:10.820
+Basically what are the important features in the input and what's not.
+
+02:10.830 --> 02:16.240
+So this update gate is the most important part of gated recurrent units.
+
+02:16.350 --> 02:23.810
+OK by the way lots of lots of applications relied heavily on Al SDM because we can train in our own
+
+02:23.850 --> 02:26.540
+network with the help of the GP.
+
+02:26.580 --> 02:33.540
+So graphical processing unit and it doesn't matter that we have three gates with lots of lots of educates.
+
+02:33.630 --> 02:38.620
+We are able to solve this problem of computational power in the 21st century.
+
+02:38.640 --> 02:45.590
+Quite cheap we don't care about the lots of lots of adulate we are able to train this architecture.
+
+02:45.590 --> 02:50.730
+We have both parallelization and the half of the graphical processing unit.
+
+02:50.850 --> 02:54.330
+So basically that's why there is no good solution.
+
+02:54.360 --> 03:00.320
+Getas with current units are working quite fine as well as long short term memory.
+
+03:00.390 --> 03:02.050
+They are very very similar.
+
+03:02.060 --> 03:06.580
+The gate is recurrent you need is just the simplified ASTM.
+
+03:06.720 --> 03:11.660
+So that's all about the main architecture of our ASTM and grew.
+
+03:11.730 --> 03:13.650
+And this is how we can cope with it.
+
+03:13.670 --> 03:20.460
+Vanishing gradient problem in the next chapter we are going to take a look at concrete examples of how
+
+03:20.460 --> 03:22.590
+to use recurrent out of the networks.
+
+03:22.710 --> 03:26.680
+And we will come to the conclusion that it is working quite fine.
+
+03:26.700 --> 03:27.540
+Thanks for watching.

@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.270 --> 00:03.520
+Hi my name is Balazs alter from Budapest Hungary.
+
+00:03.630 --> 00:06.110
+And welcome to my course on machine learning.
+
+00:06.120 --> 00:08.490
+And now we're all networks in Python.
+
+00:08.580 --> 00:11.960
+So first of all let me tell a few words about myself.
+
+00:11.970 --> 00:13.520
+I'm from Budapest Hungary.
+
+00:13.650 --> 00:20.010
+I'm qualified as a physicist and later on I decided to get a master's degree in applied mathematics.
+
+00:20.010 --> 00:26.740
+Currently I'm working as a software engineer and I'm interested in algorithms and artificial intelligence.
+
+00:26.760 --> 00:33.300
+So what you are going to get from this course we are going to talk about three main topics machine learning
+
+00:33.600 --> 00:38.740
+computer vision and now we're on networks as far as machine learning is concerned.
+
+00:38.820 --> 00:46.080
+We are going to talk about most of the relevant approaches such as regression nearest neighbor classifier
+
+00:46.320 --> 00:53.520
+name based classifier support vector machines bagging and boosting and clustering algorithms.
+
+00:53.640 --> 00:59.640
+We are going to talk about a theoretical background and we are going to implement give him problems
+
+00:59.880 --> 01:02.280
+with the help of Python libraries.
+
+01:02.340 --> 01:05.030
+The next topic is about computer vision.
+
+01:05.040 --> 01:09.780
+We are going to talk about Viola Jones algorithm for object detection.
+
+01:09.780 --> 01:16.320
+We are going to talk about phase detection and we will use Open see the library in order to achieve
+
+01:16.320 --> 01:17.520
+this objective.
+
+01:17.640 --> 01:21.330
+The last topic is now we're all networks and deep learning.
+
+01:21.420 --> 01:26.620
+So we are going to talk about feet for Verdon were all networks deep our own networks.
+
+01:26.670 --> 01:30.660
+Convolutional Now what role networks and recurrent neural networks.
+
+01:30.730 --> 01:37.320
+Again we are going to talk about a technical background and then we are going to implement these problems
+
+01:37.620 --> 01:43.440
+with the help of carers and with the help of Google's open source dance or flow framework.
+
+01:43.620 --> 01:47.360
+What's very important that there is an HD option for the lectures.
+
+01:47.460 --> 01:53.490
+So if you find your videos blurry you just have to set it to an HD option like you do it on YouTube
+
+01:53.490 --> 01:54.510
+for example.
+
+01:54.570 --> 01:57.220
+Thanks for joining my corps lads get started.

@@ -1,0 +1,118 @@
+WEBVTT
+
+00:01.240 --> 00:08.420
+In this lecture we use K nearest neighbor a classifier in order to predicate the stock price tomorrow.
+
+00:08.510 --> 00:13.210
+So we would like to product to better the stock price will go up or go down.
+
+00:13.220 --> 00:20.960
+We just have to create that dataset again with the lack features and direction and instead of logistic
+
+00:20.960 --> 00:25.960
+regression we are going to use KNM and sorry for that it is a bit misleading.
+
+00:26.360 --> 00:31.500
+So of course we are going to use K nearest neighbor a classifier 300.
+
+00:31.520 --> 00:32.250
+What does it mean.
+
+00:32.270 --> 00:33.910
+This is the key peramivir.
+
+00:33.950 --> 00:39.630
+So for k nearest neighbor if the K is one we consider the smallest distance.
+
+00:39.650 --> 00:46.040
+If k is equal to we consider the two smallest distances K is equal to 300.
+
+00:46.040 --> 00:52.760
+The model is going to consider the 300 nearest neighbors in order to end up with the solution in our
+
+00:52.760 --> 00:53.780
+implementation.
+
+00:53.780 --> 00:55.280
+There are two classes.
+
+00:55.340 --> 00:58.000
+Whether the stock price will go up.
+
+00:58.010 --> 01:01.520
+This is the first class or the stock price will decline.
+
+01:01.520 --> 01:02.960
+This is the second class.
+
+01:03.050 --> 01:05.150
+Plus one or a minus one.
+
+01:05.150 --> 01:11.300
+Accordingly for k nearest neighbor we can tune this key Peramivir and we can come to the conclusion
+
+01:11.300 --> 01:12.290
+I have tested it.
+
+01:12.290 --> 01:14.160
+Feel free to change this value.
+
+01:14.240 --> 01:18.540
+But if we use 300 is going to yield the best result.
+
+01:18.590 --> 01:25.490
+OK so if we run this Python's great machine learning TNN we can come to the conclusion that it is better
+
+01:25.610 --> 01:29.330
+than logistic regression as far as the accuracy is concerned.
+
+01:29.390 --> 01:32.480
+It is approximately 61 percent.
+
+01:32.540 --> 01:34.570
+You can see the confusion matrix.
+
+01:34.580 --> 01:37.750
+There are lots of Roths of misclassified items.
+
+01:37.820 --> 01:45.080
+But anyways it is a bit better than logistic regression which is rather counter-intuitive because the
+
+01:45.080 --> 01:48.190
+nearest neighbor classifier is a lazy learner.
+
+01:48.230 --> 01:51.680
+We do not build a model for logistic regression.
+
+01:51.710 --> 01:58.040
+We have built a model for support vector machines we build a model for cany its neighbor classifier.
+
+01:58.040 --> 01:59.900
+We don't build a model at all.
+
+01:59.990 --> 02:06.020
+We just have to calculate the Euclidean distances and as you can see it is working quite fine.
+
+02:06.020 --> 02:08.970
+It is much better than logistic regression.
+
+02:09.230 --> 02:18.560
+OK by the way the best machine learning approaches cannot do better than approximately 69 70 persons.
+
+02:18.620 --> 02:25.050
+So you are not able to achieve for example 99 percent accuracy with the machine learning more.
+
+02:25.160 --> 02:31.090
+Of course if you are able to achieve it then you can make lots of lots of money on the stock market.
+
+02:31.130 --> 02:39.020
+So the 61 percent is approximately good as far as machine learning is concerned for stock market applications
+
+02:39.180 --> 02:41.840
+in the next lecture we are going to talk about support.
+
+02:41.860 --> 02:43.110
+Back to the machines.
+
+02:43.310 --> 02:44.090
+Thanks for watching.

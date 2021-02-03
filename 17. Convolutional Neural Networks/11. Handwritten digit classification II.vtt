@@ -1,0 +1,304 @@
+WEBVTT
+
+00:02.550 --> 00:09.510
+In the last lecture we have managed to load the nice dataset we have managed to reshape the features
+
+00:09.630 --> 00:12.480
+to make it compatible with tens or flow.
+
+00:12.600 --> 00:18.900
+Ok then we use something very very similar to minimax normalization in order to transform the feature
+
+00:18.900 --> 00:21.400
+values within the range 0 and 1.
+
+00:21.660 --> 00:25.950
+And we use one halt in coding for the output classes.
+
+00:26.010 --> 00:32.560
+OK if we want to build a convolutional on our network again we can use the seek Paschall.
+
+00:32.610 --> 00:34.920
+So let's instantiate this class.
+
+00:35.010 --> 00:39.960
+It's going to be the model and then we are able to audit the given layers.
+
+00:39.960 --> 00:45.690
+First of all we can order a convolutional layer with 32 features.
+
+00:45.690 --> 00:46.610
+What does it mean.
+
+00:46.650 --> 00:48.770
+So this is the original image.
+
+00:48.870 --> 00:55.530
+And with the help of the filters or kernels we are able to end up with several feature maps.
+
+00:55.680 --> 01:02.970
+So basically the number of theaters we apply is going to yield the number of feature maps in the next
+
+01:02.970 --> 01:03.590
+layer.
+
+01:03.660 --> 01:11.160
+So in this case we use 32 theaters and the size of the theater is going to be three pixels by three
+
+01:11.160 --> 01:11.970
+pixels.
+
+01:12.060 --> 01:18.630
+So this is what we have been discussing in the previous lecture that we are going to use a feature detector
+
+01:18.630 --> 01:26.010
+in order to scan the original image and a feature detector is going to have given the weird and a given
+
+01:26.020 --> 01:26.690
+haith.
+
+01:26.760 --> 01:33.680
+So this is why we define three by three so the size of the theater is three pixels by three pixels.
+
+01:33.810 --> 01:36.790
+You may pose the question that was going to be tried.
+
+01:36.870 --> 01:39.800
+So we have been talking about that on every iteration.
+
+01:39.810 --> 01:48.030
+We are going to shift the given theater one step to the right and after we have considered all the pixels
+
+01:48.150 --> 01:54.510
+in a given row we are going to increment the location of the detector in a vertical manner as well.
+
+01:54.540 --> 01:57.330
+In this case we shaved the feature detector.
+
+01:57.360 --> 02:01.310
+One big slit to the right and the one pixel downwards.
+
+02:01.350 --> 02:02.810
+This is called the stride.
+
+02:02.810 --> 02:10.220
+Here we do not have to specify the stride because if we take a look at the documentation of Cara's Slayers
+
+02:10.260 --> 02:16.840
+convert to the you can see that there is a default value for strides which is 1 and 1.
+
+02:16.860 --> 02:20.360
+So one pixel to the right and one piece downwards.
+
+02:20.400 --> 02:24.160
+This is exactly what we have been discussing in a topical section.
+
+02:24.240 --> 02:31.560
+OK the input shape is going to be 28 by 28 by one because the inputs are images like this.
+
+02:31.680 --> 02:37.710
+As you can see 28 big Selway 28 big so hate and one for the channel.
+
+02:37.740 --> 02:44.580
+If we are dealing with a red green blue image is so colored images theres going to be three channels
+
+02:44.730 --> 02:49.260
+but now we are dealing with great skill images with just a single channel.
+
+02:49.260 --> 02:55.860
+What's important that we can use this batch normalization which normalizes the activations in the previous
+
+02:55.860 --> 02:58.790
+layer after the convolutional phase.
+
+02:58.890 --> 03:06.030
+So with the half of this batch normalization or batch transformation we can maintain the mean activation
+
+03:06.030 --> 03:09.970
+close to zero and the standard deviation close to 1.
+
+03:10.020 --> 03:13.890
+So basically the scale of each dimension remains the same.
+
+03:13.890 --> 03:19.970
+Why is it good because it significantly reduce the running time of the training procedure.
+
+03:20.160 --> 03:26.820
+OK so this is why we use this batch normalization then we are going to use another convolutional layer
+
+03:26.820 --> 03:34.450
+with 32 filters and the size of the filters are going to be three pixels by three pixels with the red
+
+03:34.470 --> 03:36.410
+you activation function.
+
+03:36.420 --> 03:37.140
+Sorry for that.
+
+03:37.140 --> 03:43.650
+We use the activation function really for the first convolutional layer as well that we use a maximum
+
+03:43.650 --> 03:47.140
+pooling layer with the pool size 2 and 2.
+
+03:47.250 --> 03:55.800
+OK so the maximum pooling is going to take a two by two window and it is going to get the maximum value
+
+03:56.190 --> 04:00.380
+the value of the maximum pixel within this given window.
+
+04:00.620 --> 04:03.930
+OK then we shifted the window two steps to the right.
+
+04:04.080 --> 04:09.400
+So with the help of maximum pooling we can select the most relevant features.
+
+04:09.420 --> 04:15.360
+This is how we can deal with spatial invariants that we just care about the most relevant features.
+
+04:15.360 --> 04:20.500
+For example here we would like to find the most relevant features for a cat.
+
+04:20.520 --> 04:23.030
+We don't care about the size of the image.
+
+04:23.130 --> 04:25.100
+We don't care about the rotation.
+
+04:25.140 --> 04:28.590
+We don't care whether the image has been scaled or not.
+
+04:28.650 --> 04:33.730
+So this is called spatial invariants and this is why we like maximum pooling.
+
+04:33.780 --> 04:38.350
+OK so the pooling size is going to be two pixels by two pixels.
+
+04:38.460 --> 04:43.860
+As we have seen in the theoretical section then again we use Bache normalization.
+
+04:43.980 --> 04:51.750
+Then again a convolutional layer with 64 filters a size of a good filter again is three pixels by three
+
+04:51.750 --> 05:00.090
+pixels really activation function Bache normalization DNA convolutional aliar again and a maximum pooling
+
+05:00.090 --> 05:04.980
+layer then we use flat this is what we have been discussing as well.
+
+05:05.030 --> 05:10.760
+Finally we have to use flattening in order to end up with a one dimensional array.
+
+05:10.760 --> 05:11.750
+Why is it good.
+
+05:11.840 --> 05:18.270
+Because these values are going to be the input values for the fully connected feedforward.
+
+05:18.290 --> 05:19.520
+Now we're on network.
+
+05:19.520 --> 05:28.250
+So basically flattening is going to take the values 2 to 1 2 to 1 as you can see then the values in
+
+05:28.250 --> 05:36.460
+the next row are going to be the next values in this one dimensional array 1 3 0 1 3 0.
+
+05:36.460 --> 05:42.150
+As you can see then the next 0 0 1 0 0 1 0 as you can see.
+
+05:42.170 --> 05:49.130
+So we are going to create a one dimensional array out of these two dimensional matrix in order to be
+
+05:49.130 --> 05:54.670
+able to use feedforward network of networks with a given input layer.
+
+05:54.680 --> 06:01.400
+So that's why we need a flattening layer then we use batched normalization again and we use densely
+
+06:01.400 --> 06:02.940
+connected feet fordable.
+
+06:02.950 --> 06:10.820
+Now we're all in that work as you can see it is going to have a dense hidden layer with 512 now rowans
+
+06:11.060 --> 06:13.370
+and rail activation function.
+
+06:13.500 --> 06:20.630
+Okay the output layer is going to be a densely connected layer weighed 10 in our roans of course 10
+
+06:20.630 --> 06:27.040
+and now we're on because we have 10 output classes deactivation function is going to be soft Max.
+
+06:27.050 --> 06:31.360
+And we are going to use drop out with 0.2 peramivir.
+
+06:31.460 --> 06:39.170
+Basically this dropout is an inexpensive regularisation method that helps to avoid overfitting in machine
+
+06:39.170 --> 06:42.510
+learning as well as in artificial intelligence.
+
+06:42.530 --> 06:47.660
+So dropout means we the activation Unforgiven no run to be zero.
+
+06:47.660 --> 06:50.050
+Temporarily and it works so well.
+
+06:50.060 --> 06:52.560
+It still has degraded and descent matter.
+
+06:52.670 --> 06:58.930
+So usually we apply dropout in the hidden layer exclusively which means that we simply omit.
+
+06:58.940 --> 07:01.560
+Now rowans we do give them probability.
+
+07:01.680 --> 07:08.630
+OK so in this case the probability is zero that too as you can see and basically drop out is able to
+
+07:08.670 --> 07:10.180
+prevent adaptation.
+
+07:10.220 --> 07:17.300
+Among detectors which had drive better generalization in a given model which means that it is able to
+
+07:17.300 --> 07:19.190
+reduce overfitting.
+
+07:19.380 --> 07:23.630
+OK so we use this dropout rate paramita 0.2.
+
+07:23.640 --> 07:28.710
+We just have to compile the modal Red Cross and truculence function.
+
+07:28.760 --> 07:35.800
+And Adam optimizer and we have to train in our role and that work on the training data set with a bat
+
+07:35.800 --> 07:44.990
+size 128 way to appliques wader validation data that we are going to use that tests that as a validation
+
+07:45.060 --> 07:48.000
+dataset and where both Bose's equals to arm.
+
+07:48.190 --> 07:48.920
+OK.
+
+07:48.980 --> 07:54.350
+So let's evaluate the model on the test dataset and let's print out the accuracy.
+
+07:54.470 --> 08:00.250
+And as you can see the accuracy is 99 percent which is extremely fine.
+
+08:00.260 --> 08:04.790
+So this is why we like deep now our own networks and convolutional now.
+
+08:04.800 --> 08:12.190
+And that works especially because we are able to achieve very very good accuracy 99 percent for high
+
+08:12.190 --> 08:14.370
+end of it and in get classification.
+
+08:14.540 --> 08:15.440
+Thanks for watching.

@@ -1,0 +1,310 @@
+WEBVTT
+
+00:00.600 --> 00:07.400
+High in this video I would like to show you how to train a supporting actor machine on the so-called
+
+00:07.460 --> 00:09.050
+Iblees data set.
+
+00:09.060 --> 00:11.080
+So let's get started.
+
+00:11.220 --> 00:12.380
+So what is this.
+
+00:12.490 --> 00:13.490
+Is data set.
+
+00:13.500 --> 00:20.070
+Basically you can find any machine learning related repository here you see.
+
+00:20.250 --> 00:23.430
+And you can have a good grasp on the Ivey's data set.
+
+00:23.430 --> 00:30.390
+For example we have the data set information which means that the data set contains three classes of
+
+00:30.390 --> 00:32.680
+50 instances each.
+
+00:32.880 --> 00:35.160
+So we are going to have three classes.
+
+00:35.160 --> 00:37.240
+It is a classification problem.
+
+00:37.530 --> 00:42.040
+And as you can see one class is linearly separable from the other two.
+
+00:42.120 --> 00:45.950
+The latter are not in the early separable from each other.
+
+00:46.110 --> 00:49.650
+So we will have the iris plan basically.
+
+00:49.710 --> 00:56.770
+And if you click on the data folder and ID's data then this is the training data.
+
+00:56.850 --> 01:04.680
+We have the ID Seto's we have the diaries versicolor and we have the iris virginica and we have four
+
+01:04.680 --> 01:12.180
+features basically the battle against the tactile with the sample and send the sample rate or something
+
+01:12.180 --> 01:20.750
+like this I think that OK you can see the attributes here SEP-IRA lanced sample with battle lines and
+
+01:20.760 --> 01:21.410
+Tatel away.
+
+01:21.420 --> 01:27.680
+So we are going to have four features and the last one is the Clauss I reset to always wears the color.
+
+01:27.720 --> 01:35.500
+Iris virginica so we don't have to download this dataset because we are able to be included from psyche
+
+01:35.550 --> 01:37.310
+to learn datasets.
+
+01:37.320 --> 01:39.210
+So let's see whether it's working fine.
+
+01:39.210 --> 01:46.820
+We have the data set is equal to the data sets that load IDs.
+
+01:47.430 --> 01:51.080
+And then I would like to printout this dataset.
+
+01:51.270 --> 01:56.510
+So let's take a look how it looks in the console.
+
+01:56.820 --> 01:57.470
+OK.
+
+01:57.490 --> 01:58.960
+As we race.
+
+01:59.250 --> 02:04.470
+So as you can see we have the target the 0 1 and 2.
+
+02:04.560 --> 02:12.100
+So we assigned the zero for the Reset Tosa the number one or two items versicolor.
+
+02:12.180 --> 02:16.340
+And we have the number two for the IATSE or genie.
+
+02:17.040 --> 02:22.400
+So that's why we have the 0 1 and 2 as far as the target is concerned.
+
+02:22.560 --> 02:25.210
+And this is the data set as you can see.
+
+02:25.230 --> 02:29.250
+So we have what's the name it has the name data.
+
+02:29.400 --> 02:34.060
+So 4.9 Srey 1.4 0.2.
+
+02:34.080 --> 02:35.930
+This is I guess the first line.
+
+02:35.970 --> 02:38.550
+Yes 3.5 1.4.
+
+02:38.680 --> 02:39.090
+Okay.
+
+02:39.120 --> 02:40.470
+There's a 5 missing.
+
+02:40.500 --> 02:47.960
+I'm not sure why but anyways this is how we are able to fetch the Iowas dataset from the secret learned
+
+02:47.960 --> 02:49.210
+data sets.
+
+02:49.230 --> 02:52.690
+I'm going to comment it out because we don't need it anymore.
+
+02:53.990 --> 02:57.970
+I'm going to separate the features from the target.
+
+02:58.130 --> 03:01.150
+So it's going to be a data set that data.
+
+03:01.310 --> 03:09.050
+This is what we have been discussing here that that we are able to get the data and we are able to get
+
+03:09.080 --> 03:12.960
+the target okay to target as you can see.
+
+03:12.980 --> 03:24.010
+So we have the features and we have the target variable's is equal to the data set the target then we
+
+03:24.010 --> 03:30.550
+split our dataset into our training data and the test data as usual.
+
+03:30.580 --> 03:35.350
+So we will have the feature for the training data.
+
+03:35.350 --> 03:44.890
+We will have a feature for the test data that we will have a target for the training data and the target
+
+03:44.890 --> 03:46.450
+for that task.
+
+03:46.510 --> 03:52.830
+We just have to use the train task's split for the features
+
+03:55.110 --> 04:05.400
+OK and the target variables it's only for that target of variables and the task size will be in this
+
+04:05.400 --> 04:14.330
+case for example 0.3 percent of the original dataset will be for testing purposes.
+
+04:14.430 --> 04:19.790
+And 70 percent of the original dataset will be for training purposes.
+
+04:20.150 --> 04:20.590
+OK.
+
+04:20.620 --> 04:27.480
+And I'm going to have the model which is the SVM that support vector classifier and I'm not going to
+
+04:27.480 --> 04:31.290
+define that gamma and the C parameters at the beginning.
+
+04:31.290 --> 04:37.680
+So this is the out or more in the sense that Skateland is going to decide these parameters for us.
+
+04:37.710 --> 04:48.620
+OK so we have the fitted model model that fit on the feature train.
+
+04:50.820 --> 04:52.720
+And target train.
+
+04:52.770 --> 04:59.750
+So we train or support like a machine on the training data and then we are able to make predictions
+
+04:59.750 --> 05:12.390
+so predictions is equal to the fitted model dot product and I'm going to use the feature test of course
+
+05:12.390 --> 05:17.380
+so we are going to make predictions on that task and we are going to compare them.
+
+05:17.520 --> 05:27.530
+So I'm going to printout the confusion matrix for the target data so I would like to compare the target.
+
+05:27.540 --> 05:33.900
+So what we know for certain from the data set and what we have pedic there with the help of support
+
+05:33.900 --> 05:43.770
+back through machines and I would like to do basically the same for the accuracy score that target test
+
+05:44.430 --> 05:47.090
+and predictions.
+
+05:47.610 --> 05:48.250
+Okay.
+
+05:48.300 --> 05:54.830
+So let's save it and let's see whether or support the vector the machine is working fine or not.
+
+05:55.410 --> 05:58.490
+As you can see zero dot 95.
+
+05:58.560 --> 06:03.270
+So the accuracy of for supporting actor or machine is 95 percent.
+
+06:03.330 --> 06:10.470
+It's quite good as you can see the confusion matrix that we have only two mis classifications because
+
+06:10.470 --> 06:18.210
+the old diagonal items are the misclassified items and the diagonalize times are correctly classified
+
+06:18.240 --> 06:19.080
+items.
+
+06:19.110 --> 06:28.800
+So let's see if we define the parameters manually so that gamma is equal to zero that 0 1 These parameters
+
+06:28.800 --> 06:34.950
+are usually set to something like this and penalty's equal to 100.
+
+06:34.950 --> 06:37.830
+For example let's say that and let's run it.
+
+06:37.890 --> 06:43.920
+You can play around with these parameters and test better support better a machine will make better
+
+06:43.920 --> 06:45.180
+predictions or not.
+
+06:45.270 --> 06:48.500
+But as I can see OK sometimes it's a bit better.
+
+06:48.570 --> 06:53.010
+Oh as you can see we just have a single misclassification.
+
+06:53.010 --> 06:58.890
+So basically 97 approximately 98 percent accuracy it is very very good.
+
+06:58.920 --> 07:04.690
+We are able to achieve the same accuracy with the help of deep now we're And that for us.
+
+07:04.710 --> 07:07.600
+So again I'm going to get rid of this game.
+
+07:07.620 --> 07:12.050
+I'm going to comment it out in order to be able to use it.
+
+07:12.090 --> 07:18.360
+If you download the source code but I guess that if we set it to an out or more in the sense that secret
+
+07:18.350 --> 07:29.160
+learning is going to decide experimenter's for us than 95 95 Yeah they are our eyes you can see a hundred
+
+07:29.160 --> 07:30.130
+accuracy.
+
+07:30.350 --> 07:30.750
+OK.
+
+07:30.750 --> 07:33.210
+There are no misclassification at all.
+
+07:33.260 --> 07:33.800
+OK.
+
+07:33.870 --> 07:37.800
+But anyways 95 percent accuracy is very very good.
+
+07:37.800 --> 07:44.220
+So usually we can say that support vector machines are able to make better predictions than logistic
+
+07:44.220 --> 07:47.510
+regression for example or the naive base algorithm.
+
+07:47.610 --> 07:54.110
+So this is why I support vector machines were considered to be the best machine learning algorithm ever.
+
+07:54.270 --> 08:02.500
+And we went of supercomputer as we are able to train now and that works let alone deep nodal networks
+
+08:02.680 --> 08:05.670
+that are marketable of making better predictions.
+
+08:05.670 --> 08:13.500
+So that's why in 2017 now all that works and deep know real networks are usually outperform support
+
+08:13.500 --> 08:16.110
+vector machines by supper vector machines.
+
+08:16.260 --> 08:21.990
+As you can see I can make very very good predictions so it is a very very powerful machine learning
+
+08:21.990 --> 08:23.220
+algorithm.
+
+08:23.220 --> 08:24.050
+Thanks for watching.

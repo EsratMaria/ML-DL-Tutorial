@@ -1,0 +1,250 @@
+WEBVTT
+
+00:02.760 --> 00:08.900
+Incoming lectures we are going to talk about the concrete implementation of convolutional now.
+
+00:08.960 --> 00:11.480
+And that works with the help of keras.
+
+00:11.640 --> 00:12.400
+OK.
+
+00:12.420 --> 00:19.100
+We have been talking about classifying the missed handwritten data with the help of support machines
+
+00:19.290 --> 00:25.980
+and we managed to achieve 96 percent accuracy okay with the help of convolutional and there were all
+
+00:26.000 --> 00:27.720
+networks and deep learning.
+
+00:27.720 --> 00:31.530
+We are able to achieve 99 percent accuracy.
+
+00:31.560 --> 00:38.540
+So this is why I have told you that deep now Real Networks can outperform any machine learning algorithms.
+
+00:38.550 --> 00:45.300
+So as far as the needs dataset is concerned it is a data set of handwritten digits.
+
+00:45.360 --> 00:51.000
+So there are 60000 samples as far as the training data set is concerned.
+
+00:51.150 --> 00:58.740
+And 10000 examples for the task sat and the digits have been sized normalized and centered in a fixed
+
+00:58.740 --> 00:59.920
+size image.
+
+01:00.000 --> 01:07.080
+Okay the last important feature is that these images are 28 by 28 pixels images.
+
+01:07.230 --> 01:11.190
+Okay so we can load it with the half of keras data set.
+
+01:11.280 --> 01:14.640
+If we import the list from Cara's data set.
+
+01:14.640 --> 01:19.220
+So we are able to load the data as far as the training data set.
+
+01:19.260 --> 01:22.460
+And as far as that task the data set is gone.
+
+01:22.560 --> 01:30.660
+So lets print out the shape of the training data set and tasks that there are 60000 samples as far as
+
+01:30.660 --> 01:33.210
+the training teachers are concerned.
+
+01:33.240 --> 01:38.240
+As you can see we have 28 pixels by 28 pixels images.
+
+01:38.280 --> 01:42.380
+So this is the features for the training data set.
+
+01:42.420 --> 01:45.440
+These are the labels for the training data set.
+
+01:45.450 --> 01:52.900
+So if we printout out that X strain 0 as grayscale and Whiteway in 0 we get this image.
+
+01:53.010 --> 01:57.100
+Basically this is the input for the convolutional in our network.
+
+01:57.150 --> 01:59.260
+As you can see it is the number five.
+
+01:59.280 --> 02:02.810
+So thats why the label is going to be declassified.
+
+02:02.910 --> 02:05.260
+So this is what we have printed out here.
+
+02:05.340 --> 02:09.290
+OK the shape of the testing dataset is approximately the same.
+
+02:09.390 --> 02:14.780
+But here we are dealing with 10000 samples instead of 60000 samples.
+
+02:14.920 --> 02:15.480
+Okay.
+
+02:15.480 --> 02:24.900
+So again the input is going to be 10000 images and every single image is 28 by 28 pixels image like
+
+02:24.900 --> 02:26.730
+for example this one here.
+
+02:26.850 --> 02:32.480
+And of course we have the output labels 10000 integers basically.
+
+02:32.490 --> 02:40.850
+So we have the class 0 for the integer 0 we have 1 for the numbers 1 we have to use 3 up to 9.
+
+02:40.980 --> 02:41.400
+OK.
+
+02:41.400 --> 02:44.440
+So these are going to be the target variables.
+
+02:44.590 --> 02:45.180
+Okay.
+
+02:45.180 --> 02:51.600
+There are several steps we have to take in order to make sure that the training procedure will work
+
+02:51.600 --> 02:52.250
+fine.
+
+02:52.350 --> 03:00.510
+So first of all tens of flow kind of handle format like this the batch size haith weight and the number
+
+03:00.510 --> 03:07.000
+of channels because we are dealing with black and white images or basically grayscale images.
+
+03:07.020 --> 03:10.050
+Thats why the number of channels is one.
+
+03:10.110 --> 03:13.650
+We have 28 by 28 pixels images.
+
+03:13.710 --> 03:21.420
+So the health and the weight parameters are equal to 28 and we are going to use the bat size as the
+
+03:21.420 --> 03:22.820
+number of samples.
+
+03:22.920 --> 03:30.300
+So in this case 60000 for the training data set and 10000 for that task data set.
+
+03:30.300 --> 03:31.020
+Why.
+
+03:31.020 --> 03:35.130
+Because when we feed the model we are able to change the bat size.
+
+03:35.130 --> 03:42.210
+So in this case we just initialize it to be the number of samples which means basically a gradient descent
+
+03:42.240 --> 03:43.030
+approach.
+
+03:43.200 --> 03:49.830
+Okay then do we have to notify tens or flow that these values are going to be floating point numbers
+
+03:49.830 --> 03:53.030
+so that's why S-type float 32.
+
+03:53.240 --> 03:55.230
+Okay so these are the features.
+
+03:55.230 --> 03:58.970
+Last step is to do a minimax normalization.
+
+03:59.100 --> 04:06.520
+So we would like to transform the values within the range 0 and 1 as usual because we are dealing with
+
+04:06.540 --> 04:08.040
+grayscale images.
+
+04:08.130 --> 04:12.030
+So the maximum value is two hundred and fifty five.
+
+04:12.090 --> 04:18.960
+That's why if we divide the values by two hundred and fifty five we are going to end up with something
+
+04:18.960 --> 04:22.030
+very very similar to minimax normalization.
+
+04:22.290 --> 04:31.560
+Then we have to transform the output labels because so far we have 0 1 2 3 2 9 but these values are
+
+04:31.560 --> 04:38.070
+not going to work fine for the training procedure because the activation functions usually transformed
+
+04:38.070 --> 04:40.710
+the values within the range 0 when 1.
+
+04:40.740 --> 04:43.630
+So that's why we use this one hold in coding.
+
+04:43.650 --> 04:47.880
+This is exactly what we have seen when dealing with the iris data set.
+
+04:47.910 --> 04:51.210
+So we have to transform the output labels.
+
+04:51.210 --> 04:54.200
+In this case we are dealing with handwritten digits.
+
+04:54.240 --> 05:04.730
+So 0 1 2 up to nine we have to transform these values into a binary representation was 0 0 0 0 4 0 0
+
+05:04.730 --> 05:06.650
+1 0 0 0 4 1.
+
+05:06.740 --> 05:14.450
+So we are going to represent every single label with a one dimensional vector the size of the one dimensional
+
+05:14.450 --> 05:17.220
+vector is the number of possible outcomes.
+
+05:17.240 --> 05:19.580
+In this case we have 10 classes.
+
+05:19.640 --> 05:26.900
+So that's why the size of this one dimensional array is going to be 10 and the values within this array
+
+05:26.960 --> 05:29.500
+can be either 0 or 1.
+
+05:29.510 --> 05:35.160
+So this is how we use one halt in coding in order to represent the output classes.
+
+05:35.270 --> 05:42.020
+Ok so for example 2 is going to be 0 0 1 0 0 0 0 0 0 0 0.
+
+05:42.110 --> 05:45.080
+So we can do it with the help of Nahm Piute.
+
+05:45.080 --> 05:47.330
+Is that too categorical.
+
+05:47.330 --> 05:53.530
+We have to define the features for the training and the features for that testing dataset.
+
+05:53.720 --> 06:00.470
+And we have to define the number of output classes we have 10 output classes and that's why we are able
+
+06:00.470 --> 06:07.660
+to transform the Y output classes into targets for the training set and for the task sat.
+
+06:07.670 --> 06:14.120
+So basically these are the stats we have to take before applying the convolutional in our own networks.
+
+06:14.240 --> 06:17.750
+But this is what we are going to talk about in the next lecture.
+
+06:17.750 --> 06:18.620
+Thanks for watching.

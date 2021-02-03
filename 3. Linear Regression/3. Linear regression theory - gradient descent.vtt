@@ -1,0 +1,262 @@
+WEBVTT
+
+00:01.530 --> 00:05.330
+So far we have been talking about the linear regression model.
+
+00:05.400 --> 00:12.900
+So we would like to find a linear relationship between two features such as size of a given houses and
+
+00:12.930 --> 00:14.630
+prices accordingly.
+
+00:14.670 --> 00:20.180
+OK we can use a two dimensional plot in order to plot the data points.
+
+00:20.250 --> 00:27.730
+And because we are after some linear relationships that's why we can use this linear formula H.
+
+00:27.750 --> 00:37.080
+X is equals the beat is 0 plus a B to 1 times x x is the size and age X is the price of the given house.
+
+00:37.260 --> 00:40.890
+So we will end up with a linear line like this.
+
+00:40.890 --> 00:47.760
+And we have to use some optimization algorithm because we would like to make sure that the distance
+
+00:47.850 --> 00:54.310
+of the data points from this linear line is going to be as small as possible.
+
+00:54.330 --> 01:00.700
+What does it mean that we would like to minimize this mean square error or the cost function.
+
+01:00.850 --> 01:05.650
+Ok so we would like to minimize by tuning the better perimeters.
+
+01:05.700 --> 01:12.690
+This formula the age X minus Y which is that main squared error or OK we can do it with the half of
+
+01:12.690 --> 01:19.710
+linear algebra but gradient descent is a better approach because it is working fine in higher dimensions
+
+01:20.010 --> 01:23.080
+even when dealing with lots of lots of features.
+
+01:23.160 --> 01:29.310
+OK so gradient descent has something to do with partial derivatives and the gradient.
+
+01:29.310 --> 01:35.940
+So if we Plaut this cost function which is the main square arrow or and for example all the possible
+
+01:35.940 --> 01:40.820
+values for between one and all the possible values for a BD 0.
+
+01:40.920 --> 01:44.530
+We end up with a three dimensional plane like this.
+
+01:44.610 --> 01:50.250
+It is going to have a local minima and this is exactly what we are after.
+
+01:50.250 --> 01:51.000
+Why.
+
+01:51.000 --> 01:57.540
+Because if we find those better perimeters that minimize the cost function which is the mean square
+
+01:57.600 --> 02:02.710
+error or it means that there's going to be a very very small error term.
+
+02:02.730 --> 02:05.280
+And of course this is what we are after.
+
+02:05.400 --> 02:12.670
+So we have to know the partial derivative of the cost function and go to the direction of the gradient.
+
+02:12.730 --> 02:19.980
+That's the main principle behind 3D and descend the gradient is going to be the partial derivative of
+
+02:19.980 --> 02:23.310
+the cost function with respect to beat zero.
+
+02:23.340 --> 02:31.740
+And with respect to be the warm sodium gradient X Unforgiven f x function is pointing in the direction
+
+02:31.830 --> 02:33.300
+of the maximum.
+
+02:33.360 --> 02:36.000
+But of course we are looking for the minimum.
+
+02:36.030 --> 02:44.850
+So thats why we have to use minus gradient AF X of course the x x in this case the cost function or
+
+02:44.850 --> 02:47.430
+the mean squared error function.
+
+02:47.430 --> 02:51.300
+So basically gradient descent is a very very simple approach.
+
+02:51.300 --> 02:53.200
+It is an iterative approach.
+
+02:53.280 --> 03:00.550
+So we have to make lots of lots of iterations and in every iteration we update the beat is 0 and B to
+
+03:00.560 --> 03:01.630
+1 paramita.
+
+03:01.890 --> 03:09.710
+According to this equation the new value of b to zero is equal to the previous value of b to zero minus
+
+03:09.770 --> 03:12.390
+a learning rate times the gradient.
+
+03:12.390 --> 03:13.350
+What is it mean.
+
+03:13.410 --> 03:21.480
+Because of the minus sign in every iteration we take a small step towards the local minima and basically
+
+03:21.480 --> 03:28.350
+thats why we have to use this our this our thought is the learning grade and it is going to define whether
+
+03:28.350 --> 03:33.350
+the stop is going to be big or just very very small step.
+
+03:33.360 --> 03:35.930
+Usually we prefer making small steps.
+
+03:36.060 --> 03:37.000
+But anyways.
+
+03:37.050 --> 03:43.350
+Ok so this is how we change the beat is zero parameter and this is how we change the be the one parameter
+
+03:43.350 --> 03:49.260
+as you can see the difference is that the partial derivatives with respect to beat is 0.
+
+03:49.260 --> 03:55.000
+This is how we update to zero and a partial derivative with respect to be to 1.
+
+03:55.050 --> 03:57.540
+This is how we update the B to one.
+
+03:57.720 --> 04:00.190
+OK and Alpha is the learning rate.
+
+04:00.290 --> 04:05.820
+If it is small then the algorithm takes small steps Stover's the minimum.
+
+04:05.820 --> 04:10.210
+It takes more time to converge but its going to be more accurate.
+
+04:10.500 --> 04:12.540
+Even the learning rate is huge.
+
+04:12.540 --> 04:16.410
+The algorithm takes big steps towards the minimum.
+
+04:16.470 --> 04:19.900
+OK on the other hand it's going to be faster.
+
+04:20.010 --> 04:24.900
+So there's a tradeoff between accuracy and running time.
+
+04:24.990 --> 04:32.010
+If the learning rate is small the algorithm is going to be quite accurate but it's not going to be the
+
+04:32.010 --> 04:32.730
+fastest.
+
+04:32.730 --> 04:40.290
+I agree that impossible if the learning rate is high then the algorithm is going to be quite fast but
+
+04:40.290 --> 04:42.370
+it's not going to be accurate.
+
+04:42.630 --> 04:45.120
+OK so this is the cost function.
+
+04:45.120 --> 04:51.780
+We have the better perimeters and with the half of gradient descent and in these equations I guess these
+
+04:51.780 --> 04:53.470
+are quite easy equations.
+
+04:53.490 --> 04:59.190
+OK we just have to deal with the partial derivatives but basically this is how we are able to end up
+
+04:59.190 --> 05:07.500
+with the minimum is it good because if we find a better one and a beat is zero Peramivir is associated
+
+05:07.500 --> 05:09.470
+with minimum value.
+
+05:09.600 --> 05:13.800
+It means that the mean square error or is a very very small.
+
+05:13.800 --> 05:18.120
+What is it mean that age X is very very similar to own.
+
+05:18.180 --> 05:23.930
+What does it mean that our linear regression model is making good predictions.
+
+05:24.090 --> 05:32.550
+If age X is very very far away from y it means that our linear regression model makes bad predictions.
+
+05:32.550 --> 05:39.540
+So we would like to make sure that age X is very very similar to Y and basically we kind of make sure
+
+05:39.600 --> 05:42.500
+that age X is very very similar to y.
+
+05:42.600 --> 05:49.630
+If we find the global minima as far as the cost function is concerned we just have to use the bita 1
+
+05:49.650 --> 05:57.080
+and beat 0 parameters associated with the local minima and read the half of this equation using the
+
+05:57.080 --> 06:03.990
+beat is 0 and B to 1 perimeters we have found with the help of gradient descent we are able to make
+
+06:03.990 --> 06:08.360
+good predictions as far as house prices are concerned.
+
+06:08.460 --> 06:15.100
+OK if you navigate to this website there's a good illustration how gradient descent works.
+
+06:15.240 --> 06:18.270
+As you can see it is an iterative approach.
+
+06:18.300 --> 06:21.080
+It uses a three dimensional function.
+
+06:21.090 --> 06:23.590
+Very very similar to what we have seen.
+
+06:23.730 --> 06:31.140
+So the cost function is very very similar to this function but here we have a three dimensional representation
+
+06:31.410 --> 06:32.800
+here on the website.
+
+06:32.820 --> 06:37.420
+There's a two dimensional representation of the three dimensional function.
+
+06:37.560 --> 06:43.400
+But as you can see gradient descent is going to converge to the global minima.
+
+06:43.470 --> 06:50.580
+What does it mean that we are able to find the minima of this function with the help of this iterative
+
+06:50.670 --> 06:57.990
+gradient descent algorithm which means that we are able to solve this optimization problem and eventually
+
+06:58.020 --> 07:05.340
+we are able to end up with a model that's capable of making good predictions as far as house prices
+
+07:05.340 --> 07:06.840
+are concerned.
+
+07:06.840 --> 07:07.710
+Thanks for watching.

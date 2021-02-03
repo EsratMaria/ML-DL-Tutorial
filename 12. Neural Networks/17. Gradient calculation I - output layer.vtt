@@ -1,0 +1,313 @@
+WEBVTT
+
+00:00.330 --> 00:06.250
+High in this video we are going to talk about how to calculate the gradient.
+
+00:06.330 --> 00:12.930
+We have been talking about when we were discussing optimization methods such as gradient descent and
+
+00:12.930 --> 00:18.880
+how to optimize the cost function which is basically the Adoor function but we haven't discussed that.
+
+00:18.900 --> 00:19.470
+OK.
+
+00:19.470 --> 00:20.970
+How to calculate it.
+
+00:21.000 --> 00:22.320
+Exactly.
+
+00:22.700 --> 00:28.500
+And OK this is what we have been already discussing that we have the cost function rather dependent
+
+00:28.510 --> 00:37.110
+variables are the educates adulate one educates two up to educate and and we have to minimize this function
+
+00:37.410 --> 00:43.030
+and how are we able to minimize it if we change and a variety educates.
+
+00:43.050 --> 00:49.650
+So we are looking for a combination of educators where the cost function which measures the arrow or
+
+00:49.830 --> 00:54.660
+is as small as possible and because we have several weights.
+
+00:54.780 --> 00:59.460
+The problem we'll be an optimization problem in height I'm engines.
+
+00:59.520 --> 01:04.610
+Basically there's going to be as many dimensions as the number of edge weights.
+
+01:04.800 --> 01:10.530
+And I'm not sure whether you are familiar with any kinds of optimization technique and this is why we
+
+01:10.530 --> 01:17.220
+have been discussing it in the artificial intelligence part the one that we can use brute force search
+
+01:17.220 --> 01:25.620
+for example for the optimal solution but it's not going to work fine because of the enormous space but
+
+01:25.620 --> 01:26.400
+we could use.
+
+01:26.430 --> 01:32.690
+Matter how eristic approaches such a simulated annealing or genetic algorithms.
+
+01:32.700 --> 01:39.180
+OK they are just going to provide an approximation but it's going to be good for most of the time.
+
+01:39.180 --> 01:44.670
+OK so the problem is that for example we just have a single edge weight and we can measure the error
+
+01:44.680 --> 01:49.920
+or basically the cost function where we initialize the adulate at random.
+
+01:49.920 --> 01:57.660
+So for example DCS the randomly initialised edge weight and the error is for example like this as you
+
+01:57.660 --> 02:01.680
+can see there can be better solution for the adulate.
+
+02:01.710 --> 02:05.300
+There's a local optimum and there's a global optimum.
+
+02:05.400 --> 02:12.420
+So we have to calculate the gradient to know how much we should adjust the educate the gradient is going
+
+02:12.420 --> 02:19.210
+to tell that what direction we should move in order to decrease the mean square error.
+
+02:19.230 --> 02:24.630
+So this is going to be the direction of the gradient and I'm not sure whether you are familiar with
+
+02:24.630 --> 02:30.860
+higher mathematics but we are able to calculate the gradient with a partial derivative.
+
+02:30.870 --> 02:35.640
+So it's going to be the derivative of the mean square error or the cost function.
+
+02:35.640 --> 02:38.590
+We do respect it up w adulate.
+
+02:38.790 --> 02:39.670
+OK.
+
+02:39.840 --> 02:45.550
+And for every know that we have to calculate the so-called data perimeter.
+
+02:45.600 --> 02:46.320
+Why.
+
+02:46.320 --> 02:53.400
+Because if we know what the data parameter we are able to calculate the gradient quite easily for calculating
+
+02:53.400 --> 03:01.160
+that data parameter we need the activation function as well as the dirty work of deactivation function.
+
+03:01.170 --> 03:08.310
+I have read several articles concerning our networks and in the beginning I didn't understand that.
+
+03:08.310 --> 03:15.120
+They always said that we needed the derivative of the activation function for the training and I always
+
+03:15.120 --> 03:17.350
+posed the question that OK why.
+
+03:17.490 --> 03:20.980
+What does the derivative has to do with the training.
+
+03:21.300 --> 03:23.790
+And basically we have the sigmoid function.
+
+03:23.790 --> 03:30.120
+This is what we have been discussing that if we want to make a good training algorithm then the activation
+
+03:30.120 --> 03:36.360
+function should be the sigmoid function or the hyperbolic tangan but not the step function.
+
+03:36.360 --> 03:42.030
+So let's suppose that we have the sigmoid function it's going to be like this in Java.
+
+03:42.030 --> 03:48.760
+So it's going to return a wanted divide by one applause Marth that X minus X where X is the import.
+
+03:48.870 --> 03:51.440
+This is the equation basically.
+
+03:51.450 --> 03:58.020
+And if you are familiar with higher mathematics you can differentiate this function.
+
+03:58.080 --> 04:02.260
+So the derivative of the sigmoid function will be something like this.
+
+04:02.310 --> 04:08.590
+You can prove it yourself is the sigmoid function on the X times 1 minus sigmoid function.
+
+04:08.600 --> 04:12.260
+X is going to be the derivative of this function.
+
+04:12.380 --> 04:13.690
+Why do we need it.
+
+04:13.740 --> 04:16.620
+We need it to calculate that a power meter.
+
+04:16.620 --> 04:21.150
+Why do we need the data perimeter in order to calculate the gradient.
+
+04:21.150 --> 04:28.800
+Why do we need the gradient in order to be able to decide what direction to move in order to end up
+
+04:28.970 --> 04:30.750
+with the global minimum.
+
+04:30.750 --> 04:32.630
+Why do we need a global minimum.
+
+04:32.640 --> 04:37.260
+Because if we need the global minimum then we know the optimal educate.
+
+04:37.320 --> 04:43.970
+And if we know what the optimal educate then or networks will produce good predictions.
+
+04:44.040 --> 04:44.770
+OK.
+
+04:44.860 --> 04:48.780
+So this is the equation how we can calculate that data.
+
+04:48.780 --> 04:51.300
+Paramita or for the output layer.
+
+04:51.330 --> 04:58.710
+It is extremely important that there's a different equation for the output layer and for the hidden
+
+04:58.710 --> 04:59.410
+layer.
+
+04:59.760 --> 05:06.910
+So if we would like to calculate that data for the output layer we can do it by multiplying the error
+
+05:06.990 --> 05:09.080
+term and we have to multiply it.
+
+05:09.090 --> 05:13.950
+We did derivative of the activation function we disarm.
+
+05:13.980 --> 05:17.660
+So sometimes the error term is defined differently by the way.
+
+05:17.790 --> 05:23.940
+And this is sometimes this negative sign is not present here because we can define the error as the
+
+05:23.970 --> 05:26.170
+actual minus the ideal.
+
+05:26.250 --> 05:30.010
+But we can define it as the ideal minus the actual.
+
+05:30.030 --> 05:35.040
+This is why we usually square the difference between the ideal and the actual.
+
+05:35.130 --> 05:42.270
+Because in that case it doesn't matter whether the actual minus ideal or ideal minus actual are because
+
+05:42.270 --> 05:45.140
+we can define the terms both ways.
+
+05:45.150 --> 05:51.260
+That's why sometimes there's a negative sign and sometimes there is no negative signs.
+
+05:51.350 --> 05:52.850
+OK.
+
+05:53.250 --> 05:55.470
+So let's see a concrete example.
+
+05:55.500 --> 06:00.370
+We have the old boot node and we have the hidden notes for example here.
+
+06:00.540 --> 06:07.310
+We have calculated the some minor 0.50 one and the output is 0 that sort 3.
+
+06:07.440 --> 06:15.670
+We have the Adoor now we're on 0.2 174 disarm and 0 that 76 for the output we have the edge weights.
+
+06:15.810 --> 06:20.230
+So how we calculate data first we have to know the sum.
+
+06:20.250 --> 06:22.540
+Because in that equation we have sum.
+
+06:22.650 --> 06:23.800
+What is the sum.
+
+06:23.850 --> 06:25.470
+It is the activation.
+
+06:25.470 --> 06:30.930
+So basically the output times the edge weight loss the output for the next.
+
+06:30.930 --> 06:43.560
+Now we're on times the adulate So 0 that three times minus 0.22 Plus is 0 that 76 times 0.15 it's going
+
+06:43.560 --> 06:49.300
+to be 0.04 well for then we have to calculate the output for this node.
+
+06:49.410 --> 06:55.980
+We have to apply the sigmoid function for this sum was the sigmoid function the sigmoid function is
+
+06:56.160 --> 07:01.410
+this function basically wond divide by 1 plus E to the minus x.
+
+07:01.780 --> 07:08.850
+Ok so we calculate that the output is equal to the sigmoid function at the sum and we come to the conclusion
+
+07:09.030 --> 07:11.890
+that it's equal to zero or 51.
+
+07:11.910 --> 07:13.820
+The idea should be won.
+
+07:13.830 --> 07:16.750
+We know it from the training data.
+
+07:16.770 --> 07:23.400
+So what's the error or the error or is the actual mine is the ideal 0.50 want.
+
+07:23.400 --> 07:29.130
+What we have calculated basically was the result of the now we're on that we're at minus 1 and it's
+
+07:29.130 --> 07:33.360
+equal to minus zero dot 49.
+
+07:33.360 --> 07:40.800
+Then we calculate the data for the output it is minus the error term because we have a negative sign
+
+07:40.800 --> 07:43.160
+here and it is a negative value.
+
+07:43.200 --> 07:52.320
+It's going to be positive 0.14 nine times the derivative of the sigmoid function that this sum was the
+
+07:52.320 --> 07:52.980
+sum.
+
+07:52.980 --> 07:58.530
+This is what we have calculated and it's going to be 0 not 1 to 2.
+
+07:58.740 --> 08:04.400
+So we have managed to calculate that data for the output node in the next video.
+
+08:04.410 --> 08:11.180
+We are going to talk about how to calculate that data output for the hidden layer because if we calculate
+
+08:11.180 --> 08:18.420
+it in a different manner there's going to be a different equation for the hidden layer of data and the
+
+08:18.420 --> 08:20.180
+output layer or data.
+
+08:20.330 --> 08:21.210
+Thanks for watching.

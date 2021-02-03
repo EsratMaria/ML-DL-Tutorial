@@ -1,0 +1,160 @@
+WEBVTT
+
+00:01.010 --> 00:07.440
+So far we have been talking about the three important stops as far as convolutional now Real Networks
+
+00:07.440 --> 00:08.430
+are concerned.
+
+00:08.600 --> 00:13.910
+So we have the convolutional operation we have pooling and we have flattening.
+
+00:14.000 --> 00:14.630
+OK.
+
+00:14.630 --> 00:22.280
+As far as convolution is concerned basically we have to use two matrices one the matrix representing
+
+00:22.280 --> 00:29.570
+the image the second the matrix representing the kernel or the feature detector in order to find the
+
+00:29.570 --> 00:32.900
+most relevant features on the given image.
+
+00:32.900 --> 00:36.220
+And we just have to calculate something like this.
+
+00:36.260 --> 00:43.970
+OK let's talk a bit more about feature detectors so feature detectors are represented as matrices and
+
+00:43.970 --> 00:47.510
+how to detect the relevant features in a given image.
+
+00:47.510 --> 00:54.410
+Of course there are lots of lots of feature detectors or caramelize such as the sharpened kernel.
+
+00:54.410 --> 01:02.070
+Basically it makes the given image more sharp so increases the intensity of the actual pixels.
+
+01:02.080 --> 01:08.480
+So this is why in the middle it has the value five which means that we are going to increase the pixel
+
+01:08.480 --> 01:11.200
+intensity of the actual pixel.
+
+01:11.270 --> 01:17.870
+And as we can see we have minus one of minus one of mine a small minus one which means that we are going
+
+01:17.870 --> 01:21.720
+to reduce the pixel intensity of the neighbor pixels.
+
+01:21.750 --> 01:26.560
+OK as far as the diagonal values are concerned they are all zeros.
+
+01:26.720 --> 01:30.640
+But as you can see this is the result that we have the original image.
+
+01:30.740 --> 01:38.450
+And after applying this can with these values it is going to be the result as you can see it is quite
+
+01:38.450 --> 01:41.770
+sharp What about edge detection Carnel.
+
+01:41.780 --> 01:49.760
+This is one of the most important and most widely used feature detectors this edge detection can detect
+
+01:49.850 --> 01:50.500
+edges.
+
+01:50.630 --> 01:54.110
+Sometimes this is how we can end up with relevant features.
+
+01:54.140 --> 02:01.550
+So as we can see minus four which means that we decrease the pixel intensity of the actual pixel and
+
+02:01.550 --> 02:08.570
+we do not change the pixel intensity of the neighboring pixels of course the diagonal values are set
+
+02:08.570 --> 02:09.920
+to be zero again.
+
+02:10.040 --> 02:17.570
+But as far as the known diagonal values are concerned we have 1 1 1 and 1 which means that we do not
+
+02:17.630 --> 02:20.000
+change those big so intensities.
+
+02:20.120 --> 02:26.160
+And this is how we can detect the edges sometimes the edges are quite relevant features.
+
+02:26.180 --> 02:32.750
+So this is why we like edge detection kernel as far as convolutional in our own networks our concern.
+
+02:32.810 --> 02:35.580
+Okay the next kernel is the kernel.
+
+02:35.630 --> 02:37.090
+It is not that useful.
+
+02:37.130 --> 02:41.210
+So we do not use this technique in convolutional now with all networks.
+
+02:41.330 --> 02:46.310
+As you can see it is going to make our regional image more blurry.
+
+02:46.460 --> 02:53.520
+So there's no point in applying this Karine-A because the most relevant information may be lost.
+
+02:53.710 --> 02:54.550
+OK.
+
+02:54.560 --> 03:00.940
+Every single candidate will use a specific feature of the image when using edge detector.
+
+03:00.980 --> 03:08.150
+We assume the edges are important for example and the good question is how to decide what feature detector
+
+03:08.150 --> 03:09.110
+to use.
+
+03:09.110 --> 03:12.280
+And the answer is rather counter-intuitive.
+
+03:12.320 --> 03:19.070
+We don't have to decide in advance what feature detector to use because convolutional now road network
+
+03:19.070 --> 03:25.580
+uses many channels and during the training procedure it eventually selects the best possible.
+
+03:25.580 --> 03:32.780
+So for example in the first iteration the convolutional now no network uses the sharpened kernel and
+
+03:32.870 --> 03:35.670
+it is going to have some error term.
+
+03:35.850 --> 03:43.270
+OK if the error is huge it means that the sharp end of kernel is not a gyud feature detector so its
+
+03:43.280 --> 03:46.010
+going to use edge detection kernel.
+
+03:46.070 --> 03:52.760
+So we just have to check the error or so the difference between the actual And the prediction made by
+
+03:52.760 --> 03:55.960
+the now will not work if the error is small.
+
+03:55.970 --> 04:02.630
+It means that the edge detection kernel is able to find the most relevant feature as any way.
+
+04:02.660 --> 04:07.690
+We have to use another kernel such as blur kernel and so on.
+
+04:07.820 --> 04:15.430
+So they are going to be lots of lots of kernels and now the network is going to choose the best possible
+
+04:15.530 --> 04:17.810
+during the training procedure.
+
+04:17.810 --> 04:18.680
+Thanks for watching.

@@ -1,0 +1,235 @@
+WEBVTT
+
+00:01.440 --> 00:08.880
+So let's use K nearest neighbor classifier on that credit scoring data that let's check whether we can
+
+00:08.880 --> 00:11.930
+do better than logistic regression or not.
+
+00:12.030 --> 00:16.960
+Of course the final answer is yeah we can do better than logistic regression.
+
+00:17.100 --> 00:24.450
+And I guess it is pretty counter intuitive because logistic regression seems to be a much more complex
+
+00:24.450 --> 00:24.900
+model.
+
+00:24.900 --> 00:29.800
+That's why we may have the intuition that it is going to work better.
+
+00:29.820 --> 00:31.620
+Danny Kaye CNN algorithm.
+
+00:31.730 --> 00:35.890
+And an algorithm has a very very simple underlying principle.
+
+00:35.970 --> 00:41.720
+And as you can see it is able to do approximately 98 percent accuracy.
+
+00:41.730 --> 00:43.270
+It is extremely fine.
+
+00:43.290 --> 00:43.960
+OK.
+
+00:44.090 --> 00:51.950
+OK so first we fudged the data from credit data that CSC we have the features as income age and loan.
+
+00:52.050 --> 00:59.790
+We have the target valuables as defaults zero and on whether the client has defaulted or managed to
+
+00:59.790 --> 01:05.640
+pay back the loan was extremely important for k nearest neighbor classifier.
+
+01:05.640 --> 01:09.250
+We have to use some pre-processing and scaling.
+
+01:09.340 --> 01:09.860
+Okay.
+
+01:09.870 --> 01:18.090
+So as far as normalization is concerned features are usually transformed into a range before the KNM
+
+01:18.180 --> 01:19.660
+algorithm is applied.
+
+01:19.710 --> 01:21.440
+You may pose the question of why.
+
+01:21.540 --> 01:28.680
+Because the distance formula depends on how the features are measured if certain features have much
+
+01:28.680 --> 01:35.390
+larger values than other than the distance measurement will be strongly dominated by the larger values.
+
+01:35.400 --> 01:42.090
+So we have to re skill the various features such that each one contributes relatively equally to the
+
+01:42.090 --> 01:43.490
+distance formula.
+
+01:43.500 --> 01:48.930
+There are two ways the minimax normalization and the transformation.
+
+01:49.050 --> 01:52.220
+Let's talk a bit about minimax normalization.
+
+01:52.230 --> 02:00.720
+This process transforms a feature such that all of its values fall within the range 0 and 1 normalized
+
+02:00.750 --> 02:09.640
+feature values can be interpreted as indicating how far from 0 percent to 100 percent the original value
+
+02:09.660 --> 02:10.660
+fall alone.
+
+02:10.770 --> 02:14.210
+Range between the original minima and Maxima.
+
+02:14.280 --> 02:21.660
+So first we have to find the minimum value in the data set as far as the given feature is going on and
+
+02:21.720 --> 02:26.880
+a given item is going to be updated according to this equation.
+
+02:26.910 --> 02:34.840
+X z equals 2 x minus the minimum of x y by the maximum minus the minimum.
+
+02:35.040 --> 02:43.460
+So this minimax normalization is going to transform the feature of values within the range 0 and 1.
+
+02:43.710 --> 02:49.080
+OK we have the so-called Z score normalization or standardization.
+
+02:49.080 --> 02:55.560
+It is a way of normalizing the data set has about the algorithm uses the mean and standard deviation
+
+02:55.830 --> 02:58.670
+instead of min and max values.
+
+02:58.800 --> 03:04.760
+Ok so the x y is equal to x minus the mean divide by the standard deviation.
+
+03:04.950 --> 03:11.390
+And he may pose the question a watch the use minimax normalization or z score transformation.
+
+03:11.490 --> 03:14.610
+It depends for a principal component analyzes.
+
+03:14.670 --> 03:22.620
+We prefer using z score normalization but for image processing where pixel intensities have to be normalized
+
+03:22.710 --> 03:29.840
+to fit within a certain range plus when using nodal networks we prefer minimax normalization.
+
+03:29.850 --> 03:36.900
+What's very very important that usually when dealing with machine learning algorithms or now with networks
+
+03:37.050 --> 03:44.790
+we use some kinds of normalization or whether it is zees core standardization or minimax normalization.
+
+03:44.850 --> 03:46.950
+We have to use something like this.
+
+03:47.010 --> 03:47.490
+OK.
+
+03:47.490 --> 03:50.800
+So we can use this prepossessing minimax scaler.
+
+03:50.790 --> 03:56.460
+So we are going to use minimax normalization on the data features.
+
+03:56.460 --> 04:02.680
+OK basically we don't have to manipulate the target because the target is either 0 or 1.
+
+04:02.700 --> 04:06.110
+Basically it is transformed within the range 0 and 1.
+
+04:06.210 --> 04:09.990
+OK so what's important that there is a huge difference.
+
+04:10.020 --> 04:13.700
+After applying this min max normalization.
+
+04:13.710 --> 04:20.150
+So if we get rid of this mean Max normalization and run the algorithm we just have to instantiate this
+
+04:20.150 --> 04:23.750
+case neighbors classifier with 20 neighbors.
+
+04:23.820 --> 04:24.690
+What does it mean.
+
+04:24.690 --> 04:26.710
+K equals 220.
+
+04:26.730 --> 04:34.650
+So the algorithm is going to find the 20 nearest items and go to decide the output class or the label
+
+04:34.650 --> 04:39.110
+for the actual item based on the 20 nearest items.
+
+04:39.370 --> 04:44.040
+Ok then we calculate the confusion matrix and the accuracy score.
+
+04:44.040 --> 04:51.120
+So let's run the algorithm we doubt the minimax normalization as you can see without the minimax normalization
+
+04:51.300 --> 04:56.100
+the accuracy is 84 percent which is not that good.
+
+04:56.130 --> 04:58.770
+We can do better with logistic regression.
+
+04:58.890 --> 05:03.570
+OK let's transform the teachers wait a min max normalization.
+
+05:03.730 --> 05:05.620
+Let's say it and let's run it.
+
+05:05.620 --> 05:08.500
+The accuracy is so much better.
+
+05:08.530 --> 05:10.860
+It is 98 percent.
+
+05:10.900 --> 05:12.720
+So all we can do better.
+
+05:12.720 --> 05:14.410
+Download is the quick question.
+
+05:14.470 --> 05:20.800
+You just have to use the very very simple concept of K nearest neighbor classifier.
+
+05:20.800 --> 05:22.860
+There is no model at all.
+
+05:22.870 --> 05:29.980
+We don't find even optimal barometer as we just calculate the Euclidean distances between the actual
+
+05:29.980 --> 05:34.700
+data point and all the other data points in the data set.
+
+05:34.750 --> 05:40.970
+We find the 20 nearest item and make the decision based on these neighbors.
+
+05:41.060 --> 05:48.070
+OK so we will see that when dealing with finance related data came nearest neighbor algorithm is going
+
+05:48.070 --> 05:49.840
+to be the best one possible.
+
+05:49.840 --> 05:53.840
+So K and I agree them is working extremely fine.
+
+05:53.980 --> 05:54.490
+OK.
+
+05:54.520 --> 06:01.430
+In the next lecture we are going to talk about how to find the optimal value for the K peramivir.
+
+06:01.600 --> 06:02.450
+Thanks for watching.

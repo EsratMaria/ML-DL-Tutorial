@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.330 --> 00:07.380
+High in this video we are going to talk about the two most important learning approaches.
+
+00:07.380 --> 00:14.340
+The first one is the so-called supervised learning where the dataset we have has labels.
+
+00:14.520 --> 00:18.180
+So we know what results we are looking for.
+
+00:18.450 --> 00:23.460
+So we just thrain the now rule network until we get good results.
+
+00:23.460 --> 00:30.070
+For example for a face recognition but a more common example is the logical operators.
+
+00:30.180 --> 00:38.370
+Let's consider the and logical relation we will have to impute variables the x and y.
+
+00:38.610 --> 00:46.320
+And we have the labels we know for certain how deep and logical relation behaves if both the inputs
+
+00:46.320 --> 00:49.560
+are zeros then the output is 0.
+
+00:49.710 --> 00:51.670
+If the first input is 0.
+
+00:51.690 --> 00:55.820
+The second input is on the output again is 0.
+
+00:55.980 --> 01:04.620
+If the first input is one but the second input is 0 then the output is 0 again and if both of the inputs
+
+01:04.770 --> 01:08.950
+are equal to one than the output is going to be 1.
+
+01:08.970 --> 01:17.120
+So in this case this is a super wise learning approach because we have the input data for the input
+
+01:17.140 --> 01:20.120
+variables or the features as we call it.
+
+01:20.160 --> 01:25.210
+We have the labels basically what output we are looking for.
+
+01:25.230 --> 01:32.400
+So we are going to train or now and that work until we get the outputs for the given name both.
+
+01:32.430 --> 01:40.170
+This is the supervised learning approach and we have the unsupervised learning where the data set we
+
+01:40.170 --> 01:41.890
+have is not labeled.
+
+01:42.000 --> 01:45.600
+So we do not know what results we are looking for.
+
+01:45.690 --> 01:52.830
+The algorithm will figure out the patterns for us for example any kinds of clustering algorithms k means
+
+01:52.830 --> 01:58.300
+clustering hierarchical clustering D-B scan algorithm and so on.
+
+01:58.320 --> 02:06.300
+So we have for example a two dimensional plane and we have two ribose the X1 and x2.
+
+02:06.450 --> 02:12.720
+And we have that data basically these points in the two dimensional plane and if people would like to
+
+02:12.780 --> 02:19.650
+classify them and these clustering algorithms are going to come to the conclusion that there are Srey
+
+02:19.650 --> 02:24.920
+closter as the yellow dots the green dots and the blue dots.
+
+02:24.930 --> 02:32.340
+So basically we don't have labels in the sense that we don't know know was that was going to be the
+
+02:32.340 --> 02:39.480
+good resolves the algorithm itself is going to analyze the data and it's going to come to the conclusion
+
+02:39.720 --> 02:46.960
+that they are sui Klosters and these classifying Geiger rhythms are working quite fine for ID's data
+
+02:46.960 --> 02:50.190
+sat for classifying digits for example.
+
+02:50.190 --> 02:52.290
+It is approximately working fine.
+
+02:52.290 --> 02:58.740
+So that's all about the difference between supervised and unsupervised learning Bangsar watching.

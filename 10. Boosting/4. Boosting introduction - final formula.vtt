@@ -1,0 +1,295 @@
+WEBVTT
+
+00:00.890 --> 00:03.920
+Let's talk a bit about the alpha parameter.
+
+00:04.010 --> 00:11.570
+So we have to calculate the outer perimeter during the iteration and Alpha is equal to 1 divided by
+
+00:11.570 --> 00:15.680
+two times the logarithm of one of mine is the error term.
+
+00:15.800 --> 00:23.060
+Divide by the error term and if we take a closer look at this Plaut where we have the error rate and
+
+00:23.060 --> 00:31.730
+the alpha value we can see that if the error rate is smaller than 0.5 What does it mean that it is a
+
+00:31.730 --> 00:36.920
+better classifier than a coin flip so a random guess basically.
+
+00:36.980 --> 00:44.340
+So a given Ajax classifier out of value increases as the air or converges to zero.
+
+00:44.360 --> 00:48.020
+Of course dude classifiers are given more leeway.
+
+00:48.050 --> 00:55.430
+So this is what we have been talking about that the path of value controls the given age X we or if
+
+00:55.490 --> 00:57.300
+Alpha is 0.
+
+00:57.320 --> 01:05.240
+It means that we do not care about that given learner the value of alpha is great for example plus one
+
+01:05.270 --> 01:08.380
+plus two plus three or something like this.
+
+01:08.390 --> 01:12.210
+It means that we give more weight to this given learner.
+
+01:12.290 --> 01:20.600
+OK so here in this region where the error rate is small the value is going to be plausible and plus
+
+01:20.600 --> 01:21.800
+two and so on.
+
+01:21.800 --> 01:30.170
+So we would like to give more weight to a classifier with small error rate if the error rate is 0.5
+
+01:30.310 --> 01:35.320
+than the value of that given Ajax classifier is zero.
+
+01:35.360 --> 01:37.050
+You may pose the question Why.
+
+01:37.100 --> 01:39.340
+Because it is a random guess.
+
+01:39.350 --> 01:41.200
+Basically a coin flip.
+
+01:41.240 --> 01:50.060
+So the error rate is 0.5 it is a coin flip and we don't want our algorithm to rely on random guesses.
+
+01:50.090 --> 01:55.880
+So we are not going to bother with classifier with error rate 0.5.
+
+01:55.880 --> 02:03.470
+We don't want to deal with random guesses and if the error rate is greater than 0.5 as you can see the
+
+02:03.470 --> 02:06.470
+alpha value will be smaller than 0.
+
+02:06.470 --> 02:12.730
+What does it mean that basically we do the opposite because that's the best action we can make if we
+
+02:12.740 --> 02:20.900
+have a classifier Wade for example a 90 percent error rate what does it mean that with 90 percent probability
+
+02:21.140 --> 02:24.590
+the classifier is going to make bad decisions.
+
+02:24.590 --> 02:31.850
+Of course if we do the opposite it means that the opposite of the classifier will make good decisions
+
+02:31.850 --> 02:34.030
+with 90 percent accuracy.
+
+02:34.100 --> 02:42.260
+So of course if the error rate is greater than 0.5 the Alpha has to be smaller than 0.
+
+02:42.320 --> 02:45.360
+So we would like to make opposite actions.
+
+02:45.470 --> 02:52.310
+So basically this is why we have to calculate our weight the top of this formula because this formula
+
+02:52.400 --> 03:01.160
+makes sure that if we are dealing with Ajax classifier we'd all read smaller than 0.5 Atha is going
+
+03:01.160 --> 03:08.840
+to be greater than zero which means that gyud classifiers are given more weight the error rate is 0.5.
+
+03:08.840 --> 03:11.970
+We don't want to bother about that classifier.
+
+03:11.980 --> 03:18.490
+So the path of failure is going to be zero and the error rate is greater than 0.5.
+
+03:18.530 --> 03:22.230
+It means that the best action is to do the opposite.
+
+03:22.250 --> 03:26.120
+So that's why the alpha value will be smaller than 0.
+
+03:26.210 --> 03:32.420
+OK so this is why we have been discussing in the previous lecture that the outer perimeter is going
+
+03:32.420 --> 03:35.280
+to control the H x week learners.
+
+03:35.420 --> 03:38.890
+So Alpha has something to do with the Week learners.
+
+03:38.960 --> 03:40.700
+OK what about the weights.
+
+03:40.820 --> 03:46.730
+We are going to assign a given w weight to every single sampling the data set.
+
+03:46.820 --> 03:54.240
+And of course in every iteration we have to update the weights associated to every single sample.
+
+03:54.350 --> 04:00.830
+And this is the formula we have to use the weight in the next iteration is equal to the weight in the
+
+04:00.830 --> 04:02.300
+previous iteration.
+
+04:02.360 --> 04:05.930
+Now divide by Zad times an exponential function.
+
+04:05.930 --> 04:11.020
+So each of the power of minus Alpha times h times Y.
+
+04:11.030 --> 04:17.180
+So this is how we are today the weights in every iteration the W weights has something to do with the
+
+04:17.180 --> 04:18.410
+dataset samples.
+
+04:18.410 --> 04:19.050
+OK.
+
+04:19.190 --> 04:25.930
+We set higher weights to more important samples and lower away to values still less important one.
+
+04:25.940 --> 04:32.900
+This is what we have been discussing so that if we have the learner with some misclassify samples of
+
+04:32.900 --> 04:38.330
+course in the next iteration we would like to focus on the misclassified items.
+
+04:38.390 --> 04:42.580
+So we don't want to bother about correctly classified items.
+
+04:42.710 --> 04:48.390
+That's why we are going to decrease the weights for that correctly classified items.
+
+04:48.440 --> 04:52.900
+And we are going to increase the weight for the misclassified items.
+
+04:53.000 --> 04:55.080
+This is how the algorithm knows that.
+
+04:55.100 --> 04:55.850
+OK.
+
+04:55.910 --> 05:02.640
+In the next iteration we have to deal with these values we you come up with a classification algorithm
+
+05:02.850 --> 05:07.350
+that's able to classify correctly these data samples.
+
+05:07.350 --> 05:12.270
+By the way this Zad makes sure that the W is a distribution.
+
+05:12.270 --> 05:18.790
+This is what we have been discussing that some of the double use Sabai weights must be equal to one.
+
+05:18.840 --> 05:22.260
+And that's why we have this normalization factor.
+
+05:22.290 --> 05:30.070
+Then we have this a y x function which is basically flips the sign of the exponent if H x is wrong.
+
+05:30.180 --> 05:38.610
+So we have to make sure that if the given sample was misclassified then we have to increase the weights.
+
+05:38.730 --> 05:46.110
+And if the given sample would index I was classified correctly we have to decrease the weight.
+
+05:46.230 --> 05:53.250
+And basically this is why we have this y function if age x a week learner has managed to classify the
+
+05:53.250 --> 06:00.160
+given sample with index I correctly we have to make sure that the weight is going to be decreased.
+
+06:00.240 --> 06:04.500
+So we have to make sure that the xponent will be smaller than zero.
+
+06:04.500 --> 06:10.370
+So if X made a good decision then why is going to be plausible.
+
+06:10.590 --> 06:16.550
+If Ajax made a bad decision then why X is going to be minus one.
+
+06:16.560 --> 06:20.780
+This is how it is going to flip the sign of the xponent.
+
+06:20.820 --> 06:27.620
+Why is it good because it makes sure to assign smaller weights to samples that are correctly classified
+
+06:27.840 --> 06:30.760
+and a bigger weight for misclassification.
+
+06:30.870 --> 06:36.360
+So in the next iteration the Ajax learner can focus on those samples.
+
+06:36.380 --> 06:37.840
+We'd had your weights.
+
+06:37.920 --> 06:45.480
+OK so what is the why function makes sure that the weights are going to be updated correctly and you
+
+06:45.480 --> 06:50.540
+may pose the question that why do we have to include the alpha in the exponent.
+
+06:50.670 --> 06:56.720
+Because this is how we make sure that stronger classifiers decisions are more important.
+
+06:56.820 --> 07:04.860
+So if we could classify your misclassify as an input we do not take that as seriously as a strong classifiers
+
+07:04.860 --> 07:07.450
+mistake who may pose a question that why.
+
+07:07.470 --> 07:12.870
+Because if the alpha male is high it means that the error rate is low.
+
+07:12.870 --> 07:19.620
+What does it mean that it is a strong classifier and this is how we make sure that a strong classifiers
+
+07:19.620 --> 07:25.600
+decision are more important because we multiply the exponent by Alpha.
+
+07:25.710 --> 07:35.530
+OK so if a classifier where the alpha is approximately 0 as you can see 0.1 or 0.2 this is a weak classifier
+
+07:35.680 --> 07:36.750
+your error rate.
+
+07:36.750 --> 07:42.470
+In this case we do not take it as seriously as a strong classifiers mistake.
+
+07:42.480 --> 07:47.200
+So this is why we have to include the alpha in the xponent as well.
+
+07:47.340 --> 07:50.700
+So this is how we can update the W weight values.
+
+07:50.700 --> 07:53.310
+This is how we can update the alpha values.
+
+07:53.400 --> 08:00.510
+And basically we just have to use this iterative approach in order to get the D.H. X we learners.
+
+08:00.630 --> 08:08.430
+And with the combination of these classifiers or weak learners we are able to end up with a strong classifier
+
+08:08.550 --> 08:10.800
+that's able to make good predictions.
+
+08:10.800 --> 08:16.000
+For example here it is able to solve these nonlinearly separable problem.
+
+08:16.080 --> 08:24.540
+We just have to combine extremely near classifiers this classifier this classifier and this classifier.
+
+08:24.630 --> 08:26.890
+So this is how boosting works.
+
+08:27.120 --> 08:27.970
+Thanks for watching.

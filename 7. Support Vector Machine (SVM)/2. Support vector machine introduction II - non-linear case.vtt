@@ -1,0 +1,256 @@
+WEBVTT
+
+00:00.630 --> 00:07.350
+Horn in the previous video we have been talking about linearly separable problems and we have come to
+
+00:07.350 --> 00:12.120
+the conclusion that we just have to solve some optimization problem.
+
+00:12.270 --> 00:17.810
+So basically we define the equation for the hyperplane.
+
+00:17.910 --> 00:25.650
+So we have to minimize disturb one divide by two times the Euclidean norm of the weights squared.
+
+00:25.800 --> 00:32.660
+And it's going to work fine for linearly separable problems but sometimes we have non-linear spaces.
+
+00:32.670 --> 00:38.350
+So in many real world applications the relationship between miraculous are non-linear.
+
+00:38.370 --> 00:45.900
+So a key feature of support back to our machines is their ability to map the problem into a higher dimensional
+
+00:45.900 --> 00:49.870
+space using a process known as the cardinal trick.
+
+00:49.890 --> 00:56.490
+So OK we know how to handle linearly separable problems but we know how to deal with these kinds of
+
+00:56.490 --> 00:57.150
+problems.
+
+00:57.180 --> 01:00.650
+We do much easier in machine learning related algorithms.
+
+01:00.660 --> 01:07.110
+This is why we like supporting actor machines because we are able to transform the problem into a higher
+
+01:07.110 --> 01:08.560
+dimensional space.
+
+01:08.610 --> 01:14.140
+And in the higher dimensional space we are able to solve the problem very very easily.
+
+01:14.250 --> 01:16.450
+So this is the so-called kernel tree.
+
+01:16.560 --> 01:23.790
+So Cardinal treaty's the process of making the transformation and non-linear relationship may suddenly
+
+01:23.820 --> 01:25.840
+appears to be quite linear.
+
+01:25.890 --> 01:34.310
+So as you can see here for example in this case we are not able to separate the green dots from the
+
+01:34.330 --> 01:36.660
+already dots with a linear line.
+
+01:36.690 --> 01:37.730
+We can't do it.
+
+01:37.740 --> 01:44.440
+But if we separated the same manner with a hyper plane like this then there's going to be several mis
+
+01:44.440 --> 01:52.800
+classifications as you can see we have a red dot a Mohmed green dots and we have a green dot among the
+
+01:52.800 --> 01:59.970
+red dots and there's the distance between the misclassified items and the hyperplane ID no detail.
+
+01:59.980 --> 02:07.880
+We with a Saibai and OK our model is going to suggest that it's not a problem that we have some mis
+
+02:07.890 --> 02:12.990
+classifications but we should minimize the number of mis classifications.
+
+02:13.020 --> 02:18.870
+So this is what we have been discussing for the linearly separable problem that we have to minimize
+
+02:18.870 --> 02:25.770
+the divide by two times the Euclidean norm moved away squared plus we will have a term.
+
+02:25.770 --> 02:32.700
+This term is because we will have some mis classifications and basically this term is going to make
+
+02:32.700 --> 02:37.560
+sure that we would like to minimize the amount of misclassified items.
+
+02:37.560 --> 02:44.060
+Of course this is the aim of some work better machines so we have to sum up the ace of surprise.
+
+02:44.070 --> 02:45.750
+What are these a surprise.
+
+02:45.780 --> 02:52.470
+These are the distances between the misclassified items and the hyper planes.
+
+02:52.560 --> 02:58.950
+OK NDC parameter is the cost parameter to all points that why you laid the constraints.
+
+02:58.950 --> 03:05.250
+So we make or optimization on this cost function thats going to be the cost function and we would like
+
+03:05.250 --> 03:12.960
+to find the global minimum of that a given cost function we can tune to see para meter we can modify
+
+03:12.960 --> 03:16.350
+the penalty for the data points that are misclassified.
+
+03:16.470 --> 03:22.170
+As I said earlier the Stern has something to do with the misclassify data points.
+
+03:22.170 --> 03:23.230
+Okay.
+
+03:23.390 --> 03:25.230
+Even the sea is very large.
+
+03:25.230 --> 03:29.930
+The algorithm's tries to find a 100 percent separation.
+
+03:30.190 --> 03:36.560
+If the seas low then the wider overall margin is a load with more misclassify data points.
+
+03:36.570 --> 03:42.650
+So if the seas low it means that there is going to be several misclassify data points.
+
+03:42.720 --> 03:49.140
+The seas are very large that the support vector machine is going to find a way to separate all Daut
+
+03:49.410 --> 03:50.660
+in the right class.
+
+03:50.730 --> 03:54.530
+So theres not going to be any misclassified items.
+
+03:54.630 --> 04:02.630
+Ok so thats all about the extended cost function we have to minimize for nonlinearly separable problems.
+
+04:02.850 --> 04:04.540
+And what about the Kerala's.
+
+04:04.620 --> 04:12.840
+As I said earlier that the Cannell trait is something like the transformation of the import data into
+
+04:12.940 --> 04:18.720
+an outer space where the classification can be solved much easier.
+
+04:18.720 --> 04:23.800
+So for example we had some weather classes sunny weather and snowy weather.
+
+04:23.820 --> 04:31.860
+We have green dots they represent snowy weather and we have the red dots representing sunny weather
+
+04:32.100 --> 04:39.870
+and we have two features the Longet two and the latitude the cardno function is able to transform the
+
+04:39.870 --> 04:47.850
+data set and it is going to create some so-called slacke voluble the altitude this altitude feature
+
+04:48.030 --> 04:51.030
+is not present in the original data set.
+
+04:51.090 --> 04:55.620
+It is not a feature as far as the original data is concerned.
+
+04:55.740 --> 04:58.930
+The cardinal function is going to create DST too.
+
+04:59.040 --> 04:59.730
+Why.
+
+04:59.730 --> 05:06.820
+Because if we have an attitude as you can see we have managed to transform the data into a higher dimensional
+
+05:06.820 --> 05:09.660
+space because we have an additional feature.
+
+05:09.700 --> 05:13.710
+So instead of two features we will have three features in this case.
+
+05:13.810 --> 05:18.490
+So the data has been transformed into a higher dimensional space.
+
+05:18.760 --> 05:25.290
+But in this higher dimensional space we are able to separate the two classes linearly.
+
+05:25.300 --> 05:32.530
+So we have a linear hyperplane because we have created that slacke voluble attitude.
+
+05:32.530 --> 05:35.220
+And as you can see it's the snow we better.
+
+05:35.260 --> 05:40.140
+And it is the Sahni matter it has something to do with the attitude and supper the fact that a machine
+
+05:40.420 --> 05:45.100
+is going to find the slack variable for us we don't have to bother about it.
+
+05:45.190 --> 05:48.070
+And this is why we live supper reactor machines.
+
+05:48.070 --> 05:54.610
+This is why support that our machines are working very very fine and outperforms other in machine learning
+
+05:54.610 --> 05:56.380
+techniques in the main.
+
+05:56.650 --> 06:02.950
+OK so as I said earlier it is in a higher dimensional space because we have the slack where valuable
+
+06:02.950 --> 06:04.070
+altitude.
+
+06:04.090 --> 06:10.920
+So we can all function we can transform the problem into linearly separable one as you can see here
+
+06:10.930 --> 06:14.930
+we are not able to separate the problems with the map of a linear line.
+
+06:15.100 --> 06:19.800
+But here we are able to separate the two classes with the hop of a linear line.
+
+06:20.050 --> 06:26.050
+So we have to use a slack or idea of the altitude and this is what the Cannell function is going to
+
+06:26.050 --> 06:27.760
+find for us.
+
+06:28.420 --> 06:36.520
+OK so this is the hyperplane in the higher dimensional space that's going to separate the two classes.
+
+06:36.640 --> 06:43.300
+And what's more important that supper vector a machine learns concepts that are not explicitly measured
+
+06:43.300 --> 06:50.290
+in the original data and no other machine learning related algorithm is capable to do something like
+
+06:50.290 --> 06:58.660
+this linear regression logistic regression caning us neighbor naive based classifier these algorithms
+
+06:58.720 --> 07:01.710
+are not able to create slacke variables.
+
+07:01.840 --> 07:08.860
+But this is why I suppose vector machine is working really very fine because it's able to learns and
+
+07:08.860 --> 07:10.630
+creates new features.
+
+07:10.630 --> 07:17.710
+For example this attitude in this case in the next video we are going to talk about tantalizing domain.
+
+07:17.890 --> 07:18.820
+Bangsar watching.

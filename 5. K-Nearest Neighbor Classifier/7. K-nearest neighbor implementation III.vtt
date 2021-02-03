@@ -1,0 +1,148 @@
+WEBVTT
+
+00:01.440 --> 00:08.850
+We have seen in the previous lecture how to achieve 98 percent accuracy with the help of K nearest neighbor
+
+00:08.880 --> 00:09.920
+classifier.
+
+00:10.020 --> 00:17.520
+But there's a problem again that we don't use cross-validation we just had a simple data set and we
+
+00:17.520 --> 00:25.410
+have split data these dataset into a training data set and a test data set usually 70 person for the
+
+00:25.410 --> 00:29.280
+training data and certain person for the task data.
+
+00:29.280 --> 00:35.010
+So it means that there can be some overfitting or some underfeeding.
+
+00:35.040 --> 00:38.080
+This is why we have to use cross-validation.
+
+00:38.160 --> 00:44.400
+OK so we are going to use cross-validation in order to find the optimal k value.
+
+00:44.520 --> 00:53.610
+This optimal value is not going to have as good accuracy and precision as we have seen for any neighbors
+
+00:53.730 --> 01:00.380
+close to 20 but it is going to be much more realistic because we use cross-validation.
+
+01:00.470 --> 01:01.180
+OK.
+
+01:01.290 --> 01:08.700
+So we are going to use the cross-validation scores and then we are going to make a simple iteration.
+
+01:08.730 --> 01:14.940
+Basically we are going to consider k values from 1 up to 100.
+
+01:15.120 --> 01:23.250
+So we are going to feed a K nearest neighbor classifier model where k is equal to 1 Dan in the next
+
+01:23.250 --> 01:25.780
+iteration of where cazy goes to.
+
+01:25.900 --> 01:30.230
+Then in the next iteration of where Casey goes is 3 up to 100.
+
+01:30.330 --> 01:36.210
+So as you can see the number of neighbors is initialized to be the K index.
+
+01:36.210 --> 01:42.630
+Then we get discourse with the hop of cross avows score it is imported from secret it learned that modal
+
+01:42.630 --> 01:43.530
+selection.
+
+01:43.560 --> 01:47.440
+This is what we have been discussing when dealing with logistic regression.
+
+01:47.510 --> 01:55.200
+OK so we use a cross-fertilisation we decay an animal model who we the data features and the data target
+
+01:55.440 --> 02:02.670
+we are going to use tan Ford and the scoring is going to be accuracy because we would like to select
+
+02:02.730 --> 02:09.660
+the model with the highest accuracy and then we are going to mandate do this cross values scores data
+
+02:09.660 --> 02:10.490
+structure.
+
+02:10.770 --> 02:14.500
+Okay of course we have to deal with the mean of the scores.
+
+02:14.520 --> 02:19.640
+So this is what we have been discussing that we split the data into K.
+
+02:19.800 --> 02:28.200
+In this case the cazy close to tan and by the way this K so the number of folds is not the same as the
+
+02:28.200 --> 02:31.830
+k Parent-Teacher for k nearest neighbor classifier.
+
+02:31.830 --> 02:39.930
+OK so what's important that we are going to ever reach the results from this experience as far as cross-validation
+
+02:39.930 --> 02:40.840
+is concerned.
+
+02:40.890 --> 02:47.970
+So that's why we have to bend scores that mean we are going to deal with the average of the scores.
+
+02:48.180 --> 02:48.650
+OK.
+
+02:48.660 --> 02:56.210
+And then if we want to find the optimal k value which cross-validation we just have to get a D or a
+
+02:56.210 --> 02:58.790
+max of this gross valid scores.
+
+02:58.830 --> 03:02.480
+Basically this is why we store it in a data structure like this.
+
+03:02.550 --> 03:10.230
+We are going to consider all the K paramita and DS K Peramivir is the number of neighbors as far as
+
+03:10.230 --> 03:13.160
+k nearest neighbor classifier is concerned.
+
+03:13.170 --> 03:20.730
+And then we just have to define the item with the maximum value because the higher the accuracy the
+
+03:20.730 --> 03:21.660
+better the model.
+
+03:21.660 --> 03:24.290
+Of course this is exactly what we are after.
+
+03:24.300 --> 03:29.970
+So as you can see the optimal K-Ville you read cross-validation is 28.
+
+03:30.090 --> 03:37.950
+So if we said the number of neighbors to 28 and reran the algorithm maybe the precision is not going
+
+03:37.950 --> 03:41.540
+to be as high as we have seen in the previous lecture.
+
+03:41.580 --> 03:47.900
+OK by the way it is a sort of accuracy with cross-validation is 98 person.
+
+03:48.060 --> 03:55.080
+So we are able to use cross-validation in order to find the optimal k Peramivir as far as the number
+
+03:55.080 --> 04:00.240
+of nearest neighbors are concerned for the KUNM classify your algorithm.
+
+04:00.300 --> 04:06.900
+OK so this is how we saw that credit scoring read the map of nearest neighbor classifier and we can
+
+04:06.900 --> 04:13.680
+come to the conclusion that it is a better model for this problem than logistic regression.
+
+04:13.860 --> 04:14.760
+Thanks for watching.

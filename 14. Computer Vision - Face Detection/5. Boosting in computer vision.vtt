@@ -1,0 +1,223 @@
+WEBVTT
+
+00:02.540 --> 00:09.200
+In the last lecture we have been talking about the integral image approach and we have come to the conclusion
+
+00:09.410 --> 00:12.120
+that we are able to do the algorithm.
+
+00:12.170 --> 00:16.820
+OK so far so good but there are way too many features.
+
+00:16.820 --> 00:23.760
+So even though we have managed to reduce the Ordo and squared quadratic running time complexity to all
+
+00:23.800 --> 00:30.800
+door one costs and time complexity there are too many features to deal with and most of these features
+
+00:30.860 --> 00:34.610
+are irrelevant and not important at all.
+
+00:34.610 --> 00:41.970
+So somehow we should find an approach in order to select the most important and most relevant features.
+
+00:42.080 --> 00:45.310
+And we can do it with the help of boosting.
+
+00:45.520 --> 00:52.090
+OK so was the basic principle behind boosting is that we have lots of lots of weak learners.
+
+00:52.190 --> 00:57.200
+In this case a weak learner has just a single hard feature.
+
+00:57.200 --> 01:05.090
+So for example the first week learner has just a single hot feature and it is going to decide whether
+
+01:05.090 --> 01:10.160
+the image contains a face or not based on that single feature.
+
+01:10.160 --> 01:17.030
+The second week learner is basically another Haar feature that's going to make the final decision based
+
+01:17.030 --> 01:18.480
+on that given feature.
+
+01:18.500 --> 01:25.310
+The third week learner is basically another hot feature that's going to make the decision based on that
+
+01:25.310 --> 01:32.450
+given feature then we have the next week learner with a very very simple feature and all of these are
+
+01:32.450 --> 01:40.220
+weak learners are going to make the final decision based on a single hard feature you can pose the question
+
+01:40.220 --> 01:47.590
+that OK if we combine lots of this week learners are we able to end up with a strong classifier.
+
+01:47.600 --> 01:52.010
+And the answer is rodder counter-intuitive because yes we can.
+
+01:52.010 --> 01:59.210
+So if we combine lots of lots of weak classifiers we are able to end up with a Parver full classification
+
+01:59.210 --> 02:03.290
+algorithm and that's the main idea behind added boost.
+
+02:03.290 --> 02:09.820
+So we just have to combine these vehicles earner's and we have these alpha para meters and the esoteric
+
+02:09.820 --> 02:13.580
+meter is going to control that given the learner.
+
+02:13.590 --> 02:17.090
+So the vehicle learner is not making predictions.
+
+02:17.170 --> 02:23.050
+Then the alpha value will be very low as you can see the outer perimeter is zero.
+
+02:23.060 --> 02:27.150
+It means that we do not care about the age X weak learner.
+
+02:27.200 --> 02:34.400
+So if we have a very very poor hard feature that's not able to detect whether the image contains a face
+
+02:34.400 --> 02:35.090
+or not.
+
+02:35.240 --> 02:40.110
+Dan we are just going to set the outer perimeter to be a low number.
+
+02:40.160 --> 02:45.760
+For example 0.1 which means that we don't care about that cool feature.
+
+02:46.040 --> 02:51.240
+So at the beginning all of these Ajax weak learners have the same weight.
+
+02:51.410 --> 02:58.580
+OK I don't want to repeat myself over and over again but basically a weak learner is just a simple hard
+
+02:58.580 --> 02:59.540
+feature.
+
+02:59.540 --> 03:01.660
+There are lots of lots of features.
+
+03:01.670 --> 03:07.430
+This is what we have been discussing in one of the previous lectures that usually there are approximately
+
+03:07.430 --> 03:15.820
+200000 features because we can use the same characters with different sizes and different locations.
+
+03:15.830 --> 03:19.870
+So that's why they are going to be a huge number of features.
+
+03:19.910 --> 03:26.890
+Some of them are important features but most of them are irrelevant so not important features.
+
+03:27.050 --> 03:33.170
+OK so we are going to use these weak learners all of them contribute to the final decision.
+
+03:33.170 --> 03:41.180
+So whether a face is detected or not and using the training phase Viola Johnson algorithm updates the
+
+03:41.180 --> 03:43.640
+weights of the Ajax weak learners.
+
+03:43.700 --> 03:44.860
+So the features.
+
+03:44.990 --> 03:49.390
+And finally we have the relevant features with higher weights.
+
+03:49.490 --> 03:56.050
+And if we want to get the final classifier we just have to sum up these vehicles as we.
+
+03:56.060 --> 03:58.140
+These are for parameters of course.
+
+03:58.220 --> 04:04.090
+So the outer perimeter will decide whether we care about that given a feature or not.
+
+04:04.130 --> 04:09.680
+OK I don't want to talk a lot about boosting because we have already discussing boosting in one of our
+
+04:09.680 --> 04:10.910
+previous chapters.
+
+04:10.940 --> 04:13.620
+So this is the algorithm at the beginning.
+
+04:13.650 --> 04:21.710
+All the samples have equal weight 1 divided by n then we pick the H we call earner that minimizes the
+
+04:21.710 --> 04:25.080
+error or this is how we can calculate the Alpha.
+
+04:25.220 --> 04:27.320
+And then we can update the weights.
+
+04:27.450 --> 04:35.470
+So the weight in the next iteration is going to be updated according to this formula on every iteration
+
+04:35.470 --> 04:38.330
+or we are a new age x v learner.
+
+04:38.360 --> 04:43.640
+So we consider another feature in order to end up with the final model.
+
+04:43.700 --> 04:50.600
+OK so in the first iteration the first week learner is able to classify some of the images correctly
+
+04:50.870 --> 04:54.950
+but of course there are going to be some mis classifications.
+
+04:54.950 --> 05:01.640
+So that's why in the next iteration we are going to generate a new week learner and this week learner
+
+05:01.690 --> 05:05.690
+is going to focus on the misclassified items.
+
+05:05.790 --> 05:10.110
+So this is how we can select the most relevant features OK.
+
+05:10.170 --> 05:16.380
+In the first iteration they find a feature that's able to classify given images.
+
+05:16.380 --> 05:19.020
+Then of course we have some misclassification.
+
+05:19.020 --> 05:26.290
+So we have to include more and more Veeck learners and of course of equal earner's means more features.
+
+05:26.310 --> 05:32.580
+So in the next iteration the next week learner tries to classify the misclassified items.
+
+05:32.710 --> 05:33.170
+OK.
+
+05:33.180 --> 05:38.190
+Read the half of the new feature we are able to classify the next image.
+
+05:38.280 --> 05:41.490
+But of course we have some misclassified items.
+
+05:41.550 --> 05:48.030
+So we have to select the next learner in order to be able to classify all the images.
+
+05:48.030 --> 05:55.110
+And this is how we are able to combine vehicle earners in order to end up with the fine strong the classifier
+
+05:55.260 --> 06:02.850
+that's able to use the relevant features in order to detect faces and in order to be able to decide
+
+06:02.910 --> 06:06.660
+whether the image contain a human face or not.
+
+06:06.840 --> 06:12.720
+So basically this is exactly what's happening in the background when using Viola Jones Taghavi them.
+
+06:12.780 --> 06:17.610
+There's one more stat we have to make in order to enhance this algorithm.
+
+06:17.610 --> 06:18.630
+Thanks for watching.

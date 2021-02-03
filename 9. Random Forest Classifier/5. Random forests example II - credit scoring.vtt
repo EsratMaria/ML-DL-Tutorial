@@ -1,0 +1,64 @@
+WEBVTT
+
+00:01.030 --> 00:07.380
+In this lecture we are going to use random as classifier in order to deal with credit scoring.
+
+00:07.420 --> 00:14.260
+So we have been talking about credit scoring for a while for logistic regression the accuracy's 93 percent
+
+00:14.410 --> 00:16.910
+which came nearest neighbor classifier.
+
+00:16.960 --> 00:20.630
+The accuracy is approximately 97 percent.
+
+00:20.780 --> 00:24.320
+OK it's important that we have normalized the data set.
+
+00:24.460 --> 00:32.230
+And what's very important that we have both random for us classifier we can achieve 99 percent accuracy.
+
+00:32.230 --> 00:39.640
+So we just have to read comma separated values file already dated Azzi Yes we we just have to define
+
+00:39.640 --> 00:45.370
+the features income age and loan we can defined target variable.
+
+00:45.370 --> 00:47.020
+We split the data set.
+
+00:47.020 --> 00:55.540
+So I guess 80 percent to 80 percent of the dataset is for the training and 20 percent is for testing.
+
+00:55.740 --> 01:02.620
+We create a random forest classifier with a thousand decision trees who add the maximum features is
+
+01:02.620 --> 01:09.270
+initialized to be the square and then we feed the model and train the model on the training data set
+
+01:09.370 --> 01:11.160
+and then we make predictions.
+
+01:11.170 --> 01:16.960
+So if we run this algorithm the accuracy is going to be 99 percent.
+
+01:17.080 --> 01:20.490
+So this is the best approach so far.
+
+01:20.530 --> 01:28.440
+Random for us classifier is able to outperform logistic regression K nearest neighbor classifier naive
+
+01:28.450 --> 01:30.280
+base classifier and so on.
+
+01:30.280 --> 01:37.580
+So this is why decision trees and random for us classifier are extremely powerful algorithms.
+
+01:37.720 --> 01:43.690
+So in the next lecture we are going to talk about an other dataset and we are going to talk about how
+
+01:43.690 --> 01:47.470
+to tune random foras classifier even more.
+
+01:47.470 --> 01:48.270
+Thanks for watching.

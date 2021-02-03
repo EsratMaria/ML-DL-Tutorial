@@ -1,0 +1,223 @@
+WEBVTT
+
+00:00.630 --> 00:06.300
+High in this video we are going to talk about activation functions.
+
+00:06.300 --> 00:09.100
+So let's get started.
+
+00:09.300 --> 00:16.780
+This is what we have been discussing in the previous video that there are several activation functions.
+
+00:16.890 --> 00:24.030
+We have the step function for percept Thrones and we have sigmoid activation function for the sigmoid
+
+00:24.030 --> 00:25.180
+network owns.
+
+00:25.260 --> 00:28.410
+So basically a stat function is the sign function.
+
+00:28.410 --> 00:35.480
+I'm not sure at all you're familiar with this but this function is going to return a minus on it.
+
+00:35.610 --> 00:45.540
+If the X impled is smaller than 0 and it's going to return plus 1 if the X input value is greater than
+
+00:45.540 --> 00:46.500
+zero.
+
+00:46.680 --> 00:51.920
+So we have to apply one of these activation functions on the Somme.
+
+00:51.930 --> 00:54.020
+We have calculated previously.
+
+00:54.060 --> 00:59.820
+This is what we have been discussing in the previous lecture that does activation functions are going
+
+00:59.820 --> 01:02.590
+to determine the output on the given.
+
+01:02.590 --> 01:03.320
+Now we're on.
+
+01:03.450 --> 01:10.000
+OK first we have to sum up the incoming cycles then we have to apply the activation function on there
+
+01:10.000 --> 01:11.370
+to give us some.
+
+01:11.370 --> 01:16.260
+So this is the step function we are able to transform it several ways.
+
+01:16.260 --> 01:23.580
+For example if we have the X minus a then the stop function is shifted to the right.
+
+01:23.760 --> 01:32.580
+And basically it means that this a is this threshold if that given X import is smaller than a dandy
+
+01:32.670 --> 01:39.550
+step function is going to return the minus swan if the axiom put is greater then the a threshold.
+
+01:39.630 --> 01:42.440
+The step function is going to return a plus one.
+
+01:42.600 --> 01:46.090
+So this a basically is the threshold.
+
+01:46.350 --> 01:47.090
+OK.
+
+01:47.160 --> 01:54.600
+Usually this threshold is zero but a step function can be defined like this that it's not going to return
+
+01:54.600 --> 01:56.580
+a minus one and plus one.
+
+01:56.700 --> 01:59.920
+But it's going to return 0 when Paswan.
+
+01:59.970 --> 02:06.220
+So even the X is smaller than zero then the result is going to be zero.
+
+02:06.390 --> 02:14.120
+And if the input for that stat function is greater than zero then the result will be Paswan.
+
+02:14.520 --> 02:19.650
+So that's all about a step function by Daler other activation functions.
+
+02:19.650 --> 02:27.840
+For example the sigmoid function it is defined something like this wanted D-y by one plus exponential
+
+02:27.840 --> 02:36.210
+function to the power of minus X where X is the input as you can see that it can have the values in
+
+02:36.210 --> 02:40.470
+the range 0 and warm if the input.
+
+02:40.470 --> 02:49.340
+So if the X is very very big then the output of the sigmoid function is going to be won approximately.
+
+02:49.590 --> 02:50.370
+The input.
+
+02:50.370 --> 02:58.350
+So the X is very very small as you can see the value of the sigmoid function is going to be close to
+
+02:58.350 --> 02:59.130
+zero.
+
+02:59.280 --> 03:03.060
+So it's going to be a range 0 and 1.
+
+03:03.150 --> 03:10.510
+But what's very important that it can have the well use between 0 and 1 the sigmoid function.
+
+03:10.560 --> 03:19.450
+Can we turn the well use 0.1 0.2 0.2 to 5 6 0.4 0.8 and so on.
+
+03:19.560 --> 03:26.790
+So instead of a binary output 0 when we want as we have seen for the stat function it can have an output
+
+03:26.790 --> 03:29.430
+value in the range 0 when.
+
+03:29.650 --> 03:32.550
+Any real number in this range.
+
+03:32.610 --> 03:39.090
+But you may have the intuition that OK there's some problem with the sigmoid function and the problem
+
+03:39.270 --> 03:42.840
+is that it doesn't have any negative values.
+
+03:42.960 --> 03:49.600
+And this is why the so-called tangan hyperbolic function has came to be because we are able to return
+
+03:49.630 --> 03:54.040
+values ranging from minor Swane to Swan.
+
+03:54.150 --> 04:03.000
+It is defined like this exponential X minus exponential minus X divide by exponential X plus exponential
+
+04:03.060 --> 04:10.780
+minus X and sometimes it is a better activation function because it can have negative values as well.
+
+04:10.800 --> 04:17.160
+We are not going to have a tank and hyperbolic function as an activation of function in the concrete
+
+04:17.160 --> 04:24.690
+implementations because we are going to use the sigmoid function and we are going to ENIC code the output
+
+04:24.870 --> 04:29.340
+so that the sigmoid function is going to work just fine.
+
+04:29.340 --> 04:32.330
+So that's all about the activation functions.
+
+04:32.370 --> 04:38.760
+We have the step function we have the sigmoid function and we have the tongue and hyperbolic function
+
+04:38.970 --> 04:42.350
+in order we need negative values as well.
+
+04:42.510 --> 04:47.420
+And I don't want to repeat myself over and over again but it's crucial to see that.
+
+04:47.460 --> 04:55.050
+Why is it good to use for example a sigmoid function because it can have the output 0 and Paswan as
+
+04:55.080 --> 04:57.350
+we have seen for desktop function.
+
+04:57.570 --> 05:06.610
+But more important that it can have any values besides one and zero so it can have a well you in the
+
+05:06.610 --> 05:08.520
+range 0 and 1.
+
+05:08.620 --> 05:15.100
+And this is what we are after if you may recall the problem with the percept wrong is that a small change
+
+05:15.100 --> 05:22.150
+in the weights of any single person in the network can sometimes code the output of that percept or
+
+05:22.160 --> 05:26.940
+on to completely flip from zero to 1 or 2 1 to zero.
+
+05:27.100 --> 05:28.840
+And this is why we like sigmoid.
+
+05:28.840 --> 05:34.820
+Now we're on because the input and the outputs can take anywhere between 0 and 1.
+
+05:35.030 --> 05:37.620
+Ok this is what we have been discussing.
+
+05:37.630 --> 05:38.820
+It can be done.
+
+05:38.870 --> 05:44.310
+We hop over the sigmoid activation function has the name sigmoid now wrong.
+
+05:44.440 --> 05:51.640
+And why is it good because we would like to make sure that small changes in the edge weights cause small
+
+05:51.640 --> 05:53.580
+changes in the output.
+
+05:53.620 --> 05:56.270
+We don't want to have Flip's at all.
+
+05:56.290 --> 06:03.070
+So this is why it's good to use sigmoid function instead of the stat function because Spurr sections
+
+06:03.220 --> 06:05.660
+are using stop functions sigmoid.
+
+06:05.690 --> 06:12.460
+Now we're ons are using sigmoid function and this is why if we want to make a good out of network we
+
+06:12.460 --> 06:16.260
+have to use sigmoid now roans banks are watching.

@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.300 --> 00:06.930
+Hide in this video we are going to talk about Didi's scan clustering algorithm.
+
+00:06.930 --> 00:14.060
+It stands for density based spatial clustering of applications with noise D-B ass.
+
+00:14.100 --> 00:22.360
+C a n f is a data clustering algorithm such as Kamins clustering and it is density based.
+
+00:22.470 --> 00:29.210
+So given a set of points in some space it groups to gather points that are closely packed together.
+
+00:29.250 --> 00:36.210
+It is a very very common clustering algorithm and usually it outperforms Kamins clustering because we
+
+00:36.210 --> 00:42.870
+don't have to know each other wants that how many clusters we would like to find and it is a bit faster
+
+00:42.900 --> 00:44.580
+than Kamins clustering.
+
+00:44.760 --> 00:51.750
+So there are given points in a two dimensional plane and if we try to find every single points that
+
+00:51.750 --> 00:56.960
+are separated by a distance no more than a given Absalom's threshold.
+
+00:57.030 --> 01:01.760
+This is the so-called threshold distance what are the same clusters.
+
+01:01.890 --> 01:08.230
+We can hope from a given note to another by hoping no more than this absolute and distance parameter
+
+01:08.520 --> 01:11.130
+these points are in the same cluster.
+
+01:11.360 --> 01:13.900
+OK let's see a concrete illustration.
+
+01:13.920 --> 01:22.120
+We have six data points and we pick one item at random in order to be able to start our algorithm.
+
+01:22.140 --> 01:27.060
+We have a radius basically this absolute distance value.
+
+01:27.210 --> 01:33.480
+And as you can see that we had these points within the range of these Absalom's threshold.
+
+01:33.480 --> 01:39.720
+So it means that we are able to hope to this point and it's going to be in the same cluster as this
+
+01:39.720 --> 01:40.480
+one.
+
+01:40.650 --> 01:47.440
+In this case this point is within the epsilon distance so we are able to hope to this point.
+
+01:47.550 --> 01:48.250
+OK.
+
+01:48.330 --> 01:55.200
+So at this point again is in the same cluster as this point and this point we are able to talk to this
+
+01:55.200 --> 02:00.960
+point but we have already considered this point and we are able to hope to this point because it is
+
+02:00.960 --> 02:03.120
+within the Absolom stands.
+
+02:03.270 --> 02:08.360
+So we are able to visit this point and there are no more always at that point.
+
+02:08.370 --> 02:14.640
+We can always eat within this absolute on the range so we can come to the conclusion that these four
+
+02:14.640 --> 02:16.940
+dots are in the same cluster.
+
+02:17.220 --> 02:23.430
+Let's choose another data point at random that we haven't visited so far for example that one and we
+
+02:23.430 --> 02:24.940
+can come to the conclusion that.
+
+02:24.980 --> 02:27.710
+OK let's consider Dorte.
+
+02:27.770 --> 02:33.310
+Within this absolute range and for example we are able to consider this point.
+
+02:33.500 --> 02:38.150
+OK we hope to that point and we come to the conclusion that there are no.
+
+02:38.190 --> 02:44.990
+And with that it points in this cluster and any Anyways we have visited all the dots in the dataset.
+
+02:45.000 --> 02:47.800
+So that's determination of our algorithm.
+
+02:48.000 --> 02:55.470
+So we have managed to find too close to hers in that given dataset without specifying the K parameter
+
+02:55.650 --> 03:03.420
+as we had to do with K means clustering of course there are some advantages as well as some disadvantages
+
+03:03.420 --> 03:05.820
+for the skin as well.
+
+03:05.820 --> 03:11.510
+So we can find it nonlinearly separable clusters arbitrarily shape clusters.
+
+03:11.520 --> 03:18.420
+It is a huge advantage for D-B scan for Kamin So we have to specify the number of clusters we want to
+
+03:18.420 --> 03:19.250
+find here.
+
+03:19.260 --> 03:23.580
+We do not need to do so we don't have to specify that K perimeter.
+
+03:23.580 --> 03:30.530
+We don't have to use the elbow method in order to approximate the number of Klosters we want to find.
+
+03:30.630 --> 03:36.960
+It is very robust to outliers and the result doesn't depend on the starting conditions.
+
+03:37.260 --> 03:44.820
+Of course we are some additional paramita is the single APS-C long distance threshold Plus the minimum
+
+03:44.820 --> 03:46.440
+number of neighbors.
+
+03:46.860 --> 03:54.180
+Very important that it has a very very fast implementation with though and Logan so linear it may crumbing
+
+03:54.180 --> 04:00.450
+time and we like and prefer algorithms built in the arrhythmic running time quite fast.
+
+04:00.450 --> 04:08.100
+What about the disadvantages and the second is not entirely deterministic border points that are reachable
+
+04:08.100 --> 04:15.790
+for more than one cluster can be part of either cluster depending on the order the data is aerosolized.
+
+04:15.810 --> 04:19.890
+It relies heavily on a distance measure this Absolom radius.
+
+04:20.070 --> 04:26.360
+And in this case we use Euclidean distance or Euclidean measure in higher dimensions.
+
+04:26.370 --> 04:30.780
+It's very hard to find a good value for this absolute value.
+
+04:30.780 --> 04:33.700
+It is the so-called curse of dimensionality.
+
+04:33.770 --> 04:40.560
+Even the data and the scale are not well understood using a meaningful distance threshold Epsilon can
+
+04:40.560 --> 04:42.180
+be very difficult.
+
+04:42.180 --> 04:46.200
+So again we have some advantages and some disadvantages.
+
+04:46.320 --> 04:54.860
+But despite the disadvantages for the scan the an algorithm usually preferred over k means clustering.
+
+04:54.870 --> 04:55.740
+Thanks for watching.

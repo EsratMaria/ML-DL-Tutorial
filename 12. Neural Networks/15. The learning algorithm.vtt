@@ -1,0 +1,229 @@
+WEBVTT
+
+00:00.480 --> 00:05.500
+So let me tell a few words about the concrete algorithm.
+
+00:05.640 --> 00:09.590
+First we have to initialize the educates at random.
+
+00:09.630 --> 00:17.500
+So far we have initialize the weights OK at random but we gave them a well-defined value everything
+
+00:17.520 --> 00:18.320
+go wait.
+
+00:18.510 --> 00:22.940
+So first we have to initialize the weights at random.
+
+00:23.100 --> 00:26.660
+Then we have to calculate the error on every iteration.
+
+00:26.760 --> 00:32.020
+We have some training data and some results from our own network itself.
+
+00:32.100 --> 00:40.180
+For example the X or logical relation we have the training data 0 0 for example and the output for this
+
+00:40.320 --> 00:41.210
+zero.
+
+00:41.310 --> 00:48.810
+Then the next training data zero on the output for this given training data is on for the next training
+
+00:48.810 --> 00:50.310
+day to 1 0.
+
+00:50.370 --> 00:53.080
+The output is worn down for one.
+
+00:53.130 --> 00:54.820
+The output is zero.
+
+00:55.080 --> 01:01.950
+So we have the inputs as x y pairs because in this situation we have two inputs.
+
+01:02.100 --> 01:08.820
+We calculate the sound we all use and the activation function as usual we get an output value and the
+
+01:08.820 --> 01:14.960
+output is not always the same as the output value in the training data.
+
+01:15.090 --> 01:21.160
+That's why we have air or terms and that's why we have to change the edge weights in our own network.
+
+01:21.480 --> 01:26.820
+So we calculate the changes of the weights and they do weights accordingly.
+
+01:26.940 --> 01:35.640
+This is the back propagation process and we keep iterating these steps until the network error is small.
+
+01:35.640 --> 01:37.470
+How we do back propagation.
+
+01:37.580 --> 01:40.800
+OK we have to consider some other issues.
+
+01:40.920 --> 01:43.410
+How to calculate the errors exactly.
+
+01:43.500 --> 01:45.070
+What are the gradients.
+
+01:45.150 --> 01:49.400
+We have to calculate the know the data for every single an on.
+
+01:49.500 --> 01:52.080
+And that's when we can do that propagation.
+
+01:52.080 --> 01:55.170
+We are going to talk about it in the coming radios.
+
+01:55.290 --> 01:59.920
+So we have this feed for now to the network with a single hidden layer.
+
+02:00.120 --> 02:02.920
+We initialize the actuates at random.
+
+02:02.920 --> 02:06.600
+There will we basically run or network on the training data.
+
+02:06.600 --> 02:08.250
+We have the sound function.
+
+02:08.250 --> 02:10.350
+We use activation functions.
+
+02:10.350 --> 02:18.030
+For example if the input is 0 0 and we have the edge weights like this then of course we get 0 0 0 because
+
+02:18.030 --> 02:22.300
+no matter what are the educates if we move to apply them by zero.
+
+02:22.320 --> 02:24.290
+Of course the results will be zero.
+
+02:24.360 --> 02:27.600
+So the output will be zero and the error is zero.
+
+02:27.660 --> 02:34.080
+Because for the X or logical relation when the input is 0 0 0 we should end up with 0.
+
+02:34.080 --> 02:35.650
+The error is 0.
+
+02:35.720 --> 02:43.420
+What if the input is 0 1 then we should get one for the X or logical relation.
+
+02:43.470 --> 02:50.100
+We calculate this and we come to the conclusion that the sum is equal to the 0.35 we apply the step
+
+02:50.100 --> 02:53.120
+function which is going to use plus 1.
+
+02:53.130 --> 02:55.080
+Then we calculate the next.
+
+02:55.080 --> 02:58.750
+Now we're on the sum is a minus zero that's 78.
+
+02:58.920 --> 03:01.560
+If we apply the step function or we get zero.
+
+03:01.560 --> 03:03.440
+This is why it will be 0.
+
+03:03.480 --> 03:05.550
+Then we calculate the sum for the loss.
+
+03:05.550 --> 03:07.270
+Now we're on in the hidden layer.
+
+03:07.290 --> 03:13.970
+It will have the sum zero that 2:56 if we apply the step function the value will be warm.
+
+03:13.990 --> 03:23.580
+So this is how we calculate it and recalculate the output one time 0 that 78 plus 0 times 0.5 plus 1
+
+03:23.580 --> 03:26.700
+times minus 0.4.
+
+03:26.850 --> 03:30.320
+If we apply the step function that the result will be zero.
+
+03:30.420 --> 03:32.070
+So we get zero.
+
+03:32.160 --> 03:38.750
+We out on that network but we should get one according to our training data.
+
+03:38.760 --> 03:41.480
+So of course there's an error here.
+
+03:41.670 --> 03:47.780
+So what do we have to do with Iran or an hour on that on the training data.
+
+03:47.880 --> 03:50.420
+We get the calculated output.
+
+03:50.460 --> 03:57.270
+This is the forward process because we have the imports and we keep feeding the information for the
+
+03:57.270 --> 03:59.900
+next layer then the next layer.
+
+03:59.910 --> 04:06.440
+So that direction is from the input layer in the direction of the output layer.
+
+04:06.450 --> 04:08.450
+So this is the forward process.
+
+04:08.550 --> 04:12.860
+We have the ideal low to boot because it is a superb learning method.
+
+04:12.870 --> 04:19.920
+Then we calculate the error term which is for example of the calculated output minus the ideal output
+
+04:20.220 --> 04:22.810
+and we update the actuates accordingly.
+
+04:22.830 --> 04:24.650
+Okay how do we do it.
+
+04:24.720 --> 04:31.380
+We have to calculate the gradients we have to use learning rate and the momentum we are going to consider
+
+04:31.380 --> 04:33.720
+these terms in the coming videos.
+
+04:33.720 --> 04:40.620
+But after we have updated the educates of course we have to run out on that to work again because the
+
+04:40.710 --> 04:42.670
+educates have been updated.
+
+04:42.690 --> 04:49.710
+So there's going to be a different calculated outputs which may be better then we calculate the ADD
+
+04:49.710 --> 04:50.870
+or term again.
+
+04:50.940 --> 04:56.750
+And on every single iteration the order will be smaller and smaller.
+
+04:56.910 --> 05:01.590
+So we have to iterate until the error it is small enough.
+
+05:01.670 --> 05:03.810
+OK so far so good.
+
+05:03.910 --> 05:07.750
+Then the last questions are how we calculate gradients.
+
+05:07.780 --> 05:11.920
+Why do we have to use learning grade and what is the momentum.
+
+05:11.920 --> 05:16.840
+These are the questions that we are going to discuss in the coming videos.
+
+05:16.840 --> 05:17.710
+Thanks for watching.

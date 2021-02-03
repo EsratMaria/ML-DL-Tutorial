@@ -1,0 +1,325 @@
+WEBVTT
+
+00:01.640 --> 00:07.540
+The first machine learning algorithm we have to consider these so-called linear regression.
+
+00:07.550 --> 00:10.500
+This is the basic machine learning algorithm.
+
+00:10.590 --> 00:18.440
+OK so it is an approach for modeling the relationship between scalar dependent variable y and a one
+
+00:18.470 --> 00:21.500
+or more explanatory variables x.
+
+00:21.650 --> 00:27.300
+That's why this X is a vector as you can see for simple in your regression.
+
+00:27.320 --> 00:29.820
+This is just a single variable.
+
+00:29.840 --> 00:33.080
+So there's a single explanatory variable x.
+
+00:33.080 --> 00:40.370
+So for example we want to approximate the prices of a given house if we know the size of their given
+
+00:40.370 --> 00:41.110
+house.
+
+00:41.400 --> 00:47.000
+Multi-billions regression means that we have several explanatory variables.
+
+00:47.000 --> 00:52.560
+So this X is a vector indeed in the sense that there are several features.
+
+00:52.680 --> 00:57.680
+OK so for example we have these house prices cxxviii file.
+
+00:57.830 --> 01:04.310
+And if we take a look at the headers there are lots of lots of features we are going to approximate
+
+01:04.310 --> 01:05.190
+that price.
+
+01:05.210 --> 01:12.770
+So it is the Y variable is the dependent variable but there are lots of lots of explanitory varietals
+
+01:12.800 --> 01:18.550
+such as the number of bedrooms number of bathrooms square feet of the living room.
+
+01:18.700 --> 01:23.700
+OK the number of floors it degrade the square foot above and so on.
+
+01:23.700 --> 01:27.620
+So there may be lots of lots of features that we can consider.
+
+01:27.650 --> 01:31.870
+So these features are these X explanitory variables.
+
+01:32.090 --> 01:39.260
+If we just deal with a simple variable it is called simple regression such as we just care about the
+
+01:39.260 --> 01:46.460
+size of the given house or we can deal with multiple linear regression problem if we consider several
+
+01:46.460 --> 01:47.300
+features.
+
+01:47.420 --> 01:52.610
+The number of bedrooms the number of bathrooms the size of the house and so on.
+
+01:52.610 --> 01:56.460
+So there are going to be more variables to consider.
+
+01:56.660 --> 02:02.010
+And of course we want to approximate the price of the house if we know despairing meters.
+
+02:02.030 --> 02:08.510
+So the size of the House the number of rooms such as the number of bathrooms the number of living rooms
+
+02:08.510 --> 02:13.630
+and so on and of course because we use linear predictor function.
+
+02:13.760 --> 02:16.880
+Thats why it is called linear regression.
+
+02:16.910 --> 02:21.900
+So we are after a linear relationship between two features.
+
+02:22.010 --> 02:28.940
+Okay so linear regression is a machine learning algorithm and every single machine learning or artificial
+
+02:28.940 --> 02:32.830
+intelligence related algorithm need a data set.
+
+02:32.840 --> 02:39.320
+So thats why we will have these C-s we file with all the relevant information such as the number of
+
+02:39.320 --> 02:46.130
+bedrooms the number of bathrooms the square feet of the living room the number of floors the price of
+
+02:46.130 --> 02:49.510
+that given house because we have of this data set.
+
+02:49.580 --> 02:56.900
+We are able to train a given model such as linear regression in order to find a relationship between
+
+02:56.900 --> 02:57.910
+the features.
+
+02:58.010 --> 03:05.710
+OK so this is the data that we are going to use year in implementation and if we use just a single variable.
+
+03:05.720 --> 03:12.320
+So if we are dealing with simple in the array direction we just have a single explanatory variable.
+
+03:12.320 --> 03:17.540
+For example the size of the house and we have a single dependent variable.
+
+03:17.540 --> 03:21.430
+We would like to approximate such as the price of the house.
+
+03:21.560 --> 03:26.060
+And we are able to create a two dimensional plot like this.
+
+03:26.060 --> 03:32.780
+Of course theres some linear relationship between these features because the bigger the size of the
+
+03:32.780 --> 03:34.940
+house the higher the price.
+
+03:34.940 --> 03:39.150
+Of course there must be some linear dependence.
+
+03:39.350 --> 03:42.260
+OK so what's the aim of linear regression.
+
+03:42.260 --> 03:49.400
+We want to find some linear relationship between the features and if you are familiar with higher mathematics
+
+03:49.670 --> 03:54.070
+a linear relationship can be expressed with this formula.
+
+03:54.110 --> 04:01.970
+So X is the independent variable we use to make predictions in this case this X is the size of the house
+
+04:02.450 --> 04:05.770
+this age X is the dependent variable.
+
+04:05.810 --> 04:12.130
+This is what we are trying to predict or estimate with the apple of the linear regression model.
+
+04:12.140 --> 04:16.200
+So in this case these age X is the price of the house.
+
+04:16.310 --> 04:24.080
+So X is the size age X is the price and we would like to come up with a linear relationship between
+
+04:24.080 --> 04:25.570
+these two variables.
+
+04:25.670 --> 04:30.360
+And of course we need some parameters between zero and to be warm.
+
+04:30.530 --> 04:37.120
+Okay so this equation is the equation of a linear line like this for example.
+
+04:37.130 --> 04:40.140
+So we build a model based on the data set.
+
+04:40.220 --> 04:41.840
+It is a linear model.
+
+04:41.840 --> 04:44.370
+So the result is a linear line.
+
+04:44.480 --> 04:50.760
+And this equation describes a linear line there between 0 and beat one.
+
+04:50.910 --> 04:55.110
+Who will define the location of that given green line.
+
+04:55.160 --> 04:59.230
+OK so the model defines the relationship between the variables.
+
+04:59.270 --> 05:03.450
+In this case between X and age x.
+
+05:03.590 --> 05:10.550
+So this equation is going to define the relationship between the size of the House and the price of
+
+05:10.550 --> 05:11.320
+the house.
+
+05:11.480 --> 05:12.040
+OK.
+
+05:12.050 --> 05:18.620
+And after the training procedure so after we have this linear line we are able to make further predictions
+
+05:18.880 --> 05:25.130
+because if we want to calculate that what can be the price of a house the size.
+
+05:25.130 --> 05:27.810
+For example 90 square meters.
+
+05:27.890 --> 05:29.020
+What do we have to do.
+
+05:29.060 --> 05:36.860
+We just have to use this linear line in order to find the value associated with it the size 90.
+
+05:36.860 --> 05:38.730
+It is something like this.
+
+05:38.810 --> 05:41.090
+So it is going to have a value.
+
+05:41.110 --> 05:43.200
+Four hundred and eighty dollars.
+
+05:43.220 --> 05:46.050
+Of course it is just a simple example.
+
+05:46.100 --> 05:50.760
+These values have nothing to do with real sizes and prizes.
+
+05:50.870 --> 05:53.420
+But this is how linear regression works.
+
+05:53.720 --> 06:01.080
+OK so what does it mean exactly that if we have a new X features such as a new house size we can get
+
+06:01.160 --> 06:05.660
+this age X price of the house we the half of this linear model.
+
+06:05.690 --> 06:07.620
+So this green line.
+
+06:07.700 --> 06:14.120
+OK so the big picture is that we have a huge data set because all machine learning algorithms needs
+
+06:14.120 --> 06:14.600
+one.
+
+06:14.600 --> 06:15.300
+OK.
+
+06:15.350 --> 06:20.580
+So this is the data set we are going to consider in the given implementation.
+
+06:20.660 --> 06:24.110
+We are going to deal with simple near regression.
+
+06:24.110 --> 06:30.800
+So we have the price of the house and we have the size of the house and we would like to find a linear
+
+06:30.800 --> 06:33.730
+relationship between these features.
+
+06:33.740 --> 06:38.800
+So as you can see there are lots of lots of data samples within this dataset.
+
+06:38.810 --> 06:42.010
+So we are going to consider this dataset.
+
+06:42.050 --> 06:48.500
+OK then we are going to train the algorithm which means finding the linear relationship between the
+
+06:48.500 --> 06:56.330
+Ajax and the ACSM arrival as basically we would like to find a pair leaders such as this be 0 and a
+
+06:56.360 --> 07:02.370
+better one in order to define the relationship between x and Ajax.
+
+07:02.510 --> 07:09.310
+We are able to find these between and the beat 0 parameters with the help of optimization algorithms.
+
+07:09.320 --> 07:15.520
+This is what we are going to talk about in the next lecture and after the training procedure we have
+
+07:15.520 --> 07:21.230
+to be there I'll use that which means that we can make predictions with the hop of the model.
+
+07:21.260 --> 07:23.580
+So for new data points.
+
+07:23.810 --> 07:25.900
+OK so we have a data set.
+
+07:26.030 --> 07:33.140
+We have to train the algorithm which means that for linear regression we have defined these the parameters
+
+07:33.390 --> 07:36.340
+we are looking for a linear relationship.
+
+07:36.380 --> 07:40.880
+That's why we are looking for a linear line in this linear equation.
+
+07:40.940 --> 07:47.500
+We have to use some optimization methods in order to find these bita 0 and B to 1 parameters.
+
+07:47.510 --> 07:48.460
+And why is it good.
+
+07:48.470 --> 07:56.030
+Because after all we have this model Ajax is to some beat zero value plus better won't tell you times
+
+07:56.060 --> 07:59.200
+x we are able to make new predictions.
+
+07:59.210 --> 08:06.290
+So if we have a new house we are able to predict the price of that given house because we have this
+
+08:06.290 --> 08:09.990
+linear relationship and we have this linear model.
+
+08:10.040 --> 08:17.030
+Okay in the next lecture we are going to talk about the concrete optimization techniques how to find
+
+08:17.030 --> 08:20.510
+these Beatty's zero and be the one parameters.
+
+08:20.510 --> 08:21.370
+Thanks for watching.

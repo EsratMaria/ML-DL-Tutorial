@@ -1,0 +1,172 @@
+WEBVTT
+
+00:01.050 --> 00:04.800
+In this chapter we are going to talk about boosting.
+
+00:04.980 --> 00:10.830
+So boosting can be use for classification as well as for regression.
+
+00:10.830 --> 00:13.600
+It has to reduce variance and bias.
+
+00:13.620 --> 00:19.560
+This is what we have been talking about in the previous chapter when discussing pruning and bagging
+
+00:19.830 --> 00:25.880
+that these methods are able to reduce variance and it is the same for boosting.
+
+00:26.010 --> 00:28.640
+The aim is to reduce variance.
+
+00:28.680 --> 00:33.470
+OK so begging and boosting are very very similar approaches.
+
+00:33.570 --> 00:35.320
+But there's a huge difference.
+
+00:35.400 --> 00:42.600
+So while begging creates multiple copies of the original data and construct several decision trees on
+
+00:42.600 --> 00:49.470
+the co-pays and combining all the trees to make predictions we can say that the algorithm constructs
+
+00:49.560 --> 00:51.750
+these trees independently.
+
+00:51.780 --> 00:53.770
+So what do I mean exactly.
+
+00:53.790 --> 01:01.470
+I mean that if we have a given dataset and if we know what features to use as far as the random forests
+
+01:01.470 --> 01:08.760
+are concerned than constructing the tree like structures are independent of each other of course in
+
+01:08.760 --> 01:15.840
+the end some of these decision trees may be correlated but it doesn't matter what's important that as
+
+01:15.840 --> 01:23.040
+far as the construction is concerned we are able to generate these decision trees independent of each
+
+01:23.040 --> 01:25.590
+other basically in a parallel manner.
+
+01:25.590 --> 01:26.280
+OK.
+
+01:26.310 --> 01:30.630
+On the other hand boosting is a see commercial algorithm.
+
+01:30.630 --> 01:34.430
+So here are the decision trees are grown SIKMA initially.
+
+01:34.540 --> 01:40.200
+So each tree is grown using information from previously grown trees.
+
+01:40.260 --> 01:46.990
+So these trees are not independent from each other because boosting is a sequence Shanell learning algorithm.
+
+01:47.040 --> 01:54.510
+So when constructing decision trees in a random forest classifier these trees are independent of each
+
+01:54.510 --> 01:57.300
+other as far as boosting is concerned.
+
+01:57.420 --> 02:03.990
+We are going to generate the first decision tree down in the next iteration or we are going to generate
+
+02:04.080 --> 02:10.040
+the next decision tree based on information regarding the first decision tree.
+
+02:10.290 --> 02:17.100
+Ok then in the next iteration we are going to generate the Circuit decision tree based on the information
+
+02:17.160 --> 02:19.560
+of the previous decision trees and so on.
+
+02:19.560 --> 02:22.470
+So it is a sequential algorithm.
+
+02:22.470 --> 02:29.570
+We keep constructing more and more decision trees in order to be able to make better and better predictions.
+
+02:29.610 --> 02:36.350
+OK so that's the main difference between boosting and bagging and it is our counter intuitive theory
+
+02:36.540 --> 02:43.230
+because we are able to combine a weak learners in order to end up with a powerful classifier so weak
+
+02:43.230 --> 02:47.750
+learners are just a bit better than a random guess says or coin flips.
+
+02:47.820 --> 02:48.360
+OK.
+
+02:48.360 --> 02:51.580
+Boosting usually uses decisions stamps.
+
+02:51.600 --> 02:52.710
+So what does it mean.
+
+02:52.740 --> 02:54.320
+These are decision trees.
+
+02:54.330 --> 02:55.750
+We did that one.
+
+02:55.800 --> 03:01.070
+So for example this is a decision stamp it has just a root node.
+
+03:01.200 --> 03:03.840
+And that child and are-I child.
+
+03:03.840 --> 03:07.280
+So this is a decision stamp Where did that warm.
+
+03:07.350 --> 03:15.180
+OK so by fitting small decision trees we slowly improve the final result in cases when it doesn't perform
+
+03:15.270 --> 03:16.250
+out OK.
+
+03:16.290 --> 03:20.840
+By the way we are going to talk about additive boosting or add a boost.
+
+03:20.850 --> 03:23.020
+I go to them in the coming lectures.
+
+03:23.040 --> 03:25.510
+So why do we have to talk about boosting.
+
+03:25.530 --> 03:32.640
+First of all because it is a rather powerful approach and it has lots of lots of useful applications.
+
+03:32.640 --> 03:39.960
+And the most important application of boosting is the viola Jones phase detection algorithm used by
+
+03:40.020 --> 03:42.020
+open C library.
+
+03:42.060 --> 03:49.380
+So it combines decision stands in order to detect faces the learners decide whether a given section
+
+03:49.380 --> 03:55.170
+of that image contains a face or not and it is an extremely accurate algorithm.
+
+03:55.170 --> 03:57.730
+On the other hand it is quite fast.
+
+03:57.780 --> 04:03.660
+So this is the standard algorithm in order to detect faces in one of the coming chapters.
+
+04:03.660 --> 04:06.440
+We are going to talk about phase detection.
+
+04:06.540 --> 04:13.780
+So we are going to talk a lot more about boosting and Viola Jones algorithm in the next lecture.
+
+04:13.800 --> 04:19.530
+We are going to see a concrete illustration of how boosting algorithm works.
+
+04:19.530 --> 04:20.370
+Thanks for watching.

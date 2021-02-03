@@ -1,0 +1,64 @@
+WEBVTT
+
+00:01.360 --> 00:07.220
+In this lecture we are going to talk about the difference between technical and alliances and quantitative
+
+00:07.220 --> 00:11.960
+analysis so technical analysis is about historical data.
+
+00:11.960 --> 00:15.060
+This is what we have been talking about in this chapter.
+
+00:15.080 --> 00:21.010
+We use machine learning algorithms in order to approximate stock prices in the future.
+
+00:21.050 --> 00:24.890
+And we have come to the conclusion that it's not working that fine.
+
+00:24.970 --> 00:31.610
+And as far as I am concerned I'm a huge fan of quantitative analysis because it has an assumption all
+
+00:31.610 --> 00:37.500
+financial quantities such as stock prices or interest rates has random behavior.
+
+00:37.520 --> 00:44.090
+So we have to use randomness in our models stochastic calculus still has the differential equations
+
+00:44.090 --> 00:44.900
+are needed.
+
+00:44.900 --> 00:51.830
+This is why Blackshaw modalist so popular the complexity behind black shows model is able to grasp the
+
+00:51.830 --> 00:56.020
+fundamental randomness that's present in the stock market.
+
+00:56.060 --> 00:58.990
+So I'm not a huge fan of technical analysis.
+
+00:59.120 --> 01:05.960
+Historical data is not going to contain all the information needed to build a good model.
+
+01:06.050 --> 01:11.980
+And that's why machine learning approaches time series and alliances are not going to work that much.
+
+01:12.020 --> 01:16.710
+OK we have seen that with K-ET and KNUS neighbor classifier.
+
+01:16.760 --> 01:21.290
+We can achieve 61 percent accuracy which is not that bad.
+
+01:21.470 --> 01:27.320
+If you have lots of lots of money and you make lots of lots of trades maybe you are able to make money
+
+01:27.320 --> 01:28.420
+on the stock market.
+
+01:28.520 --> 01:35.780
+But if you may recall this accuracy is quite bad as far as for example optical character recognition
+
+01:35.780 --> 01:37.160
+is concern.
+
+01:37.160 --> 01:38.010
+Thanks for watching.

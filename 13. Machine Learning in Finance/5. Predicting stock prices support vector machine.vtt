@@ -1,0 +1,127 @@
+WEBVTT
+
+00:01.250 --> 00:08.330
+In this lecture we are going to talk about how to use support vector machines in order to approximate
+
+00:08.360 --> 00:10.520
+stock prices in the future.
+
+00:10.610 --> 00:17.990
+So we are going to use linear support vector classifier and then we are going to use radial basis cannot
+
+00:17.990 --> 00:21.130
+function and test what is going to be the better.
+
+00:21.140 --> 00:23.350
+As far as accuracy is concerned.
+
+00:23.360 --> 00:29.090
+So we have been talking about that if we have a linearly separable problem support vector the machine
+
+00:29.090 --> 00:31.820
+is going to find the maximum margin.
+
+00:31.820 --> 00:35.020
+That's why it is called the maximum Margene classifier.
+
+00:35.090 --> 00:42.290
+And if we have a nonlinearly separable problem we can use the candle function in order to transform
+
+00:42.290 --> 00:47.190
+the problem into a higher dimensional space with additional features.
+
+00:47.300 --> 00:53.600
+And within this higher dimensional space we are able to end up with the linear hyperplane basically
+
+00:53.780 --> 00:55.300
+in order to separate.
+
+00:55.370 --> 00:58.590
+In this case the green dots from the yellow dots.
+
+00:58.640 --> 01:05.390
+So first we assume that we have a linearly separable problem then we assume that our stock market problem
+
+01:05.420 --> 01:07.240
+is nonlinearly separable.
+
+01:07.250 --> 01:10.150
+So we are going to use a panel function.
+
+01:10.160 --> 01:13.340
+Ok this is the linear support vector classifier.
+
+01:13.400 --> 01:15.830
+So let's see what is the accuracy.
+
+01:15.950 --> 01:22.940
+OK the accuracy is fifty six person which is not that good as you can see we can do better with the
+
+01:22.940 --> 01:26.810
+half of k and n k and n is a very very simple approach.
+
+01:26.810 --> 01:29.000
+On the other hand it is quite powerful.
+
+01:29.030 --> 01:35.750
+We have seen in previous examples when we were talking about KNM classifier So this linear support vector
+
+01:35.750 --> 01:38.230
+classifier is not the best.
+
+01:38.240 --> 01:41.540
+So let's take a look at the radial basis function.
+
+01:41.630 --> 01:48.190
+We are going to use this as we see from stickit learn as we and we use a can function.
+
+01:48.190 --> 01:52.790
+RB Freddi all of these is function with a gamma apparently like this.
+
+01:52.790 --> 01:55.340
+Again feel free to change these parameters.
+
+01:55.340 --> 01:59.130
+Let's take a look at support vector machine to that pi.
+
+01:59.150 --> 02:02.250
+The accuracy is 53 percent.
+
+02:02.330 --> 02:07.370
+So linear classifier can do even better than we do the Cannell function.
+
+02:07.370 --> 02:13.970
+Of course we may change the gamma in order to obtain a better solution and we can't come to the conclusion
+
+02:14.210 --> 02:19.280
+that k n and k nearest neighbor classifier is working quite fine.
+
+02:19.280 --> 02:26.900
+By the way a better approach is to use deep now on networks because deep learning is able to grasp the
+
+02:26.900 --> 02:32.770
+fundamental relationship between the features in order to end up with better accuracy.
+
+02:32.930 --> 02:36.150
+And of course maybe our model is not good.
+
+02:36.200 --> 02:39.220
+Maybe we shouldn't use these features.
+
+02:39.260 --> 02:46.070
+The Legwand lack the lacks free and lack for maybe daily returns in the past has nothing to do with
+
+02:46.070 --> 02:48.040
+directions in the future.
+
+02:48.140 --> 02:54.350
+So that's why we have two tasks tasks and tasks in order to come up with a good machine learning algorithm
+
+02:54.440 --> 02:57.630
+to be able to forecast stock prices in the future.
+
+02:57.630 --> 03:01.470
+But as you can see TNN is working quite fine.
+
+03:01.490 --> 03:02.390
+Thanks for watching.

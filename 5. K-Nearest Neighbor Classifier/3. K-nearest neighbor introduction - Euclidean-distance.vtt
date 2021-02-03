@@ -1,0 +1,211 @@
+WEBVTT
+
+00:01.520 --> 00:08.530
+In this lecture we are going to talk about how to calculate the distances between training samples with
+
+00:08.530 --> 00:15.640
+the half of the Euclidean formula so we can calculate the distance between two points x and y way to
+
+00:15.700 --> 00:16.960
+this equation.
+
+00:17.030 --> 00:24.770
+So we have to calculate the square root of x y and minus y one squared plus X to minus y to square up
+
+00:24.770 --> 00:27.870
+to x and y minus Y and squared.
+
+00:27.920 --> 00:30.200
+So this is the Euclidean formula.
+
+00:30.320 --> 00:33.200
+I'm sure you are familiar with this equation.
+
+00:33.200 --> 00:36.320
+OK so let's apply it to our dataset.
+
+00:36.440 --> 00:44.580
+So we have the feature as sweetness and crunchiness we have the labels fruit protein or vegetable.
+
+00:44.600 --> 00:52.460
+So we have three output classes and if we want to classify new items we have to calculate the Euclidean
+
+00:52.490 --> 00:53.370
+distance.
+
+00:53.510 --> 01:01.490
+OK so for example the distance between tomato and carrot we just have to consider the two features sweetness
+
+01:01.520 --> 01:05.730
+and crunchiness that's why as you can see we have two terms.
+
+01:05.750 --> 01:07.260
+Six miners Southern.
+
+01:07.280 --> 01:11.850
+What does it mean the sweetness barometer for tomato is 6.
+
+01:11.870 --> 01:18.580
+That's why there's a six minus southern because the sweetness paramita of the carrot is Southern.
+
+01:18.590 --> 01:19.850
+We have to square it.
+
+01:19.910 --> 01:22.840
+Plus we have to deal with the other feature.
+
+01:22.850 --> 01:27.280
+So the crunchiness the crunchiness barometer for tomato is for.
+
+01:27.290 --> 01:32.730
+That's why there is a four minus the crunchiness perimeter of the carrot is tan.
+
+01:32.810 --> 01:34.620
+We have to square it down.
+
+01:34.730 --> 01:42.240
+Of course we have to calculate the square root of this entity which turns out to be 6.0 83.
+
+01:42.260 --> 01:46.620
+This is the Euclidean distance between tomato and carrot.
+
+01:46.700 --> 01:53.510
+If we are able to end up with numerical values for the given features such as sweetness and crunchiness
+
+01:53.720 --> 02:01.430
+we are able to use Euclidean formula in order to calculate the distance between the two items in the
+
+02:01.430 --> 02:02.800
+training data set.
+
+02:02.930 --> 02:10.700
+OK so let's calculate the distance between the tomato and all the other entities in the data set.
+
+02:10.700 --> 02:17.720
+OK you may pose the question that why tomato because we would like to classify tomato based on previous
+
+02:17.800 --> 02:19.730
+entities in the dataset.
+
+02:19.760 --> 02:23.230
+So we have Apple bake in a banana carrot and cheese.
+
+02:23.390 --> 02:26.070
+And we would like to classify tomato.
+
+02:26.160 --> 02:29.840
+OK so we have to calculate the Euclidean distances.
+
+02:29.870 --> 02:32.160
+These are the results as you can see.
+
+02:32.240 --> 02:35.510
+And then we have to consider the K paramita.
+
+02:35.660 --> 02:42.890
+So K nearest neighbor a classifier has a senior paramita are called K if K is still on.
+
+02:42.890 --> 02:50.200
+What does it mean that we consider the smallest distance between the tomato and all the other items.
+
+02:50.210 --> 02:55.170
+So we just have to find the lowest value within these values.
+
+02:55.220 --> 02:56.360
+It is the five.
+
+02:56.420 --> 02:59.490
+But basically there are two smallest of values.
+
+02:59.590 --> 03:05.340
+The distance between tomato and bacon and the distance between tomato when banana.
+
+03:05.360 --> 03:11.860
+So as far as k nearest neighbor classifiers is concerned when cazy close to 1.
+
+03:11.870 --> 03:19.070
+So we consider the smallest distance the algorithm can come to the conclusion that it is either a protein
+
+03:19.130 --> 03:26.870
+because bacon is a protein as far as the output label is concerned or it is a fruit because banana is
+
+03:26.870 --> 03:30.350
+a fruit as far as the output label is concerned.
+
+03:30.470 --> 03:35.480
+If cazy close to you we consider that too small as distances.
+
+03:35.510 --> 03:39.850
+In this case the two smallest distances again are five and five.
+
+03:39.950 --> 03:47.060
+So again there's 50 percent chance that it is a fruit or a protein if cazy close to three.
+
+03:47.090 --> 03:51.030
+We have to consider this three smallest distances.
+
+03:51.080 --> 03:59.660
+Bacon banana and cheese because bacon and cheese are proteins as far as the output label is concerned.
+
+03:59.720 --> 04:01.260
+The banana is a fruit.
+
+04:01.280 --> 04:08.000
+So basically there are two proteins and a single fruit cake and an algorithm can come to the conclusion
+
+04:08.210 --> 04:10.440
+that tomato is a protein.
+
+04:10.550 --> 04:14.920
+OK the final question is how to choose this k value.
+
+04:14.930 --> 04:21.790
+So basically the K value will define how many neighbors to use for k and then algorithm.
+
+04:21.950 --> 04:28.790
+OK so it determines how well the model will generalize and work on other data sets.
+
+04:28.880 --> 04:36.530
+If k is too small then noisy Dator or outliers have a huge impact on our classifier.
+
+04:36.530 --> 04:38.670
+This is called underfeeding.
+
+04:38.810 --> 04:42.310
+OK so we have already discussing under faithing.
+
+04:42.470 --> 04:49.040
+This happens when we use a very very simple model instead of a bit more complex swarm.
+
+04:49.160 --> 04:56.560
+OK so it happens when we use a very very simple model which misses the trends in the training data set.
+
+04:56.660 --> 05:04.860
+OK so when k is small it is called under-15 if K-Stew too large on the other hand then the classifier
+
+05:04.860 --> 05:11.370
+has the tendency to predicate the majority class regardless of which neighbors are nearest.
+
+05:11.370 --> 05:13.430
+This is called overfitting.
+
+05:13.500 --> 05:19.050
+So this is the case as we have discussed in one of our previous lectures which means that the algorithm
+
+05:19.050 --> 05:24.950
+is very accurate on the training data set but you'd poor results on the test data.
+
+05:25.140 --> 05:32.300
+OK so the model lowers the noise instead of actual relationships between the variables in the data.
+
+05:32.310 --> 05:41.390
+So we have to be very careful when choosing the optimal k you do small scale you results in under two
+
+05:41.580 --> 05:45.180
+large K-Ville you results in overfitting.
+
+05:45.180 --> 05:49.710
+So this is what we are going to talk about during the implementation.
+
+05:49.710 --> 05:50.550
+Thanks for watching.

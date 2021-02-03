@@ -1,0 +1,172 @@
+WEBVTT
+
+00:01.000 --> 00:07.180
+So far we have been talking about feature detector as we have been talking about feature emacs and we
+
+00:07.180 --> 00:09.600
+have been talking about maximum pooling.
+
+00:09.790 --> 00:14.580
+And there's one last stop we have to consider as far as convolutional.
+
+00:14.590 --> 00:16.570
+Now all networks are concerned.
+
+00:16.570 --> 00:20.350
+So we have the pool feature map that was the last stop.
+
+00:20.350 --> 00:26.260
+This is what we have been discussing in the previous lecture that we have to calculate the maximum values
+
+00:26.500 --> 00:28.460
+out all the feature mapped values.
+
+00:28.480 --> 00:29.240
+Okay.
+
+00:29.380 --> 00:32.980
+And after that we have to apply the flattening operation.
+
+00:33.130 --> 00:34.020
+What is it mean.
+
+00:34.120 --> 00:44.040
+We are going to flatten the given matrix basically as we can see on a row by row basis 2 to 1 2 to 1
+
+00:44.350 --> 00:48.750
+then the next row 1 is 3 0 1 3 0.
+
+00:48.760 --> 00:55.990
+Then the next below 0 1 0 0 1 0 0 you may pose the question that we have to do so because we would like
+
+00:55.990 --> 01:03.250
+to make sure that these values are going to be the input values for a densely connected artificial in
+
+01:03.250 --> 01:06.930
+our role and that of her with the soft Max activation function.
+
+01:07.060 --> 01:15.040
+So basically we just use feature detector feature maps maximum pooling and flattening in order to end
+
+01:15.040 --> 01:21.640
+up with a one dimensional vector that's going to be the boot of a simple in our own network.
+
+01:21.730 --> 01:24.160
+And you may pose the question that why is it good.
+
+01:24.250 --> 01:31.810
+Because after using the Carneal detector after using maximum BORLING this one dimensional vector is
+
+01:31.810 --> 01:35.320
+going to store the most relevant features.
+
+01:35.410 --> 01:42.920
+It is not going to store the unnecessary noise it stores the most important values and basically why
+
+01:42.930 --> 01:50.650
+to use immortally are now on a network because we want to make sure to learn the nonlinear combinations
+
+01:50.650 --> 01:52.920
+of these important features.
+
+01:53.020 --> 01:59.740
+So OK we come to the conclusion that what are the most relevant features for a cat for example the shape
+
+01:59.740 --> 02:04.470
+of the ears the shape of the mouth the cat eyes and so one.
+
+02:04.570 --> 02:12.010
+But now we would like to combine them in order to end up with the good classification algorithm.
+
+02:12.040 --> 02:16.130
+So our classifier is going to work something like this.
+
+02:16.180 --> 02:22.600
+It is going to consider for example this image and it will come to the conclusion that OK it is very
+
+02:22.600 --> 02:31.180
+very similar to the cat ear and the eyes are very very similar to cats and the mouth is very very similar
+
+02:31.240 --> 02:32.500
+to cats mouth.
+
+02:32.560 --> 02:38.240
+Saudi jaggery them will come to the conclusion that with high probability it is a cat.
+
+02:38.260 --> 02:44.100
+So it is going to combine the most relevant features in order to make the prediction.
+
+02:44.110 --> 02:50.530
+So this is why we have to use an artificial neural network with the most relevant feature of values
+
+02:50.590 --> 02:57.250
+as the input in order to learn the non-linear combinations of these important features.
+
+02:57.250 --> 03:02.370
+This is why convolutional now all networks are working extremely fine.
+
+03:02.670 --> 03:08.940
+OK so we use gradient descent or back propagation as usual as far as the training is concerned.
+
+03:09.070 --> 03:15.540
+So basically we keep updating educates according to the error and if we choose the right filter.
+
+03:15.560 --> 03:22.690
+So it's very very important that first we have the image we are going to use several Caml detectors
+
+03:22.900 --> 03:25.920
+and that's why we will have several feature maps.
+
+03:26.150 --> 03:32.890
+OK then we are going to use the really activation function then we are going to use maximum pooling
+
+03:33.130 --> 03:39.670
+then we are going to use flattening then we are going to use a densely connected now run network and
+
+03:39.670 --> 03:44.950
+then we calculate the error term because it is a supervised learning algorithm.
+
+03:44.980 --> 03:52.570
+We know the actual value from the data set we calculate the output from the our own network and of course
+
+03:52.570 --> 03:59.560
+the difference between the two of them is the error term if the error or term is big then we have to
+
+03:59.560 --> 04:02.580
+train in our network with gradient descent.
+
+04:02.710 --> 04:08.280
+So we have to change the educates and we have to change the filters accordingly.
+
+04:08.380 --> 04:13.480
+This is what we have been discussing in one of the previous lectures that there are lots of lots of
+
+04:13.480 --> 04:19.360
+feature detectors sharpened cannel edge detection Cannell nor Carnel.
+
+04:19.390 --> 04:24.000
+So the algorithm is going to choose the best one possible.
+
+04:24.040 --> 04:30.130
+It will come to the conclusion that this edge detection Cannell can detect the most relevant features.
+
+04:30.190 --> 04:36.940
+So we are not going to use sharpened cannel we are not going to use blur kernel because the edge detection
+
+04:36.940 --> 04:39.310
+kernel is the best possible.
+
+04:39.310 --> 04:44.320
+So this is exactly what's going to happen during the training procedure.
+
+04:44.320 --> 04:50.720
+We are feeding the network with label images and if we come to the conclusion that there some error
+
+04:51.040 --> 04:58.340
+then we are going to change the educate and we are going to use another filter another feature detector.
+
+04:58.360 --> 05:01.840
+That's the big picture for convolution Well now we're all networks.
+
+05:02.010 --> 05:02.890
+Thanks for watching.

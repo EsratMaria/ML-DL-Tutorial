@@ -1,0 +1,337 @@
+WEBVTT
+
+00:01.020 --> 00:08.250
+In the previous lecture we have been talking about the actual architecture of recurrent now rail networks.
+
+00:08.370 --> 00:14.160
+So we have come to the conclusion that we can honor roll a given we current Now roll and that work in
+
+00:14.160 --> 00:18.350
+time in order to end up with this given architecture.
+
+00:18.390 --> 00:24.980
+So what's very important that it is a way to well use are shared across every single layer.
+
+00:25.200 --> 00:30.320
+And that's why we have to deal with a vanishing or exploding gradient problem.
+
+00:30.480 --> 00:36.810
+You may pose the question that OK we have been talking about these problems but basically recurrent
+
+00:36.840 --> 00:39.750
+now and that of course can be very very deep.
+
+00:39.750 --> 00:46.190
+So in one of the previous chapter as we have been talking about classifying the Ivey's data that we
+
+00:46.300 --> 00:48.450
+need deep our own networks.
+
+00:48.450 --> 00:52.170
+So in this case we had several hidden layers.
+
+00:52.320 --> 00:56.740
+But basically we just had two or three players.
+
+00:56.790 --> 01:02.620
+So it means that we didn't have to bother about vanishing gradient problem.
+
+01:02.730 --> 01:10.380
+A solution is to use the real you activation function instead of the sigmoid or Tanah activation function
+
+01:10.650 --> 01:15.540
+but basically it was working quite fine here with recurrence.
+
+01:15.540 --> 01:16.780
+Now we're on that works.
+
+01:16.830 --> 01:22.910
+We can have several hundred or up to sever thousand hidden layers hands.
+
+01:22.950 --> 01:27.200
+We have to deal with when itching or exploding gradients problem.
+
+01:27.270 --> 01:31.760
+So when dealing with back propagation we have to calculate the gradient.
+
+01:31.830 --> 01:38.990
+So for every single output we can associate a given last function and the last function.
+
+01:39.030 --> 01:46.000
+Partial derivatives with respect to the double you educates are going to yield the gradients.
+
+01:46.020 --> 01:47.910
+Why do we need the gradient.
+
+01:47.910 --> 01:53.250
+Because this is how we change the given educates you ring back propagation.
+
+01:53.250 --> 02:00.180
+So if we calculate the derivative of the last function with respect to the double you actuates we will
+
+02:00.240 --> 02:01.630
+end up with the sum.
+
+02:01.650 --> 02:08.370
+We just have to sum up every single partial derivative as far as the given layers are concerned.
+
+02:08.550 --> 02:12.480
+Basically we just have to apply the chain rule several times.
+
+02:12.510 --> 02:20.190
+So this partial derivative out t with respect to double use of R is going to be the sum of the given
+
+02:20.300 --> 02:26.940
+educates and of course we have to multiply with the diagonal of the activation functions derivative.
+
+02:27.030 --> 02:29.580
+But anyways this is not that important.
+
+02:29.670 --> 02:35.520
+What's important that we have to multiply the educates in every single layer.
+
+02:35.640 --> 02:43.620
+And if we multiply the weight several times and we apply a given x value which is smaller than one several
+
+02:43.620 --> 02:47.370
+times then the result will get smaller and smaller.
+
+02:47.460 --> 02:54.840
+So if we have several layers then using that propagation we have to apply the given edge weights but
+
+02:55.160 --> 02:58.510
+these values are smaller than the one Dan.
+
+02:58.560 --> 03:02.060
+The gradient is going to be smaller and smaller.
+
+03:02.070 --> 03:09.390
+This is the way Nisshin gradient problem that after making several back propagation stop the gradient
+
+03:09.390 --> 03:15.040
+will be so small that we are not going to make any changes in the previously years.
+
+03:15.060 --> 03:18.900
+So the gradient is going to be smaller and smaller.
+
+03:19.020 --> 03:23.580
+And this is why back propagation is not going to work that well.
+
+03:23.630 --> 03:24.150
+Okay.
+
+03:24.150 --> 03:31.350
+By the way we use back propagation through time which is the same as back propagation but these gradients
+
+03:31.350 --> 03:37.940
+or error or seiners will also flow backward from future time staps to current time stops.
+
+03:38.070 --> 03:45.640
+So h D-plus to then we back propagate to H D plus 1 then we back propagate again into h t.
+
+03:45.750 --> 03:52.330
+So this is why as you can see it flows backward from future time staps to current time stops.
+
+03:52.350 --> 03:58.050
+So this is why we call this kind of back propagation back propagation through time.
+
+03:58.070 --> 04:02.850
+But it is the same as the standard back propagation procedure.
+
+04:02.880 --> 04:08.630
+So this is the vanishing gradient problem that the gradients are going to be smaller and smaller.
+
+04:08.730 --> 04:15.750
+And this is why we are not able to train our and our own network because within the layers further and
+
+04:15.750 --> 04:23.090
+further away from the actual layer the gradients will be so small that we are not going to RBD the edge
+
+04:23.100 --> 04:25.950
+weight if we do not Aberdare the educates.
+
+04:25.980 --> 04:28.860
+Of course there is no training procedure at all.
+
+04:28.860 --> 04:35.560
+So this is the way Nisshin gradient problem where the gradients are going to be smaller and smaller.
+
+04:35.580 --> 04:38.310
+Theres the exploding gradient problem.
+
+04:38.310 --> 04:44.550
+If we move to imply a value that is greater than one several times then the results will get bigger
+
+04:44.610 --> 04:45.510
+and bigger.
+
+04:45.510 --> 04:51.870
+So what does it mean that the gradient is going to be bigger and bigger and we are going to make huge
+
+04:51.870 --> 04:56.410
+changes in later as far away from the actual one.
+
+04:56.430 --> 05:03.390
+And of course we don't want to do this or we just want to add the day to the awaits just the right proportion.
+
+05:03.510 --> 05:09.180
+So no matter that we are dealing with the vanishing ingredients problem or exploding gradient problem
+
+05:09.450 --> 05:11.660
+we have to solve this issue.
+
+05:11.850 --> 05:17.940
+OK so it is a problem when dealing with recurrent now Real Networks because these networks are usually
+
+05:17.940 --> 05:18.890
+very very deep.
+
+05:18.890 --> 05:21.500
+So there are thousands of hidden layers.
+
+05:21.660 --> 05:24.880
+So somehow we have to deal with this issue.
+
+05:24.990 --> 05:30.180
+And you may pose the question that why when is she in gradient is a problem because gradients become
+
+05:30.180 --> 05:37.740
+too small or too large which makes the model difficult to cope with longer range dependences if the
+
+05:37.740 --> 05:40.570
+gradient is going to be very small.
+
+05:40.590 --> 05:46.760
+We are not going to update the educate further away from the actual layer.
+
+05:46.770 --> 05:48.740
+This is what we want to avoid.
+
+05:48.750 --> 05:56.760
+We would like to make sure that our recurrent our own network is able to deal with items quite far away
+
+05:56.760 --> 05:57.990
+from each other.
+
+05:57.990 --> 06:06.660
+This is why a well-trained current and our network is able to predict that a Hungarian guy speaks fluent
+
+06:06.690 --> 06:07.780
+Hungarian.
+
+06:07.860 --> 06:14.940
+So we would like to deal with items that are very very far away from each other and the gradient is
+
+06:14.940 --> 06:16.160
+very very small.
+
+06:16.170 --> 06:23.230
+We are not going to date weights in a given layer that's far away from the actual one.
+
+06:23.250 --> 06:29.510
+So this is why we have to deal with 20 shin gradient problem ok for recurrence now.
+
+06:29.570 --> 06:36.470
+Real Networks local optima are a much more significant problem than we'd feedforward our own networks.
+
+06:36.540 --> 06:38.040
+This is the last function.
+
+06:38.130 --> 06:44.310
+And as you can see there are lots of lots of local optima which makes the optimization problem even
+
+06:44.310 --> 06:45.160
+harder.
+
+06:45.180 --> 06:52.560
+So the error or function suffers is quite complex these complex surfaces have several local optima and
+
+06:52.560 --> 06:54.790
+we want to find the global one.
+
+06:54.810 --> 07:01.740
+For example we can use matter how eristic approaches instead of gradient or still has degraded descent.
+
+07:01.980 --> 07:08.820
+OK I don't want to repeat myself over and over again but this is why we have to deal with optimisation
+
+07:08.880 --> 07:14.010
+algorithms before starting the concrete implementation of our networks.
+
+07:14.010 --> 07:20.880
+There are lots of lots of matter how artistic optimization methods such as simulated annealing genetic
+
+07:20.970 --> 07:28.970
+algorithms or porticos from optimization that can be used to be very very useful in these kinds of situations.
+
+07:28.980 --> 07:35.670
+OK so when there are lots of lots of local optima and we are after the global one then matter how eristic
+
+07:35.670 --> 07:43.020
+approaches are working extremely fine genetic algorithms simulated annealing or something like this.
+
+07:43.020 --> 07:43.550
+OK.
+
+07:43.560 --> 07:50.190
+So the final question is how to deal with all vanishing or exploding gradients problem dealing with
+
+07:50.250 --> 07:53.160
+exploding gradients problem is quite easy.
+
+07:53.160 --> 08:00.420
+We can use truncated back propagation Srey time algorithm which means that we use simple back propagation
+
+08:00.660 --> 08:04.680
+but we only do that propagations K time stops.
+
+08:04.740 --> 08:10.160
+So we are not going to visit every single hidden layer in a previous time stops.
+
+08:10.320 --> 08:13.320
+We are just going to visit k he didn't.
+
+08:13.360 --> 08:14.300
+OK.
+
+08:14.340 --> 08:16.550
+Or we can adjust the learning rate.
+
+08:16.560 --> 08:24.260
+We are enmasse Propp which is an adaptive algorithm we normalize the gradients and using moving average
+
+08:24.300 --> 08:31.140
+over the root mean squared gradient in order to add the date and adjust the learning rate accordingly.
+
+08:31.290 --> 08:34.790
+So this is how we can deal with exploding gradients problem.
+
+08:34.830 --> 08:42.020
+It is much more easier to detect this problem and it is much more easier to deal with this problem when
+
+08:42.050 --> 08:45.110
+issuing gradient problem is a bit more complex.
+
+08:45.120 --> 08:50.050
+It is harder to detect and it is harder to cope with this problem.
+
+08:50.070 --> 08:54.900
+We can initialize the weights properly with Zawia initialization.
+
+08:54.990 --> 09:01.530
+We can use proper activation functions such as that rectified linear unit activation function instead
+
+09:01.530 --> 09:07.870
+of the sigmoid one or we can use other are heat factors such as Al SDM.
+
+09:07.920 --> 09:14.220
+So long short term memory architecture or gated recurrent unit architecture.
+
+09:14.310 --> 09:20.340
+This is what we are going to discuss in the coming lectures and why is it important to consider these
+
+09:20.510 --> 09:26.100
+architectures because we would like to avoid any sheen gradients problem.
+
+09:26.100 --> 09:26.950
+Thanks for watching.

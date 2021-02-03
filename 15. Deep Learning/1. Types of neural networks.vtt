@@ -1,0 +1,148 @@
+WEBVTT
+
+00:01.000 --> 00:06.230
+In this lecture they are going to talk about the different types of natural networks.
+
+00:06.230 --> 00:12.110
+So there are lots of lots of types of natural networks and there are several types of learning such
+
+00:12.110 --> 00:19.500
+as supervised learning and unsupervised learning as far as supervised learning is concerned.
+
+00:19.550 --> 00:25.600
+There is a given dataset on which we are going to train our own network.
+
+00:25.610 --> 00:29.150
+For example we have the x or logical relation.
+
+00:29.300 --> 00:32.570
+And that's why we have two features X and Y.
+
+00:32.750 --> 00:41.750
+And we have the labels basically the x or the values accordingly 0 0 and the label is 0 0 1.
+
+00:41.750 --> 00:42.900
+The label is 1.
+
+00:42.920 --> 00:50.410
+So for supervised learning we have a data set like this and we are going to train our natural network
+
+00:50.630 --> 00:52.620
+on a given dataset.
+
+00:52.760 --> 00:59.630
+So at the end of the training procedure our natural network will learn the relationship between the
+
+00:59.630 --> 01:00.820
+given features.
+
+01:00.860 --> 01:03.300
+In this case we have two features.
+
+01:03.320 --> 01:04.720
+X and Y.
+
+01:04.790 --> 01:07.550
+So this is called supervised learning.
+
+01:07.550 --> 01:14.190
+When we have given a data set as far as honest supervised learning is concerned we don't have a data
+
+01:14.190 --> 01:15.520
+set at all.
+
+01:15.530 --> 01:21.710
+The algorithm itself is going to make the classification or any other problem we dealt.
+
+01:21.740 --> 01:23.500
+Any data set.
+
+01:23.510 --> 01:30.050
+So as far as supervised learning is concerned there are artificial now and networks these networks are
+
+01:30.050 --> 01:33.590
+used for regression and classification.
+
+01:33.590 --> 01:39.520
+Then there are convolutional now where all the networks these networks are used for computer vision.
+
+01:39.560 --> 01:42.290
+So basically this is the most important.
+
+01:42.290 --> 01:49.610
+Now will the network as far as self-driving cars are concerned as far as pedestrian detection is concerned
+
+01:49.610 --> 01:50.510
+and so on.
+
+01:50.540 --> 01:58.330
+So convolutional now a rail network is one of the main reasons why deep learning is working quite fine.
+
+01:58.370 --> 02:00.990
+Then there are a recurrent now rule and that works.
+
+02:00.990 --> 02:07.280
+These networks can be used for time series analyzes I'm not sure whether you are familiar with the time
+
+02:07.280 --> 02:16.320
+series but basically you can analyze time series with several approaches such as auto correlation functions.
+
+02:16.330 --> 02:23.030
+There are lots of lots of models such as outmoded receive models moving ever reach modals and any other
+
+02:23.030 --> 02:29.460
+hetero's scholastic models in order to make some predictions on the stock market or only for X..
+
+02:29.480 --> 02:32.290
+So we drop off recurrent narrow networks.
+
+02:32.390 --> 02:37.120
+We are able to analyze time series we had artificial intelligence.
+
+02:37.150 --> 02:43.970
+OK as far as unsupervised learning this concern about some of the machines and outswing corridors and
+
+02:43.970 --> 02:50.960
+south organized maps are the most important algorithms these approaches are used for recommendation
+
+02:50.960 --> 02:54.120
+systems as well as for feature detection.
+
+02:54.170 --> 03:00.650
+So this is one of the most complex problems as far as artificial intelligence is concerned is how to
+
+03:00.650 --> 03:03.510
+select the features what are the features.
+
+03:03.560 --> 03:07.170
+Features are basically the columns in the data set.
+
+03:07.280 --> 03:13.260
+In this case for the X or logical relationship the features are x and y.
+
+03:13.370 --> 03:18.840
+But as far as time series are concerned there can be lots of lots of features.
+
+03:18.890 --> 03:20.530
+For example the stock price.
+
+03:20.530 --> 03:25.370
+Yesterday the stock price two days ago the stock price three days ago.
+
+03:25.400 --> 03:27.100
+These are all features.
+
+03:27.140 --> 03:34.850
+So somehow we have to sell at the most important and most relevant features in order to make good predictions.
+
+03:34.850 --> 03:42.710
+So South organizing maps can detect features and aboard some of the machines and our two encoders can
+
+03:42.710 --> 03:45.450
+be used for recommendation systems.
+
+03:45.470 --> 03:50.180
+So basically these are the most important approaches in artificial intelligence.
+
+03:50.180 --> 03:51.000
+Thanks for watching.

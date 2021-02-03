@@ -1,0 +1,166 @@
+WEBVTT
+
+00:00.330 --> 00:06.060
+High in this video I'm going to talk a bit about day care functions.
+
+00:06.120 --> 00:11.720
+I'm not going to go into details if you are interested in supporting actor machines.
+
+00:11.730 --> 00:19.200
+There are lots of lots of articles and open courses from MIT and Princeton and you can take a look at
+
+00:19.200 --> 00:23.180
+the concrete quadratic optimization related problems and so on.
+
+00:23.280 --> 00:30.240
+But what's very important that we have this function is basically this fefe function defines the mapping
+
+00:30.450 --> 00:33.480
+of the data X into another space.
+
+00:33.480 --> 00:39.880
+For example in the higher dimensional space we dislike we're liable and we are usually interested in
+
+00:39.990 --> 00:41.930
+in the cardinal function.
+
+00:42.030 --> 00:46.170
+So we decay X Sabai and X sobbed J.
+
+00:46.290 --> 00:52.710
+And basically the scandals function is the dot product of two three function.
+
+00:52.710 --> 00:59.690
+So the function is basically the representation of the given vector in the outer space.
+
+00:59.910 --> 01:05.850
+And what's very important that we are interested in the cardinal function which is the dot product of
+
+01:05.880 --> 01:13.230
+two functions and it is a very very important concept that as far as the optimization is concerned the
+
+01:13.230 --> 01:20.790
+optimization depends on the dot products only and we don't care about the concrete transformation we
+
+01:20.790 --> 01:30.910
+just care about the dot product of two vectors Diffie X Y for example dorper that the three x sobbed
+
+01:30.930 --> 01:31.620
+J.
+
+01:31.620 --> 01:38.520
+So we are not interested in the concrete transformation that how we are going to map the data X into
+
+01:38.610 --> 01:40.530
+a higher dimensional space.
+
+01:40.650 --> 01:48.030
+We are just curious about the dot product between the two vectors in the outer space and this scandal
+
+01:48.030 --> 01:52.340
+function defines the dot product of these two functions.
+
+01:52.350 --> 01:56.370
+There are several cardinal functions the linear kernel function.
+
+01:56.460 --> 01:58.410
+The polynomial can function.
+
+01:58.560 --> 02:04.840
+And this is what we are going to use in Python to learn the radial daisies function.
+
+02:04.860 --> 02:07.660
+Usually it's working very very fine.
+
+02:07.680 --> 02:11.200
+So we have to apply it to two vectors basically.
+
+02:11.420 --> 02:18.890
+And it is going to define this transformation and it is called the Gaussian already obeys its function
+
+02:18.900 --> 02:19.920
+cannel.
+
+02:19.920 --> 02:27.240
+So support vector machines with nonlinear Cardinals odd additional dimensions to the data in order to
+
+02:27.240 --> 02:30.060
+create separation in this way.
+
+02:30.210 --> 02:31.810
+We have the cardinal trick.
+
+02:31.890 --> 02:40.050
+It is the fundamental basis for of actor machines is the process of our new features that express mathematical
+
+02:40.050 --> 02:43.950
+relationships between measured characteristics.
+
+02:43.950 --> 02:50.460
+This allows the support vector machine to learn concepts that were not explicitly measured in the original
+
+02:50.460 --> 02:51.810
+data set.
+
+02:51.870 --> 02:58.090
+Of course there are some advantages as well as some disadvantages for support back to the machines.
+
+02:58.140 --> 03:04.080
+The advantages are that supporting actor or machine can be used for expression problems as valid for
+
+03:04.080 --> 03:05.070
+classification.
+
+03:05.070 --> 03:10.370
+Basically we can use support back to the machine algorithm to what ever problem we want.
+
+03:10.470 --> 03:17.150
+It is not overly influenced by noisy data and it's easier to use than our own that works.
+
+03:17.160 --> 03:18.940
+What are the disadvantages.
+
+03:19.230 --> 03:26.320
+Finding the best model requires testing of various combinations of cameleers and model parameters.
+
+03:26.340 --> 03:33.390
+What are the model parameters for example of that see cost parameter that we have discussed in the non-linear
+
+03:33.390 --> 03:36.510
+model or for example the camel itself.
+
+03:36.540 --> 03:43.050
+We have been discussing that there are several caravels linear Cannell polynomial Cannell already are
+
+03:43.050 --> 03:48.840
+Basie's function can land so one we have 8:02 that was the best fit for our model.
+
+03:48.870 --> 03:54.410
+It is quite slow especially when the input data set has a large number of features.
+
+03:54.680 --> 03:59.180
+And what's very important that support vector machine is a black box model.
+
+03:59.190 --> 04:01.140
+It's very very hard to understand.
+
+04:01.200 --> 04:03.540
+For example cany less neighbor.
+
+04:03.570 --> 04:07.720
+It is a very simple algorithm and it's quite easy to comprehend.
+
+04:07.810 --> 04:09.730
+It's what's happening in the background.
+
+04:09.960 --> 04:11.790
+For supper it's back to the machines.
+
+04:11.790 --> 04:18.070
+It's not that easy to get the fundamental basics behind support back to our machines.
+
+04:18.270 --> 04:21.890
+So that's all about the advantages and disadvantages.
+
+04:22.170 --> 04:23.100
+Thanks for watching.

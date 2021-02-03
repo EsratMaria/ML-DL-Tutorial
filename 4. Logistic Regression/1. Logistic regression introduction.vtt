@@ -1,0 +1,454 @@
+WEBVTT
+
+00:01.440 --> 00:06.370
+Enter this given chapter we are going to talk about logistic regression.
+
+00:06.370 --> 00:13.030
+So in the last lecture we have been discussing linear regression and linear regression soul's regression
+
+00:13.030 --> 00:14.410
+related problems.
+
+00:14.470 --> 00:16.760
+So the prediction is a miracle.
+
+00:16.760 --> 00:23.710
+They'll You for example have the features such as the size of the flat the number of bedrooms the number
+
+00:23.710 --> 00:25.380
+of bathrooms and so on.
+
+00:25.510 --> 00:33.340
+And in this model so linear regression is able to predict the price and the price is an American value.
+
+00:33.400 --> 00:39.640
+OK so this was the problem we have been discussing that we have the size of the house and we have the
+
+00:39.640 --> 00:41.370
+prices accordingly.
+
+00:41.380 --> 00:46.950
+And as you can see with the help of the model we are able to assign a numerical value.
+
+00:46.960 --> 00:52.200
+Basically the price of the house in dollars to every single size.
+
+00:52.300 --> 00:57.860
+On the other hand logistic regression solves classification related problems.
+
+00:57.940 --> 01:05.640
+Usually we use this method for binary classification when dealing with spam detection for emails.
+
+01:05.680 --> 01:08.480
+The email can be spam or not.
+
+01:08.500 --> 01:17.730
+So 0 or 1 or predicating if a customer will default on a loan or not the result can be 0 or 1 in default
+
+01:17.770 --> 01:18.730
+or not.
+
+01:18.730 --> 01:26.410
+So the outcome of a dependent variable is discrete instead of a numerical value we have seen for linear
+
+01:26.410 --> 01:32.860
+regression linear regression is a continuous model logistic regression is a discrete model.
+
+01:32.860 --> 01:33.420
+OK.
+
+01:33.430 --> 01:39.920
+And what's more important that logistic regression assigns probabilities to given outcomes.
+
+01:40.000 --> 01:45.720
+So the output is a probability that a given input belongs to a certain class.
+
+01:45.760 --> 01:51.580
+For example if we have a given e-mail logistic regression is able to detect that.
+
+01:51.610 --> 01:52.290
+OK.
+
+01:52.310 --> 01:59.470
+There is 80 percent chance that this e-mail is a spam and 20 percent chance that it is not.
+
+01:59.470 --> 02:05.140
+So it's very very important that we are dealing with probabilities with logistic regression which is
+
+02:05.140 --> 02:11.840
+quite favorable because with the help of linear regression we are able to decide the price of the house.
+
+02:11.890 --> 02:15.160
+But we are not able to assign a given probability.
+
+02:15.160 --> 02:20.670
+We don't know that whether it is 10 percent accurate or it is 90 percent accurate.
+
+02:20.830 --> 02:27.460
+And that's why the largest creation is quite useful because we are able to assign probabilities to given
+
+02:27.510 --> 02:28.620
+out guns.
+
+02:28.630 --> 02:32.110
+OK so let's consider the problem of credit risk.
+
+02:32.110 --> 02:39.340
+For example you are working in an investment bank and your job is to decide whether the given client
+
+02:39.550 --> 02:42.810
+will be able to pay back that debt or not.
+
+02:42.820 --> 02:47.880
+Of course we have a dataset with some excellent authority varietals in this case.
+
+02:47.900 --> 02:51.450
+The x is equal to the balance on the credit card.
+
+02:51.730 --> 02:53.930
+$300 $500.
+
+02:53.980 --> 02:56.560
+Eight hundred dollars and a thousand dollars.
+
+02:56.750 --> 03:04.840
+And why were arguable is basically a binary class whether the client is able to pay back the debt or
+
+03:04.870 --> 03:07.030
+not 0 or warm.
+
+03:07.100 --> 03:14.650
+OK so in our example it is quite straightforward that if the given client do not have much money on
+
+03:14.650 --> 03:20.040
+the credit card of course he or she will not be able to pay back the debt.
+
+03:20.050 --> 03:22.630
+So that's why there's going to be zero.
+
+03:22.660 --> 03:26.030
+The client will default on the other hand.
+
+03:26.170 --> 03:30.150
+There is lots of lots of money on the credit card declined.
+
+03:30.240 --> 03:32.490
+We'll be able to pay back the loan.
+
+03:32.500 --> 03:35.880
+So that's why the outcome is going to be open.
+
+03:35.890 --> 03:38.650
+It is a binary classification problem.
+
+03:38.730 --> 03:46.040
+OK so if we apply linear regression for this classification problem it's not going to be a good idea.
+
+03:46.090 --> 03:46.640
+Why.
+
+03:46.660 --> 03:54.100
+First of all because if we apply a linear regression for this problem that it will have values outside
+
+03:54.100 --> 03:55.860
+the 0 1 range.
+
+03:55.870 --> 04:03.550
+So as you can see a linear regression can yield values smaller than 0 and they'll use greater than 1.
+
+04:03.550 --> 04:10.300
+So what does it mean if we are dealing with a classification problem like this where 0 means that the
+
+04:10.300 --> 04:16.130
+client has defaulted and or one means that the client is able to pay back the loan.
+
+04:16.150 --> 04:22.150
+What is it mean that the linear regression result is minus one for example.
+
+04:22.150 --> 04:28.710
+So of course we have to make sure that the results will be within the range 0 when warm.
+
+04:28.720 --> 04:32.410
+The second problem that it is sensitive to outliers.
+
+04:32.500 --> 04:40.210
+So if we use linear regression and we have an outlier as you can see the outlier is going to change
+
+04:40.210 --> 04:43.570
+the linear regression line in a dramatic manner.
+
+04:43.690 --> 04:47.310
+OK so we should use something like this instead.
+
+04:47.440 --> 04:51.590
+So we would like to end up with this so-called sigmoid function.
+
+04:51.640 --> 05:00.130
+First of all because it has the values between 0 and 1 it is not sensible to outliers and we are able
+
+05:00.130 --> 05:03.670
+to kind of probabilities do given actions.
+
+05:03.670 --> 05:05.650
+So basically this is what we are after.
+
+05:05.650 --> 05:10.960
+This is why we don't like linear regression when dealing with classification problems.
+
+05:10.960 --> 05:18.470
+And this is why we prefer logistic regression because we are able to assign probabilities to given outcomes.
+
+05:18.580 --> 05:24.280
+So we have come to the conclusion that we have to use this so-called sigmoid function because it has
+
+05:24.280 --> 05:26.830
+lots of lots of favorable properties.
+
+05:26.830 --> 05:28.800
+So what is the sigmoid function.
+
+05:28.930 --> 05:34.980
+The sigmoid function is equal to one divided by one plus each to the Parver of minus x.
+
+05:35.050 --> 05:37.090
+This is the sigmoid function.
+
+05:37.090 --> 05:40.440
+We are able to solve the problems we have discussed here.
+
+05:40.570 --> 05:41.390
+OK.
+
+05:41.530 --> 05:48.360
+So it has the value between 0 and 1 hence it can be interpreted as probability.
+
+05:48.430 --> 05:55.820
+OK so we the hap of this sigmoid function we are able to assign probabilities to given actions.
+
+05:56.020 --> 06:05.020
+OK so in this case the p x is the probability of default given as Blands so that p x is equal to the
+
+06:05.020 --> 06:08.090
+probability that the why is the close to on.
+
+06:08.110 --> 06:14.350
+What does it mean the y in this case is whether the client is able to pay back the loan.
+
+06:14.380 --> 06:17.320
+It can be one and it can be zero.
+
+06:17.380 --> 06:23.560
+So if we want to calculate the probability that the client will be able to pay back the loan.
+
+06:23.560 --> 06:28.930
+That's why the why is Eco's still wanted it given x goes to the balance.
+
+06:28.960 --> 06:35.650
+So basically we would like to calculate the probability that the client is able to pay back the loan.
+
+06:35.710 --> 06:38.280
+If we know the balance on the credit card.
+
+06:38.380 --> 06:45.100
+OK so we just have to use this formula that the probability of this action that the client has a given
+
+06:45.100 --> 06:52.860
+balance and he or she will be able to pay back the loan the probability of this action is ECOs Tijuana
+
+06:52.870 --> 07:01.990
+divided by 1 plus E to the Parver of minus beater's zero plus veto times X where X Y Z goes to the balance
+
+07:01.990 --> 07:03.130
+on the credit card.
+
+07:03.130 --> 07:07.630
+OK so these be the perimeter as again are the model parameters.
+
+07:07.690 --> 07:10.970
+It is the same as we have discussed for linear regression.
+
+07:10.990 --> 07:18.030
+Basically the aim of logistic regression is to find out the optimal values for these parameters.
+
+07:18.050 --> 07:24.250
+There are several ways to fit the model with the help of gradient descent or with the map of maximum
+
+07:24.250 --> 07:25.330
+likelihood method.
+
+07:25.360 --> 07:25.830
+Okay.
+
+07:25.840 --> 07:30.000
+And by the way we can define the so-called logit transformation.
+
+07:30.010 --> 07:35.960
+So the nature of the logarithm of the X divided by one of mine SBX.
+
+07:35.960 --> 07:37.340
+What is the P x.
+
+07:37.340 --> 07:44.800
+P X is Eco's Tijuana divided by 1 plus E to the power of minus beat is 0 plus B to one times x.
+
+07:44.800 --> 07:51.600
+Basically this is the sigmoid function and the logi transformation is equal to zero.
+
+07:51.610 --> 07:53.840
+Plus B to 1 times x.
+
+07:53.860 --> 07:58.180
+So the point of the logic transformation is to make linear.
+
+07:58.180 --> 08:03.730
+So logistic regression is a linear regression on the logit transformation.
+
+08:03.730 --> 08:11.680
+If we apply the logic to transformation on a P X divided by one minor speakes we end up with this formula
+
+08:11.680 --> 08:14.940
+which is very very similar to linear regression.
+
+08:14.950 --> 08:21.810
+That's why we can say that logistic regression is a linear regression on the logit transformation.
+
+08:22.080 --> 08:27.500
+You can pose the question that ok how to find these vitis zero and better one parameters.
+
+08:27.640 --> 08:34.560
+Again we can use gradient descent or a maximum likelihood method usually for logistic regression.
+
+08:34.660 --> 08:36.940
+We use maximum likelihood method.
+
+08:37.060 --> 08:41.580
+That's why we are going to talk a lot more about it in the coming lectures.
+
+08:41.770 --> 08:48.580
+But what's very important that it is so low Taoistic regression is a generalized linear model not because
+
+08:48.580 --> 08:52.520
+the estimated probability of the response is linear.
+
+08:52.660 --> 08:55.120
+So if we take a look at it this function.
+
+08:55.120 --> 09:01.690
+Of course it is not linear but because the logic Brant's formation of the estimated probability.
+
+09:01.690 --> 09:08.390
+So the nature of a logarithm of the agues divide by 1 minus B yeggs this is the Lotti transformation.
+
+09:08.410 --> 09:14.590
+So the Lotti transformation of the estimated probability response is a linear function of the parameters.
+
+09:14.710 --> 09:21.460
+Because as you can see if we make the logi transformation we end up with a linear function of paramita
+
+09:21.460 --> 09:24.670
+and B to 0 plus B to 1 times x.
+
+09:24.700 --> 09:27.370
+It is very similar to linear regression.
+
+09:27.370 --> 09:33.040
+Basically it is a linear combination of x values and bita values.
+
+09:33.050 --> 09:40.660
+OK we can talk about simple logistic regression and multinomial logistic regression if we have just
+
+09:40.660 --> 09:42.420
+a single experimenter.
+
+09:42.430 --> 09:47.040
+For example in this case x is the balance on the credit card.
+
+09:47.080 --> 09:54.370
+We have a simple explanitory variable and we would like to approximate whether the output will be 1
+
+09:54.430 --> 09:55.980
+or 0 1.
+
+09:56.020 --> 10:02.580
+If the client is able to pay back the loan 0 if the client is not able to pay back the loan.
+
+10:02.580 --> 10:04.230
+This is called default.
+
+10:04.290 --> 10:11.490
+So for example balance on the credit card in this case we have to use this formula 1 plus E-2 the power
+
+10:11.490 --> 10:18.590
+of mine is below zero plus B to 1 times X because we just have a single explanatory variable.
+
+10:18.630 --> 10:25.170
+The balance on the credit card we can deal with the multinomial logistic regression where we have multiple
+
+10:25.230 --> 10:26.330
+experimenter's.
+
+10:26.400 --> 10:33.390
+For example we consider not just the balance on the credit card exclusively but at the age of the client
+
+10:33.630 --> 10:39.300
+the gender of the client demographics loan it to income ratio and so on.
+
+10:39.360 --> 10:45.810
+So in this case we have to use approximately the same formula with the sigmoid function but instead
+
+10:45.810 --> 10:52.890
+of dealing with a single explanitory voluble we are going to have several varietals because we have
+
+10:52.890 --> 10:54.480
+balance on credit card.
+
+10:54.600 --> 10:57.410
+This is the X1 we have the age.
+
+10:57.450 --> 10:58.920
+This is the X-2.
+
+10:58.920 --> 10:59.960
+We have the gender.
+
+10:59.990 --> 11:04.910
+This is X. sorry we have a loan to income ratio this is x4 and so on.
+
+11:04.920 --> 11:14.160
+So we have to consider the linear combination of parameters and the D x x 20 variables accordingly balance
+
+11:14.160 --> 11:18.190
+on credit card age gender demographics loan to income ratio and so on.
+
+11:18.330 --> 11:24.480
+So it is very very similar to linear regression that we have a simple autistic regression with just
+
+11:24.480 --> 11:30.380
+a single x parameter and multinomial logistic regression with multiple experimenters.
+
+11:30.480 --> 11:36.600
+We have to use the same sigmoid function but we have to deal with just a single variable.
+
+11:36.600 --> 11:42.850
+For simple logistic regression and multiple variables for malting amile logistic regression.
+
+11:43.060 --> 11:49.950
+By the way it is a rule of thumb that usually we use logistic regression for binary classification.
+
+11:50.010 --> 11:57.890
+So when there are two output glosses email is spam or not the client is sick or healthy.
+
+11:57.900 --> 12:05.190
+Usually we dont use logistic regression for digit classification for example when there are 10 or both
+
+12:05.220 --> 12:12.810
+classes or for example hand with 10 correct recognition when there are 26 output classes support vector
+
+12:12.810 --> 12:16.180
+machines and they've based classifiers can do better.
+
+12:16.220 --> 12:20.740
+So just a quick question is working fine for binary classification.
+
+12:20.940 --> 12:21.750
+Thanks for watching.

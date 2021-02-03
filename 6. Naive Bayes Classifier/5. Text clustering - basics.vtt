@@ -1,0 +1,331 @@
+WEBVTT
+
+00:01.750 --> 00:08.580
+Point in this lecture you are going to talk about tax clustering and natural language processing.
+
+00:08.690 --> 00:10.920
+So let's get started.
+
+00:11.150 --> 00:14.750
+Basically what's the aim of natural language processing.
+
+00:14.810 --> 00:22.250
+Of course the aim is to end up with an algorithm that's capable of classifying documents and tax.
+
+00:22.310 --> 00:30.950
+For example we would like to decide whether an email is spam or not or we would like to classify emails
+
+00:31.070 --> 00:36.610
+according to topics or for example not just e-mails but articles on the web.
+
+00:36.770 --> 00:44.540
+Whether they are science related topics politics related topics religion related topics and so on or
+
+00:44.540 --> 00:52.010
+for example if you are interested in stock markets then you want to crawl the web with even a web crawler
+
+00:52.070 --> 00:57.060
+and you would like to find all the stock market related articles of course.
+
+00:57.080 --> 01:05.990
+Somehow you have to transform documents articles and tax into numerical data in order to be able to
+
+01:05.990 --> 01:14.030
+classify them and find out whether the topic is about a better stock market science politics and something
+
+01:14.030 --> 01:14.860
+like this.
+
+01:14.930 --> 01:18.460
+OK this is called sentiment analysis by the way.
+
+01:18.770 --> 01:25.830
+And a problem that algorithms can handle numerical data not tax documents and strains.
+
+01:26.000 --> 01:34.280
+So somehow we have to transform documents and strains into numerical data in order to be able to use
+
+01:34.400 --> 01:36.390
+the machine learning algorithms.
+
+01:36.440 --> 01:37.240
+OK.
+
+01:37.340 --> 01:45.350
+There are two kinds of tax clustering and semantic clustering group sentences with the same meaning
+
+01:45.470 --> 01:46.890
+and information.
+
+01:46.970 --> 01:54.960
+They do not contain the same Virts for example but we know that they have the same information and meaning.
+
+01:55.080 --> 02:01.740
+Ok then we have the thematic clustering that groups sentences with the same topic.
+
+02:01.990 --> 02:09.070
+Ok for example we have an article on Java and we have an article on C and C++.
+
+02:09.080 --> 02:14.420
+It's not the same meaning and same information but we know that it is the same topic.
+
+02:14.450 --> 02:17.110
+Software Engineering and Computer Science.
+
+02:17.310 --> 02:18.070
+OK.
+
+02:18.110 --> 02:25.010
+So first we need to measure our tax similarity was the similarity between two documents between two
+
+02:25.010 --> 02:30.420
+sentences between two articles and we needed each clustering algorithm.
+
+02:30.530 --> 02:33.390
+That's why Usually we use k means clustering.
+
+02:33.470 --> 02:41.250
+But we can use any other machine learning approaches such as logistic regression or naive base classifier.
+
+02:41.360 --> 02:47.310
+OK so the first approach is to split a given tax into a set of words.
+
+02:47.420 --> 02:49.900
+For example we have two sentences.
+
+02:50.000 --> 02:56.260
+My name is Kevin is going to be transformed into a one dimensional array of words.
+
+02:56.300 --> 02:57.580
+Strings basically.
+
+02:57.710 --> 03:00.420
+My name is Kevin.
+
+03:00.560 --> 03:06.190
+My dog is now and is going to be transformed into my dog is nice.
+
+03:06.320 --> 03:14.390
+So we are going to split the articles or the sentences in this case and we are going to store the items
+
+03:14.540 --> 03:16.680
+in one dimensional arrays.
+
+03:16.940 --> 03:20.220
+How to convert it into numerical data.
+
+03:20.270 --> 03:24.960
+For example we can count the occurrence of every single word.
+
+03:25.010 --> 03:28.690
+This is how we end up with the document Dermont matrix.
+
+03:28.760 --> 03:35.900
+We had all the distinctive words in all the sentences not just the first sentence or just the second
+
+03:35.900 --> 03:40.280
+sentence but all the documents and all the sentences.
+
+03:40.280 --> 03:43.730
+My name Dog is.
+
+03:43.760 --> 03:44.500
+Nice.
+
+03:44.630 --> 03:50.380
+So as you can see we are able to construct the first sentence and the second sentence says survival
+
+03:50.550 --> 03:51.860
+out of these words.
+
+03:51.980 --> 03:56.930
+And then we just have to take a look at the first sentence it is with zero index.
+
+03:57.050 --> 03:58.400
+We have a word my.
+
+03:58.460 --> 04:01.890
+So that's why there's the one we have a word name.
+
+04:01.910 --> 04:04.310
+As you can see my name is Kevin.
+
+04:04.430 --> 04:11.430
+We don't have the word dog in the first sentence than we have is in the first sentence we have Cadden
+
+04:11.450 --> 04:15.910
+in the first sentence but we don't have knives in the first sentence.
+
+04:15.920 --> 04:17.600
+What about the second sentence.
+
+04:17.600 --> 04:24.810
+We have my we don't have name we have a dog we have is we don't have Skadden but we have a nice.
+
+04:24.890 --> 04:27.290
+My dog is nice.
+
+04:27.290 --> 04:29.500
+This is the document term matrix.
+
+04:29.570 --> 04:36.770
+We are able to construct a matrix like this out of a given article a given document not just from a
+
+04:36.770 --> 04:45.560
+given sentence OK but there's a problem that lots of common words that do not mean much are present
+
+04:45.560 --> 04:54.520
+in the text such as my dirk is you wish you'd get rid of these Verd that do not contain much information
+
+04:54.920 --> 05:04.510
+as you can see both sentences contains my for example or is so our intuition that these words are not
+
+05:04.510 --> 05:08.750
+important they do not contain much information.
+
+05:08.800 --> 05:11.010
+So that's why we should get rid of them.
+
+05:11.170 --> 05:18.700
+And that's why a better solution is that T.F. IVF term frequency Inv. document frequency back to approach
+
+05:19.090 --> 05:24.360
+this approach handled always forgiven w in a given document.
+
+05:24.360 --> 05:31.390
+D in this case we have sentences I don't want to repeat myself over and over again but it's very important
+
+05:31.390 --> 05:34.250
+to see in this case we have sentences.
+
+05:34.390 --> 05:37.380
+But we can have articles and documents.
+
+05:37.480 --> 05:38.710
+We have a sentence.
+
+05:38.710 --> 05:40.070
+It can be an article.
+
+05:40.090 --> 05:41.510
+It can be a document.
+
+05:41.650 --> 05:45.820
+This is the second sentence second article or second document.
+
+05:45.940 --> 05:46.600
+OK.
+
+05:46.690 --> 05:53.740
+So we just have to calculate the term frequency which is the number of times W-word appears in Dokument
+
+05:53.770 --> 05:54.440
+D.
+
+05:54.460 --> 06:01.360
+This document is the sentence in this case divided by the total number of words in the document the
+
+06:01.660 --> 06:07.540
+times the inverse document frequency which is the logarithm of the number of documents.
+
+06:07.630 --> 06:15.070
+Divide by the number of documents that contain over w was the number of documents in this case the number
+
+06:15.070 --> 06:16.620
+of documents is two.
+
+06:16.630 --> 06:18.450
+We have two sentences.
+
+06:18.610 --> 06:27.640
+OK so what's the meaning of term frequency and Inv. document frequency the more times 30 occurs in document
+
+06:27.670 --> 06:32.460
+d the more likely it is that T is relevant to the document.
+
+06:32.470 --> 06:40.090
+For example we have an article and we come to the conclusion that the word physics here is certain times
+
+06:40.180 --> 06:46.520
+in that given article then it is a good guess that given article is about physics.
+
+06:46.710 --> 06:47.100
+OK.
+
+06:47.110 --> 06:54.780
+So the more times term t occurs in Dokument d the more likely it is that T is relevant to the document.
+
+06:54.790 --> 06:57.220
+What about Inv. document frequency.
+
+06:57.220 --> 07:04.650
+The more term t appears through all the documents the more puerility discriminate between documents.
+
+07:04.750 --> 07:10.810
+And that's why we have to get rid of the Virts that occurs in every single article.
+
+07:10.840 --> 07:14.840
+For example dirt is mine and so warm.
+
+07:14.890 --> 07:17.980
+So that's why we have to get rid of these.
+
+07:18.100 --> 07:24.050
+My the is you these words do not contain much information.
+
+07:24.130 --> 07:24.840
+Why.
+
+07:24.850 --> 07:31.870
+Because every single article every single sentence every single document contains these words these
+
+07:31.870 --> 07:34.770
+words do not contain much information.
+
+07:34.920 --> 07:35.690
+OK.
+
+07:35.740 --> 07:43.210
+It's very important that in Python we can use the built in functions and built classes DFI the fact
+
+07:43.210 --> 07:51.580
+the riser is going to make a T.F. IDF Waechter the count vectorize or is going to count the occurrence
+
+07:51.640 --> 07:52.850
+of given avert.
+
+07:52.900 --> 08:00.550
+So T.F. idea of where the riser is going to calculate the Sterne's count where the riser is going to
+
+08:00.550 --> 08:07.900
+end up with the document term a matrix is going to count the appearance of every single word in a given
+
+08:07.900 --> 08:10.800
+sentence document or article.
+
+08:10.810 --> 08:14.630
+So that's all about the basics behind attacks clustering.
+
+08:14.680 --> 08:21.700
+What's important that first of all we have to tokenize a given sentence a given article a given document
+
+08:22.180 --> 08:28.120
+then we can count the occurrence but it's not going to be very good because there's going to be lots
+
+08:28.120 --> 08:32.200
+of lots of words that do not contain much information.
+
+08:32.380 --> 08:40.270
+That's why T.F. IDF approach came to be which is going to be a bit better with the help of IDF.
+
+08:40.450 --> 08:46.960
+We are able to measure the similarity of two distinct sentences articles or documents.
+
+08:47.020 --> 08:51.330
+We just have to calculate these terms and we just have to multiply them.
+
+08:51.610 --> 08:54.340
+OK so that's all about tax clustering.
+
+08:54.480 --> 08:55.360
+Thanks for watching.

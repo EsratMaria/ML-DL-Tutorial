@@ -1,0 +1,208 @@
+WEBVTT
+
+00:01.330 --> 00:07.930
+The last topic we have to consider before implementing the algorithms really deep learning for Jay is
+
+00:07.930 --> 00:09.340
+hyper peramivir.
+
+00:09.580 --> 00:16.000
+So we can tune our natural networks with different parameters such as the learning rate momentum and
+
+00:16.000 --> 00:21.510
+so on because we would like to avoid overfitting and under faithing.
+
+00:21.670 --> 00:27.640
+But of course we want to make sure the algorithm is capable of learning the structure of the data as
+
+00:27.640 --> 00:29.480
+quickly as possible.
+
+00:29.500 --> 00:32.860
+So the first hyper Peramivir is the learning grade.
+
+00:32.890 --> 00:36.020
+This is how we define the pace of the algorithm.
+
+00:36.100 --> 00:42.950
+So the learning rate is high then the learning will be very very fast but it's not going to be accurate.
+
+00:43.000 --> 00:47.190
+By the way this is the coefficient when we are dealing with the gradient.
+
+00:47.200 --> 00:52.650
+So basically we are going to update actuates according to the learning rate.
+
+00:52.750 --> 00:55.930
+And this is why if the learning rate is huge.
+
+00:55.960 --> 01:01.340
+So if our fear is greater than one it means that the learning rate is too high.
+
+01:01.360 --> 01:05.410
+The training will be fast but it may miss the optimum.
+
+01:05.410 --> 01:06.640
+So what is it mean.
+
+01:06.640 --> 01:13.390
+It means that if we have these three dimensional Plaut if the learning rate is very very small then
+
+01:13.390 --> 01:20.150
+we are going to take very very little steps towards the minimum because we are the day the educator.
+
+01:20.200 --> 01:27.370
+According to the math times the gradient if the alpha learning rate is small it means that we take a
+
+01:27.370 --> 01:32.010
+very very little step in the direction of the negative gradient.
+
+01:32.200 --> 01:39.430
+If the alpha learning rate is very very high it means that we are going to take a huge step in the direction
+
+01:39.520 --> 01:40.500
+of the minima.
+
+01:40.630 --> 01:47.680
+But as you may guess that if we are very very close to the minimum and we take a huge step then again
+
+01:47.710 --> 01:50.640
+we are going to be far away from the minimum.
+
+01:50.650 --> 01:55.860
+So if our thought is greater than one then we may miss the optimum.
+
+01:55.990 --> 02:00.990
+If Alpha is very very small it means that the training will be very slow.
+
+02:01.000 --> 02:06.100
+It will find the optimum whether it is a local or global optimum.
+
+02:06.310 --> 02:12.730
+OK so basically we have to try several values for Alpha where we don't know for certain that what is
+
+02:12.730 --> 02:14.740
+the optimal rate of learning.
+
+02:14.770 --> 02:16.310
+What about momentum.
+
+02:16.420 --> 02:23.530
+Momentum helps the learning algorithm get out of spot in the search space where it would otherwise become
+
+02:23.530 --> 02:24.160
+stock.
+
+02:24.160 --> 02:31.360
+So this is what we have been discussing that gradient descent has the tendency to converge to local
+
+02:31.360 --> 02:32.030
+monomers.
+
+02:32.200 --> 02:34.570
+As you can see this is the local minimum.
+
+02:34.630 --> 02:41.800
+If we take a little stop to the left or to the right the negative gradient is pointing to this local
+
+02:41.800 --> 02:42.520
+minimum.
+
+02:42.520 --> 02:49.680
+So we are not able to escape it unless we use momentum because momentum has the learning algorithm.
+
+02:49.720 --> 02:54.690
+Get out of sports in the search space where it would otherwise become stuck.
+
+02:54.730 --> 03:02.410
+So it is a value between 0 and 1 that increases the size of the steps taken towards the minimum by trying
+
+03:02.410 --> 03:04.330
+to jam from a local minima.
+
+03:04.420 --> 03:11.320
+If the momentum is large the learning rate should be kept smaller and the larger value of momentum also
+
+03:11.320 --> 03:14.230
+means that the convergence will happen fast.
+
+03:14.350 --> 03:20.260
+So what's really important that this is what we have been discussing the gradient the sand has the tendency
+
+03:20.380 --> 03:27.160
+to start at local minimum instead of the global minima and with the help of the momentum paramita we
+
+03:27.160 --> 03:35.170
+are able to make sure that the algorithm is not going to stop at a local optimum but it's going to converge
+
+03:35.170 --> 03:37.260
+to the global one instead.
+
+03:37.270 --> 03:40.150
+So that's all about learning rate and momentum.
+
+03:40.150 --> 03:44.460
+Finally I would like to tell a few words about regularisation.
+
+03:44.530 --> 03:47.100
+So why do we have to use regularisation.
+
+03:47.170 --> 03:53.590
+This is how we can control overfitting in machine learning as well as in artificial intelligence.
+
+03:53.800 --> 03:57.720
+For example the most common technique is dropout.
+
+03:57.730 --> 04:04.710
+It is an inexpensive regularisation of matter which means that we set the activation of a given now
+
+04:04.720 --> 04:06.520
+own to be zero.
+
+04:06.520 --> 04:13.960
+So basically if we apply dropout then we are going to get rid of some narrowings as far as the network
+
+04:13.960 --> 04:14.820
+is concerned.
+
+04:14.860 --> 04:18.840
+OK it is verse 12 it still has a gradient descent matter.
+
+04:18.970 --> 04:23.390
+And usually we upright dropout in the hidden layer exclusively.
+
+04:23.410 --> 04:29.450
+So we are not going to use dropout in the input layer of course because we need all the input.
+
+04:29.620 --> 04:35.680
+And of course we don't want to apply dropout in the output layer because this is how we make predictions.
+
+04:35.680 --> 04:40.840
+So we just apply dropout in the hidden layer which means that we simply omit.
+
+04:40.840 --> 04:48.820
+Now roans we are given a priori probability for example with 0.5 which means that with 50 percent probability
+
+04:49.060 --> 04:50.420
+we omit the given.
+
+04:50.470 --> 04:52.490
+Now Ron why is it good.
+
+04:52.540 --> 05:00.800
+We would like to avoid overfitting so we can prevent adaptation among detectors which had Dr. better
+
+05:00.920 --> 05:06.390
+generalization in giving models bridleway drop out is not always working fine.
+
+05:06.500 --> 05:10.920
+It is less effective as the number of training records rises up.
+
+05:10.940 --> 05:17.360
+So when the number of training records is greater then tens of millions then dropout is not going to
+
+05:17.360 --> 05:18.730
+be a good solution.
+
+05:18.950 --> 05:19.780
+Thanks for watching.

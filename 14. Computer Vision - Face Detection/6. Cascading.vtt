@@ -1,0 +1,166 @@
+WEBVTT
+
+00:02.610 --> 00:06.450
+The last thing we have to consider is cascading.
+
+00:06.450 --> 00:10.950
+So with the help of boosting we can make the algorithm quite fast.
+
+00:11.070 --> 00:15.370
+But again we can pose the question that can we do even better.
+
+00:15.480 --> 00:21.720
+And the answer is yes because we know that most of the image region is known face regions.
+
+00:21.720 --> 00:28.890
+So for example if we consider this image there are four faces but most of the image doesn't contain
+
+00:28.890 --> 00:30.840
+faces at all.
+
+00:30.840 --> 00:37.640
+OK so this is why we can come to the conclusion that most of the major regions are known face regions.
+
+00:37.710 --> 00:43.980
+So it is a better idea to have a simple method to check if a window is not a face region.
+
+00:43.980 --> 00:50.610
+So instead of posing a question whether the given region contains a face we do the opposite.
+
+00:50.610 --> 00:54.300
+We check if a window is not a face region.
+
+00:54.330 --> 00:58.070
+If it is not then we can discard it in a single shot.
+
+00:58.120 --> 01:01.810
+OK so we don't want to process unnecessary regions.
+
+01:01.860 --> 01:06.880
+We would like to focus on regions where there can be a face instead.
+
+01:07.020 --> 01:14.070
+So this is why we use the cascade classifier concept because we know that most of the M.H. region is
+
+01:14.160 --> 01:15.810
+known face regions.
+
+01:15.840 --> 01:22.920
+So instead of applying all the 6000 features for example we use the most relevant ones in the first
+
+01:22.980 --> 01:23.950
+iteration.
+
+01:24.030 --> 01:27.570
+So the first stage is contain very less features.
+
+01:27.570 --> 01:32.160
+For example the first stage contains just a single feature.
+
+01:32.160 --> 01:38.310
+The second stage contains 10 features then 15 features and 50 features.
+
+01:38.310 --> 01:42.260
+You may pose the question that how to find the most relevant features.
+
+01:42.420 --> 01:48.750
+So here we have been talking about that in the first stage we have to use just a single feature.
+
+01:48.870 --> 01:55.590
+How to decide what features to include and basically we can use the result of the boosting algorithm
+
+01:55.850 --> 01:59.540
+because the boosting has already found the best features.
+
+01:59.670 --> 02:06.900
+The best feature is going to be that Ajax classifier with the highest Alpha perimeter.
+
+02:06.990 --> 02:13.240
+OK so the Ajax class the failure rate higher for values are the relevant features.
+
+02:13.350 --> 02:16.010
+OK so we'll just have to use this approach.
+
+02:16.140 --> 02:22.960
+If the window doesn't contain the most relevant features so features with the highest Alpha paramita
+
+02:22.960 --> 02:29.400
+as we can consider the next region on the image because we came to the conclusion that the given region
+
+02:29.490 --> 02:31.920
+doesn't contain a human face.
+
+02:31.920 --> 02:34.630
+So it is something like a decision tree.
+
+02:34.650 --> 02:36.200
+We have the given features.
+
+02:36.240 --> 02:39.580
+The first feature is the most important feature.
+
+02:39.600 --> 02:42.820
+The second feature is the second important feature.
+
+02:42.860 --> 02:49.080
+The third important feature and so on and we pose the question that is that feature present in the sub
+
+02:49.080 --> 02:49.950
+window.
+
+02:49.950 --> 02:52.650
+If no then it is not a phase.
+
+02:52.650 --> 02:55.620
+If yes then we check the second feature.
+
+02:55.620 --> 02:58.490
+If it is present then we check the search feature.
+
+02:58.500 --> 03:05.100
+Anyways we come to the conclusion that it is not a phase and if all the relevant features are present
+
+03:05.100 --> 03:10.170
+in the window then we can come to the conclusion that it is a human face.
+
+03:10.170 --> 03:13.370
+Basically this is what we have been discussing at the beginning.
+
+03:13.410 --> 03:17.890
+That for example this window doesn't contain the relevant features.
+
+03:17.940 --> 03:24.830
+The feature for the eyebrows the feature for the eyes the feature for the nose the feature for the lips.
+
+03:24.930 --> 03:32.220
+So because this window doesn't contain any of these features we can come to the conclusion that OK we
+
+03:32.220 --> 03:38.970
+don't have to check all the other features because the most relevant features are missing so we can't
+
+03:38.970 --> 03:41.160
+consider the next sub window.
+
+03:41.230 --> 03:48.300
+OK and when we have this situation the algorithm can come to the conclusion that all the relevant features
+
+03:48.360 --> 03:50.880
+are included within this region.
+
+03:50.970 --> 03:57.190
+So within this sub window hands we can say with high probability that it is a phase.
+
+03:57.210 --> 04:05.910
+So all the relevant Haar features are included for the left eye right eye eyebrows nose lips and so
+
+04:05.910 --> 04:06.340
+on.
+
+04:06.360 --> 04:08.440
+So it is a human face.
+
+04:08.490 --> 04:12.650
+So this is how old Jones algorithm works under the hood.
+
+04:12.840 --> 04:13.650
+Thanks for watching.

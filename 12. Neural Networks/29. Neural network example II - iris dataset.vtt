@@ -1,0 +1,265 @@
+WEBVTT
+
+00:00.390 --> 00:07.430
+High in this video I would like to show you how to use now and that works for classifying the ideas
+
+00:07.580 --> 00:09.570
+dataset first.
+
+00:09.570 --> 00:16.430
+We have to load the ideas from the data sets and these data sets is the secretly or an import data sets
+
+00:17.040 --> 00:19.960
+and we have to separate the data features.
+
+00:19.980 --> 00:26.370
+Basically the sample way the balanced battle we'd battle and we have been talking about the Ivey's data
+
+00:26.370 --> 00:27.450
+set before.
+
+00:27.600 --> 00:31.840
+So we have four features and we have a single target.
+
+00:32.250 --> 00:39.690
+We have to instantiate a classification dataset and we will have 4 inputs a single output and we will
+
+00:39.690 --> 00:48.780
+have three classes the Seto's ideas virginica and Iris versicolor or if you may recall then we have
+
+00:48.780 --> 00:56.670
+to create the data sads basically so the dataset that art sample this non-firearm evolved is going to
+
+00:56.670 --> 00:58.040
+flatten the array.
+
+00:58.110 --> 01:08.730
+So if we have for example wawn and won and 2 for example in an array like this then it's going to create
+
+01:08.730 --> 01:16.890
+these empty préval is going to create a single long diamonds on a wall on one end too.
+
+01:17.160 --> 01:22.700
+And this is how we flattened features basically for further processing.
+
+01:22.950 --> 01:24.130
+And we have the target.
+
+01:24.130 --> 01:29.960
+So basically we create classification data with the help of this for Luud.
+
+01:30.090 --> 01:35.430
+Then we split with proportion because we would like to make sure that 70 percent of the dataset will
+
+01:35.430 --> 01:43.740
+be for training purposes and 30 percent will be for task data then is convert to one of many is a bit
+
+01:43.740 --> 01:45.350
+buggy in by brain.
+
+01:45.360 --> 01:52.140
+So that's why we have to use display with proportion method in order to be able to use this convert
+
+01:52.170 --> 01:57.940
+to one of many because it's going to say that we have three classes basically.
+
+01:58.050 --> 02:07.710
+I suppose I was versicolor and I was virginica and this convert to one of many is going to make sure
+
+02:07.890 --> 02:16.710
+that the first class will be represented with 1 0 0 the second class is going to represented by 0 1
+
+02:16.740 --> 02:21.260
+0 and a search class will be represented by 0 0 1.
+
+02:21.270 --> 02:25.360
+This is what we have been discussing for optical correcto recognition.
+
+02:25.410 --> 02:31.350
+When we were discussing the tower reticle background that we have to transform the outputs to something
+
+02:31.350 --> 02:37.310
+like this in order to make sure that are now known that were predictions will be working fine.
+
+02:37.580 --> 02:38.350
+OK.
+
+02:38.520 --> 02:42.580
+So this is what this Colmer one of many is going to do.
+
+02:43.380 --> 02:49.590
+And then we build in our own network with the training data in Diamanda and it's going to be for we
+
+02:49.590 --> 02:53.030
+will have Savanah hidden out in the hidden layer.
+
+02:53.100 --> 03:00.090
+We have just a single out put this out then and we have the softer much layer for the output class then
+
+03:00.090 --> 03:05.640
+we have the back propagation we do now and that work the training that it's very important that we train
+
+03:05.640 --> 03:12.070
+our national network on the training data with the momentum with learning grade and the verb goes through.
+
+03:12.130 --> 03:19.610
+We'll make sure that we get lots of lots of information concerning the training then we train for 10000
+
+03:19.620 --> 03:28.950
+iterations and we printout the error on the test sat this train app is going to printout at all on the
+
+03:28.950 --> 03:32.460
+training sat and then we printout out the error on the task sat.
+
+03:32.460 --> 03:36.890
+So that's why this person Tarrar trainer test on class data.
+
+03:36.900 --> 03:42.720
+We did test data set and the task data Clauss is going to be the right answers.
+
+03:42.720 --> 03:50.160
+We know from the iris data that we have loaded from the data sets and then we basically just iterate
+
+03:50.160 --> 03:57.150
+through and print out the solutions to check whether or not our network is making these predictions
+
+03:57.150 --> 03:58.080
+or not.
+
+03:58.380 --> 04:07.750
+So if I say that and we want now we're on that irenæus it's going to train or now we're on a network.
+
+04:08.060 --> 04:10.930
+And as you can see the error rate is decreasing.
+
+04:10.980 --> 04:17.490
+Of course you make 10000 iteration so it's going to take awhile to make sure that the total error on
+
+04:17.490 --> 04:21.850
+the training data sat really as low as possible.
+
+04:21.960 --> 04:26.250
+As you can see it is approximately 0 0 0 and so on.
+
+04:26.300 --> 04:29.300
+So it keeps decreasing in the course of training.
+
+04:29.340 --> 04:33.000
+So let's wait for the end of the training procedure.
+
+04:35.140 --> 04:42.250
+And you can manipulate this training process with the help of the learning rate and momentum basically
+
+04:42.610 --> 04:44.830
+to play around with these parameters.
+
+04:44.920 --> 04:50.320
+And basically that's why we do not like these kinds of black box methods because we don't know for certain
+
+04:50.320 --> 04:55.350
+that what values we should assigned to the learning rate and the momentum.
+
+04:55.860 --> 05:04.030
+OK so let's wait for the end of the training and don't worry it's going to take a while approximately
+
+05:04.030 --> 05:07.990
+one or two minutes to finish with the training procedure.
+
+05:07.990 --> 05:13.630
+This is why I told you that training in our own network is extremely hard in the sense that it's going
+
+05:13.630 --> 05:18.550
+to take a lot of time and it is just so very very simple data set.
+
+05:18.730 --> 05:25.410
+So you can imagine that how much does it take for a deep out on the road to be able to identify patterns
+
+05:25.420 --> 05:29.350
+for example of pedestrians for safe driving cars and so on.
+
+05:29.530 --> 05:31.080
+It's very very slow procedure.
+
+05:31.090 --> 05:37.040
+But on the other hand these now run networks are able to make very very good predictions.
+
+05:37.630 --> 05:44.080
+OK so as you can see it's the end of the training procedure and we should get something like from 0
+
+05:44.080 --> 05:46.140
+to 49.
+
+05:46.240 --> 05:49.800
+We should get something like 1 0 0.
+
+05:49.900 --> 05:55.270
+So as you can see it is something like one and these values are zero.
+
+05:55.270 --> 05:59.670
+So basically as you can see we have 1 0 0 1 0 0.
+
+05:59.710 --> 06:02.200
+It is the representation of the first class.
+
+06:02.200 --> 06:09.280
+This is why we had to use this to convert to one of many methods in order to make sure that the targets
+
+06:09.280 --> 06:11.250
+are going to be converted.
+
+06:11.260 --> 06:16.690
+These kinds of well use that we will have from I think 50 to 100.
+
+06:16.690 --> 06:18.800
+We should get 0 1 0.
+
+06:18.850 --> 06:22.120
+As you can see 0 1 0 for all of them.
+
+06:22.120 --> 06:23.870
+OK maybe we should round them up.
+
+06:23.890 --> 06:26.250
+But as you can see these are very very little number.
+
+06:26.260 --> 06:30.350
+It is very very close to one and it is a very very little number again.
+
+06:30.700 --> 06:38.780
+And from a 100 we should get something like 0 0 1 0 0 1 0 0 1 0 0 1 and so on.
+
+06:38.860 --> 06:41.090
+So basically it's working quite fine.
+
+06:41.110 --> 06:46.780
+We have managed to find the Klosters and the glasses and we have managed to make the classification
+
+06:46.780 --> 06:48.830
+with the help of our own networks.
+
+06:49.010 --> 06:51.380
+OK you may pose the question that wait a bit.
+
+06:51.460 --> 06:55.080
+Eat take lots of lots of time to train an hour on that work.
+
+06:55.180 --> 07:01.990
+And we have seen that we are able to solve this Ivory's data set classification problem within Suttons.
+
+07:01.990 --> 07:08.380
+Basically with the help of other machine learning algorithms and the that is true but maybe if we have
+
+07:08.380 --> 07:15.850
+much more complicated problems such as for example how to detect pedestrians or how to create self-driving
+
+07:15.850 --> 07:21.480
+cars these now we're And that can prove to be very very handy and very very useful.
+
+07:21.490 --> 07:22.830
+So that's all about now.
+
+07:22.860 --> 07:24.070
+And that works.
+
+07:24.070 --> 07:24.940
+Thanks for watching.

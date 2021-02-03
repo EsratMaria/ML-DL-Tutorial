@@ -1,0 +1,229 @@
+WEBVTT
+
+00:01.180 --> 00:04.950
+So far we have been talking about Den's now Real Networks.
+
+00:04.960 --> 00:11.500
+What does it mean exactly that every single neuron is connected to every single now we're on in the
+
+00:11.500 --> 00:12.550
+next layer.
+
+00:12.610 --> 00:15.210
+So for example this is a dance.
+
+00:15.220 --> 00:21.700
+Now we're all networking the sands that as you can see every single now we're on is connected to every
+
+00:21.700 --> 00:24.160
+other narrowings in the next layer.
+
+00:24.270 --> 00:29.920
+These Now ones are connected to every single neuron in the next layer and so on.
+
+00:29.920 --> 00:33.740
+So this is called Dance now really and that works OK.
+
+00:33.760 --> 00:35.110
+It is working fine.
+
+00:35.110 --> 00:38.150
+This is what we have been discussing in the previous chapters.
+
+00:38.200 --> 00:40.770
+We are able to make good predictions.
+
+00:40.770 --> 00:43.260
+We did these Danz now and that works.
+
+00:43.390 --> 00:48.230
+But even there are thousands or millions of neurons in each layer.
+
+00:48.310 --> 00:51.630
+Then the number of weights increased dramatically.
+
+00:51.640 --> 00:54.750
+Hence the training will be extremely slow.
+
+00:54.760 --> 01:03.280
+So if we have for example a to by 32 pixel image then it means that we have approximately 8000 pixels
+
+01:03.340 --> 01:04.450
+all together.
+
+01:04.450 --> 01:07.380
+Of course we should consider colors as well.
+
+01:07.390 --> 01:12.690
+So every single pixel has three channels red green and blue.
+
+01:12.700 --> 01:19.570
+So if we want to be precise we have to multiply this number by three or what's very important that there
+
+01:19.570 --> 01:26.710
+are going to be lots of lots of big cells in a given image and there's going to be lots of lots of connections
+
+01:26.800 --> 01:34.390
+and weights to train and in our own network this is called combinatorial explosion and gradient descent
+
+01:34.450 --> 01:39.310
+changes the educates according to the learning rate and the gradient.
+
+01:39.310 --> 01:42.880
+That's why the training is going to be very very slow.
+
+01:43.000 --> 01:45.000
+So what can be the solution.
+
+01:45.010 --> 01:52.150
+Of course the solution is the main topic of discourse convolutional now we're all networks because convolutional
+
+01:52.150 --> 01:59.770
+now we're all networks have a given assumption such that the inputs are images so we can encode certain
+
+01:59.770 --> 02:06.940
+properties into the architecture and it was extremely important feature as far as convolutional in our
+
+02:06.970 --> 02:14.160
+networks are concerned that now rowans are not connected to every single on our own in the next layer.
+
+02:14.260 --> 02:20.950
+So that's why convolutional now where all the networks are not densely connected networks under the
+
+02:20.950 --> 02:21.870
+hood by the way.
+
+02:21.880 --> 02:29.560
+It uses a standard nodal network but at the beginning it transforms the data in order to achieve the
+
+02:29.560 --> 02:31.680
+best accuracy possible.
+
+02:31.690 --> 02:38.050
+Self-driving cars are pedestrian detection have something to do with convolutional now we're on networks
+
+02:38.320 --> 02:44.340
+and basically because of convolutional and there were all networks artificial intelligence outperformance
+
+02:44.470 --> 02:48.040
+machine learning techniques such as supporting actor or machine.
+
+02:48.040 --> 02:55.150
+So at the beginning of the machine learning approaches were better such as support a machine nowadays.
+
+02:55.140 --> 03:01.630
+And now real networks such as convolutional now all networks can outperform these kinds of machine learning
+
+03:01.630 --> 03:07.090
+approaches because we have an assumption that the inputs are images.
+
+03:07.330 --> 03:14.040
+There are three important steps convolutional operation then pooling data flattening.
+
+03:14.200 --> 03:21.220
+And after that we can use a standard densely connected now network for making predictions so that's
+
+03:21.220 --> 03:27.590
+why I told you that under the hood it uses a standard densely connected now and network.
+
+03:27.670 --> 03:30.660
+OK so what about the convolutional operation.
+
+03:30.670 --> 03:36.730
+Maybe you are not interested in higher mathematics but we have to talk a bit about the concrete formula
+
+03:36.820 --> 03:39.520
+as far as convolution is concerned.
+
+03:39.550 --> 03:42.670
+So we have two functions af and G.
+
+03:42.850 --> 03:50.770
+And we can calculate the convolution with the hop of an integral at few times g t minus u d u.
+
+03:50.770 --> 03:55.750
+So this integral is going to define the convolution operation.
+
+03:55.750 --> 04:02.800
+By the way in image processing convolution is the process of ordering each element of the image to its
+
+04:02.800 --> 04:05.890
+local neighbors waited by the cairn.
+
+04:06.010 --> 04:08.270
+We are going to talk a lot more about it.
+
+04:08.320 --> 04:14.930
+It's going to be clear what extremely important data images can be represented the way that happens
+
+04:14.990 --> 04:16.020
+matrices.
+
+04:16.090 --> 04:23.620
+So here this image is a matrix basically with lots of lots of columns and lots of lots of rows and every
+
+04:23.620 --> 04:31.210
+single pixel in the image is a certain value in the matrix with a given row index and with a given column
+
+04:31.220 --> 04:31.760
+index.
+
+04:31.810 --> 04:40.060
+OK so for images we use matrix representation and for Karina's we use another matrix by the way there
+
+04:40.060 --> 04:44.600
+are lots of lots of names for caramelize we can call it Karen.
+
+04:44.740 --> 04:52.420
+We can call it feature detector we can call it filter as far as I am concerned the best name is feature
+
+04:52.420 --> 04:59.590
+detector because we are half of the kernel we are able to detach the most important features on a given
+
+04:59.590 --> 05:00.080
+image.
+
+05:00.100 --> 05:07.130
+So for example if we are dealing with this smile emoji of course the most important feature is this
+
+05:07.220 --> 05:08.640
+smiling curve.
+
+05:08.750 --> 05:15.430
+We don't care about the eyes we don't care about the nose because the mouth is the most important feature.
+
+05:15.560 --> 05:19.880
+If it is something like this then it is the happy emoji.
+
+05:19.880 --> 05:25.200
+If the curve is quite on the opposite it's going to be the sad emoji.
+
+05:25.280 --> 05:32.280
+So that's why we have to use Karina's in order to detach the most relevant feature on a given image.
+
+05:32.300 --> 05:32.840
+OK.
+
+05:32.840 --> 05:39.890
+By the way as far as matrix operation is concerned the convolutional can be defined way to this given
+
+05:39.890 --> 05:40.780
+formula.
+
+05:40.820 --> 05:48.020
+So we have to iterate through all the Cullens we have to consider all the rows and then we have to multiply
+
+05:48.020 --> 05:51.910
+the items as far as the image matrix is concerned.
+
+05:52.040 --> 05:56.140
+And as far as the feature detector matrix is concerned.
+
+05:56.150 --> 06:01.120
+So basically we just have to move the plie values of given the matrices.
+
+06:01.160 --> 06:06.340
+Of course we are going to talk a lot more about these operations in the coming lectures.
+
+06:06.350 --> 06:07.220
+Thanks for watching.

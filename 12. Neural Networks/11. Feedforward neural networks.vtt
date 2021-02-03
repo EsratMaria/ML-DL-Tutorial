@@ -1,0 +1,310 @@
+WEBVTT
+
+00:00.560 --> 00:07.910
+Hajji in this chapter we are going to talk about feedforward now and that for us we have been talking
+
+00:07.910 --> 00:15.080
+about the basic concept as far as our networks are concerned and we have been talking about Hopp fields
+
+00:15.080 --> 00:21.130
+networks and we have came to the conclusion that there are several problems concerning Copperfield's
+
+00:21.140 --> 00:29.270
+networks and it's not going to be that fine for classifying a dataset or for example facial recognition
+
+00:29.480 --> 00:32.120
+optical correcter recognition and so on.
+
+00:32.150 --> 00:35.590
+This is why feedforward in that first half came to be.
+
+00:35.780 --> 00:38.570
+So what about the topology for feedforward.
+
+00:38.570 --> 00:45.470
+Now all networks we have been talking about that we have an input layer we have for example one or more
+
+00:45.470 --> 00:52.210
+hidden layers and we have an output layer and one of the main features for feet for working out our
+
+00:52.250 --> 00:59.270
+networks is that the directed edge is pointing from a given layer to another.
+
+00:59.300 --> 01:06.050
+And as you can see there is no directed edge back to the earth in the sense that for example from the
+
+01:06.050 --> 01:13.220
+hidden layer in the direction of the input layer or from the output layer in the direction of the hidden
+
+01:13.220 --> 01:21.560
+layer has the name feedforward we keep pointing edges from the input layer to the next layer and from
+
+01:21.560 --> 01:23.980
+the hidden layer to the output layer.
+
+01:24.050 --> 01:31.160
+So the information is going from this direction so from the direction of the input layer to over's the
+
+01:31.190 --> 01:32.500
+output layer.
+
+01:32.600 --> 01:34.850
+So let's see a little illustration.
+
+01:34.940 --> 01:42.500
+We have just an input layer with a single output layer and in the input layer there are two now roans
+
+01:42.860 --> 01:44.250
+in the output layer.
+
+01:44.260 --> 01:46.340
+There is just a single now wrong.
+
+01:46.430 --> 01:52.900
+So there is no hidden layer as you can see this illustration has no hidden layer at all.
+
+01:53.180 --> 01:57.310
+So let's suppose the fact that OK it is a feat for over an hour on network.
+
+01:57.350 --> 02:04.210
+So we have directed edges pointing from the input layer to the output layer.
+
+02:04.250 --> 02:11.360
+And of course every node has a stretch called T as we have discussed that if the incoming cyano is greater
+
+02:11.360 --> 02:17.300
+than the threshold then now Warrenville failure Anyways it's not going to fire.
+
+02:17.480 --> 02:23.840
+So let's suppose the situation that we would like to learn the and logical relation.
+
+02:23.840 --> 02:25.290
+So we have to input.
+
+02:25.310 --> 02:32.680
+Now roans and when they are both zeros the output will be zero when the first one is zero the second
+
+02:32.680 --> 02:35.290
+the input is one the output is zero.
+
+02:35.420 --> 02:36.850
+The first input is 1.
+
+02:36.920 --> 02:39.930
+The second the input is zero the output is zero.
+
+02:40.070 --> 02:44.590
+And if both the inputs are 1 then the output will be warm.
+
+02:44.760 --> 02:50.930
+OK let's suppose the fact that we have for example death's threshold for this output.
+
+02:50.930 --> 02:53.040
+Now Ron is equal to 2.
+
+02:53.150 --> 03:00.530
+What is it to mean that if the incoming sign from the previously or so from the input layer is greater
+
+03:00.590 --> 03:03.830
+than the threshold then than now we don't know we will fire.
+
+03:03.920 --> 03:07.180
+What does it mean that for example the output will be warm.
+
+03:07.440 --> 03:12.290
+Even the incoming sign is smaller than the threshold that nothing happens.
+
+03:12.290 --> 03:15.840
+We are going to represent the situation with the zero.
+
+03:15.890 --> 03:23.240
+So to summarize again if the incoming sign is greater than the threshold the output will be 1 in this
+
+03:23.300 --> 03:23.960
+output.
+
+03:23.960 --> 03:24.940
+Now we're on.
+
+03:25.030 --> 03:27.500
+Anyways it's going to be zero.
+
+03:27.530 --> 03:30.870
+So we have the first educate 1.5.
+
+03:31.130 --> 03:35.160
+We have the second that you wait it is equal again 1.5.
+
+03:35.540 --> 03:42.410
+And for example if the imports the first input is zero and the second the input is 0 then the result
+
+03:42.410 --> 03:43.870
+should be zero.
+
+03:43.880 --> 03:50.060
+Why this is how this logical relation behaves as you can see if the first input is zero.
+
+03:50.060 --> 03:51.630
+Second the input is zero.
+
+03:51.650 --> 03:53.450
+The result should be zero.
+
+03:53.540 --> 03:56.570
+So let's see if the first is zero.
+
+03:56.570 --> 04:06.110
+The second is 0 then the incoming sign on to the output node from x and y is going to be well over there.
+
+04:06.110 --> 04:08.280
+Now we're on TIME's the adulate.
+
+04:08.300 --> 04:10.550
+This is Houde percept from modal verbs.
+
+04:10.550 --> 04:18.980
+We have to move the Apply the nowon state multiply by the adulate so Axwell you times double you on
+
+04:19.190 --> 04:21.880
+plus Y Well you Times W2.
+
+04:22.070 --> 04:31.710
+But as you may guess zero times 1.5 is 0 0 times 1.5 is 0 0 0 0.
+
+04:31.820 --> 04:38.090
+So if the incoming Sinulog is greater than the threshold which is to then our own will fire.
+
+04:38.180 --> 04:43.740
+But of course the incoming cycle is zero and zero is not greater than two.
+
+04:43.820 --> 04:51.010
+So in this case the output will be zero which is fine because this is how the and logical relation behaves.
+
+04:51.110 --> 04:55.210
+If both of the inputs are zero the result should be zero.
+
+04:55.270 --> 05:05.090
+OK what about if for example the first import is on the second day in booty's zero Dandie and logical
+
+05:05.090 --> 05:07.680
+relation should be zero again.
+
+05:07.880 --> 05:15.010
+So one 1 times 1.5 plus 0 times 1.5 is equal to 1.5.
+
+05:15.170 --> 05:16.860
+The threshold is two.
+
+05:16.930 --> 05:19.710
+So the incoming sign is smaller then two.
+
+05:19.730 --> 05:23.210
+So the result is again will be zero.
+
+05:23.240 --> 05:29.620
+What if we do like this is 0 and 1 again is going to be 1.5.
+
+05:29.780 --> 05:31.730
+It's smaller than the threshold.
+
+05:31.790 --> 05:34.040
+So the result will be zero.
+
+05:34.040 --> 05:41.300
+What if all of the imports Ottawa in one times 1.5 plus one times 1.5.
+
+05:41.300 --> 05:47.030
+This is how we calculate the incoming sign because it does Snoad has a connection with this.
+
+05:47.030 --> 05:48.920
+Now we're on and this now we're on.
+
+05:49.010 --> 05:56.000
+So we have to sum up the incoming signers of this activation times the educate deactivation times the
+
+05:56.000 --> 06:05.330
+adulate So one times 1.5 Blas The other activation times the W2 educate which is 1 times 1.5 again it's
+
+06:05.330 --> 06:10.160
+equal to 3 3 is greater than the threshold for the output.
+
+06:10.160 --> 06:10.890
+Now we're on.
+
+06:11.030 --> 06:13.380
+So the result is going to be on.
+
+06:13.580 --> 06:15.690
+And basically this is what we are after.
+
+06:15.710 --> 06:25.640
+We want to make sure that if the inputs are 0 0 0 the output is 0 0 1 0 1 0 0 and if both of the inputs
+
+06:25.700 --> 06:29.840
+are one Dandie and logical relation should yield the warm.
+
+06:29.990 --> 06:32.000
+And that's what's happening here.
+
+06:32.180 --> 06:39.040
+So basically it was the conclusion that okay we chose DS actuates not at random.
+
+06:39.170 --> 06:46.140
+I chose these adulated because I know that if we choose the weights like this then it's going to be
+
+06:46.140 --> 06:53.330
+the logical relation and it's going to work fine but usually we'll be initialized the educates at random
+
+06:53.540 --> 06:57.960
+and maybe we are not going to end up with the logical relation.
+
+06:58.020 --> 07:03.550
+Sometimes when the inputs are 1 and 1 then the output can be zero.
+
+07:03.560 --> 07:09.920
+If we initialize the adulate at random for example let's suppose the fact that we initialize both of
+
+07:09.920 --> 07:11.770
+the agitates to be zero.
+
+07:11.780 --> 07:16.100
+Then of course no matter what the input the output will be to zero.
+
+07:16.130 --> 07:19.080
+And this is not the logical relation.
+
+07:19.340 --> 07:21.850
+So this is what we have been discussing.
+
+07:21.890 --> 07:29.280
+And the first chapter that we initialize the educates at random and we have to train on our own network
+
+07:29.480 --> 07:37.160
+by changing the edge weights until we come to a situation where for the given inputs we get the right
+
+07:37.220 --> 07:37.820
+output.
+
+07:37.850 --> 07:42.220
+This is the basic of super wide learning algorithms.
+
+07:42.260 --> 07:50.480
+So the last question is OK how we will be able to train or our own network how we will be able to decide
+
+07:50.680 --> 07:53.830
+that what's going to be the good educate.
+
+07:53.960 --> 08:01.370
+And of course we have to change the actuates and there are two options back propagation and gradient
+
+08:01.370 --> 08:02.200
+descent.
+
+08:02.240 --> 08:08.210
+OK back propagation is a form of gradient descent but this is what we are going to talk about in the
+
+08:08.210 --> 08:09.760
+coming videos.
+
+08:09.770 --> 08:10.570
+Thanks for watching.

@@ -1,0 +1,232 @@
+WEBVTT
+
+00:01.020 --> 00:06.200
+Harm in this video we are going to talk about K means clustering.
+
+00:06.300 --> 00:08.820
+So let's get started.
+
+00:08.820 --> 00:11.230
+Basically what is this Kamins clustering.
+
+00:11.250 --> 00:16.710
+It is a very very popular and supervised learning algorithm in data mining.
+
+00:16.710 --> 00:22.380
+It's very important that so far we have been discussing supervised learning algorithms we have in the
+
+00:22.470 --> 00:26.200
+dataset we had the target outputs as well.
+
+00:26.310 --> 00:34.510
+So we know for sure that what should be the result in this case we have the data sets without the labels.
+
+00:34.800 --> 00:42.200
+So that's why it is unsupervised learning algorithm it automatically DeWyze that data into clusters
+
+00:42.240 --> 00:44.790
+or groupings of similar items.
+
+00:44.790 --> 00:50.850
+Plus it does this without having been told what the groups should look like ahead of time.
+
+00:50.910 --> 00:57.870
+The problem of course is how could a computer possibly know where one group and another begins.
+
+00:57.990 --> 01:04.530
+And the answer is that elements inside the cluster should be very similar to each other but on the other
+
+01:04.530 --> 01:07.250
+hand very different from those outside.
+
+01:07.260 --> 01:13.130
+So basically Kamins clustering is going to make decision based on similarity.
+
+01:13.350 --> 01:22.020
+So basically k means clustering aims to partition and observations into clusters in which each observation
+
+01:22.050 --> 01:23.690
+belongs to the cluster.
+
+01:23.700 --> 01:28.370
+We didn't need us to mean that it can be done with Grath algorithms as so.
+
+01:28.440 --> 01:34.740
+I'm not sure whether you are familiar with minimum spanning trees but if we construct the minimum spanning
+
+01:34.740 --> 01:41.430
+tree and remove the last k edges we are going to end up with Klosters basically.
+
+01:41.460 --> 01:42.930
+So we can solve this.
+
+01:42.930 --> 01:47.250
+K means clustering problem with the help of spanning trees as well.
+
+01:47.280 --> 01:52.870
+By the way it is an anti heart problem but Loide algorithm is very common no days.
+
+01:52.950 --> 01:55.130
+So what is this Loide algorithm.
+
+01:55.140 --> 01:56.970
+There are three stops.
+
+01:56.970 --> 02:00.960
+First of all we have to initialize the central weights at random.
+
+02:00.960 --> 02:02.090
+What are the centroid.
+
+02:02.100 --> 02:05.020
+These are the centers of a given cluster.
+
+02:05.020 --> 02:12.300
+What's very important that usually we initialize the center of a centroid to the the center author random
+
+02:12.300 --> 02:15.340
+data point in the dataset.
+
+02:15.850 --> 02:22.950
+Step two we have to decide for every point in our dataset that what centroid is the nearest to them
+
+02:23.480 --> 02:30.210
+than the last stop is that we have to calculate the new means of every distinct Gloucester's and we
+
+02:30.210 --> 02:33.510
+have to run these taps until convergence.
+
+02:33.510 --> 02:38.280
+Of course we don't have to re-initialize the central weights over and over again.
+
+02:38.400 --> 02:44.610
+We just have to run the second and the third stops over and over again until convergence.
+
+02:44.940 --> 02:47.260
+OK so let's see a concrete example.
+
+02:47.280 --> 02:51.540
+We have three examples two features x1 and x2.
+
+02:51.600 --> 02:58.230
+In this case these features are going to be the X scored in that and the y coordinate on a two dimensional
+
+02:58.230 --> 02:59.190
+plane.
+
+02:59.220 --> 03:06.000
+So we have been discussing that we should measure similarity and we are able to measure similarity according
+
+03:06.000 --> 03:07.320
+to the distances.
+
+03:07.410 --> 03:10.600
+Basically we have to use the Euclidean distance.
+
+03:10.830 --> 03:15.150
+OK so we initialize the clusters at random.
+
+03:15.270 --> 03:22.170
+And as I said earlier we initialize it to be the center of a random data point in the data set.
+
+03:22.260 --> 03:30.790
+For example it is the K equal to 3 case that we are looking for stri clusters in the data set.
+
+03:30.840 --> 03:35.200
+The green cluster the red cluster and the blue cluster.
+
+03:35.570 --> 03:42.990
+OK then we have to iterate through all the points in our dataset and we have to calculate the distances
+
+03:43.260 --> 03:45.030
+to the cluster means.
+
+03:45.030 --> 03:52.440
+So we have to calculate the minimum out of the U on the 2 and 3 and we come to the conclusion that the
+
+03:52.440 --> 03:54.950
+nearest centroid is the green one.
+
+03:54.960 --> 03:58.650
+So it means that this data point belongs to the green Clauss.
+
+03:58.860 --> 04:07.210
+OK so we have to do it for every single point in the dataset we have to calculate the minimum distance.
+
+04:07.320 --> 04:09.550
+It's going to be a green dot.
+
+04:09.600 --> 04:11.820
+It's going to be a green dot again.
+
+04:11.860 --> 04:13.480
+Now this is a green dot.
+
+04:13.720 --> 04:15.590
+Then this is a green dot.
+
+04:15.600 --> 04:20.760
+This is not going to be a green dot because the closer central it is the red one.
+
+04:20.790 --> 04:22.870
+So it's going to the red point.
+
+04:22.960 --> 04:32.010
+It's going to the red point again but it's going to be blue on blue on blue again blue again and finally
+
+04:32.040 --> 04:32.740
+blue.
+
+04:33.210 --> 04:35.690
+And then we have to update the central weights.
+
+04:35.700 --> 04:39.090
+This is what Lloyd's algorithm tells us to do.
+
+04:39.240 --> 04:46.620
+So if we update the centroid we just have to calculate for example for the Greenglass we have to put
+
+04:46.890 --> 04:53.780
+the center of the centroid to be the mean of that data point in that given Greenglass.
+
+04:53.910 --> 05:00.800
+So for example for the Arat loss it's going to be the mean we calculate the mean on the success and
+
+05:00.800 --> 05:08.540
+I mean on the y axis or the X-1 feature and X-2 features and we re-initialize the location of the central
+
+05:08.540 --> 05:15.290
+heat for the rat class we do the same for the green glass and we do the same for the blue glass and
+
+05:15.290 --> 05:21.940
+after that we have to consider that a lot because the location of the central needs have changed.
+
+05:21.980 --> 05:27.580
+So maybe there are datapoints that's going to belong to another class.
+
+05:27.590 --> 05:32.560
+So basically all of the points are correct except for this one.
+
+05:32.600 --> 05:35.260
+This point has belong to the blue class.
+
+05:35.420 --> 05:41.660
+But after we re-initialize the location for the central AIDS we have come to the conclusion it is going
+
+05:41.660 --> 05:47.710
+to belong to the rat class and we have to re-initialize the location for the central AIDS.
+
+05:47.840 --> 05:54.650
+And after that or algorithm has converged in the sense that basically we are not going to change the
+
+05:54.650 --> 06:01.230
+location of the central AIDS and we are not going to change the color of the given thoughts.
+
+06:01.580 --> 06:05.440
+And an important question is how to find the key parameter.
+
+06:05.510 --> 06:09.030
+And this is what we are going to talk about in the next video.
+
+06:09.170 --> 06:10.430
+Thanks for watching.

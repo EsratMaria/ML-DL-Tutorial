@@ -1,0 +1,175 @@
+WEBVTT
+
+00:00.950 --> 00:08.060
+That talk a bit about a concrete implementation of the scan and let's compare this method with a k means
+
+00:08.060 --> 00:09.010
+clustering.
+
+00:09.020 --> 00:09.400
+OK.
+
+00:09.410 --> 00:13.000
+So first of all we are going to generate a data set.
+
+00:13.010 --> 00:21.590
+We are able to imported from data sets and this make moon function is going to generate 1000 and 500
+
+00:21.590 --> 00:24.580
+samples who weighed 5 percent noise.
+
+00:24.770 --> 00:30.230
+OK and if we applaud the original dataset we can take a closer look at it.
+
+00:30.230 --> 00:33.300
+So this is the data that we would like to closter.
+
+00:33.320 --> 00:40.580
+Basically we have two half circles and this is what we want to closter with the help of the scan and
+
+00:40.580 --> 00:42.050
+k means clustering.
+
+00:42.220 --> 00:42.880
+OK.
+
+00:42.950 --> 00:48.480
+So as far as the scan is concerned we don't have to define the number of clusters.
+
+00:48.590 --> 00:51.690
+So basically this is why we prefer D-B scan.
+
+00:51.830 --> 00:54.640
+We just have to define and Absolom parameter.
+
+00:54.740 --> 00:58.280
+And basically that's all we are able to fit the model.
+
+00:58.280 --> 01:05.810
+And then we are able to get the labels so D-B scan labels we are able to get the labels after fitting
+
+01:05.810 --> 01:06.600
+the model.
+
+01:06.700 --> 01:15.500
+OK we just have to define two colors the red color and green color and we are able to Plaut the cluster
+
+01:15.500 --> 01:18.400
+as we have found with the top of the scanner.
+
+01:18.440 --> 01:26.300
+So the scan is going to find two Klosters a green closter and Arat Gloucester we are able to do the
+
+01:26.300 --> 01:28.350
+same with K means clustering.
+
+01:28.350 --> 01:33.320
+And if we take a look at the second plot this is why we prefer D-B scan.
+
+01:33.320 --> 01:40.340
+As you can see it is quite apparent that we have two Klosters the first cluster here and the second
+
+01:40.340 --> 01:41.410
+cluster here.
+
+01:41.540 --> 01:48.800
+D.B skin algorithm is able to find the two Klosters without any issue but k means clustering is not
+
+01:48.800 --> 01:55.080
+that perfect as you can see we are not able to solve this problem with the help of k means clustering.
+
+01:55.220 --> 01:59.180
+OK so this is why we prefer the scan algorithm.
+
+01:59.240 --> 02:06.290
+By the way if we take a closer look at the documentation of the scan we can find lots of lots of paramita
+
+02:06.290 --> 02:08.220
+errors such as Epsilon.
+
+02:08.270 --> 02:12.220
+So basically this is the maximum distance between two samples.
+
+02:12.230 --> 02:18.380
+This is how we are able to decide whether the samples belong to the same cluster or the same neighborhood
+
+02:18.470 --> 02:19.330
+or not.
+
+02:19.370 --> 02:23.100
+We can define the mean samples as you can see the mean samples.
+
+02:23.090 --> 02:24.960
+The fourth value is five.
+
+02:24.980 --> 02:31.160
+This is the number of samples or total weight in the neighborhood for a point to be considered as a
+
+02:31.160 --> 02:32.080
+quarter point.
+
+02:32.210 --> 02:34.530
+So this includes the pointed south.
+
+02:34.640 --> 02:38.570
+OK by the way the default value is usually fine.
+
+02:38.630 --> 02:42.160
+Then there's a metric which is set to be Euclidean.
+
+02:42.170 --> 02:46.800
+There are several methods to measure the distance between two points.
+
+02:46.850 --> 02:54.080
+We can use Manhattan distance or we can use Euclidean distance for most of the cases we use Euclidean
+
+02:54.080 --> 02:54.720
+distance.
+
+02:54.800 --> 03:00.340
+So that's why this is the default value as far as the metric parameter is concerned.
+
+03:00.410 --> 03:03.310
+OK we have the number of parallel jobs.
+
+03:03.400 --> 03:10.100
+If it is set to be minus 1 this is what we have been talking about for random for classifiers then the
+
+03:10.100 --> 03:14.210
+number of jobs is set to the number of CPQ cores.
+
+03:14.210 --> 03:20.060
+So what does it mean that we are able to make D-B scan a parallel algorithm.
+
+03:20.060 --> 03:25.940
+This dataset is so small that we can use D-B scan RIDO with any parallelization.
+
+03:26.030 --> 03:34.040
+But if we have a huge dataset we are able to use parallel algorithms and multiple ACP cores in order
+
+03:34.040 --> 03:35.510
+to boost the algorithm.
+
+03:35.590 --> 03:40.610
+OK so this is why D-B scanner for most of the cases is a better approach.
+
+03:40.610 --> 03:46.880
+Danny K means clustering if you take a look at this plot it is quite straightforward that we are able
+
+03:46.880 --> 03:53.900
+to find the two Klosters with D-B scan and Kamins clustering on the other hand is not working fine.
+
+03:54.050 --> 03:59.820
+And what's more important that for Kamins clustering we have to define the number of clusters.
+
+03:59.930 --> 04:06.080
+And usually we don't know the number of clusters to use so D-B scan is a better algorithm.
+
+04:06.200 --> 04:14.180
+We can use multiple CPQ cores in order to make this algorithm parallel and make it as fast as possible.
+
+04:14.300 --> 04:19.640
+And we don't have to define the number of Klosters that's all about D-B scan.
+
+04:19.640 --> 04:20.530
+Thanks for watching.

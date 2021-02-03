@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.340 --> 00:07.080
+High in this lecture I would like to show you how to install open CD on Windows.
+
+00:07.080 --> 00:10.740
+I think if you have Linux operating system it is quite easy.
+
+00:10.740 --> 00:14.670
+First of all it's quite easy to search on the Web how to install it.
+
+00:14.760 --> 00:21.090
+But with the help of the Coleman line abt pseudo once so one it's much more convenient and on Windows
+
+00:21.570 --> 00:27.080
+on Windows you have to type that download open CD.
+
+00:27.540 --> 00:28.480
+OK.
+
+00:28.650 --> 00:35.100
+We have the downloads and I think that we are able to download the open CD from sourceforge.
+
+00:35.220 --> 00:41.790
+So if you click on the open C-v for Windows or download open you will start in four seconds.
+
+00:41.790 --> 00:47.870
+So the open CD is going to be downloaded as you can see there's the open CD.
+
+00:48.240 --> 00:53.850
+I have already have open CD on my system so I'm not going to install it I just show you that you have
+
+00:53.850 --> 00:58.010
+to double click as you can see there's the X extension.
+
+00:58.050 --> 01:02.690
+So you just have to double click it and the Windows operating system is going to install it for you
+
+01:02.690 --> 01:03.530
+basically.
+
+01:03.720 --> 01:10.080
+What's very important that after the installation process we have this sad path as usual as we have
+
+01:10.080 --> 01:13.100
+seen for other JDK and so on.
+
+01:13.380 --> 01:17.100
+So I guess it is going to be downloaded in seconds.
+
+01:17.160 --> 01:18.040
+OK.
+
+01:18.150 --> 01:21.390
+Right click open for other.
+
+01:21.420 --> 01:24.390
+And this is the open CVB are looking for.
+
+01:24.640 --> 01:33.480
+OK so we have to double click it open see the it's going to be extracted to see user's user downloads.
+
+01:33.630 --> 01:35.270
+OK.
+
+01:38.780 --> 01:45.620
+OK and after it has been unsaved let's search for open see as you can see if you are going to have an
+
+01:45.620 --> 01:47.350
+open see the folder.
+
+01:47.510 --> 01:50.200
+And here we will have the bill basically.
+
+01:50.270 --> 01:58.100
+And then first of all maybe I'm going to copy and paste it because I don't like to store my stuff in
+
+01:58.100 --> 02:06.040
+the download so I'm going to cut this open C.V folder and I'm going to navigate to the program files.
+
+02:06.110 --> 02:09.810
+I'm going to I'm going to paste it here.
+
+02:10.190 --> 02:11.770
+OK.
+
+02:13.100 --> 02:18.900
+So it's going to be in C program files and you have to navigate to that build.
+
+02:18.950 --> 02:27.140
+And then as usual and you have to copy this part so see Program Files open see the building on my machine
+
+02:27.670 --> 02:31.740
+and I'm going to search for the environmental variables.
+
+02:31.970 --> 02:35.060
+So let's search for the environmental variables.
+
+02:35.060 --> 02:35.840
+So ready for that.
+
+02:35.840 --> 02:38.310
+My operating system speaks Hungarian.
+
+02:38.540 --> 02:45.710
+But you have to search for in the settings that will have the CCed tools networking and internet connections
+
+02:45.710 --> 02:52.510
+security and something like this and you search for the environmental variety obols modification and
+
+02:52.520 --> 02:54.050
+you will get something like this.
+
+02:54.050 --> 02:54.630
+We did.
+
+02:54.680 --> 02:56.660
+And environmental variables.
+
+02:56.750 --> 02:59.540
+And we are looking for the Parthiv south.
+
+02:59.690 --> 03:04.510
+So we have to clean the path so we have to modify it.
+
+03:04.670 --> 03:06.830
+We have to click on the new one.
+
+03:06.830 --> 03:13.490
+It is the Windows operating system so it's a bit more convenient than doing it on Windows 8 or Windows
+
+03:13.580 --> 03:15.450
+7 or something like this.
+
+03:15.740 --> 03:20.710
+And you have to pace that so you will have the C program files open see the build.
+
+03:20.750 --> 03:27.790
+Been on the past basically as you can see I have already did it with Java JDK.
+
+03:27.830 --> 03:30.430
+I have read that the data were just way too wide.
+
+03:30.430 --> 03:35.760
+Fly server with the Java runtime environment Wiedmaier skew server.
+
+03:35.840 --> 03:37.830
+So this is the standard case.
+
+03:37.850 --> 03:43.810
+You install something and you update the environmental variables and you set it to the path.
+
+03:44.060 --> 03:48.440
+OK so that's click OK let's click OK.
+
+03:48.620 --> 03:51.980
+And it means that the open CV is on the path.
+
+03:52.010 --> 03:59.850
+If you navigate to the console so command line and I think we are able to narrow that path.
+
+04:00.150 --> 04:08.300
+OK I have several items on the path such as the wild fly as we have discussed Apache Mavor in Java runtime
+
+04:08.300 --> 04:15.050
+environment and as you can see after we have updated the classpath there's going to be the program files
+
+04:15.110 --> 04:21.500
+open see the build been on the classpath So this is how we setup open see the answer.
+
+04:21.510 --> 04:21.990
+Watching.

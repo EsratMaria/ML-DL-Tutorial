@@ -1,0 +1,205 @@
+WEBVTT
+
+00:00.290 --> 00:05.480
+Hi Finally we are going to talk about back propagation.
+
+00:05.520 --> 00:09.430
+This is why we needed this partial derivatives term.
+
+00:09.450 --> 00:12.380
+This is why we have been discussing the gradients.
+
+00:12.420 --> 00:15.260
+This is why we have been discussing no doubt.
+
+00:15.300 --> 00:16.410
+And so on.
+
+00:16.590 --> 00:23.040
+So this is the equation we are going to implement basically and this is the equation we are going to
+
+00:23.040 --> 00:25.830
+use the day the educators.
+
+00:26.010 --> 00:26.750
+Why.
+
+00:26.760 --> 00:33.870
+Because we have came to the conclusion that OK the information is encoded in the educators for an hour
+
+00:33.910 --> 00:41.040
+and that if we change the educates a little bit then the output is going to change a little bit.
+
+00:41.160 --> 00:47.190
+And sometimes we have to change the output because we came to the conclusion that the output is not
+
+00:47.250 --> 00:50.150
+equal to the output we should get.
+
+00:50.400 --> 00:57.860
+So the change in the educate at a given iteration For example if we are talking about time intervals
+
+00:58.220 --> 01:07.400
+the change of the weights at time t is equal to the learning in great times this partial derivative.
+
+01:07.440 --> 01:16.120
+Basically this is the gradient Plus the momentum at times the previous change in Edge weight from previous
+
+01:16.170 --> 01:16.920
+iteration.
+
+01:16.920 --> 01:20.870
+So that's why this is the iteration of for at the time.
+
+01:20.910 --> 01:27.110
+And this is the change in the weights in the T MINUS 1 time interval.
+
+01:27.120 --> 01:33.510
+So what's very important that we have to call stands the learning rate and the momentum and we have
+
+01:33.510 --> 01:34.560
+been discussing that.
+
+01:34.560 --> 01:43.050
+We are able to calculate these very very complex partial derivative we both know the data is like this
+
+01:43.280 --> 01:49.410
+don't know the data at the output node times the activation of our own input.
+
+01:49.440 --> 01:53.400
+So we ended up with quite a simple equation.
+
+01:53.610 --> 02:01.860
+The change of the adulate is equal to the learning rate times the data times the input plus the momentum
+
+02:01.890 --> 02:06.360
+times the change in adulate from the previous iteration.
+
+02:06.360 --> 02:08.170
+This is why I told you that.
+
+02:08.190 --> 02:08.810
+OK.
+
+02:08.970 --> 02:14.120
+That tells me is quite term plaques with partial derivatives and so on.
+
+02:14.250 --> 02:20.760
+But in the end we are going to end up with an equation where we have just more duplications and some
+
+02:20.760 --> 02:22.410
+addition.
+
+02:22.480 --> 02:28.940
+OK so maybe you pose a question that what is this learning rate and what is this momentum.
+
+02:28.980 --> 02:34.620
+And basically the learning rate is usually initialized to be 0.3.
+
+02:34.860 --> 02:43.470
+Is define how fast or algorithm learn if it is too high and then the algorithm converge is forced but
+
+02:43.500 --> 02:45.190
+not really accurate.
+
+02:45.270 --> 02:49.330
+It may miss global optimum if it is too low.
+
+02:49.410 --> 02:52.680
+The algorithm will be slow but more accurate.
+
+02:52.680 --> 02:59.580
+So basically there's a trade off if the learning rate is high or the learning rate is too low usually
+
+02:59.670 --> 03:05.050
+0.3 is going to work fine for most of the problems.
+
+03:05.070 --> 03:06.670
+What about the momentum.
+
+03:06.720 --> 03:11.380
+It is usually initialized to be approximately 0.6.
+
+03:11.460 --> 03:15.440
+We can escape local minimize or way this momentum.
+
+03:15.540 --> 03:22.700
+So this is why it is good this learning great can be good and we can all make this part of the equation
+
+03:22.950 --> 03:26.210
+and we can set the momentum to be close to zero.
+
+03:26.340 --> 03:30.250
+But this momentum had to avoid local minimums.
+
+03:30.420 --> 03:39.090
+For example here as you can see we have a local minima and the global minima and the momentum term hard
+
+03:39.150 --> 03:42.500
+to avoid converging to the local optimum.
+
+03:42.630 --> 03:51.740
+And it has to make sure that this w adulate will be eventually converge to this optimal solution.
+
+03:51.930 --> 03:52.590
+OK.
+
+03:52.620 --> 03:54.990
+By the way it doesn't always work.
+
+03:54.990 --> 04:02.020
+But anyways this momentum of the fine is how much we are relying on the previous change.
+
+04:02.130 --> 04:07.930
+So simply odds are a fraction of the previous weight update to the current one.
+
+04:08.330 --> 04:13.940
+Okay if it's too high then it has to increase the speed of convergence of the system.
+
+04:14.010 --> 04:17.910
+But it can overshoot the minimum if it's too low.
+
+04:17.940 --> 04:22.330
+It cannot avoid local teams and slows down the training.
+
+04:22.350 --> 04:23.530
+So there's a tradeoff.
+
+04:23.530 --> 04:26.540
+Again better if it's too high or too low.
+
+04:26.610 --> 04:32.250
+But basically these are the parameters we have to tune for back propagation.
+
+04:32.370 --> 04:35.010
+The learning rate and the momentum.
+
+04:35.010 --> 04:40.490
+So if you come to the conclusion that your network is not going to work fine.
+
+04:40.590 --> 04:47.180
+Maybe it is because the learning rate and the momentum do not have proper values.
+
+04:47.370 --> 04:49.850
+So that's all about back propagation.
+
+04:49.950 --> 04:53.740
+And this is the equation of we are going to implement in Java.
+
+04:53.840 --> 04:59.460
+We are not going to use this partial derivative because we have come to the conclusion that the gradient
+
+05:00.050 --> 05:05.940
+go to the delta dives they import but it is a very very simple equation.
+
+05:05.950 --> 05:09.200
+We don't have to bother about higher mathematics.
+
+05:09.250 --> 05:15.790
+We just have to specify the learning grade and the momentum and the deviate updates are just going to
+
+05:15.790 --> 05:17.320
+be fine.
+
+05:17.320 --> 05:18.220
+Thanks for watching.

@@ -1,0 +1,250 @@
+WEBVTT
+
+00:01.810 --> 00:07.710
+In the previous lecture we have been talking about how to use carrots in order to create an hour.
+
+00:07.750 --> 00:09.590
+And that for and basically.
+
+00:09.610 --> 00:16.360
+So all we have to instantiate SIKMA and show and then we can order as many hidden layers as we want.
+
+00:16.390 --> 00:19.640
+We don't have to define the input layer explicitly.
+
+00:19.690 --> 00:26.440
+We defined a number of nations in the input layer with the help of the input to them in the first hidden
+
+00:26.440 --> 00:27.130
+layer.
+
+00:27.220 --> 00:32.790
+OK these are the hidden layers and we have a single output layer as usual.
+
+00:32.800 --> 00:39.310
+So let's talk about this model that compile where we can define the last function where we can define
+
+00:39.310 --> 00:41.950
+the optimizer and the metrics.
+
+00:42.160 --> 00:49.720
+OK so those functions can be for example mean square error or negative log likelihood for classification
+
+00:49.720 --> 00:50.490
+problem.
+
+00:50.500 --> 00:53.630
+So what does this mean square error or Exactly.
+
+00:53.650 --> 00:57.270
+First of all a last function to measure is how close they are given.
+
+00:57.270 --> 01:01.670
+Now we're on a network to the ideal toward which it is training.
+
+01:01.840 --> 01:08.740
+OK we have several options such as the main square or last function or negative log likelihood loss
+
+01:08.740 --> 01:09.420
+function.
+
+01:09.460 --> 01:14.220
+As far as mean square error is concern we just have to use this formula.
+
+01:14.260 --> 01:21.520
+So we just have to sum up the differences between the actual values present in the data set and the
+
+01:21.520 --> 01:26.410
+predictions made by the network network y minus Y prime.
+
+01:26.470 --> 01:27.900
+We have to square it.
+
+01:27.940 --> 01:31.340
+We have to sum them up and we have to calculate the mean.
+
+01:31.360 --> 01:36.170
+So that's why we can divide by and the sum of all the differences.
+
+01:36.190 --> 01:39.020
+This is how we calculate means squared error.
+
+01:39.070 --> 01:43.990
+And this is what we are going to use when dealing with the X or logical problem.
+
+01:44.020 --> 01:49.490
+Of course during the iteration the value of the last function is going to decrease.
+
+01:49.510 --> 01:56.330
+As you can see in the last iteration the last function value is 0 0 5 approximately.
+
+01:56.440 --> 02:01.520
+And if we take a look at a previous iteration Okay it is a bit higher.
+
+02:01.570 --> 02:06.540
+So the last function value is going to decrease during the training procedure.
+
+02:06.610 --> 02:13.040
+Then we have an optimizer and usually we use the Adam optimizer or the Adam updater.
+
+02:13.140 --> 02:18.630
+There's a good documentation on a deep learning for j dot org slash updater.
+
+02:18.680 --> 02:21.970
+Ok deep learning for J is for Java.
+
+02:22.000 --> 02:25.780
+But basically these algorithms are the same no matter what we are dealing with.
+
+02:25.780 --> 02:29.940
+Java Python carious cans or flow or whatever.
+
+02:29.980 --> 02:31.740
+These algorithms are the same.
+
+02:31.840 --> 02:37.520
+So we have Distel the gradient descent algorithm that's going to Aberdare the educates.
+
+02:37.570 --> 02:44.190
+So these theta values are the double you educate as you can see for still has the gradient descent.
+
+02:44.350 --> 02:52.810
+We just have a single paramita are the alpha and we are going to update D-W educates based on the gradient.
+
+02:52.810 --> 02:55.180
+OK so alpha is the learning rate.
+
+02:55.210 --> 02:59.680
+If our So is small than the algorithm is going to be slow.
+
+02:59.800 --> 03:05.660
+If Alpha is high then the algorithm will be fast but not going to be accurate.
+
+03:05.680 --> 03:11.860
+So was the problem which still has degraded in the sense that the updater take small steps but those
+
+03:11.860 --> 03:16.140
+steps zigzag back and forth on their way to an error or many of them.
+
+03:16.150 --> 03:22.310
+So as you can see if we just use simple still has the gradient the sand will be as for learning grade
+
+03:22.320 --> 03:23.400
+exclusively.
+
+03:23.450 --> 03:27.480
+Dan the training procedure is going to be something like this.
+
+03:27.550 --> 03:31.610
+So the algorithm is not going to be as stable as possible.
+
+03:31.630 --> 03:37.750
+That's why we should use momentum if we use the momentum then the training procedure is going to be
+
+03:37.750 --> 03:38.600
+very smooth.
+
+03:38.620 --> 03:45.410
+As you can see and that's why using momentum is an order updater or another optimizer.
+
+03:45.430 --> 03:52.990
+OK there are other optimizers such as at a grad or RMX prop so added great regret skilless out for each
+
+03:52.990 --> 03:53.580
+paramita.
+
+03:53.620 --> 04:00.520
+According to the history of the gradient so the previous stops which means that these are adaptive algorithms.
+
+04:00.520 --> 04:04.940
+The math is changing in the course of the training procedure.
+
+04:05.050 --> 04:09.630
+So when the gradient is large our is reduced and vice versa.
+
+04:09.820 --> 04:17.500
+Then we have our M-S prop where we had a G.T. term that's calculated by exponentially decaying the average
+
+04:17.590 --> 04:25.660
+and not the sum of the gradients and basically Adam optimizer combines both at a grad and RMX prop in
+
+04:25.660 --> 04:31.900
+the sense that these are the equations we have to use in order to update the double you educate.
+
+04:31.930 --> 04:36.090
+OK here in this article These are the theta values.
+
+04:36.250 --> 04:39.630
+But this is how we can update the given educates.
+
+04:39.700 --> 04:46.210
+What's very important that for atom optimizer we are going to assign a given learning grade to every
+
+04:46.210 --> 04:47.550
+single educate.
+
+04:47.620 --> 04:52.390
+So we are going to handle all the W educates independently.
+
+04:52.460 --> 04:55.320
+OK so it uses first order moment.
+
+04:55.330 --> 04:58.550
+These are the values and second order moments.
+
+04:58.570 --> 05:04.540
+These are the G values and the steps size will decrease as we approach to the air or meaning.
+
+05:04.570 --> 05:08.350
+So in that sense it is an adaptive algorithm as well.
+
+05:08.350 --> 05:12.940
+So this atom optimizer is working fine for most of the cases.
+
+05:12.970 --> 05:20.110
+That's why we use Adam as the optimizer means square there or as the last function and the metrics is
+
+05:20.110 --> 05:21.690
+the binary accuracy.
+
+05:21.700 --> 05:27.940
+So if you take a look at the documentation of course the metrics is a function that is used to judge
+
+05:27.940 --> 05:34.630
+the performance of your model so we can define a binary accuracy that calculates the mean accuracy rate
+
+05:34.690 --> 05:39.270
+across all predictions for a binary classification problems.
+
+05:39.280 --> 05:46.660
+Here we are dealing with a binary classification problem because the solution can be either 0 or a warm.
+
+05:46.720 --> 05:50.560
+So the target for your bullets are zeros and ones as you can see.
+
+05:50.620 --> 05:57.490
+OK we are going to use categorical accuracy when dealing with multiclass classification problems.
+
+05:57.520 --> 06:04.870
+For example when dealing with hand with 10 digit classification where we have 10 output Klosters 0 1
+
+06:04.940 --> 06:06.250
+2 up to 9.
+
+06:06.310 --> 06:09.900
+So in those cases we have to use categorical accuracy.
+
+06:09.910 --> 06:13.050
+But now we are dealing with binary classes.
+
+06:13.090 --> 06:15.430
+That's why we use binary accuracy.
+
+06:15.490 --> 06:15.960
+OK.
+
+06:15.950 --> 06:19.150
+In the next lecture we are going to run the algorithm.
+
+06:19.150 --> 06:20.140
+Thanks for watching.

@@ -1,0 +1,106 @@
+WEBVTT
+
+00:00.240 --> 00:06.700
+High in this video we are going to talk about how to handle data SATs in PI brain.
+
+00:06.840 --> 00:08.020
+So that's important.
+
+00:08.040 --> 00:12.010
+PI abrain dataset supervised data set.
+
+00:12.180 --> 00:17.840
+And if we would like to create a supervised data set it's quite easy we just have to instantiate it
+
+00:18.060 --> 00:19.640
+supervised data.
+
+00:19.860 --> 00:27.420
+And we have to specify that what's the number of the inputs and how many outputs we are looking for.
+
+00:27.420 --> 00:34.920
+So for example if we are talking about logical operators we had two inputs and a single output.
+
+00:34.920 --> 00:35.730
+Why.
+
+00:35.730 --> 00:46.560
+Because we have for example 0 0 as an input and we have zero as an output or if we have 1 0 then the
+
+00:46.560 --> 00:51.830
+output will be one for the X or logical relation.
+
+00:52.020 --> 00:58.170
+So that's why we have to specify that what's going to be the input size and the output size.
+
+00:58.860 --> 01:08.510
+And then we are able to order samples so our sample with 0 0 and for example 0.
+
+01:08.590 --> 01:19.080
+OK it's going to be the first sample then we are able to or I'm going to talk about X or logical relations
+
+01:19.080 --> 01:23.550
+so something like this like that.
+
+01:23.560 --> 01:24.310
+OK.
+
+01:24.480 --> 01:27.030
+And we are able to get that input.
+
+01:27.060 --> 01:31.220
+So we are able to get the inputs from this data.
+
+01:31.290 --> 01:34.290
+And we are able to get the target verifiable.
+
+01:34.470 --> 01:42.140
+So we are able to iterate through we have the input we have a target in the data.
+
+01:42.390 --> 01:49.200
+We just have to iterate through something like this and printout that the improved aim
+
+01:52.220 --> 01:59.580
+and output is the target solely for that the target for arrivals.
+
+01:59.930 --> 02:06.120
+So that say that and I guess we're just going to work fine.
+
+02:06.160 --> 02:09.170
+I'm going to run an hour on that story that by.
+
+02:09.260 --> 02:16.520
+And yet we are able to separate and gather the inputs and the targets from the Superlight data sat as
+
+02:16.520 --> 02:23.960
+you can see we have the input and the output input output input output on a line by line basis and we
+
+02:23.960 --> 02:33.520
+are able to if we would like to get for example all the inputs we can refer to the inputs as the input.
+
+02:33.530 --> 02:41.810
+So if we printed out like this going to say that cleared the console and run it as you can see we are
+
+02:41.810 --> 02:49.460
+able to get all of the input variables if we reference the data with this import and it's going to get
+
+02:49.520 --> 02:52.350
+all the rows for the inputs.
+
+02:52.430 --> 02:59.030
+If we are curious about the outputs or the target variables we just have to say that I would like to
+
+02:59.090 --> 03:03.460
+get from the data that targets.
+
+03:03.830 --> 03:12.740
+OK and if I say that and right again as you can see we are able to separate the inputs and the target
+
+03:12.830 --> 03:13.930
+accordingly.
+
+03:14.120 --> 03:19.760
+So this is how we handle data in PI brain quite easy and quite convenient.
+
+03:19.760 --> 03:20.720
+Thanks for watching.

@@ -1,0 +1,298 @@
+WEBVTT
+
+00:02.370 --> 00:09.520
+In the last lecture we have been talking about Viola Jones algorithm and how to detect a human face
+
+00:09.610 --> 00:10.620
+on an image.
+
+00:10.720 --> 00:16.720
+And we have come to the conclusion that the algorithm is going to look for the most relevant features
+
+00:16.720 --> 00:25.620
+such as the eyes so left side right-I nose lips forehead eyebrows and something like this.
+
+00:25.630 --> 00:31.000
+So these are the most relevant features as far as human faces are concerned.
+
+00:31.240 --> 00:34.750
+And the good question is how to detect these features.
+
+00:34.780 --> 00:43.300
+And the answer is Haar wavelets or heart features so hard wavelet is a sequence of rescaled square shaped
+
+00:43.300 --> 00:44.260
+functions.
+
+00:44.260 --> 00:50.740
+It is very very similar to Fourier analyzes it was proposed by a Hungarian mathematician of freight
+
+00:50.750 --> 00:58.240
+car in 19:9 by the way these features are very very similar to convolutional caramelised.
+
+00:58.300 --> 01:04.330
+So basically this is the theory behind convolutional now where all the networks that read the map of
+
+01:04.350 --> 01:08.380
+these cardinals the most relevant features can be detected.
+
+01:08.380 --> 01:15.430
+So the approach is approximately the same Haar features are the relevant features for phase detection.
+
+01:15.550 --> 01:22.520
+We are going to assign a hard feature to every single important feature on a human face.
+
+01:22.570 --> 01:27.480
+OK so for example there are edge features and line features.
+
+01:27.670 --> 01:36.020
+So what does it mean exactly that for example for edge features there are white boxes and black pixels.
+
+01:36.140 --> 01:36.700
+OK.
+
+01:36.700 --> 01:44.680
+Of course in real images like this there's no completely white or completely black pixels because it
+
+01:44.680 --> 01:52.040
+is a grayscale image every single pixel has the value from 0 to two hundred and fifty five.
+
+01:52.120 --> 01:56.240
+So there's no completely white and completely black images.
+
+01:56.350 --> 02:04.230
+But let's consider the ideal case where there's a white region of pixels and black region of pixels.
+
+02:04.330 --> 02:08.150
+OK there's a horizontal version and the vertical version.
+
+02:08.260 --> 02:14.190
+But as you can see it is approximately the same in the sense that it is going to detect edges.
+
+02:14.230 --> 02:22.510
+So let's try to search for edges as far as this image is concerned as you can see for example the eyebrow
+
+02:22.570 --> 02:30.420
+contains darker pixels and the forehead right above the eyebrow contains brighter pixels.
+
+02:30.610 --> 02:34.350
+OK so this is very very similar to this edge feature.
+
+02:34.390 --> 02:37.370
+Brighter pixels darker pixels.
+
+02:37.490 --> 02:43.560
+OK we can use line features that can detect lines quite effectively.
+
+02:43.630 --> 02:50.020
+So for example we can have brighter pixels than darker pixels than brighter pixels.
+
+02:50.020 --> 02:52.750
+Again this is the vertical version.
+
+02:52.780 --> 02:57.200
+This is the horizontal version by the way the opposite can happen.
+
+02:57.220 --> 03:03.180
+So instead of white black white we can deal with the black white black.
+
+03:03.250 --> 03:11.350
+So darker pixels brighter pixels and darker pixels again for example as far as this image is concerned
+
+03:11.590 --> 03:18.910
+you can see that these are dark pixels than brighter pixels than dark pixels again.
+
+03:19.030 --> 03:25.660
+So it is very very similar to line features black pixels white pixels black pixels.
+
+03:25.810 --> 03:34.210
+OK then we have the nose as you can see this region of the nose contains brighter pixels and these regions
+
+03:34.330 --> 03:40.770
+right next to the nose contains darker pixels so black white black again.
+
+03:40.900 --> 03:47.520
+So we are able to assign hard features to the most relevant features on the human face.
+
+03:47.520 --> 03:48.930
+And why is it important.
+
+03:49.030 --> 03:57.610
+Because the algorithm is going to detect human faces based on the most relevant features eyes eyebrows
+
+03:57.790 --> 04:00.160
+nose lips and so on.
+
+04:00.160 --> 04:07.000
+So this is why car features are extremely important and extremely powerful method for detecting the
+
+04:07.000 --> 04:08.640
+most relevant features.
+
+04:08.860 --> 04:12.430
+OK lets talk a bit about the concrete computation.
+
+04:12.490 --> 04:17.520
+So we are able to assign a pixel intensity to every single pixel.
+
+04:17.590 --> 04:26.110
+If we are dealing with grayscale images these values are within the range 0 and 255 in this case we
+
+04:26.110 --> 04:31.560
+are going to represent white pixels with 0 and the black boxes with 1.
+
+04:31.570 --> 04:34.040
+So these are the pixel intensities.
+
+04:34.180 --> 04:40.960
+OK so this is the ideal Haar feature big so intense that is when we are dealing with the white box and
+
+04:40.960 --> 04:49.360
+the black boxes exclusively of course in real life Canarios these values are not zeros and ones exclusively
+
+04:49.420 --> 04:56.110
+because we are dealing with grayscale images but something like this is so 0.1 is very bright.
+
+04:56.110 --> 05:05.250
+So 0.3 is a bit darker 0.6 is even darker and you can see 0.9 is almost black.
+
+05:05.360 --> 05:11.490
+OK so we can detect that these are brighter pixels these are darker pixels.
+
+05:11.560 --> 05:12.970
+So what do we have to do.
+
+05:13.010 --> 05:21.090
+Rioli Jones algorithm is going to compare how close the various Canario is to the ideal case.
+
+05:21.100 --> 05:27.670
+So somehow we have to compare these pixel intensities read these pixel intensities.
+
+05:27.820 --> 05:30.930
+So we just have to sum up the white big intensities.
+
+05:30.970 --> 05:38.110
+So let's sum up these values and calculate the average Let's calculate the sum of the black boxes and
+
+05:38.110 --> 05:45.400
+calculate the average and the data which is the difference of the dark intensity is minus the white
+
+05:45.460 --> 05:46.380
+intensity.
+
+05:46.450 --> 05:51.680
+So as you can see the eye is the pixel intensity of a given pixel.
+
+05:51.880 --> 05:56.700
+OK we just have to sum them up as far as Dot pixels are concerned.
+
+05:56.740 --> 06:01.430
+So 0.6 0.8 plus 0.8 plus 0.6.
+
+06:01.510 --> 06:06.220
+So we just have to sum these numbers up and we have to calculate the average.
+
+06:06.310 --> 06:13.030
+So that's why we have to multiply it by one divided by and where n is the number of pixels in the given
+
+06:13.030 --> 06:13.740
+region.
+
+06:13.890 --> 06:22.070
+OK in this case we had a two values of a minus the average of the brighter pixel intensities.
+
+06:22.210 --> 06:26.400
+What about this data value for the ideal higher feature.
+
+06:26.470 --> 06:29.890
+We just have to calculate the average of the dark region.
+
+06:29.980 --> 06:33.860
+OK we just have to sum up ones and divide it by 8.
+
+06:33.940 --> 06:39.970
+So the average will be one here for the brighter pixels the average will be 0.
+
+06:39.970 --> 06:40.560
+So what.
+
+06:40.580 --> 06:42.620
+Minus Zero is 1.
+
+06:42.730 --> 06:46.140
+So the data value is going to be one of four.
+
+06:46.140 --> 06:53.770
+The ideal feature what about this real life scenario we just have to calculate the dark pixel intensities
+
+06:53.890 --> 06:55.580
+white pixel intensities.
+
+06:55.630 --> 07:05.020
+So that's why 0 that 74 is the average of the dark pixels minus 0.18 which is the average of the brighter
+
+07:05.020 --> 07:05.870
+pixels.
+
+07:06.160 --> 07:08.920
+It is going to be 0 0 0 or 56.
+
+07:08.980 --> 07:16.450
+So the closer the value to on the more likely we have found a hard feature and because we will never
+
+07:16.450 --> 07:21.230
+get zeros or ones because we are dealing with real images.
+
+07:21.310 --> 07:29.020
+So if you take a look at this image there is no zero or a one pixel intensity because there is no completely
+
+07:29.020 --> 07:31.840
+white and completely black pixels.
+
+07:31.840 --> 07:33.140
+OK maybe here.
+
+07:33.160 --> 07:35.660
+These are approximately black boxes.
+
+07:35.770 --> 07:39.730
+But anyways usually we are dealing with values like this.
+
+07:39.820 --> 07:45.190
+And the closer the value to on the more likely we have found the haar feature.
+
+07:45.280 --> 07:47.170
+OK so what do we have to do.
+
+07:47.200 --> 07:49.660
+We just have to calculate these data.
+
+07:49.810 --> 07:53.220
+And even the data is very very close to one.
+
+07:53.260 --> 07:59.370
+We can't come to the conclusion that we have found a match in the sense that we have found a given Haar
+
+07:59.500 --> 08:00.430
+feature.
+
+08:00.430 --> 08:04.610
+So for example we have found and I grow we have found a nose.
+
+08:04.720 --> 08:06.940
+We have found our lips and so on.
+
+08:06.940 --> 08:12.280
+So this is how we are able to detect the most relevant features on a given image.
+
+08:12.460 --> 08:19.210
+OK in the next lecture we are going to talk about how to boost these calculations because as you can
+
+08:19.210 --> 08:23.450
+see we have to sum up the values within a rectangle.
+
+08:23.500 --> 08:30.430
+So maybe we can come up with a smarter algorithm in order to make that approach as fast as possible.
+
+08:30.430 --> 08:31.290
+Thanks for watching.

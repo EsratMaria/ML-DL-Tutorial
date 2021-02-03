@@ -1,0 +1,316 @@
+WEBVTT
+
+00:01.420 --> 00:08.230
+In this chapter we are going to talk about tree based algorithms focusing on decision trees.
+
+00:08.230 --> 00:10.570
+So what are decision trees.
+
+00:10.570 --> 00:13.690
+It is a type of supervised learning approach.
+
+00:13.690 --> 00:20.100
+It is mostly used in classification problems but it can be used for regression as well.
+
+00:20.110 --> 00:21.820
+What's extremely important.
+
+00:21.820 --> 00:28.870
+And basically this is why we like decision trees because it works fine for both categorical variables
+
+00:28.990 --> 00:31.530
+and continuous input as well.
+
+00:31.540 --> 00:35.500
+What does it mean when we were dealing with credit scoring.
+
+00:35.500 --> 00:41.370
+We had a data set like this with income age loan loan to income ratio.
+
+00:41.380 --> 00:42.810
+These are the features.
+
+00:42.940 --> 00:51.610
+And as we can see these are continuous imports in the sense that these are American values of 59 0 1
+
+00:51.960 --> 01:00.700
+48 2 1 1 and so 1 So these are not Marichal they'll use OK but decision trees can handle categorical
+
+01:00.700 --> 01:02.160
+variables as well.
+
+01:02.170 --> 01:03.810
+What does it mean exactly.
+
+01:03.850 --> 01:11.530
+For example when dealing with a data set like this as you can see these values are not numerical values.
+
+01:11.530 --> 01:16.550
+We have four features outlook temperature humidity and wind.
+
+01:16.570 --> 01:22.160
+And we have a single target Merali about whether we are going to play golf or not.
+
+01:22.270 --> 01:25.750
+And as we can see these are not numerical values.
+
+01:25.850 --> 01:34.450
+Sunny overcast or rainy as far as Outlook is concerned though when it can be true or false the weather
+
+01:34.450 --> 01:36.160
+is when they or not.
+
+01:36.160 --> 01:41.770
+So these are not numerical values but categorical variables instead.
+
+01:41.890 --> 01:48.670
+And basically this is the most important when the age of decision is that it can handle both of these
+
+01:48.670 --> 01:49.730
+variables.
+
+01:49.890 --> 01:50.670
+OK.
+
+01:50.680 --> 01:53.300
+It is very very similar to search trees.
+
+01:53.320 --> 01:58.890
+So if you are familiar with the binary search the data structure it is very very similar.
+
+01:58.960 --> 02:02.030
+A given decision tree has the root node.
+
+02:02.080 --> 02:04.660
+It can have two or more children.
+
+02:04.660 --> 02:06.620
+So these are the child nodes.
+
+02:06.670 --> 02:10.540
+And of course it's going to have several leaf nodes.
+
+02:10.540 --> 02:13.350
+So it is very similar to a search tree.
+
+02:13.600 --> 02:20.440
+And we just have to split the data or the population of basically the original data set into two or
+
+02:20.440 --> 02:25.870
+more homogenous sets based on significant splitter in the input variables.
+
+02:25.990 --> 02:30.620
+We are going to talk a lot more about this issue in the coming lectures.
+
+02:30.740 --> 02:33.740
+OK so let's consider a concrete example.
+
+02:33.760 --> 02:40.630
+We have a single feature X for example the number of Arbor's a students band with studying.
+
+02:40.750 --> 02:45.340
+And we want to predicate the Y probability of passing the exam.
+
+02:45.400 --> 02:53.560
+So we have a single feature X and we have a target variable while OK in this case the decision tree
+
+02:53.590 --> 02:55.070
+is rodders simple.
+
+02:55.090 --> 02:56.410
+We have a root node.
+
+02:56.470 --> 02:58.790
+We have to split on the X feature.
+
+02:58.840 --> 03:01.510
+Of course we don't have any other features.
+
+03:01.600 --> 03:03.870
+So we have just a single feature.
+
+03:03.910 --> 03:11.470
+The number of hours the students band with studying and if it is smaller than 5 then the student will
+
+03:11.470 --> 03:14.310
+fail if it is greater than five.
+
+03:14.380 --> 03:22.280
+So if the students span more than five hours with studying it means that he or she will pass the exam.
+
+03:22.330 --> 03:29.020
+So it is a very very simple decision tree as we can see the nodes represent the features.
+
+03:29.020 --> 03:37.450
+In this case we split on the X of arrival where X is the number of hours and we have two options whether
+
+03:37.450 --> 03:42.190
+the students fail the exam or whether the students pass the exam.
+
+03:42.190 --> 03:42.800
+Why.
+
+03:42.820 --> 03:48.500
+Because the why target bribable can have to they'll use fail or pass.
+
+03:48.640 --> 03:54.370
+OK so there's a single root node associated with every single decision tree.
+
+03:54.400 --> 04:02.830
+It represents the entire dataset or the population and this data that further gets divided into several
+
+04:02.830 --> 04:03.750
+subsets.
+
+04:03.880 --> 04:10.120
+OK what's extremely important and this is why we have to talk about Shannon entropy because the root
+
+04:10.180 --> 04:13.330
+node corresponds to the best predictor.
+
+04:13.330 --> 04:20.920
+So we have to find the most relevant feature and we are going to split the decision tree based on the
+
+04:20.920 --> 04:25.750
+most relevant predicate or or feature the predictor is the same as a feature.
+
+04:25.750 --> 04:27.580
+OK so we have a root node.
+
+04:27.670 --> 04:28.880
+We have leaf nodes.
+
+04:28.900 --> 04:33.000
+As you can see a leaf node doesn't have any children at all.
+
+04:33.010 --> 04:37.530
+So leaf nodes with no children their values are what we are after.
+
+04:37.540 --> 04:42.310
+So the values of the leaf nodes are going to be the target variable.
+
+04:42.310 --> 04:48.330
+This is what we have been talking about here that we have the target Barrayar bill or why or whether
+
+04:48.340 --> 04:52.870
+the student has paused the exam or failed the exam.
+
+04:52.900 --> 04:58.680
+We have the root node in this case because we just have a single x predictor feature.
+
+04:58.810 --> 05:02.500
+That's why this decision tree it's going to be very small.
+
+05:02.530 --> 05:08.210
+It has a single root node which two branches and two leaf nodes accordingly.
+
+05:08.230 --> 05:15.360
+But as you can see the leaf nodes represent D-y target triable as fail or postes.
+
+05:15.460 --> 05:20.300
+OK so we can say that the leaf nodes of values are what we are after.
+
+05:20.320 --> 05:24.720
+Basically the target variables and we have decision nodes.
+
+05:24.910 --> 05:27.150
+As you can see for example this blue note.
+
+05:27.190 --> 05:34.290
+It is not the root node and it is not a leaf node because it has further children.
+
+05:34.430 --> 05:41.770
+OK so for a decision node the algorithm splits the node into sub nodes based on given features in the
+
+05:41.770 --> 05:42.850
+data set.
+
+05:42.850 --> 05:47.460
+So again every single split is based on features.
+
+05:47.590 --> 05:54.570
+And the most relevant question is how to decide what nodes so what features are important.
+
+05:54.640 --> 05:57.480
+So for example what's going to be the root node.
+
+05:57.610 --> 06:00.360
+What feature is the most important one.
+
+06:00.430 --> 06:03.570
+And what are the nodes and the features.
+
+06:03.610 --> 06:05.400
+That's not that important.
+
+06:05.500 --> 06:07.260
+So what should be the root node.
+
+06:07.360 --> 06:14.110
+Basically this is why we have to deal with information theory entropy and information again in order
+
+06:14.110 --> 06:17.680
+to understand how to deconstruct the decision tree.
+
+06:17.680 --> 06:19.030
+OK we understand that.
+
+06:19.030 --> 06:20.170
+Why is it good.
+
+06:20.200 --> 06:21.360
+We have a root node.
+
+06:21.400 --> 06:29.110
+We have leaf nodes and basically these leaf nodes are what we are after these leaf nodes are the values
+
+06:29.200 --> 06:30.930
+of the target variable.
+
+06:30.930 --> 06:39.280
+Fail or Porth for our example OK or for example when we are dealing with credit scoring we have 0 and
+
+06:39.350 --> 06:46.790
+1 0 when the client is not able to pay back the loan want if the client is able to pay back the loan.
+
+06:46.900 --> 06:50.890
+So the decision tree leafs are going to be the target variable.
+
+06:51.070 --> 06:58.270
+We just have to define what are the important features and how to construct the decision tree what is
+
+06:58.270 --> 06:59.950
+going to be the root node.
+
+07:00.010 --> 07:02.740
+What's going to be decision nodes and so on.
+
+07:02.860 --> 07:08.710
+Okay so a decision to reclassify or accuracy depends heavily on escalates.
+
+07:08.800 --> 07:11.750
+So how do we construct the tree like structure.
+
+07:11.770 --> 07:16.990
+What features are more important what features are less important and so on.
+
+07:16.990 --> 07:24.850
+So there are several algorithms for this problem such as calculating a given index calculating the information
+
+07:24.880 --> 07:25.690
+entropy.
+
+07:25.750 --> 07:32.980
+This is what we are going to talk about because this is the most common approach ID 3 or see 4 or 5
+
+07:33.040 --> 07:41.170
+algorithms rely heavily on Shannon entropy and information again or we can solve the same problem with
+
+07:41.200 --> 07:44.500
+algorithms based on variance reduction.
+
+07:44.530 --> 07:50.810
+We are not going to talk about variance reduction in the next lecture we are going to talk about entropy.
+
+07:50.980 --> 07:51.870
+Thanks for watching.

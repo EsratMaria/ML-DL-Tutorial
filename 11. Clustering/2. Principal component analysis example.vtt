@@ -1,0 +1,232 @@
+WEBVTT
+
+00:01.890 --> 00:07.880
+Horn in the last lecture we have been talking about principal component analyzers.
+
+00:08.130 --> 00:14.890
+And in this lecture we are going to use the principal component analyze his own handwritten digits.
+
+00:15.030 --> 00:23.690
+So we are going to deal with these digits data that we are going to have 10 Klaas's 0 1 2 3 4 up to
+
+00:23.700 --> 00:24.670
+9.
+
+00:24.690 --> 00:33.090
+There are going to be approximately 18 hundred samples and there are going to be 64 dimensions because
+
+00:33.120 --> 00:37.330
+every single image is an 8 by 8 pixel image.
+
+00:37.430 --> 00:46.680
+OK so why use principle component analyzes because we have 64 features so basically sixty four dimensions
+
+00:46.890 --> 00:52.050
+and humans are not able to cope with this huge number of dimensions.
+
+00:52.050 --> 00:58.400
+This is why they use principle component analyzes because we are able to reduce the DI imagines and
+
+00:58.410 --> 01:02.550
+we can visualize the dataset in two dimensions.
+
+01:02.550 --> 01:03.630
+Why is it good.
+
+01:03.690 --> 01:10.530
+Because we are able to investigate if the distribution after principal component analyzes reveals the
+
+01:10.530 --> 01:17.840
+distribution of different classes and if they are clearly separable we can have a good guess better.
+
+01:17.880 --> 01:22.100
+Is it possible to separate two or more clusters and so on.
+
+01:22.290 --> 01:25.480
+So first of all we have to load the digits data.
+
+01:25.620 --> 01:30.440
+We are going to have the data and the target of our eyeballs accordingly.
+
+01:30.450 --> 01:33.340
+Let's say we realized the first six image.
+
+01:33.450 --> 01:39.540
+OK I'm going to say that I'm going to call this code and let's run it.
+
+01:41.580 --> 01:48.520
+We have already met with this data set when we used support vector machines for classifying can be written
+
+01:48.540 --> 01:49.230
+digits.
+
+01:49.320 --> 01:52.160
+We have zero we the target will use 0.
+
+01:52.230 --> 01:53.750
+Then we have the next image.
+
+01:53.850 --> 01:59.700
+We target on that next image with two then three four five and so on.
+
+01:59.700 --> 02:05.910
+So we have 18:00 images and we have the target arrival's accordingly.
+
+02:06.060 --> 02:10.800
+And of course let's take a look at the principal component and alliances.
+
+02:11.010 --> 02:19.620
+We are going to have 10 components we are going to use color code black blue purple yellow white red
+
+02:19.740 --> 02:21.350
+line and so on.
+
+02:21.540 --> 02:28.970
+And basically we would like to visualize this high dimensional data using just two dimensions.
+
+02:29.070 --> 02:36.060
+As usual we have to use the feet transform method on the dataset and basically we are going to assign
+
+02:36.060 --> 02:39.010
+a given color to every single dot.
+
+02:39.090 --> 02:41.510
+We have the x and y coordinates.
+
+02:41.580 --> 02:48.150
+We are going to create a scatterplot with the given color as ok it's very important that in the dataset
+
+02:48.480 --> 02:56.220
+as you can see we have integers 0 1 2 3 4 5 and so on but we would like to use colors and that's why
+
+02:56.220 --> 03:01.050
+we are going to assign a given color to every single number.
+
+03:01.050 --> 03:04.180
+0 1 2 3 and so on.
+
+03:04.500 --> 03:10.680
+Then we have the legend with the target names and the X label and the y label accordingly.
+
+03:10.830 --> 03:13.120
+So let's say Wait let's run it.
+
+03:13.210 --> 03:15.320
+I'm going to close it.
+
+03:15.600 --> 03:19.560
+Let's clear the console and let's rerun it again.
+
+03:19.560 --> 03:23.160
+So we had images with Target variables like this.
+
+03:23.190 --> 03:24.110
+OK.
+
+03:24.240 --> 03:30.960
+And basically it's going to be the result after using principal component and ally says we have the
+
+03:30.960 --> 03:34.160
+first principal component on the x axis.
+
+03:34.230 --> 03:37.570
+We have the second principal component on the y axis.
+
+03:37.860 --> 03:46.260
+And as you can see we assign colors to every single integer we have zeros color coded with black.
+
+03:46.260 --> 03:48.100
+We have the green dots.
+
+03:48.120 --> 03:51.100
+It is the six we have the white dots.
+
+03:51.120 --> 03:52.310
+It is the four.
+
+03:52.470 --> 03:58.440
+And as you can see it's quite interesting to use principal component analyzes because we can't come
+
+03:58.440 --> 04:04.850
+to the conclusion that OK for us humans it's very easy to classify these integers.
+
+04:04.980 --> 04:08.930
+But as far as computers are concerned it's not that easy.
+
+04:09.060 --> 04:12.170
+It's very easy to separate black dots.
+
+04:12.180 --> 04:16.640
+So basically it's very easy to classify integer 0.
+
+04:16.650 --> 04:19.850
+It's very easy to classify the green dots.
+
+04:19.860 --> 04:26.800
+So number six it's quite easy to detect the white dots which is integer 4.
+
+04:26.910 --> 04:32.950
+It is a bit more difficult to detect blue dots which represent integer 1.
+
+04:33.090 --> 04:38.120
+But as you can see there are lots of lots of dots in the same region.
+
+04:38.160 --> 04:45.210
+So it's not that easy to separate seven eight nine five as you can see.
+
+04:45.270 --> 04:50.590
+There are lots of lots of dots in the same region in the two dimensional plot.
+
+04:50.640 --> 04:56.460
+It is a bit more easier to detect the yellow dots representing the integers 3.
+
+04:56.520 --> 05:04.080
+So we can come to the conclusion after using principal component says that these integers are not that
+
+05:04.140 --> 05:05.630
+easy to detect.
+
+05:05.640 --> 05:09.830
+So 7 8 9 it's very easy to detect zero.
+
+05:09.840 --> 05:11.660
+It's very easy to detect six.
+
+05:11.670 --> 05:16.920
+It's quite easy to detect four but these are the complex part of the algorithm.
+
+05:17.070 --> 05:17.760
+OK.
+
+05:17.790 --> 05:24.380
+So when we ran the classification algorithm such as supporting actor machines such as k nearest neighbor
+
+05:24.410 --> 05:32.280
+algorithm such as Navy base Eirgrid them we may expect that there are going to be lots of lots of misclassification
+
+05:32.340 --> 05:37.600
+in this region concerning seven eight nine and five.
+
+05:37.830 --> 05:38.310
+OK.
+
+05:38.310 --> 05:45.000
+So this is why it is good and advisable to use principal component analyzers because we can get a good
+
+05:45.000 --> 05:49.350
+grasp on the dataset because for us humans it doesn't matter.
+
+05:49.350 --> 05:52.340
+We are able to classify all of these digits.
+
+05:52.440 --> 05:59.700
+But for computers it's not that easy especially Saturn 8 9 and 5.
+
+05:59.910 --> 06:00.670
+OK.
+
+06:00.720 --> 06:04.190
+So this is how we use principal component analyzes.
+
+06:04.290 --> 06:05.140
+Thanks for watching.

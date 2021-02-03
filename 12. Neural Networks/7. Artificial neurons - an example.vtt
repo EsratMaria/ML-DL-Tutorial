@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.390 --> 00:08.850
+OK we have been talking about the concrete models with the input values educates some function and then
+
+00:08.850 --> 00:11.870
+the activation functions in the previous lecture.
+
+00:11.880 --> 00:14.430
+So let's see a concrete example.
+
+00:14.430 --> 00:17.480
+So let's suppose that we have for example three input.
+
+00:17.490 --> 00:24.540
+Now roans of course with three values for example 1 1 and 0.
+
+00:24.540 --> 00:28.380
+These are going to be the input values for this.
+
+00:28.380 --> 00:36.090
+Now we're on this now we're on and this now we're on we have been talking about that every single edge.
+
+00:36.240 --> 00:37.330
+We have an agile way.
+
+00:37.380 --> 00:43.790
+Well you 0.2 minus 0.5 and 0.4.
+
+00:44.160 --> 00:51.990
+We have the SUM function and the activation function that we go when to calculate the output for this
+
+00:52.020 --> 00:53.450
+given now on.
+
+00:53.850 --> 01:01.880
+What about the sum the SUM function is going to take all the inputs multiplied by the edge weight.
+
+01:02.040 --> 01:10.790
+So X1 times w 1 plus the second input times the second adulate plus x 2 times W2.
+
+01:11.010 --> 01:14.170
+And we have the last input with the last educate.
+
+01:14.310 --> 01:20.310
+So plus x three times W3 it's equal to warn times.
+
+01:20.320 --> 01:31.400
+0.2 OK plus 1 times minus 0.5 OK and is zero times 0.4.
+
+01:31.440 --> 01:38.930
+OK this is the last term if you calculate it it's going to be equal to minus 0.3.
+
+01:39.120 --> 01:43.360
+So this is going to be a value after the sum function.
+
+01:43.590 --> 01:49.950
+But we have been discussing that we have to apply the step function on the sum.
+
+01:49.980 --> 01:57.780
+So we have calculated the sum which is equal to minus 0.3 and we have to use the step function on that
+
+01:57.810 --> 01:58.150
+given.
+
+01:58.160 --> 02:07.040
+Well you and the stat function is going to return 0 if the input is smaller than 0.
+
+02:07.200 --> 02:10.230
+Anyways it's going to return a possible arm.
+
+02:10.350 --> 02:18.520
+So here because the input for the step function is smaller than zero the output is going to be zero.
+
+02:18.630 --> 02:26.340
+So this is why we can say that if we have three inputs with these values and the educates with these
+
+02:26.340 --> 02:31.980
+values then the output on a decent our own is going to be zero.
+
+02:32.190 --> 02:34.090
+Let's see another example.
+
+02:34.230 --> 02:44.550
+In this case the inputs are going to be won won and won and the edge weights are going to be 0.2 0.5
+
+02:44.730 --> 02:46.760
+and 0.7.
+
+02:46.800 --> 02:55.860
+Again we have to calculate the sum X-1 times double you won plus x 2 times W2 plus x 3 times double
+
+02:55.860 --> 02:57.070
+use three.
+
+02:57.510 --> 03:06.250
+So one time is 0.2 plus one at times 0.5 plus a one 0.7 is the last term.
+
+03:06.250 --> 03:08.850
+It's going to be equal to 1.4.
+
+03:09.030 --> 03:15.660
+And because a 1.4 is greater than zero it's going to be one as you can see.
+
+03:15.720 --> 03:17.820
+So the output of this.
+
+03:17.820 --> 03:20.900
+Now we're on is going to be plus warm.
+
+03:20.940 --> 03:25.280
+And basically this is how our networks work.
+
+03:25.320 --> 03:27.160
+We have important values.
+
+03:27.240 --> 03:29.000
+We have data educates.
+
+03:29.070 --> 03:33.680
+We have to sum these actuates and the input values up.
+
+03:33.690 --> 03:40.210
+First we have to apply the given inputs with the given actuates and we have to some of these values
+
+03:40.800 --> 03:42.420
+and then the step function.
+
+03:42.420 --> 03:50.250
+And basically in general the activation function is going to determine what is going to be the output.
+
+03:50.250 --> 03:57.300
+This is what we have been discussing that for a stat function the output can be 1 or 0.
+
+03:57.450 --> 04:03.630
+But for a sigmoid function the output can be any real the values between 0 and 1.
+
+04:03.750 --> 04:08.910
+For example 0 0 0 0 1 0 4 6 7 and something like this.
+
+04:08.940 --> 04:15.210
+And this is what we are looking for because if we have these zero where in one output of course.
+
+04:15.240 --> 04:18.310
+Now our own network is not going to Virga fine.
+
+04:18.360 --> 04:26.420
+We want to make sure that little change in the actuates are going to Coe's little change in the output.
+
+04:26.550 --> 04:29.670
+As you can see here we have a very very little.
+
+04:29.700 --> 04:38.780
+OK not that really will change but as you can see we have changed the WTU from minus 0.5 to plus 0.5.
+
+04:38.790 --> 04:40.670
+Okay and we have changed the input.
+
+04:40.740 --> 04:47.640
+So this is not a very very good example but basically illegal changing the educates and the import result
+
+04:47.640 --> 04:51.930
+in completely different output zero down one.
+
+04:52.050 --> 04:52.530
+OK.
+
+04:52.530 --> 04:56.640
+So that's all about the concrete example for O'Berry very simple.
+
+04:56.640 --> 04:59.680
+Now we're on that network and Perceptor on tanks or.

@@ -1,0 +1,211 @@
+WEBVTT
+
+00:00.780 --> 00:07.680
+High in this video we are going to take a look at how to construct a feat for about an hour of network.
+
+00:07.860 --> 00:14.840
+So let's import that by brain structure feedforward not work linearly or see more Edley or bias unit
+
+00:15.150 --> 00:16.800
+and a full connection.
+
+00:16.800 --> 00:23.160
+So we are able to create a feed for about an hour on that front and we are able to specify the building
+
+00:23.160 --> 00:28.380
+blocks the structure basically a linear layer or sigmoid layer by this unit.
+
+00:28.440 --> 00:33.260
+We are able to create connections between the layers and so on.
+
+00:33.300 --> 00:39.160
+So we are able to instantiate that for is equal to a feedforward network.
+
+00:39.270 --> 00:48.360
+And we can specify the input layer for example so the input layer is equal to linearly or it's going
+
+00:48.360 --> 00:57.750
+to have to now loans in the input layer then we will have a hidden layer is equal to sigmoid layer with
+
+00:57.840 --> 01:04.340
+3 now roans and the output layer is equal to the sigmoid layer.
+
+01:04.340 --> 01:06.920
+Again we want output now wrong.
+
+01:06.950 --> 01:07.670
+OK.
+
+01:07.860 --> 01:13.260
+This is what we have been discussing in that article section basically that the first layer of the input
+
+01:13.260 --> 01:19.380
+layer basically doesnt have any activation function it is the linear layer of the linear layer is not
+
+01:19.380 --> 01:21.650
+going to transform the import.
+
+01:21.840 --> 01:27.060
+This is what we are looking for the sigmoid layer is going to use the sigmoid function to calculate
+
+01:27.060 --> 01:29.490
+the final activations.
+
+01:29.760 --> 01:38.310
+OK and then we can see that network on module and before are in the module I would like to create the
+
+01:38.310 --> 01:40.840
+bypass for the input layer.
+
+01:40.860 --> 01:49.350
+It is equal to a bias unit and I would like to create the second the bias unit so bias Unit 2 and I
+
+01:49.350 --> 01:53.460
+would like to Aude First of all the bias units
+
+01:56.020 --> 01:57.060
+are module.
+
+01:57.080 --> 02:04.310
+I would like to order by S2 and then I would like two or two later.
+
+02:04.330 --> 02:09.470
+So I would like to charge the input layer.
+
+02:09.580 --> 02:12.230
+I'm going to copy and paste that.
+
+02:12.310 --> 02:15.550
+So I would like to order a hidden layer
+
+02:18.400 --> 02:20.840
+and the output layer.
+
+02:21.520 --> 02:22.480
+Okay.
+
+02:22.900 --> 02:28.690
+And then I would like to create the connections between the input layer and the hidden layer and between
+
+02:28.690 --> 02:30.950
+the hidden layer and the output layer.
+
+02:31.150 --> 02:36.530
+And because every now and its connected to every single that were on we can use the full connection
+
+02:38.140 --> 02:47.080
+so input and hidden the connections between the input and the hidden layer is equal to full and action
+
+02:47.440 --> 02:55.760
+and we can find that it's going to be between the input layer and the hidden layer.
+
+02:55.870 --> 03:06.760
+Then I would like to create hidden output is going to be a food connection between the hidden layer
+
+03:07.150 --> 03:10.460
+and the output layer.
+
+03:10.570 --> 03:19.000
+We would like to create the connections between the bias nodes and now roans so pious and I would like
+
+03:19.000 --> 03:32.110
+to create full connection between bias wanted and hidden layer than bias to output is equal to a food
+
+03:32.110 --> 03:33.130
+connection.
+
+03:33.130 --> 03:38.970
+And this is how we create connections between the second bias now and the output layer.
+
+03:39.310 --> 03:44.400
+And then we just have to call the network Daut sort modules.
+
+03:44.470 --> 03:48.460
+And basically this is how we initialize the network.
+
+03:48.610 --> 03:52.490
+For example the modules are Sautee topologically and so on.
+
+03:52.660 --> 04:01.020
+So sort modules and we are able to printout the network south.
+
+04:01.180 --> 04:05.150
+So if I say that I think there's not going to be any typos.
+
+04:05.320 --> 04:10.740
+But let's see instead of network 1 I printouts network 2.
+
+04:10.870 --> 04:16.760
+And as you can see we have a feed forward in our network okay and we have a bias need.
+
+04:16.870 --> 04:18.250
+We have another bias you need.
+
+04:18.250 --> 04:20.030
+We have a linear input layer.
+
+04:20.050 --> 04:24.810
+We have a sigmoid hidden layer and we have a c Moeed output layer.
+
+04:24.850 --> 04:31.270
+We have the connections and so on and if we would like to get more information then we are able to print
+
+04:31.270 --> 04:39.670
+out for example the way to alies between the input layer and the hidden layer for example so input hidden
+
+04:39.940 --> 04:41.240
+that operands.
+
+04:41.260 --> 04:48.640
+And if we say that it's going to printout that it's going to print out the connections as you can see
+
+04:48.970 --> 04:52.600
+we have one two three four five six.
+
+04:52.630 --> 04:54.570
+Yeah because we have to input.
+
+04:54.580 --> 04:56.670
+Now one owns and three he didn't want.
+
+04:56.890 --> 04:58.950
+So that's why we have six connections.
+
+04:58.960 --> 05:03.090
+Basically the DS randomly initialized educates.
+
+05:03.250 --> 05:10.040
+If we are curious that what's going to be the educates between the bias and the hidden layer.
+
+05:10.090 --> 05:13.630
+Of course there's going to be sorry actuates.
+
+05:13.750 --> 05:15.790
+So let's see if I run it again.
+
+05:15.810 --> 05:17.020
+Yeah sorry actuates.
+
+05:17.020 --> 05:26.860
+Between the buyer Snoad and sigmoid layer are three named roans OK that I would like to get educated
+
+05:26.950 --> 05:30.850
+between the hidden layer and the output layer.
+
+05:31.600 --> 05:33.690
+I'm going to clear the console.
+
+05:33.700 --> 05:40.480
+And yeah there's going to be Street values because we have three edges between the he didn't layer and
+
+05:40.480 --> 05:41.760
+the output layer.
+
+05:41.890 --> 05:48.090
+So this is how you can construct modules fuel connections bias units and so on.
+
+05:48.160 --> 05:51.510
+In order to construct the feedforward and our own network.
+
+05:51.790 --> 05:52.910
+Thanks for watching.

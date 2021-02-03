@@ -1,0 +1,322 @@
+WEBVTT
+
+00:01.560 --> 00:07.950
+In this chapter we are going to talk about another Amercian learning algorithm the so-called Navy base
+
+00:07.950 --> 00:09.210
+classifier.
+
+00:09.210 --> 00:12.870
+It is a very efficient supervised learning algorithm.
+
+00:12.870 --> 00:19.770
+So again this algorithm needs a data set with the features and labels accordingly.
+
+00:19.950 --> 00:20.960
+It scales avail.
+
+00:20.970 --> 00:27.840
+Even in hied I imagines and it is able to compete with support vector machines or even random for us
+
+00:27.860 --> 00:31.620
+classifiers as far as machine learning is concerned.
+
+00:31.620 --> 00:36.980
+Support vector machines and random forest classifiers are the best we can do.
+
+00:37.160 --> 00:37.620
+OK.
+
+00:37.610 --> 00:44.610
+With the advent of supercomputers and deep now Real Networks support vector machines and random forest
+
+00:44.640 --> 00:48.510
+classifiers are not as popular as they have been.
+
+00:48.540 --> 00:55.770
+But anyways these approaches are working quite fine navy base classifier support vector machines and
+
+00:55.770 --> 01:02.820
+random for us classifier Navy base classifier is able to make good predictions even when the training
+
+01:02.820 --> 01:05.400
+data set is relatively small.
+
+01:05.400 --> 01:13.200
+This is a huge advantage for NE's based classifier that we don't need a huge dataset in order to train
+
+01:13.200 --> 01:14.460
+the algorithm.
+
+01:14.490 --> 01:21.540
+You may pose a question that OK why is it named because it has a naive assumption that every pair of
+
+01:21.540 --> 01:23.940
+features are independent.
+
+01:23.940 --> 01:25.850
+So let's talk a bit about it.
+
+01:25.950 --> 01:33.600
+OK so there's a strong independence assumptions as far as Navy base classify Wisconsin between the given
+
+01:33.600 --> 01:34.440
+features.
+
+01:34.560 --> 01:38.880
+So for example a fruit can be considered to be an apple.
+
+01:38.910 --> 01:40.740
+If the color is red.
+
+01:40.740 --> 01:45.990
+If it is rounded and the diameter is about 8 centimeters.
+
+01:46.020 --> 01:53.550
+Now you base classifier considers each of these features so the color the roundness and the diameter.
+
+01:53.600 --> 02:00.360
+So these features contribute independently to the probability that this food is an apple.
+
+02:00.420 --> 02:04.550
+So it does not care about the correlation between these features.
+
+02:04.740 --> 02:07.010
+And usually this is not the case.
+
+02:07.050 --> 02:14.790
+So this is the main disadvantage for naive base classifier that does independence assumption is usually
+
+02:14.790 --> 02:15.800
+not true.
+
+02:15.910 --> 02:22.470
+OK so for example if we consider credit scoring data that we have been talking about the correlation
+
+02:22.470 --> 02:29.640
+matrix and if we print out the correlation we can make sure that there are lots of lots of negatively
+
+02:29.640 --> 02:33.620
+correlated features and positively correlated features.
+
+02:33.750 --> 02:40.770
+OK the diagonal values are all the warnings because every feature is correlated with itself so we don't
+
+02:40.770 --> 02:43.980
+have to bother about the diagonal values.
+
+02:44.040 --> 02:50.790
+But as you can see there are lots of lots of positively correlated features such as income and loan
+
+02:51.060 --> 02:55.780
+and they are negatively correlated features such as income and age.
+
+02:55.890 --> 03:00.360
+So that's why this independence assumption is usually not true.
+
+03:00.360 --> 03:03.800
+The features are not independent of each other.
+
+03:03.810 --> 03:08.650
+There is some positive or negative correlation between them.
+
+03:08.880 --> 03:13.090
+OK so let's talk about the abstract mathematical approach.
+
+03:13.330 --> 03:22.670
+Knave based classifier who relies heavily on a conditional probabilities so that P C K given x1 x2 up
+
+03:22.680 --> 03:23.240
+to x.
+
+03:23.270 --> 03:29.370
+And this equation means the probability that a new item with these features.
+
+03:29.380 --> 03:34.990
+So x1 x2 X and features has d output C K.
+
+03:35.010 --> 03:36.930
+So what about these features.
+
+03:36.930 --> 03:45.030
+The X-1 feature can be income X-2 feature is the age for example x 3 feature is the loan.
+
+03:45.090 --> 03:49.210
+So the X varietals are the features in the data set.
+
+03:49.230 --> 03:53.100
+The C is the possible outcome of K classes.
+
+03:53.220 --> 04:01.520
+When dealing with credit scoring K is equal to 2 because there are two output classes 0 or 1.
+
+04:01.540 --> 04:09.390
+So default and when the client is able to pay back the loan the C K is the possible loss for a given
+
+04:09.390 --> 04:10.830
+set of features.
+
+04:10.830 --> 04:17.080
+So for example k is zero when the income is this value the ages.
+
+04:17.100 --> 04:20.140
+This enables you and a loan is this value.
+
+04:20.190 --> 04:22.400
+So X-amount x 2 x 3.
+
+04:22.400 --> 04:29.380
+Are the features and the C key values are the given old put clauses 0 or 1.
+
+04:29.400 --> 04:30.360
+In this case.
+
+04:30.390 --> 04:37.500
+OK and we can use Bayes Theorem so we can decompose the conditional probability with the half of this
+
+04:37.500 --> 04:38.230
+formula.
+
+04:38.280 --> 04:40.140
+So the P C K.
+
+04:40.140 --> 04:45.120
+Given the features is equal to the probability of the given output.
+
+04:45.150 --> 04:52.320
+As you can see times the probability of the features given the output class divide by the probability
+
+04:52.380 --> 04:58.980
+of the feature is because this probability of the features are the same for all C values.
+
+04:58.980 --> 05:05.130
+Basically we don't have to deal with because in the end we are going to use an optimization algorithm
+
+05:05.340 --> 05:09.400
+because we would like to take the action with the highest probability.
+
+05:09.480 --> 05:17.790
+OK so we are able to transform this equation into this equation because of the basic theorem and because
+
+05:17.790 --> 05:24.700
+Naved based classifier had an assumption that all the features are independent of each other.
+
+05:24.780 --> 05:33.250
+We can say that the probability of x1 x2 up to X and given a c k is equal to the probability of X Y
+
+05:33.250 --> 05:42.050
+on a given c k times the probability of x2 Gidon c k up to the probability of X and given C K.
+
+05:42.060 --> 05:49.710
+So basically the original equation is proportional to the probability of the given output Clauss times.
+
+05:49.710 --> 05:57.240
+We just have to apply all these probabilities and finally nave based classifier is going to choose the
+
+05:57.270 --> 06:00.180
+S.K. class with the highest probability.
+
+06:00.180 --> 06:05.360
+So as you can see the final C class is equal to or the max.
+
+06:05.400 --> 06:12.740
+So we are going to find the maximum as far as the credit risk data set is concerned we have 0 and 1.
+
+06:12.750 --> 06:16.160
+So S.K. can be 0 or 1.
+
+06:16.230 --> 06:23.730
+These are the probabilities of the given outputs and we just have to calculate disvalue the probability
+
+06:23.820 --> 06:25.320
+of a given feature.
+
+06:25.350 --> 06:26.900
+Given the output class.
+
+06:26.970 --> 06:32.900
+OK so that's all about the abstract mathematical approach behind Navy base classifier.
+
+06:32.940 --> 06:37.350
+Let's talk a bit about the advantages and disadvantages.
+
+06:37.470 --> 06:42.420
+The advantages are that it is relatively simple modal to understand.
+
+06:42.420 --> 06:45.870
+It can be trained on small data sets as well.
+
+06:45.870 --> 06:51.360
+It is a faster approach and it is not sensitive to irrelevant features.
+
+06:51.360 --> 06:58.890
+The disadvantage is that it assumes every feature is independent of each other and of course it is not
+
+06:58.950 --> 07:00.010
+always true.
+
+07:00.100 --> 07:07.140
+OK so as far as regression problems are concerned such as linear regression and logistic regression.
+
+07:07.230 --> 07:14.070
+The aim of the optimization algorithm is to find the optimal be the paramita as either the gradient
+
+07:14.070 --> 07:17.690
+descent or the maximum likelihood estimator.
+
+07:17.790 --> 07:25.890
+As far as naive base classifier is concerned fitting the model means finding the probabilities and finding
+
+07:25.890 --> 07:28.650
+the maximum out of the probabilities.
+
+07:28.710 --> 07:31.700
+As far as the output clauses are concerned.
+
+07:31.810 --> 07:32.450
+OK.
+
+07:32.490 --> 07:33.880
+And the last question.
+
+07:33.930 --> 07:37.780
+Is that why is it so powerful for tax classification.
+
+07:37.830 --> 07:45.810
+Because now the base classifier is usually used for tax classification or sentiment analyzes and because
+
+07:45.810 --> 07:52.770
+the two assumptions of naive basic classifier such that the probability of occurrence of any Verd given
+
+07:52.770 --> 07:59.730
+the Clauss label is independent of the probability of occurrence of any other Verd given that label
+
+08:00.030 --> 08:05.790
+and the second assumption is that the probability of occurrence of a Verd in a document is independent
+
+08:05.790 --> 08:08.500
+of the location of that word within the document.
+
+08:08.540 --> 08:15.370
+These are the same assumptions as we have for the bag of words model because according to this bagal
+
+08:15.370 --> 08:20.150
+for birds the modal documents are just a bunch of words thrown together.
+
+08:20.220 --> 08:27.990
+So these assumptions we have been talking about are true for tax classification because a bag of words
+
+08:28.000 --> 08:35.820
+model has the exact same assumptions and basically that's why name based classifier is working exceptionally
+
+08:35.820 --> 08:38.530
+fine for tax classification.
+
+08:38.670 --> 08:43.420
+In the next lecture we are going to see a step by step illustration.
+
+08:43.530 --> 08:46.440
+How naive basic classifier works.
+
+08:46.470 --> 08:47.310
+Thanks for watching.

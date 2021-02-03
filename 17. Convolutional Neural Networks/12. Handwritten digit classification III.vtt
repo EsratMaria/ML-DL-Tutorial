@@ -1,0 +1,193 @@
+WEBVTT
+
+00:01.910 --> 00:06.470
+There's one more technique we can use in order to reduce overfitting.
+
+00:06.500 --> 00:09.440
+And this is called the Data augmentation.
+
+00:09.440 --> 00:16.640
+So first we can reduce overfitting if we apply regularisation and this is why we ordered these dropout
+
+00:16.730 --> 00:20.120
+layer in our own network besides drop out.
+
+00:20.120 --> 00:27.520
+We can use data augmentation and it is going to make sure that we don't have to deal with overfitting.
+
+00:27.590 --> 00:31.970
+OK so we can use data alimentation for two reasons.
+
+00:31.970 --> 00:38.540
+First of all we need a huge data set for deep learning related algorithms and if we don't have a huge
+
+00:38.540 --> 00:42.100
+data set then we can use data augmentation.
+
+00:42.110 --> 00:49.490
+So it is going to solve the problem because data augmentation is going to apply random transformation
+
+00:49.550 --> 00:51.050
+on the given images.
+
+00:51.080 --> 00:58.480
+For example the rotations flipping scaling and so on and this is how we can make several images.
+
+00:58.520 --> 01:05.990
+So at the beginning we have just a single image and if we apply data augmentation we are going to generate
+
+01:05.990 --> 01:07.660
+lots of lots of images.
+
+01:07.790 --> 01:14.810
+So if we don't have a huge data set then we can generate lots of lots of training samples with the help
+
+01:14.810 --> 01:16.070
+of this method.
+
+01:16.070 --> 01:21.090
+The second reason to use data augmentation is to reduce overfitting.
+
+01:21.110 --> 01:27.790
+So because of the data our mentation the learning algorithm never uses the same image twice.
+
+01:27.830 --> 01:32.180
+It is going to use a modified version of the original image.
+
+01:32.330 --> 01:38.280
+After applying these random transformations rotations flipping the scaling and so on.
+
+01:38.420 --> 01:42.480
+So it means that there's not going to be overfitting.
+
+01:42.530 --> 01:47.520
+So first of all it is going to make sure that we have a huge data set.
+
+01:47.690 --> 01:50.890
+And it is going to reduce overfitting.
+
+01:51.080 --> 01:58.400
+And basically with the help of image data generator we can imported from Cara's pre-processing image
+
+01:58.670 --> 02:02.500
+this image data generator is quite convenient to use.
+
+02:02.510 --> 02:10.130
+We just have to define the random operations rotation range weight shift range hate shift range zoom
+
+02:10.130 --> 02:10.610
+range.
+
+02:10.670 --> 02:18.350
+So as you can see this algorithm is going to take a given image as an input and it is going to apply
+
+02:18.350 --> 02:26.810
+random transformations zooming in or out shifting that hate shifting with rotating the given image and
+
+02:26.810 --> 02:27.610
+so on.
+
+02:27.680 --> 02:34.040
+So if you take a look at the documentation you can see that for example the rotation of range is an
+
+02:34.130 --> 02:35.120
+integer.
+
+02:35.120 --> 02:38.100
+It is the degree range for random rotations.
+
+02:38.150 --> 02:42.000
+The weight shift range is going to be a floating point number.
+
+02:42.050 --> 02:45.290
+It is the range for random horizontal shift.
+
+02:45.380 --> 02:49.750
+Hey ships range is the range for random vertical shifts and so on.
+
+02:49.910 --> 02:56.910
+OK so this is how we apply random transformations on the training data set on the test data set.
+
+02:56.930 --> 03:03.440
+Of course we don't want to make any transformations so let's apply these transformations on the training
+
+03:03.440 --> 03:06.070
+data that we find of that size.
+
+03:06.200 --> 03:12.800
+And we just have to call the train generator we have defined here that flow method and it's going to
+
+03:12.800 --> 03:14.990
+return the training generator.
+
+03:14.990 --> 03:17.280
+The task generator is equal to that.
+
+03:17.300 --> 03:19.250
+That's the generator of that flow.
+
+03:19.250 --> 03:22.680
+We just have to specify the task today to set OK.
+
+03:22.720 --> 03:26.920
+By the way we don't use any transformations on that task dataset.
+
+03:26.930 --> 03:34.160
+But anyways this is how we get that training generator and the generator and we are able to feed the
+
+03:34.160 --> 03:35.980
+generator on the model.
+
+03:36.050 --> 03:37.160
+What's the model.
+
+03:37.160 --> 03:42.800
+The model is the convolutional and our own network we have implemented in the previous lecture.
+
+03:42.920 --> 03:47.430
+So we just have to feed the generator on the training generator.
+
+03:47.480 --> 03:54.680
+We have to specify the top spare spoke the number of apples the validation data set is going to be the
+
+03:54.740 --> 04:01.490
+test data set and the validation steps are going to be the staps in the last data set.
+
+04:01.580 --> 04:08.910
+And because we use a bat size 64 and we have 60000 samples in the training data set.
+
+04:09.020 --> 04:13.230
+That's why the staps Apple is going to be 60000.
+
+04:13.340 --> 04:15.200
+Divide by 64.
+
+04:15.200 --> 04:24.160
+And because we have 10000 items in the test dataset and we use a bat size 64 that's why the validation.
+
+04:24.290 --> 04:28.790
+So the staps in the last data set is going to be 10000.
+
+04:28.790 --> 04:30.500
+Divide by 64.
+
+04:30.560 --> 04:37.760
+And as you can see we can achieve a bit better accuracy data augmentation as we have seen in the previous
+
+04:37.760 --> 04:38.590
+lecture.
+
+04:38.630 --> 04:44.140
+So I guess in the previous lecture the accuracy was 99 percent here.
+
+04:44.150 --> 04:46.490
+We are able to achieve a bit better.
+
+04:46.490 --> 04:53.810
+So with the help of data augmentation we can generate huge data sets and on the other hand we can reduce
+
+04:53.870 --> 04:55.180
+overfitting.
+
+04:55.430 --> 04:56.300
+Thanks for watching.

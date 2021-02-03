@@ -1,0 +1,253 @@
+WEBVTT
+
+00:00.960 --> 00:07.070
+High in this video again we are going to take a closer look at the model.
+
+00:07.080 --> 00:11.400
+So how artificial now all networks are built.
+
+00:11.790 --> 00:19.680
+So we have been talking about one of the previous lectures that biological now a network can be modeled
+
+00:19.890 --> 00:22.300
+with the help of a directed graph.
+
+00:22.440 --> 00:27.990
+So we have the nodes basically the so-called Now drones or percept drones.
+
+00:28.170 --> 00:33.940
+And we have the edge weights basically the axons in the biological and our own network.
+
+00:34.130 --> 00:43.680
+OK so we have the input with sound values actual Well you X-2 you x Well you are to X on and all of
+
+00:43.680 --> 00:51.960
+these now owns have some connection basically some edge and we can assign an edge weight to every single
+
+00:52.050 --> 00:52.760
+edge.
+
+00:52.770 --> 00:59.580
+So this first input has the first educate the second the impled has that second educate and so on.
+
+00:59.610 --> 01:05.510
+And basically this does sound function and activation function is and now on order.
+
+01:05.510 --> 01:07.270
+Percepts are on again.
+
+01:07.450 --> 01:13.960
+Because as we have seen for the biological and nervous system these notions are connected.
+
+01:14.100 --> 01:15.890
+So we have some input.
+
+01:15.900 --> 01:18.760
+Now roans and this is not on our own.
+
+01:18.840 --> 01:24.060
+And of course more than one nail Rogne can be connected to a given.
+
+01:24.060 --> 01:24.790
+Now we're on.
+
+01:24.840 --> 01:26.990
+And this is what's happening here.
+
+01:27.240 --> 01:32.880
+So we have an now Rohin that's going to connect to a single and our own.
+
+01:32.910 --> 01:39.930
+And what's very important that for a given now on this is now Ron where are they in the yellow circle.
+
+01:39.960 --> 01:44.770
+We are going to have the incoming actuates and we didn't know Ron.
+
+01:44.850 --> 01:47.680
+We have to some of these actuates.
+
+01:47.760 --> 01:55.350
+And then finally the activation function gives the output whether they're given now Iran has fired or
+
+01:55.350 --> 01:55.940
+not.
+
+01:56.070 --> 01:59.750
+So OK what are the actuates are for.
+
+01:59.820 --> 02:03.730
+They can amplify or amplify the input cyano.
+
+02:03.930 --> 02:10.650
+Let's suppose the fact that if the actuates well-you is smaller than a wall and of course it's going
+
+02:10.650 --> 02:19.580
+to amplify this input value if it's greater than one then it's going to amplify the input value.
+
+02:19.710 --> 02:24.560
+So it's very very important to see that what are the airwaves good for.
+
+02:24.600 --> 02:29.490
+They can amplify or amplify the input side nodes.
+
+02:29.540 --> 02:34.100
+OK then what about some function the sound function.
+
+02:34.140 --> 02:40.680
+Are we going to move to people-I each input we give an edge weight and we have to audit these values
+
+02:40.680 --> 02:41.500
+together.
+
+02:41.610 --> 02:44.770
+So the sum function is going to do something like this.
+
+02:44.850 --> 02:46.530
+It's going to be a sum.
+
+02:46.740 --> 02:51.730
+And we have to sum up the X Sabai times w Sabai.
+
+02:51.900 --> 03:01.200
+So basically we have these X Swan and W on it we have to multiply them together plus X to multiply with
+
+03:01.290 --> 03:03.720
+W2 and so on.
+
+03:03.840 --> 03:12.360
+So we have to sum up the input values multiply by the actuates and then we have the activation function
+
+03:12.510 --> 03:15.030
+that's going to convert the output.
+
+03:15.030 --> 03:18.170
+So the well of the SUM function.
+
+03:18.240 --> 03:21.600
+Usually there are several activation functions.
+
+03:21.600 --> 03:28.560
+The step function the sigmoid function the hyperbolic function for percept Thrones we usually use the
+
+03:28.560 --> 03:32.460
+stack function and the step function will output one.
+
+03:32.490 --> 03:38.130
+If the input is higher than a certain threshold and 0 otherwise.
+
+03:38.130 --> 03:42.150
+So what's very important to know that OK we can model biological.
+
+03:42.150 --> 03:45.870
+Now run networks we hop off a directed graph.
+
+03:46.050 --> 03:52.140
+But what's important that we have the now roans or the percept Gironde we they gave us well you these
+
+03:52.140 --> 04:01.590
+are the imports x want X to X Street up to X on of course every single edge has a so-called away parameter.
+
+04:01.740 --> 04:06.900
+And whenever we have a given now we're on that's connected to several other.
+
+04:06.920 --> 04:10.510
+Now roans and we want to calculate the output.
+
+04:10.590 --> 04:18.660
+First we have to use the sum function that's going to sum up the incoming seiners and then deactivation
+
+04:18.660 --> 04:26.490
+function is going to take this some that has been calculated by the sum function and is going to decide
+
+04:26.700 --> 04:27.510
+whether that a given.
+
+04:27.510 --> 04:29.640
+Now Iran has fired or not.
+
+04:29.700 --> 04:32.650
+So whether the output is a 1 or a zero.
+
+04:32.670 --> 04:39.580
+If we are dealing with a step function and what's the main difference between percept drawn and normal
+
+04:39.650 --> 04:42.180
+our own or we usually call it sigmoid.
+
+04:42.180 --> 04:44.380
+Now we're on that for percept throne.
+
+04:44.400 --> 04:51.780
+It is now on in the now a network of course we have to sum up the weighted inputs for percept and we
+
+04:51.780 --> 04:54.660
+use the step function with a given threshold.
+
+04:54.840 --> 05:00.630
+So that's why because we use the step function the output can be one zero.
+
+05:00.700 --> 05:07.120
+And that's why it's not going to work fine for no reason network training because the output can be
+
+05:07.120 --> 05:11.570
+zero or one for any given Nolan or perception.
+
+05:11.810 --> 05:18.490
+And why is it bad because a small change in the weights or bias of any single perception in the network
+
+05:18.760 --> 05:25.960
+and sometimes goes the output of that percept thrown to completely flip from zero to 1 for example or
+
+05:25.960 --> 05:27.300
+from one to zero.
+
+05:27.580 --> 05:34.420
+And that flip may then code the behavior of the rest of the network to completely change in some very
+
+05:34.420 --> 05:41.330
+complicated way and sometimes it is not good when we want to make optical correct recognition.
+
+05:41.410 --> 05:48.400
+We want to make small changes if we have a small change in the input we want to have a small change
+
+05:48.400 --> 05:55.920
+in the output here it's going to flip 1 than 0 1 0 0 0 1 and so on.
+
+05:55.970 --> 05:59.080
+It's going to work fine by the sigmoid.
+
+05:59.080 --> 06:06.130
+Now we're on is very similar to percept trons but small changes in the weights cause small changes in
+
+06:06.130 --> 06:07.260
+the output.
+
+06:07.270 --> 06:15.490
+So there's going to be no flips and the inputs and outputs can take anywhere between 0 and 1.
+
+06:15.670 --> 06:21.300
+We are going to talk about activation and functions and we will come to the conclusion that for percept
+
+06:21.310 --> 06:24.760
+Tron we have the step function for sigmoid.
+
+06:24.760 --> 06:25.450
+Now we're on.
+
+06:25.540 --> 06:28.660
+That's going to work fine for our all networks.
+
+06:28.780 --> 06:35.230
+We will have the so-called sigmoid function and we come to the conclusion that sigmoid function is very
+
+06:35.230 --> 06:42.470
+very good because the output and the input can be anywhere between 0 and 1.
+
+06:42.550 --> 06:49.390
+And this is how we will be able to construct a learning algorithm that can detect for example faces
+
+06:49.690 --> 06:56.460
+that can recognize optical characters that can classify For example data sets and so on.
+
+06:56.680 --> 06:57.570
+Thanks for watching.

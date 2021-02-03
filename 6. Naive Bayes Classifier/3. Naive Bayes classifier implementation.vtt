@@ -1,0 +1,163 @@
+WEBVTT
+
+00:01.510 --> 00:07.450
+In the previous lectures that we have been talking about a theoretical background for naive base algorithm
+
+00:07.750 --> 00:11.330
+and let's check whether it is working fine or not.
+
+00:11.350 --> 00:15.640
+So we are going to use the credit scoring data set as usual.
+
+00:15.640 --> 00:22.810
+We have come to the conclusion that with logistic regression we can achieve 93 percent accuracy with
+
+00:22.840 --> 00:29.440
+K nearest neighbor or classify or we are able to achieve approximately 98 percent accuracy.
+
+00:29.530 --> 00:35.740
+And let's see whether we are able to do better or with the help of naive base classifier we are going
+
+00:35.740 --> 00:37.220
+to use the same features.
+
+00:37.240 --> 00:46.390
+So incom age and loan we are going to use the same target for valuable 0 or 1 0 for the fourth and one
+
+00:46.390 --> 00:49.190
+event the client is able to pay back the loan.
+
+00:49.240 --> 00:51.860
+We are going to use train to split.
+
+00:51.940 --> 00:58.020
+So we will use a training data set and that past data set we 0.3.
+
+00:58.030 --> 01:05.410
+What does it mean 70 percent of the original data set is for the training and 30 percent of the original
+
+01:05.500 --> 01:07.900
+dataset is for testing.
+
+01:07.970 --> 01:08.730
+OK.
+
+01:08.830 --> 01:13.820
+What's very important that we are going to use this go zijn and B what does it mean.
+
+01:13.840 --> 01:15.170
+It is the secret.
+
+01:15.220 --> 01:17.100
+Now is this class a failure.
+
+01:17.230 --> 01:21.680
+And it is the Gaussian naïve base classifier implementation.
+
+01:21.820 --> 01:23.500
+What does it mean exactly.
+
+01:23.500 --> 01:26.160
+There's a good article on Wikipedia.
+
+01:26.170 --> 01:31.950
+So if you search for a naive base classifier you can take a closer look at this example.
+
+01:31.960 --> 01:39.220
+So let's suppose the problem here we would like to classify whether a given person is a male or female
+
+01:39.460 --> 01:41.440
+based on the measured features.
+
+01:41.560 --> 01:49.930
+There's going to be three features haith way and the food size and Dozier naive Bazy implementation
+
+01:50.110 --> 01:58.160
+have the assumption that these features are normally distributed hence the name Gaussian Navy base.
+
+01:58.300 --> 02:02.620
+So the hate parameter has Gosia a normal distribution.
+
+02:02.650 --> 02:08.860
+The wait feature has goes the normal distribution and it is true for the food size as well.
+
+02:08.860 --> 02:10.240
+And why is it important.
+
+02:10.360 --> 02:17.290
+Because we are able to calculate the probability who better the actual sample is a male or female but
+
+02:17.350 --> 02:20.910
+then we have to calculate the probability of a given feature.
+
+02:20.920 --> 02:28.870
+In this case the hate given an output class in this case we have two output Klaas's male and female.
+
+02:28.990 --> 02:36.730
+So we have to collate the probability of a given feature such as given an output Clauss such as male
+
+02:36.970 --> 02:41.920
+and this is when we have to use the Gazi a normal distribution function.
+
+02:41.980 --> 02:46.710
+This exponential function is the Gaussian normal distribution function.
+
+02:46.840 --> 02:53.680
+And this is why we have the assumption that these features the hey the weight and the food size are
+
+02:53.680 --> 02:59.970
+normally distributed because we have to use some formula in order to calculate these probabilities.
+
+03:00.080 --> 03:07.330
+OK so here as well we will have the assumption read the half of Gaussian naïve based implementation
+
+03:07.600 --> 03:13.070
+that these features income age and loan are normally distributed.
+
+03:13.210 --> 03:16.480
+Ok lets take a look where its working fine or not.
+
+03:16.670 --> 03:24.160
+OK the final accuracy is 93 percent which means that it is something like logistic regression as you
+
+03:24.160 --> 03:30.060
+can see K nearest neighbor a classifier doesnt have any underlying model.
+
+03:30.100 --> 03:35.610
+This is the simplest algorithm as far as machine learning is concern for now.
+
+03:35.800 --> 03:41.670
+Algorithm we have lots of lot of assumptions as far as the probability distributions are concerned.
+
+03:41.740 --> 03:45.930
+We have the assumption that the features are normally distributed.
+
+03:45.970 --> 03:53.170
+So we have a rather complex model and this is the case for logistic regression as about we have a rather
+
+03:53.170 --> 03:54.330
+complex model.
+
+03:54.380 --> 04:01.810
+OK so it is quite counter-intuitive that nearest neighbor algorithm without any underlying model can
+
+04:01.870 --> 04:07.340
+outperform logistic regression and naive base classifier approaches.
+
+04:07.570 --> 04:11.330
+OK so the final accuracy is 93 percent.
+
+04:11.410 --> 04:17.470
+But this is what we have been discussing in the previous lecture that the main advantage of naive base
+
+04:17.470 --> 04:25.180
+classifier is that we can use it for tax classification and it is of working rather good when dealing
+
+04:25.180 --> 04:29.030
+with sentiment and alliances and tax classification.
+
+04:29.110 --> 04:32.490
+So this is what we are going to talk about in the next lectures.
+
+04:32.650 --> 04:33.520
+Thanks for watching.

@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.970 --> 00:07.890
+The main problem as far as decision trees and random for us classifiers our concern that we don't know
+
+00:07.930 --> 00:11.460
+the optimal parameters such as the number of estimators.
+
+00:11.560 --> 00:18.490
+So how many decision trees to use was going to be the maximum depth of the decision trees was going
+
+00:18.490 --> 00:21.030
+to be the means and police and so on.
+
+00:21.100 --> 00:24.980
+So that's why we are able to find the optimal parameters.
+
+00:25.030 --> 00:29.480
+This is called paramita or tuning we the that grid search.
+
+00:29.500 --> 00:37.360
+So if we import grid search cross-validation and random for as classifier we are able to find the optimal
+
+00:37.360 --> 00:38.230
+paramita.
+
+00:38.260 --> 00:42.810
+So in this lecture we are going to talk about D.G. classification.
+
+00:42.850 --> 00:50.290
+So that's why we are able to load the digits dataset with the help of data sets data loaded digits as
+
+00:50.290 --> 00:54.060
+you can see we have to import data sets from seeking to learn.
+
+00:54.140 --> 00:58.350
+OK we have that image features and in each target.
+
+00:58.510 --> 01:06.490
+If you take a look at documentation this low digits function is going to return the whole data set as
+
+01:06.490 --> 01:09.030
+far as handwritten digit is concerned.
+
+01:09.190 --> 01:18.970
+So there are 10 old boot classes of course 0 1 2 3 up to nine samples per class is approximately a hundred
+
+01:18.970 --> 01:19.960
+and eighty.
+
+01:19.990 --> 01:24.710
+So the total samples is approximately one thousand eight hundred.
+
+01:24.870 --> 01:31.160
+OK the dimension is 64 because we are dealing with age by 8 pixels images.
+
+01:31.210 --> 01:37.700
+So the width of the image is 8 pixels and the hate of the image is eight pixels as well.
+
+01:37.810 --> 01:44.220
+So that's why eight by eight is close to 64 so we will have 64 features.
+
+01:44.320 --> 01:50.190
+And of course we have the target Barrayar but we had a number of classes is equal to 10.
+
+01:50.380 --> 01:55.750
+OK so this is the problem we would like to solve with the help of random for us classifier.
+
+01:55.870 --> 02:03.070
+The accuracy of the algorithm as you can see is not as good as wayed support vector machines because
+
+02:03.070 --> 02:10.090
+support vector machines are quite powerful as far as the classification or correcter classification
+
+02:10.090 --> 02:11.060
+are concerned.
+
+02:11.200 --> 02:14.430
+So we are going to use a random forecast classifier.
+
+02:14.470 --> 02:18.210
+We have to said the number of jobs would be minus 1.
+
+02:18.220 --> 02:24.880
+What does it mean if we take a look at the documentation we can search for the number of jobs.
+
+02:25.030 --> 02:33.160
+OK so the number of jobs to run in parallel for both state and predict if minus 1 then the number of
+
+02:33.160 --> 02:36.550
+jobs is set to the number of processor cores.
+
+02:36.550 --> 02:41.300
+So we would like to make the random forest classification algorithm parallel.
+
+02:41.380 --> 02:44.000
+So that's why we have to set it to mine a swarm.
+
+02:44.020 --> 02:50.650
+Then we are going to split the data set into a training data set and test data set and then we have
+
+02:50.650 --> 02:53.080
+the parameters we would like to optimize.
+
+02:53.110 --> 02:58.900
+We don't know the optimal number of estimators we don't know what the optimal that's of the decision
+
+02:58.900 --> 02:59.260
+tree.
+
+02:59.260 --> 03:06.250
+So that's why we defined the values and with the help of research cross-validation we are able to find
+
+03:06.250 --> 03:07.960
+the optimal meters.
+
+03:08.020 --> 03:13.260
+So as you can see here that the optimal number of estimators is 500.
+
+03:13.300 --> 03:19.910
+The optimal that of the decision trees is 15 and the optimal means samples live.
+
+03:19.920 --> 03:21.980
+The value is 1.
+
+03:22.200 --> 03:26.050
+OK so we are able to find it with the half off grid search.
+
+03:26.050 --> 03:29.670
+Cross-validation we just have to define the estimator.
+
+03:29.710 --> 03:35.890
+It is the random forest model we have instantiated here we have the param greed the param agreed.
+
+03:35.890 --> 03:39.350
+We have defined here and the falls is tan.
+
+03:39.530 --> 03:41.140
+OK we feed the model.
+
+03:41.170 --> 03:47.950
+And this is how we can print out the best Peramivir as we get the best barometers and we instantiate
+
+03:48.010 --> 03:53.180
+the best model as a random forecast classifier with the optimal telomeres.
+
+03:53.460 --> 04:00.820
+Okay and here we are able to use model selection cross-validation in order to get the accuracy of the
+
+04:00.820 --> 04:03.990
+best model which is 93 percent.
+
+04:04.060 --> 04:08.060
+It is not as good as support vector machines but it doesn't matter.
+
+04:08.110 --> 04:15.640
+It is just an example of how to tune hyper parameters for random for as classifier because as far as
+
+04:15.950 --> 04:18.480
+within that classification is concerned.
+
+04:18.480 --> 04:25.590
+DB Now real networks can outperform both support vector machines and random for us classifiers.
+
+04:25.780 --> 04:26.520
+OK.
+
+04:26.560 --> 04:31.970
+So this is how we can find the optimal Peramivir as for random for classifier.
+
+04:32.110 --> 04:32.990
+Thanks for watching.

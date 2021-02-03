@@ -1,0 +1,151 @@
+WEBVTT
+
+00:01.520 --> 00:07.820
+In the last lecture we have been talking about the most important features as far as k nearest neighbor
+
+00:07.820 --> 00:09.510
+a classifier is concerned.
+
+00:09.520 --> 00:16.390
+We have come to the conclusion that somehow we have to measure the distance between the new entity and
+
+00:16.420 --> 00:19.260
+all the other items in the data set.
+
+00:19.270 --> 00:26.290
+We can do it with the help of the Euclidean distance but what extremely important data does k nearest
+
+00:26.290 --> 00:33.520
+neighbor classifier is a lazy learner algorithm which means that it doesn't learn anything.
+
+00:33.560 --> 00:35.720
+We just store the training data.
+
+00:35.860 --> 00:42.490
+That's why the training is very very fast because there is no training at all but making the predictions
+
+00:42.490 --> 00:49.300
+on the other hand is rather slow because we have to calculate the Euclidean distances for every single
+
+00:49.300 --> 00:51.340
+item in the data set.
+
+00:51.340 --> 00:58.700
+So what's extremely important debt for lazy learner algorithms such as this K nearest neighbor classifier.
+
+00:58.810 --> 01:01.540
+We do not build a model at all.
+
+01:01.540 --> 01:08.530
+So this is a so called non-parametric learning approach which means that no parameters are to be learned
+
+01:08.620 --> 01:09.910
+about the data.
+
+01:10.000 --> 01:15.730
+We have been talking about linear regression and we have been talking about logistic regression in the
+
+01:15.730 --> 01:22.540
+previous chapters and we have come to the conclusion that the algorithm has to learn the optimal be
+
+01:22.540 --> 01:28.100
+the parameters either really greedy in the sand or are we the maximum likelihood method.
+
+01:28.150 --> 01:35.950
+So what extremely important to see that for linear regression we have a model we define cost function
+
+01:36.130 --> 01:40.200
+which is the mean square error or age X minus Y squared.
+
+01:40.270 --> 01:46.800
+So basically we have to calculate the error terms for all the data points in the training data set.
+
+01:46.840 --> 01:51.760
+So the mean square error is equal to the sum of these absolute terms.
+
+01:51.850 --> 01:57.160
+OK we have to square these values because we are dealing with the mean square error.
+
+01:57.280 --> 02:04.960
+OK and then we have to use some optimization algorithm such as a gradient descent in order to find the
+
+02:04.960 --> 02:07.780
+minimum value of the cost function.
+
+02:07.780 --> 02:10.270
+So Ajax minus Y squared.
+
+02:10.300 --> 02:14.350
+Basically this is how we end up with the optimal be the perimeters.
+
+02:14.350 --> 02:15.390
+Why is it good.
+
+02:15.400 --> 02:22.180
+Because if we know what is optimal B the paramita as we can make further predictions we are able to
+
+02:22.300 --> 02:25.360
+use this model on that test dataset.
+
+02:25.440 --> 02:25.970
+Okay.
+
+02:25.990 --> 02:33.550
+And as far as logistic regression is concerned again we have to use maximum likelihood approach in order
+
+02:33.550 --> 02:41.560
+to estimate the optimal values for between zero and between Or if we are dealing with multinomial logistic
+
+02:41.560 --> 02:42.440
+regression.
+
+02:42.580 --> 02:50.020
+There are other B the parameters we have to know and basically we can use maximum likelihood estimator
+
+02:50.200 --> 02:56.950
+where the likelihood function or the log likelihood function and sort of a given optimization problem
+
+02:57.130 --> 03:00.940
+in order to end up with the optimal B-D perimeters.
+
+03:01.030 --> 03:08.110
+Why is it good if we know the optimal be the perimeters we can assign a given probability to a given
+
+03:08.110 --> 03:09.420
+training example.
+
+03:09.430 --> 03:16.270
+And this is exactly what we are after here with K nearest neighbor a classifier we dont build a model
+
+03:16.300 --> 03:17.250
+at all.
+
+03:17.290 --> 03:21.670
+So theres no training at all thats why the training is very fast.
+
+03:21.670 --> 03:28.660
+On the other hand making the prediction is rodders slow because we have to calculate the Euclidean distances.
+
+03:28.780 --> 03:36.690
+OK so this is the main difference between linear regression logistic regression and KNUS neighbor classifier.
+
+03:36.770 --> 03:40.020
+Yet here we do not build a model at all.
+
+03:40.060 --> 03:47.470
+So no need to use underlying optimization related algorithms such as gradient descent or maximum likelihood
+
+03:47.470 --> 03:50.740
+method because we don't build a model at all.
+
+03:50.770 --> 03:55.240
+But on the other hand it is extremely powerful algorithm.
+
+03:55.240 --> 04:02.070
+We will see that the accuracy and precision of K nearest neighbor classifier is rodder good.
+
+04:02.110 --> 04:08.190
+OK so in the next lecture we are going to talk about how to measure Euclidean distances.
+
+04:08.380 --> 04:09.380
+Thanks for watching.

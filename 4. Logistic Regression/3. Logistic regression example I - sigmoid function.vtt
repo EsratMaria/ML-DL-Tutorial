@@ -1,0 +1,280 @@
+WEBVTT
+
+00:01.410 --> 00:06.160
+Let's take a look at the concrete implementation of logistic regression.
+
+00:06.210 --> 00:10.850
+So in this lecture we are going to talk about a very very simple example.
+
+00:11.040 --> 00:16.130
+As you can see we have the hard coded values for x y and y won.
+
+00:16.200 --> 00:18.470
+It is going to be the Blue Claws.
+
+00:18.690 --> 00:24.170
+And then we have the Red Cross with X-2 and y variables.
+
+00:24.300 --> 00:30.400
+We are going to create a nom pie array out of the x values and the value they'll use.
+
+00:30.510 --> 00:38.040
+So again we will have just a single x explant already valuable just like we have seen in the theoretical
+
+00:38.040 --> 00:43.630
+section in the theoretical section we have been dealing with balance on the credit card.
+
+00:43.770 --> 00:50.480
+No we are dealing with simple numerical values without any meaning so it has nothing to do with balance
+
+00:50.490 --> 00:51.540
+on a credit card.
+
+00:51.570 --> 00:54.530
+It has nothing to do with credit scoring and so on.
+
+00:54.570 --> 01:01.650
+OK so if we take a look at the Plaut This is the plot as you can see we have blue dots and we have red
+
+01:01.650 --> 01:02.180
+dots.
+
+01:02.220 --> 01:05.060
+Accordingly the x value is high.
+
+01:05.060 --> 01:07.080
+So it is greater than 6.
+
+01:07.140 --> 01:13.180
+It is going to be the red cross the x value is smaller than let's say two.
+
+01:13.340 --> 01:15.700
+Then it's going to be the blue class.
+
+01:15.720 --> 01:19.890
+Of course there some intersection that's not that straightforward.
+
+01:19.950 --> 01:26.730
+Whether it is the Blue Claws or the Red Cross as you can see between two and six there are blue dots
+
+01:26.820 --> 01:28.450
+as well as red dot.
+
+01:28.530 --> 01:35.560
+So the sigmoid function and logistic regression is going to decide what class it belongs to.
+
+01:35.610 --> 01:42.930
+OK then if we use this logistic regression from seeking to learn linear model we are able to fit the
+
+01:42.930 --> 01:50.800
+model with the x and y variables the wive triable again have two values 0 and 1.
+
+01:50.940 --> 01:56.170
+As you can see these are the Y they'll use is 0 0 0 0 and 1 1 1.
+
+01:56.250 --> 01:59.920
+So it is a binary classification problem again.
+
+02:00.060 --> 02:07.110
+And this is why we like logistic regression logistic regression is extremely powerful when dealing with
+
+02:07.140 --> 02:09.040
+two output classes.
+
+02:09.090 --> 02:12.830
+In this case the output can be zero or a warm.
+
+02:13.050 --> 02:19.710
+OK so this method is going to calculate the is 0 and B to one pair in meters.
+
+02:19.710 --> 02:25.860
+So basically we are able to calculate the probability whether the given the dog belongs to the Blue
+
+02:25.860 --> 02:27.990
+Cross or the Red Cross.
+
+02:27.990 --> 02:34.850
+So basically value 0 or 1 as you can see we just have to deal with the sigmoid function one divided
+
+02:34.860 --> 02:40.520
+by one plus each of the power of minus beats zero plus a B to 1 times X..
+
+02:40.560 --> 02:47.070
+And when we feed the given logistic regression model 60 to learn is going to use maximum likelihood
+
+02:47.070 --> 02:53.950
+method or any other solver in order to find the optimal between zero and B to one pair ammeters.
+
+02:54.030 --> 03:01.560
+OK then we would like to Plaut the largest A function as you can see we are going to use green dots
+
+03:01.590 --> 03:04.260
+in order to represent a sigmoid function.
+
+03:04.260 --> 03:10.380
+Why is it important to use the sigmoid function because the sigmoid function will decide whether a new
+
+03:10.380 --> 03:18.450
+data point will belong to the Red Cross or w class as you can see we can get the B to 0 with the map
+
+03:18.450 --> 03:25.260
+of modal data intersect and model that QF is going to store the B one parent.
+
+03:25.260 --> 03:33.030
+So this is the sigmoid function of one divided by one plus the exponential function bita zero plus B
+
+03:33.020 --> 03:34.520
+to 1 times x.
+
+03:34.620 --> 03:38.080
+And of course we have two multiplied by minus one.
+
+03:38.340 --> 03:40.260
+OK this is how we plot it.
+
+03:40.350 --> 03:46.470
+We would like to start with D-minus minus do that's why we substract two and we divide by 10 because
+
+03:46.470 --> 03:50.380
+we would like to deal with floating point numbers not just one.
+
+03:50.400 --> 03:55.290
+But for example 0.1 0.2 0.3 and so on.
+
+03:55.320 --> 03:58.170
+So from minus 2 up to 10.
+
+03:58.260 --> 04:00.740
+OK then we are going to show the plot.
+
+04:00.780 --> 04:03.490
+So that's why we call that the Dutch show.
+
+04:03.540 --> 04:09.580
+And what's more important that we are able to make new predictions we the hop over the fitted model.
+
+04:09.600 --> 04:17.280
+So if we save and run it as you can see secret learn has calculated the Berio zero and the BE ONE parameters
+
+04:17.580 --> 04:25.800
+and the prediction is that if x is equal to 0.1 So something like Here of course it belongs to the blue
+
+04:25.800 --> 04:26.700
+class.
+
+04:26.940 --> 04:31.590
+If they surveil us for example time what is it mean.
+
+04:31.770 --> 04:34.550
+X is E-Class to 10 so we are here.
+
+04:34.590 --> 04:37.810
+Of course there are red dots in this region.
+
+04:37.860 --> 04:41.780
+So the prediction I guess will be close to 1.
+
+04:41.850 --> 04:46.830
+Ok so if you may recall we are dealing with a binary classification problem.
+
+04:46.830 --> 04:50.640
+The output can be 0 or 1 exclusively.
+
+04:50.640 --> 04:52.240
+There is no other options.
+
+04:52.440 --> 04:53.190
+OK.
+
+04:53.280 --> 04:58.240
+What's important that we can use the predicate probability instead of the predicate method.
+
+04:58.320 --> 05:04.520
+So if we use predicate probability and say Wait let's run it as you can see.
+
+05:04.570 --> 05:11.430
+Seeking to learn is going to print out the probability that the new data point will read X E-Class to
+
+05:11.440 --> 05:12.130
+10.
+
+05:12.160 --> 05:19.690
+It has 94 percent probability that it belongs to the red class and approximately five births and the
+
+05:19.690 --> 05:22.630
+probability that it belongs to the blue class.
+
+05:22.660 --> 05:27.550
+So logistic regression is going to find the maximum probability.
+
+05:27.640 --> 05:34.360
+And that's why if we do not print out the probability botted the class since that that's why it's going
+
+05:34.360 --> 05:35.780
+to be the last one.
+
+05:35.950 --> 05:40.580
+But we are able to printout the probabilities with the half of the predicate Prabhat function.
+
+05:40.660 --> 05:45.160
+Ok let's check that if the x is Eco's 2 4.
+
+05:45.220 --> 05:46.990
+It is not that straightforward.
+
+05:47.040 --> 05:48.780
+What gloss it belongs to.
+
+05:48.790 --> 05:57.220
+As you can see 53 percent that the new data point with X equals to 4 belongs to the wrath class and
+
+05:57.280 --> 06:00.970
+46 percent chance that it belongs to the blue class.
+
+06:01.090 --> 06:05.130
+But if you use for example x equals to 1.
+
+06:05.230 --> 06:11.050
+Of course there's going to be a higher probability that either belongs to the blue class as you can
+
+06:11.050 --> 06:18.880
+see 77 percent that it belongs to the blue class and only 22 percent that it belongs to the red class.
+
+06:19.050 --> 06:19.420
+OK.
+
+06:19.420 --> 06:25.150
+So this is how we are able to train the logistic regression model read the map of the fit function.
+
+06:25.150 --> 06:30.420
+This is how we are able to get the optimal parameters between 0 and B to 1.
+
+06:30.430 --> 06:36.730
+And this is how we are able to make a new prediction or better pre-Big the given class with the help
+
+06:36.730 --> 06:43.570
+of this predicate function or we are able to predict that was the probability of the given item belongs
+
+06:43.570 --> 06:45.470
+to a given class.
+
+06:46.090 --> 06:46.620
+OK.
+
+06:46.630 --> 06:49.970
+So this is why we can use this predicate proper function.
+
+06:50.020 --> 06:57.100
+So in the next lecture we are going to talk about credit scoring based on a huge comma separated value
+
+06:57.100 --> 06:58.070
+data set.
+
+06:58.210 --> 07:04.510
+And we will use lot is the quick reaction in order to decide whether the client has defaulted on the
+
+07:04.510 --> 07:06.190
+loan or not.
+
+07:06.190 --> 07:07.030
+Thanks for watching.

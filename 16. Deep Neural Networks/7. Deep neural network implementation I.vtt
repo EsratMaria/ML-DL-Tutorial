@@ -1,0 +1,250 @@
+WEBVTT
+
+00:01.900 --> 00:09.310
+In this lecture we are going to talk about the concrete implementation of mutilator deep now network
+
+00:09.350 --> 00:10.930
+with the help of carers.
+
+00:10.970 --> 00:16.370
+So Cara's is extremely convenient in the sense that we can create the model.
+
+00:16.370 --> 00:20.390
+So basically now we're on a network we are after within minutes.
+
+00:20.410 --> 00:20.920
+OK.
+
+00:20.930 --> 00:28.550
+If we want to have more control of what's happening under the hood I suggest using Tanzer flow but Cara's
+
+00:28.640 --> 00:31.980
+is able to solve most of the problem we are after.
+
+00:32.090 --> 00:38.950
+As far as deep now networks are concerned or convolutional now the networks are concerned or recurrent.
+
+00:38.960 --> 00:40.680
+Now we're told that folks are concerned.
+
+00:40.820 --> 00:47.960
+OK on the other hand Tanzer flow enables you to do everything that you can use for example threads and
+
+00:47.960 --> 00:54.490
+parallelization in order to execute the training procedure on a different processor cores.
+
+00:54.530 --> 00:59.070
+Or you can use the graphical processing unit in order to boost your algorithm.
+
+00:59.120 --> 01:01.970
+So Tanzer flow is the professional framework.
+
+01:02.030 --> 01:05.660
+But we can do most of the algorithms with the help of Cara's.
+
+01:05.730 --> 01:11.980
+OK so Cara's is the lightweight framework and Tan's or flow is the heavyweight framework.
+
+01:12.110 --> 01:14.970
+So let's take a look at the X or problem.
+
+01:15.020 --> 01:20.540
+OK so we would like to solve this nonlinearly separable problem with the help of deep.
+
+01:20.540 --> 01:21.640
+Now we're on a network.
+
+01:21.770 --> 01:25.220
+So we are going to use several hidden layers.
+
+01:25.220 --> 01:32.490
+So this is the problem we would like to so that we have two features X and Y and we have a target variable
+
+01:32.510 --> 01:34.520
+basically X or a values.
+
+01:34.520 --> 01:37.440
+So this problem is dealing with binary.
+
+01:37.550 --> 01:46.520
+So the input can be either 0 or 1 0 0 then the output is 0 0 1 the output is 1 to 1 0 the output is
+
+01:46.520 --> 01:49.430
+1 and 1 1 the output is 0.
+
+01:49.430 --> 01:52.390
+So this is a nonlinearly separable problem.
+
+01:52.430 --> 01:56.100
+So we have to use at least one hidden layer.
+
+01:56.300 --> 02:02.480
+If we do not use hidden layers at all we are not able to solve this problem because now we really need
+
+02:02.480 --> 02:10.010
+to work with out the hidden layer is able to solve linearly separable problem such as deep and logical
+
+02:10.010 --> 02:11.120
+relationship.
+
+02:11.210 --> 02:19.460
+If we want to solve the X or logical relationship we have to use at least one hidden layer in our implementation.
+
+02:19.460 --> 02:21.650
+We use several hidden layers.
+
+02:21.670 --> 02:24.210
+We'd really activation function.
+
+02:24.350 --> 02:31.160
+So first of all we can create that training data set as a non-pilot array as you can see this is the
+
+02:31.160 --> 02:39.410
+first training example we did X feature and we feature 0 0 data we have the second sample we the x and
+
+02:39.470 --> 02:43.740
+y values then the surd sample x and y values.
+
+02:43.850 --> 02:50.480
+Then the fourth sample and so on these training data set as far as the X or logical relationship is
+
+02:50.480 --> 02:54.030
+concerned contains for training samples.
+
+02:54.080 --> 02:57.330
+OK and we are dealing with floating point numbers.
+
+02:57.380 --> 02:59.160
+What about the target date.
+
+02:59.240 --> 03:01.730
+It is 0 1 1 0.
+
+03:01.820 --> 03:08.180
+So this is what we have been talking about that these are the training samples the x and y all use and
+
+03:08.180 --> 03:11.890
+we have the target variable is 0 1 1 0.
+
+03:11.900 --> 03:16.600
+So that's why we have 0 1 1 0 as floating point numbers.
+
+03:16.670 --> 03:22.520
+And basically this is why I like carious because building the model is that simple.
+
+03:22.520 --> 03:25.790
+We just have to instantiate sequential clause.
+
+03:25.940 --> 03:30.720
+We are going to define now on network layers in a sequence shell manner.
+
+03:30.740 --> 03:37.580
+So if we define sequential we are able to order the given layer as this is the first layer as you can
+
+03:37.580 --> 03:44.690
+see we don't have to define that input layer explicitly because it is going to be the first hidden layer
+
+03:44.960 --> 03:53.060
+and if we define the number of inputs which is 2 What does it mean that the input layer contains two
+
+03:53.090 --> 03:55.930
+now drones because we have two features.
+
+03:56.020 --> 04:03.660
+0 0 0 1 1 0 and 1 1 the activation function is going to be really activation function.
+
+04:03.730 --> 04:10.190
+Okay except for the output layer where we use sigmoid activation functions the first paramita ERs are
+
+04:10.200 --> 04:12.140
+the output diam engines.
+
+04:12.170 --> 04:16.880
+So the input Diamanda is to the output dimension is 16.
+
+04:17.000 --> 04:21.880
+So basically it means that it has 60 now rowans in the hidden layer.
+
+04:21.890 --> 04:28.590
+So OK we will have one hidden layer 2 3 4 5 6 7.
+
+04:28.730 --> 04:31.390
+So we will have 7 hidden layers.
+
+04:31.550 --> 04:35.330
+All of these layers contain 16 now roans.
+
+04:35.390 --> 04:38.000
+So it's going to be a huge network network.
+
+04:38.150 --> 04:45.620
+OK it's going to be an overkill because for so the X logical relationship we need just a single hidden
+
+04:45.620 --> 04:46.200
+layer.
+
+04:46.340 --> 04:49.990
+But of course we can use as many layers as we want.
+
+04:50.030 --> 04:53.270
+We just need more training iterations.
+
+04:53.270 --> 04:58.760
+OK so the activation function is going to be the real you activation function.
+
+04:58.760 --> 05:04.980
+So this is what we have been talking about in particular section that is the role of deactivation function
+
+05:05.160 --> 05:08.330
+is to make the natural network non-linear.
+
+05:08.340 --> 05:15.960
+So if we do not use an activation function the output is going to be a linear combination of the input
+
+05:16.020 --> 05:17.240
+and the educators.
+
+05:17.310 --> 05:23.150
+OK and we the map of the activation function we can introduce non-linearity.
+
+05:23.330 --> 05:30.830
+OK we can use the sigmoid activation function but a better approach is to use the read you directly
+
+05:30.830 --> 05:37.280
+file in your unit activation function which is as you can see a very simple activation function.
+
+05:37.410 --> 05:42.140
+The value is equal to the maximum out of 0 or x.
+
+05:42.150 --> 05:46.520
+So this is the plot of the rectifier linear unit activation function.
+
+05:46.530 --> 05:47.540
+Why is it good.
+
+05:47.610 --> 05:50.960
+Because it can solve the vanishing gradient issue.
+
+05:50.970 --> 05:58.080
+So we will see that if we use sigmoid activation functions then we need lots of lots of iterations and
+
+05:58.080 --> 05:59.820
+lots of lots of Apple.
+
+05:59.940 --> 06:07.260
+If we use the really activation function we are able to train the now run network with the help of future
+
+06:07.350 --> 06:08.700
+iterations.
+
+06:08.700 --> 06:09.520
+OK.
+
+06:09.660 --> 06:14.030
+So this is the architecture we are going to use in the next lecture.
+
+06:14.040 --> 06:19.500
+We are going to talk about the last function optimizer or metrics and so on.
+
+06:19.500 --> 06:20.340
+Thanks for watching.

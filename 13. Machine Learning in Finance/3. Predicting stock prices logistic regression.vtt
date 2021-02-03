@@ -1,0 +1,136 @@
+WEBVTT
+
+00:01.230 --> 00:07.980
+In this lecture we are going to talk about how to use logistic regression in order to forecast stock
+
+00:07.980 --> 00:09.880
+prices in the future.
+
+00:10.020 --> 00:17.610
+So discreate dataset is going to fetch the data from Yahoo Finance and it is going to order additional
+
+00:17.610 --> 00:25.640
+columns to the data set such as the lag one leg two or three in this case we are going to use five Wag's.
+
+00:25.650 --> 00:31.980
+So what does it mean that we are going to calculate the daily returns one day ago two days ago three
+
+00:31.980 --> 00:34.750
+days ago four days ago and five days ago.
+
+00:34.800 --> 00:40.770
+This is what we have been discussing that the features are going to be this lag of arrivals and we are
+
+00:40.770 --> 00:46.200
+going to have the directions whether the stock price went up or went down.
+
+00:46.200 --> 00:53.160
+Of course we are going to rely on historical data because we need historical data in order to construct
+
+00:53.220 --> 00:56.430
+this dataset so we download the data.
+
+00:56.430 --> 00:59.590
+We are going to deal with the adjusted closing price.
+
+00:59.700 --> 01:07.020
+We are going to calculate the lag of ribose and the directions plus one or minus one plus one.
+
+01:07.080 --> 01:10.010
+If the stock price went up minus one.
+
+01:10.050 --> 01:12.090
+If the stock price declined.
+
+01:12.350 --> 01:20.070
+OK of course we have to drop the first six rows because we would like to get rid of an A and the values
+
+01:20.310 --> 01:21.960
+these are invalid values.
+
+01:21.990 --> 01:26.930
+Machine learning algorithms can deal with numerical values exclusively.
+
+01:26.940 --> 01:34.970
+So if I print out the data frame it's going to contain lots of invalid values because of the shift operations.
+
+01:35.040 --> 01:41.390
+So as you can see we have calculated lag 1 lakh to LAX 3 like 4 and I guess like five.
+
+01:41.460 --> 01:45.010
+And of course the direction plus 1 and minus 1.
+
+01:45.120 --> 01:52.110
+So that's why we have to get rid of the first six rows in order to make sure that our machine learning
+
+01:52.140 --> 01:54.710
+algorithm is not going to crash.
+
+01:54.720 --> 01:58.560
+So in the main We just have to get this data set.
+
+01:58.560 --> 02:05.910
+We have to create the features we are going to consider for features the daily returns yesterday two
+
+02:05.910 --> 02:12.050
+days ago three days ago when four days ago and the direction is going to be the target of arrival.
+
+02:12.060 --> 02:16.990
+So we would like to approximate whether the price will go up or go down.
+
+02:17.010 --> 02:22.180
+Feel free to end up with other features because of or so we have to test it.
+
+02:22.230 --> 02:24.750
+And what are the best features to use.
+
+02:24.920 --> 02:32.080
+Okay we have a date time because we would like to split the dataset into a training set and that has
+
+02:32.120 --> 02:38.070
+sat Of course we use logistic regression we feed the model on the training data and we would like to
+
+02:38.070 --> 02:39.480
+make some prediction.
+
+02:39.510 --> 02:47.070
+We printout the accuracy and the confusion matrix going to clear the console and rerun the script as
+
+02:47.070 --> 02:51.180
+you can see the accuracy is approximately 57 percent.
+
+02:51.180 --> 02:53.560
+It is not that good as you may guess.
+
+02:53.640 --> 02:59.180
+There are lots of lots of misclassified items as we can see from the confusion matrix.
+
+02:59.190 --> 03:06.630
+So the diagonal items are the correct classification and there are several misclassified items stored
+
+03:06.690 --> 03:08.860
+in the other diagonal items.
+
+03:09.060 --> 03:17.040
+Okay so that's all about logistic regression as you can see it's not working that fine because 57 percent
+
+03:17.130 --> 03:22.470
+is a bit better then 50 percent 50 percent is like tossing a coin.
+
+03:22.470 --> 03:28.320
+So if we do not build the model at all this is not the case for logistic regression because we use that
+
+03:28.320 --> 03:36.630
+logistic function we calculate the b the parameters B to zero between a to 3 with a gradient descent
+
+03:36.630 --> 03:38.290
+or maximum likelihood method.
+
+03:38.400 --> 03:45.410
+So it is a rather complex algorithm and we are not able to do much better than tossing a coin.
+
+03:45.480 --> 03:46.290
+OK.
+
+03:46.290 --> 03:51.950
+In the next lecture we are going to talk about K nearest neighbor classifier the fire dancer watching.

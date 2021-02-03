@@ -1,0 +1,214 @@
+WEBVTT
+
+00:00.180 --> 00:03.900
+First of all let's talk about that type of learning.
+
+00:03.900 --> 00:11.580
+So there are three main types of learning such as supervised learning unsupervised learning and reinforcement
+
+00:11.580 --> 00:12.480
+learning.
+
+00:12.480 --> 00:17.100
+Supervised learning is what we have been discussing in the previous series.
+
+00:17.100 --> 00:22.140
+So we have a data set and we have samples and labels accordingly.
+
+00:22.200 --> 00:28.480
+Such as for the X or logical problem we have two features X and Y.
+
+00:28.650 --> 00:31.140
+And we have the labels accordingly.
+
+00:31.140 --> 00:37.560
+If x is 0 and 1 0 x x or y is going to be 0.
+
+00:37.560 --> 00:40.610
+So these are the labels in the last column.
+
+00:40.830 --> 00:47.430
+Most of them machine learning techniques rely heavily on data sads by the way and most of the approaches
+
+00:47.520 --> 00:55.840
+are supervised learning approach such as support vector machines or native based classifier or feedforward
+
+00:55.840 --> 00:57.050
+and our own networks.
+
+00:57.150 --> 01:00.840
+We need a dataset with samples and labels.
+
+01:00.840 --> 01:09.210
+And during the training procedure the algorithm makes sure that the production of the network is approximately
+
+01:09.210 --> 01:12.040
+the same as the labels in the data set.
+
+01:12.150 --> 01:19.020
+OK so this is a supervised learning that for example we have two features and we know the labels.
+
+01:19.020 --> 01:26.460
+We know that the given dots are belong to the yellow class and other points are belong to the green
+
+01:26.460 --> 01:27.130
+class.
+
+01:27.180 --> 01:34.320
+So we give the algorithm the right answer and during the training procedure the algorithm finds out
+
+01:34.530 --> 01:37.270
+what is the difference between the two classes.
+
+01:37.440 --> 01:43.740
+And for example with the help of supporting actor machines we are able to end up with a hyperplane like
+
+01:43.770 --> 01:51.000
+this that's going to separate the yellow class and the green class if we have a new sample we are able
+
+01:51.000 --> 01:54.260
+to classify it based on this hyperplane.
+
+01:54.380 --> 02:00.010
+If the given sample is above the hyperplane it belongs to the green.
+
+02:00.110 --> 02:06.210
+If the new sample is under the hyperplane it means that it belongs to the yellow class.
+
+02:06.450 --> 02:09.680
+So we have the samples and the labels.
+
+02:09.810 --> 02:12.150
+What about on a supervised learning.
+
+02:12.150 --> 02:19.820
+We have a data set but samples without labels and the algorithm will find some patterns in the label
+
+02:20.050 --> 02:27.460
+dataset with the help of clustering algorithms for example Kamins clustering or hierarchical clustering.
+
+02:27.510 --> 02:34.530
+We are able to come to the conclusion that there are three classes the Blue Claws the green claws and
+
+02:34.530 --> 02:35.700
+the yellow claws.
+
+02:35.820 --> 02:43.650
+So again we have a data set but without any labels this is scored on a supervised learning and we have
+
+02:43.650 --> 02:48.480
+reinforcement learning where we do not have a data set at all.
+
+02:48.480 --> 02:56.370
+So this is the main difference between supervised unsupervised and reinforcement learning that for reinforcement
+
+02:56.370 --> 02:59.530
+learning we don't have a data set at all.
+
+02:59.550 --> 03:06.300
+The artificial intelligence agent who will interact with the environment and he figures out what to
+
+03:06.300 --> 03:06.870
+do.
+
+03:06.900 --> 03:14.010
+So there are states basically the states represent the environment and there are some actions.
+
+03:14.040 --> 03:17.640
+So the agent will make an action at random.
+
+03:17.670 --> 03:20.620
+This is how we interact with the environment.
+
+03:20.820 --> 03:28.650
+And basically with the help of this action the agent goes to another state and that state can be good
+
+03:28.740 --> 03:29.550
+or bad.
+
+03:29.640 --> 03:36.790
+And that's why there's going to be some reward or some penalty if the agent made a good decision.
+
+03:36.960 --> 03:44.570
+There's going to be some reward if the agent made a bad decision then there's going to be a penalty.
+
+03:44.580 --> 03:51.630
+For example when we try to find the shortest path with the help of an artificial intelligent agent there
+
+03:51.630 --> 03:53.200
+are going to be states.
+
+03:53.250 --> 03:57.300
+These are the sounds on the grid and there are actions.
+
+03:57.300 --> 03:59.710
+The agent is able to go up.
+
+03:59.760 --> 04:01.510
+It is able to go down.
+
+04:01.560 --> 04:05.140
+It is able to go left and it is able to go right.
+
+04:05.160 --> 04:12.950
+So we have sounds and we have actions the last chapter is about how to deal with a tic tac toe game.
+
+04:13.070 --> 04:19.500
+We will come to the conclusion that a reinforced learning algorithm can be used to learn playing tic
+
+04:19.500 --> 04:20.790
+tac toe games.
+
+04:20.790 --> 04:28.350
+There is the environment represented by sounds on the board the agent which is the computer player makes
+
+04:28.440 --> 04:31.080
+a move according to the border states.
+
+04:31.080 --> 04:33.290
+These moves are the actions.
+
+04:33.300 --> 04:39.010
+This is what we have been discussing that basically the agent is going to make actions.
+
+04:39.150 --> 04:43.940
+And with the help of these actions the agent will go to different states.
+
+04:43.950 --> 04:50.850
+This is how the agent is able to interact with the environment as far as tic tac toe is concerned.
+
+04:50.880 --> 05:00.190
+A move is when we put X or all to a given cell and eventually the game will end and the agent will give
+
+05:00.220 --> 05:05.790
+a reward if it wins or receive a penalty if it loses.
+
+05:05.830 --> 05:08.350
+Basically this is the training procedure.
+
+05:08.380 --> 05:13.040
+If the agent wins it means that we reward the agent.
+
+05:13.090 --> 05:17.370
+So the algorithm will know that it made a good decision.
+
+05:17.500 --> 05:23.200
+So the computer initially plays quite poorly but after the training procedure.
+
+05:23.200 --> 05:30.610
+So playing lots of lots of tic tac toe game it will be able to choose the right actions and moves we
+
+05:30.610 --> 05:33.950
+are going to talk a lot about reinforcement learning.
+
+05:33.970 --> 05:40.660
+And in the last chapter we are going to implement a reinforcement learning tic tac toe game player from
+
+05:40.660 --> 05:41.300
+scratch.
+
+05:41.440 --> 05:43.730
+So it's going to be clear.
+
+05:43.750 --> 05:44.590
+Thanks for watching.

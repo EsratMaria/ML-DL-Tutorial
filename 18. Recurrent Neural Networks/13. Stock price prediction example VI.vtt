@@ -1,0 +1,184 @@
+WEBVTT
+
+00:01.690 --> 00:07.930
+In the last lecture we have been talking about Alice D.M. architecture how to compile and how to fit
+
+00:07.930 --> 00:08.980
+the model.
+
+00:08.980 --> 00:13.380
+Now it's time to test whether the algorithm is working fine or not.
+
+00:13.570 --> 00:19.410
+So first of all we have taken Kattan aid the training data set with that task data set.
+
+00:19.420 --> 00:20.050
+Why.
+
+00:20.050 --> 00:26.950
+Because if we want to make some predictions in the past dataset of course for example the prediction
+
+00:27.070 --> 00:34.420
+as far as the first sample is concerned it relies heavily on the previous 40 samples and the previous
+
+00:34.420 --> 00:38.410
+40 samples are located within the training data set.
+
+00:38.410 --> 00:42.220
+OK because as you may recall we use 40 features.
+
+00:42.340 --> 00:47.940
+So for the stock prices in the past in order to spread the stock price tomorrow.
+
+00:48.120 --> 00:48.850
+OK.
+
+00:48.940 --> 00:55.840
+So that's why we have to concatenate the training data set and test data set as far as the adjusted
+
+00:55.870 --> 00:57.800
+closing prices are concerned.
+
+00:57.880 --> 01:04.370
+And if we had the axes to be zero it's going to be a vertical concatenation.
+
+01:04.390 --> 01:08.190
+So if the axis is zero it is vertical.
+
+01:08.290 --> 01:13.480
+If the access is equal to 1 it's going to be horizontal concatenation.
+
+01:13.480 --> 01:21.460
+So if we take a look at these data set total as you can see we have training data set and the data we
+
+01:21.460 --> 01:23.140
+have the test data set.
+
+01:23.140 --> 01:31.200
+So as you can see we have concatenated the training data set and test data set in a vertical manner.
+
+01:31.240 --> 01:36.110
+So that's why we use axes 0 for vertical concatenation.
+
+01:36.160 --> 01:43.810
+OK then we have to calculate the input features for that past data set and with the help of this line
+
+01:43.810 --> 01:46.980
+of code we slagged the important inputs.
+
+01:47.010 --> 01:54.550
+So from the total data set we are going to calculate the lengths of the dataset minus the lengths of
+
+01:54.580 --> 02:02.200
+the price data set so that test dataset minus 40 because we need the items in the training data set
+
+02:02.440 --> 02:06.270
+in order to protect the values from the task data set.
+
+02:06.430 --> 02:12.970
+OK then we have to reshape these values data because then our own network is trained on the scale the
+
+02:12.970 --> 02:18.230
+values we have to use minimax normalization on the input as well.
+
+02:18.370 --> 02:21.310
+So this minimax scaler is already fit there.
+
+02:21.400 --> 02:26.260
+So instead of feet transform we can use this transform directly.
+
+02:26.290 --> 02:29.570
+So this is how we get that transformed input.
+
+02:29.830 --> 02:36.980
+And again we have to create a one dimensional array for the test features and we have to use these for
+
+02:36.980 --> 02:42.350
+a loop in order to create a data set like this with all of the relevant features.
+
+02:42.410 --> 02:48.760
+OK in this case we have three features but in the implementations we have 40 features.
+
+02:48.820 --> 02:51.730
+So for these stock prices in the past.
+
+02:51.730 --> 02:56.970
+Okay so thats why we use 40 and minus 40 up to our eye.
+
+02:57.010 --> 03:04.180
+As far as the roads are concerned and all the values from the first column we are dealing with a single
+
+03:04.270 --> 03:10.020
+adjusted closing price so thats why the zero index column is going to be adjusted.
+
+03:10.030 --> 03:18.160
+Closing prices then we can create a non-pilot array out of the X test values and then we have to reshape
+
+03:18.160 --> 03:19.300
+these items.
+
+03:19.300 --> 03:24.820
+This is exactly what we have discussed here because in order to make some predictions we are recurrent
+
+03:24.850 --> 03:30.910
+now and that we have to end up with these die imagines the first dimension imagine is the number of
+
+03:30.910 --> 03:31.840
+samples.
+
+03:31.840 --> 03:38.200
+Then we have the number of features that we have the number of target variables because we are after
+
+03:38.200 --> 03:39.870
+the adjusted closing price.
+
+03:39.880 --> 03:41.400
+It is a single value.
+
+03:41.410 --> 03:43.790
+So thats why we have a warm up.
+
+03:43.800 --> 03:46.780
+OK so this is why we have to use reshape.
+
+03:46.780 --> 03:48.060
+With something like this.
+
+03:48.070 --> 03:54.260
+Finally we kind of make predictions with the help of the model predicate on the past the data set.
+
+03:54.280 --> 04:00.260
+These are going to be the predictions but we make predictions on the scale the data set.
+
+04:00.310 --> 04:07.850
+So we just have to use these inverse transformations in order to end up with the predicted stock prices.
+
+04:07.930 --> 04:08.400
+Okay.
+
+04:08.410 --> 04:12.510
+So we don't want to bother with the values within the range 0 and 1.
+
+04:12.580 --> 04:18.310
+We would like to make predictions something like this that the stock price is two thousand two hundred
+
+04:18.370 --> 04:20.770
+nineteen dollars for example and so on.
+
+04:20.770 --> 04:28.900
+So this is why we need this inverse transformation and then we just have to Plaut the actual S&amp;P 500
+
+04:28.900 --> 04:34.320
+prices and the stock price is predicted by the LSD model.
+
+04:34.360 --> 04:42.100
+So we have the title we have the labels time and prices accordingly and we just have to call the show
+
+04:42.130 --> 04:45.230
+function in order to show order give them plot.
+
+04:45.250 --> 04:49.210
+So in the next lecture we are going to talk about the results.
+
+04:49.210 --> 04:50.090
+Thanks for watching.

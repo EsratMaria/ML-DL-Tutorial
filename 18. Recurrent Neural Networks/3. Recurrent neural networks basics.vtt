@@ -1,0 +1,322 @@
+WEBVTT
+
+00:01.050 --> 00:07.920
+In the last lecture we have been talking about the applications of recurrent natural networks and why
+
+00:07.920 --> 00:13.410
+is it important to use these kinds of our networks in this lecture.
+
+00:13.410 --> 00:19.480
+We are going to talk about the concrete architecture we have been talking about multi-layer are now
+
+00:19.500 --> 00:23.690
+Real Networks with one or several hidden layers.
+
+00:23.700 --> 00:28.940
+These are called Deep networks and we do these kinds of natural networks.
+
+00:29.040 --> 00:32.910
+We kind of make predictions independent of each other.
+
+00:32.940 --> 00:40.350
+So every single training example in a mood or now rail network are independent of each other.
+
+00:40.350 --> 00:46.650
+So for example when we are dealing with animal classification there are going to be several animals
+
+00:46.710 --> 00:54.630
+in the training example tigers elephants cats and something like this and it does training examples
+
+00:54.840 --> 00:57.280
+had nothing to do with each other.
+
+00:57.330 --> 01:06.780
+So that's why Petey is not correlated with P T minus 1 or P T minus 2 where p is the given training
+
+01:06.780 --> 01:12.090
+examples and because the training examples are independent of each other.
+
+01:12.210 --> 01:17.560
+Thats why the output of the natural network will be independent as well.
+
+01:17.580 --> 01:23.250
+So these predictions are independent as far as feedforward are.
+
+01:23.280 --> 01:30.250
+Now Real Networks are concerned but this is not the case for recurrent now where all networks with recurrent
+
+01:30.250 --> 01:35.500
+bowel networks we can predict the next bird in a given sentence for example.
+
+01:35.520 --> 01:43.080
+So as far as natural language processing is concerned or a time series analyzes is concerned such as
+
+01:43.080 --> 01:45.540
+predicting stock prices tomorrow.
+
+01:45.780 --> 01:50.540
+These training examples are not independent of each other.
+
+01:50.580 --> 01:55.980
+P T depends on P T minus 1 P T minus 2 and so on.
+
+01:55.980 --> 01:59.430
+So training examples are correlated of course.
+
+01:59.430 --> 02:06.120
+This is what we had been talking about that if we have several sentences then recurrent now real network
+
+02:06.150 --> 02:08.910
+is able to take guess the next word.
+
+02:09.000 --> 02:15.260
+In this case because one of the previous sentence states that the guy is from Hungary.
+
+02:15.480 --> 02:18.970
+That's why he can speak fluent Hungarian.
+
+02:19.110 --> 02:24.130
+So in this case training examples are depending of each other.
+
+02:24.240 --> 02:32.070
+And that's why the output of the now rail network is not going to be independent on the output in previous
+
+02:32.070 --> 02:32.720
+taps.
+
+02:32.730 --> 02:34.620
+So that's what I for recurrent.
+
+02:34.620 --> 02:36.520
+Now we're on networks training.
+
+02:36.550 --> 02:38.760
+Examples are correlated.
+
+02:38.930 --> 02:45.900
+OK so if we want to understand the architecture of recurrent now rail network first we have to come
+
+02:45.900 --> 02:48.240
+up with a new representation.
+
+02:48.240 --> 02:55.890
+So far we have been talking about multi-layer feet forward now road networks and we use the representation
+
+02:55.890 --> 02:56.820
+like this.
+
+02:56.820 --> 03:05.430
+We had the input layer we had hidden layer and we had the output layer and every single layer can contain
+
+03:05.460 --> 03:06.130
+several.
+
+03:06.150 --> 03:09.210
+Now we're on the input layer contains two.
+
+03:09.210 --> 03:16.000
+Now rowans the he didn't your contains screen now owns the output layer containing just a single.
+
+03:16.000 --> 03:21.240
+Now we're on in the days Gidon multi-layer now a real network for recurrent.
+
+03:21.240 --> 03:22.480
+Now we're run the network.
+
+03:22.500 --> 03:30.510
+We are going to squeeze these layers and every single layer is going to be just a single node but it
+
+03:30.510 --> 03:38.190
+is extremely important that every single node represent a given layer that can contain several.
+
+03:38.190 --> 03:44.580
+Now rowans So in this case the hidden layer is represented with just a single note.
+
+03:44.740 --> 03:53.310
+But this note contains stree now rowans the input layer is just a single node but it represents to know
+
+03:53.390 --> 03:54.070
+rowans.
+
+03:54.090 --> 03:59.180
+So this is how we are going to represent recurrent our role in that Virk architecture.
+
+03:59.310 --> 04:05.540
+And it was extremely important that the hidden layer and now drones are connected to the south.
+
+04:05.580 --> 04:13.910
+So instead of pointing in the direction of the next layer every single neuron is connected to itself.
+
+04:14.100 --> 04:15.390
+So what does it mean.
+
+04:15.390 --> 04:23.640
+It means that for recurrent neural networks he didn't layer gives an output to the output layer Plass
+
+04:23.700 --> 04:28.700
+feeds back to the south because of the recurrent architecture.
+
+04:28.760 --> 04:36.030
+OK so this is what's extremely crucial that every single neuron instead of pointing Xclusive early in
+
+04:36.030 --> 04:43.200
+the direction of the next layer there's going to be a connection to the south in this case we have X
+
+04:43.230 --> 04:53.430
+which is the input x d is the input at time t we have the weights w Sabai we have the hidden layer HD.
+
+04:53.520 --> 04:57.360
+And of course it's going to be connected to its south.
+
+04:57.540 --> 05:03.230
+H is the activation after applying the nation function on the given output.
+
+05:03.440 --> 05:10.380
+OK so for a feedforward now we're on a network we just have to deal with the fact of the input layer.
+
+05:10.550 --> 05:15.230
+But for recurrence now we're on the network there is a connection to the south.
+
+05:15.320 --> 05:19.320
+So we have to deal with the fact of the previous time stop.
+
+05:19.430 --> 05:21.780
+And of course we have to deal the abayas.
+
+05:21.890 --> 05:28.790
+So that's why HD is going to be equal to the activation function which can be the sigmoid function which
+
+05:28.790 --> 05:35.570
+can be that tan h function or direct defined linear unit activation function and we have to deal with
+
+05:35.570 --> 05:43.550
+the waits times the input plus the wait times the previous times that activation Plus the bias.
+
+05:43.550 --> 05:46.070
+So in this case these are matrices.
+
+05:46.070 --> 05:52.220
+This is what we have been talking about that every single node in a recurrence now and that Virk represents
+
+05:52.310 --> 05:55.640
+a given layer with several Now rowans.
+
+05:55.640 --> 05:59.920
+So in this case there are several now roans in a disclaimer.
+
+06:00.020 --> 06:02.550
+There are several now runs in this layer.
+
+06:02.690 --> 06:08.820
+So these values are vectors and that's why the weights are going to be matrices.
+
+06:08.930 --> 06:12.880
+Okay so we have the input layer we have the hidden layer.
+
+06:12.920 --> 06:17.510
+And of course we have the output layer as usual for our own network.
+
+06:17.510 --> 06:23.740
+So for feedforward now we're on networks there's the output layer and this is the case for recurrence
+
+06:23.740 --> 06:23.990
+now.
+
+06:23.990 --> 06:25.520
+And that works as well.
+
+06:25.720 --> 06:32.360
+Okay so we have at the White Spot the output layer and this is how we calculate the output.
+
+06:32.360 --> 06:35.340
+The output is equal to an activation function.
+
+06:35.360 --> 06:42.110
+We have some weights than we have at this age Suttie which is the activation in the hidden layer plus
+
+06:42.140 --> 06:43.520
+we have a bias.
+
+06:43.520 --> 06:50.140
+So was the crucial difference between recurrent Now networks and feedforward now and that works that
+
+06:50.150 --> 06:54.090
+the hidden layer now roans are connected to themselves.
+
+06:54.200 --> 07:02.060
+So that's why we have to deal with the fact of previous stop and a good question is how to train recurrent
+
+07:02.150 --> 07:03.240
+our own network.
+
+07:03.380 --> 07:09.080
+Basically we can unroll it in time in order to end up with the standard feedforward.
+
+07:09.080 --> 07:14.330
+Now will that work because we know how to deal that feedforward in our own networks.
+
+07:14.330 --> 07:17.020
+We know how to train a given our own network.
+
+07:17.150 --> 07:23.420
+We know how to update the good and educate we just have to use gradient descent way back propagation
+
+07:23.630 --> 07:25.470
+and basically that all.
+
+07:25.490 --> 07:31.490
+So we are going to on the roll this given a recurrence now really networking time and that's why we
+
+07:31.490 --> 07:33.920
+will end up with something like this.
+
+07:33.950 --> 07:41.450
+This is the given time stat t D-plus one times that is going to be the next layer in recurrent in our
+
+07:41.450 --> 07:43.250
+own network architecture.
+
+07:43.300 --> 07:47.150
+Dan H.T. plus 2 is going to be the next stop.
+
+07:47.350 --> 07:54.050
+Okay so we have to deal with these quite simple equations but what is extremely important that several
+
+07:54.050 --> 07:57.840
+parameters are shared across every single layer.
+
+07:57.890 --> 08:03.890
+So for example w r is going to be the same in every single layer.
+
+08:03.890 --> 08:12.630
+The same is true for double use of y or double use of these weight matrices are going to be the same.
+
+08:12.650 --> 08:18.640
+Okay this is another feature for recurrence our real networks because for feedforward now were and that
+
+08:18.640 --> 08:21.310
+works that these weights are different.
+
+08:21.470 --> 08:27.830
+So of course the edge weights from the impolitely are pointing in the direction of the hidden layer
+
+08:27.890 --> 08:33.790
+are different than the edge weights pointing from the hidden layer to the output layer.
+
+08:33.800 --> 08:38.550
+So basically we didn't share educates as far as feedforward.
+
+08:38.550 --> 08:42.590
+Now we're told that folks are concerned for recurrence now and that works.
+
+08:42.730 --> 08:50.300
+These parameters are shared across every single layer and because of this there's a huge problem with
+
+08:50.300 --> 08:56.080
+recurrence and our own networks which is scored when issuing an exploding gradient problem.
+
+08:56.180 --> 08:59.630
+This is what we are going to talk about in the next lecture.
+
+08:59.630 --> 09:00.530
+Thanks for watching.

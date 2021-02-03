@@ -1,0 +1,220 @@
+WEBVTT
+
+00:01.300 --> 00:05.660
+In this lecture we are going to talk about loss function.
+
+00:05.740 --> 00:13.360
+So we have a data set and we want to make sure that the predictions made by the natural network is approximately
+
+00:13.360 --> 00:16.060
+the same as the labels in the data set.
+
+00:16.060 --> 00:21.660
+So this is what we have been discussing in one of your previous lectures that we have the data set.
+
+00:21.670 --> 00:28.810
+For example the X or logical table which two features X and Y And We know the labels.
+
+00:28.810 --> 00:33.490
+So the X or values will be 0 1 1 and 0.
+
+00:33.490 --> 00:40.510
+So we keep training our own network until we come to the conclusion that the predictions made by the
+
+00:40.510 --> 00:45.760
+network is approximately the same as the labels in the data set.
+
+00:45.820 --> 00:53.290
+So that's why we define the last function which measures how close the given our network is to the ideal
+
+00:53.320 --> 00:55.290
+toward which it is training.
+
+00:55.330 --> 01:01.540
+So we calculate a value based on the air or we are observing the now Rose nethermost predictions and
+
+01:01.540 --> 01:08.650
+we want to find the optimal bias surveiled use as well as the weights that will minimize the loss function
+
+01:08.950 --> 01:09.700
+we can use.
+
+01:09.700 --> 01:16.630
+Gradient descent algorithm for optimization or any other matter how eristic related algorithms.
+
+01:16.630 --> 01:19.480
+Basically it is an optimization problem.
+
+01:19.540 --> 01:22.790
+So lots of lots of students have posed the question.
+
+01:22.990 --> 01:29.800
+When dealing with artificial intelligence basics that why do we have to consider simulated annealing
+
+01:29.920 --> 01:37.780
+genetic algorithms or swarm optimization because we can solve any kinds of optimization related problem.
+
+01:37.930 --> 01:44.590
+For example when we are dealing with now little networks by the way the most commonly used algorithm
+
+01:44.650 --> 01:52.250
+is gradient descent or so has the gradient descent but we can use any other optimization technique.
+
+01:52.320 --> 01:52.800
+OK.
+
+01:52.810 --> 01:55.280
+So when we are dealing with regression.
+
+01:55.330 --> 02:03.490
+So we have only one output feature we can use mean square error or as the last function we can define
+
+02:03.490 --> 02:05.480
+it as 1 wide by an.
+
+02:05.650 --> 02:15.040
+And the sum of y Sabai minus Y prime Sabai basically Y is the actual value that we know from our training
+
+02:15.040 --> 02:15.880
+data set.
+
+02:16.000 --> 02:23.500
+So these are the labels in our dataset and the y prime are the predictions made by our artificial.
+
+02:23.500 --> 02:24.570
+Now we're doing that.
+
+02:24.640 --> 02:32.100
+Of course it is quite intuitive because the actual values are close to the predictions made by or artificial.
+
+02:32.100 --> 02:33.200
+Now we're on a network.
+
+02:33.340 --> 02:41.830
+It means that y minus Y prime is approximately zero which means that the mean square error is approximately
+
+02:41.830 --> 02:42.530
+zero.
+
+02:42.580 --> 02:46.480
+So our and our network can make good predictions.
+
+02:46.510 --> 02:52.430
+Of course at the beginning there's going to be some error and this is what can be measured with the
+
+02:52.430 --> 02:55.510
+top of means square and or last function.
+
+02:55.510 --> 02:58.950
+Ok so this is the case when we are dealing with regression.
+
+02:59.080 --> 03:06.040
+But usually we are dealing with classification and this is why we can use negativa log likelihood as
+
+03:06.040 --> 03:07.110
+a last function.
+
+03:07.190 --> 03:14.560
+Ok so for example when there are several output values when dealing with a hand with 10 digits classification
+
+03:14.770 --> 03:18.590
+then basically we can use the maximum likelihood estimator.
+
+03:18.730 --> 03:25.570
+And because the logarithm function is monotonically increasing minimizing the negative load likelihood
+
+03:25.660 --> 03:28.900
+is the same as maximizing the probability.
+
+03:28.900 --> 03:32.640
+So we would like to end up with the maximum probability.
+
+03:32.710 --> 03:39.640
+OK I don't want to talk a lot about the math behind our networks but the maximum likelihood estimation
+
+03:39.640 --> 03:44.290
+is present on Wikipedia data or so you can take a closer look.
+
+03:44.290 --> 03:51.670
+One of the main features as far as maximum likelihood is concerned so we can find even paramita as such
+
+03:51.670 --> 03:59.040
+as the edge weights for an hour or network that's going to maximize the probability of making good predictions.
+
+03:59.110 --> 04:04.390
+So this is how we are going to find the actuates during the training procedure.
+
+04:04.390 --> 04:11.430
+Of course if we apply the logarithm on the given entities it's not going to change the maximum values.
+
+04:11.470 --> 04:17.680
+I'm not sure whether you are interested in quantitative finance but we can deal with the logarithm of
+
+04:17.680 --> 04:21.300
+daily returns and or calculation will be correct.
+
+04:21.340 --> 04:25.480
+So we can apply the logarithm function on the given values.
+
+04:25.600 --> 04:29.730
+It's not going to change the maximum or the minimum location.
+
+04:29.770 --> 04:35.800
+Okay the last question you may pose that while to deal with the negative of the log likelihood because
+
+04:35.800 --> 04:43.170
+most of the built in functions such as Python optimize matter finds the minimum and not the maximum.
+
+04:43.240 --> 04:50.980
+So finding the maximum value of a given function is the same as finding the minimum of the negative
+
+04:50.980 --> 04:52.690
+value of the function.
+
+04:52.690 --> 04:56.080
+So this is the negative log likelihood function.
+
+04:56.080 --> 05:01.780
+This is mathematically equivalent to what is called The Cross and droppy negative the likelihood has
+
+05:01.780 --> 05:08.380
+something to do with statistics and costs and therapy has something to do with information theory but
+
+05:08.380 --> 05:14.350
+the conclusion is the same that we can end up with a last function like this that is going to measure
+
+05:14.350 --> 05:21.730
+the air or in our now little network we are and is the number of classes it is close to ten when we
+
+05:21.730 --> 05:23.700
+classify handwritten digits.
+
+05:23.710 --> 05:26.710
+We have 0 1 2 3 4 up to 9.
+
+05:26.770 --> 05:29.030
+So we have 10 items.
+
+05:29.140 --> 05:32.430
+And and is the number of samples in the dataset.
+
+05:32.440 --> 05:36.490
+OK so this is what we are going to use during implementation.
+
+05:36.490 --> 05:41.040
+We are going to define the last function as the negative load likelihood.
+
+05:41.200 --> 05:48.220
+That's why I want to talk a bit about negative Loek likelihood to know what's happening under the hood.
+
+05:48.440 --> 05:48.950
+OK.
+
+05:48.970 --> 05:55.750
+So as far as the optimization is concerned we are going to talk about gradient descent and so has the
+
+05:55.750 --> 05:58.480
+gradient descent in the next lecture.
+
+05:58.480 --> 05:59.310
+Thanks for watching.

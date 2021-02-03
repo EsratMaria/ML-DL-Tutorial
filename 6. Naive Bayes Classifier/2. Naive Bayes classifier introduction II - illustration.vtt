@@ -1,0 +1,160 @@
+WEBVTT
+
+00:01.610 --> 00:08.150
+Okay in the last lecture we have been talking about the abstract mathematical model behind nave based
+
+00:08.150 --> 00:11.910
+classifier So let's see a concrete illustration.
+
+00:11.930 --> 00:13.880
+We have two classes.
+
+00:13.970 --> 00:20.510
+The yellow class and the green class with lots of lots of data samples as you can see and of course
+
+00:20.510 --> 00:27.220
+the aim is to be able to classify a new sample as you can see this dog with the question mark.
+
+00:27.290 --> 00:33.710
+The aim of the algorithm is to decide whether it's going to belong to the yellow class or to the green
+
+00:33.710 --> 00:34.410
+class.
+
+00:34.610 --> 00:40.000
+So first of all let's calculate the probabilities of the given classes.
+
+00:40.090 --> 00:40.550
+OK.
+
+00:40.550 --> 00:42.920
+So in this case we have two classes.
+
+00:43.040 --> 00:47.760
+Basically these are C K Klaas's K is equal to two.
+
+00:47.750 --> 00:54.740
+In this case because we have a green class and a yellow class so C one is the yellow class for example
+
+00:54.800 --> 01:00.700
+and C is the green class and the X parameters are the features.
+
+01:00.770 --> 01:06.990
+In this case we have two features because we are dealing with points on a two dimensional plane.
+
+01:07.040 --> 01:15.330
+So we have x1 and x2 features one for the X scored and at and the second for the y coordinate.
+
+01:15.480 --> 01:18.670
+OK so what's the probability of the yellow class.
+
+01:18.770 --> 01:19.990
+What do we have to do.
+
+01:20.060 --> 01:22.550
+We have to calculate the yellow dots.
+
+01:22.670 --> 01:27.960
+There are seven yellow dots and we have to calculate the dots all together.
+
+01:27.980 --> 01:35.150
+There are 17 dots which means that we have 17 data samples in the training data set.
+
+01:35.270 --> 01:43.290
+So basically it is the probability that if we pick a Daut at random it's going to have the color yellow.
+
+01:43.350 --> 01:44.870
+What about the green one.
+
+01:44.930 --> 01:47.140
+We have to calculate the green dots.
+
+01:47.150 --> 01:54.550
+There are 10 green dots and we have two divided by the number of samples which is 17.
+
+01:54.560 --> 02:01.550
+So it means the probability that if we pick a door at random its color is going to be green.
+
+02:01.670 --> 02:06.790
+OK so first of all we have to calculate the probabilities of the classes.
+
+02:06.840 --> 02:14.300
+Dan we have to consider the neighboring items and we have to calculate the probability that if we have
+
+02:14.510 --> 02:21.220
+this news sample who read all the neighboring items was the probability it's going to be green.
+
+02:21.230 --> 02:29.520
+There are three green dots within the neighborhood and how many green dots are there all together.
+
+02:29.600 --> 02:35.210
+So three dots in the neighborhood and all together we have 10 green dots.
+
+02:35.270 --> 02:37.930
+We have to do the same for the yellow dots.
+
+02:37.970 --> 02:44.560
+There's just a single yellow dot in the neighborhood and how many yellow dots are there all together.
+
+02:44.600 --> 02:47.060
+One two three four five six seven.
+
+02:47.120 --> 02:54.590
+So that's why we divide by seven and if we want to calculate the probability that the new sample belongs
+
+02:54.590 --> 03:01.880
+to the Greenglass we just have to multiply the probability of the green class by the probability that
+
+03:01.880 --> 03:04.780
+the new sample belongs to the green class.
+
+03:04.910 --> 03:08.800
+OK 10 divide by 17 times three.
+
+03:08.840 --> 03:10.180
+Divide by 10.
+
+03:10.250 --> 03:14.610
+It is ECOs 230 divided by 170.
+
+03:14.630 --> 03:21.500
+What about the probability that the new sample belongs to the yellow Clauss is a probability of the
+
+03:21.500 --> 03:28.580
+yellow class times the probability that the new sample belongs to the yellow class based on the neighboring
+
+03:28.640 --> 03:37.370
+items 7 divide by 17 times 1 divide by 7 which is equal to 7 divide by one hundred and nineteen.
+
+03:37.490 --> 03:41.050
+OK so we have calculated these values.
+
+03:41.060 --> 03:42.760
+What do we have to do now.
+
+03:42.800 --> 03:48.660
+Based classifier is going to choose the S.K. class with the highest probability.
+
+03:48.770 --> 03:56.090
+OK so the highest value is Surt they divided by one hundred and seventy which means that the new sample
+
+03:56.360 --> 04:01.100
+according to the knave based classifier belongs to the green class.
+
+04:01.100 --> 04:08.250
+So as far as regression problems are concerned we have defined the optimal be Peramivir is real.
+
+04:08.240 --> 04:11.920
+Gradient descent or maximum likelihood estimator.
+
+04:12.050 --> 04:19.910
+Here For now the base classifier we are dealing with probabilities and basically fitting the model means
+
+04:19.910 --> 04:27.360
+finding the given probabilities in order to be able to classify new samples such as in this case.
+
+04:27.530 --> 04:31.000
+OK so this is how naive basic classifier works.
+
+04:31.190 --> 04:32.080
+Thanks for watching.

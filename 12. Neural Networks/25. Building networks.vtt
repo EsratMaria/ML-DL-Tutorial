@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00.540 --> 00:07.980
+High in this video we start talking about pi brain because we are able to construct our own that works
+
+00:07.980 --> 00:14.910
+very easily with the help of my brain of course first we have to install PI brain and to be honest I
+
+00:14.910 --> 00:16.230
+was failed to install it.
+
+00:16.230 --> 00:24.750
+We are Pipp because you could use something like If you open the Anaconda command prompt and you just
+
+00:24.750 --> 00:30.680
+have to type something like beep install vibrating or something like that.
+
+00:30.690 --> 00:33.880
+Maybe you should use some paramita and so on.
+
+00:34.110 --> 00:38.050
+I have never installed anything with the help of it so I don't know.
+
+00:38.190 --> 00:42.120
+I was failed to install it because some packages were missing.
+
+00:42.150 --> 00:50.350
+So you have to download the zip file from the PI brain Web site basically and have to install manually
+
+00:50.820 --> 00:58.650
+and it's very easy you just have to navigate to the pie abrain documentation and you just have to install
+
+00:58.650 --> 00:58.880
+it.
+
+00:58.890 --> 01:00.900
+Python setup data pipe.
+
+01:01.030 --> 01:06.420
+It's going to be downloaded If you download the zip file of course you have to unzip it.
+
+01:06.570 --> 01:13.170
+But anyways you just have to type it into the command line and it's going to install tiebreaking for
+
+01:13.170 --> 01:13.860
+you.
+
+01:14.220 --> 01:21.180
+And once you have set up everything that we are able to construct now will all networks basically and
+
+01:21.180 --> 01:28.740
+it's very very convenient to do so if we have this big network which we import from prior rain today.
+
+01:28.890 --> 01:37.050
+Shortcuts we are able to create a network something like this build network and we have to define the
+
+01:37.050 --> 01:39.890
+number of Navy loans in the given layer.
+
+01:40.020 --> 01:48.030
+So if I say two three want it it means that people will have an input layer a single hidden layer and
+
+01:48.030 --> 01:49.400
+an output layer.
+
+01:49.500 --> 01:55.650
+The number of now runs in the hidden layer is to the number of neurons in the output layer is three
+
+01:55.830 --> 02:00.330
+and a number of neurons in that output layer is warm.
+
+02:00.360 --> 02:05.330
+This is what you are looking for in order to solve logicals related problems.
+
+02:05.430 --> 02:13.140
+And because the weights are initialized at random we are able to printout for example the network that
+
+02:13.200 --> 02:17.190
+activate and we just have to define.
+
+02:17.190 --> 02:20.720
+For example 1 and 0.
+
+02:21.570 --> 02:24.360
+But you can use a list you can use a top.
+
+02:24.390 --> 02:27.430
+You can use array whatever you prefer.
+
+02:27.600 --> 02:33.030
+And in this case basically because the edges are initialized at random This is what we have been discussing
+
+02:33.030 --> 02:38.790
+in a theoretical section so nothing that you're saying we are able to act the way in our own network
+
+02:39.000 --> 02:43.120
+because we have to input now owns the first input neuron is one.
+
+02:43.170 --> 02:47.440
+The second the input neuron is 0 and it's going to printout the output.
+
+02:47.440 --> 02:51.340
+So what's going to be the output in the output layer.
+
+02:51.720 --> 02:55.870
+OK we have to close the print parentheses as well.
+
+02:55.980 --> 03:01.830
+So if you run this application is going to print out the activation on the output.
+
+03:01.830 --> 03:03.930
+Now we're only talking 0.9.
+
+03:04.170 --> 03:12.150
+So when the inputs are 1 and 0 the output is going to be 0.9 because of the random initialization of
+
+03:12.150 --> 03:13.560
+the edges.
+
+03:13.560 --> 03:19.460
+Basically every part of the network has some name so we are able to printout.
+
+03:19.460 --> 03:35.250
+For example the network in is going to printout the input layer then the network hidden zero because
+
+03:35.250 --> 03:37.340
+we have just a single hidden layer.
+
+03:37.410 --> 03:41.280
+But basically we could have as many layers as we want.
+
+03:41.280 --> 03:44.600
+The first layer has the name hidden zero.
+
+03:44.610 --> 03:49.820
+The second has the name hidden one and so on and we have the out.
+
+03:49.830 --> 03:56.830
+So we are able to get the input layer the hidden layer and the output layer like this.
+
+03:57.120 --> 03:58.300
+Let's see.
+
+03:58.710 --> 04:00.580
+Yeah it is a linear layer.
+
+04:00.630 --> 04:07.820
+The hidden layer is a sigmoid layer and output layer is a linear layer as well and we can specify lots
+
+04:07.830 --> 04:08.620
+of features.
+
+04:08.620 --> 04:10.250
+For now we're on that river.
+
+04:10.320 --> 04:19.710
+For example when we build a network we are able to say that I would like to make hit in the class to
+
+04:19.710 --> 04:28.980
+have 10 age layer so instead of the sigmoid activation function we would like to use the tank and hyperbolic
+
+04:28.980 --> 04:31.160
+function for the hidden layer.
+
+04:31.290 --> 04:38.640
+Or for example the out clause is going to have the soft marks layer the soft Mock's activation function
+
+04:38.640 --> 04:41.550
+which is very very similar to sigmoid.
+
+04:41.550 --> 04:49.700
+By the way so if we printout that you can see that the topology of the network has changed.
+
+04:50.130 --> 04:56.430
+Here in the class of course because it's hidden class or for an hour class I think it's going to be
+
+04:56.430 --> 04:56.940
+fine.
+
+04:56.940 --> 05:05.350
+Sorry for the typo jazz you can see we have the linear input we have your tongue and hyperbolic for
+
+05:05.350 --> 05:06.280
+the heathen.
+
+05:06.550 --> 05:13.150
+And we have the soft muxed layer for the output layer and we are able to use the bias because in this
+
+05:13.150 --> 05:18.580
+case we don't have the bias so we can specify the bias is equal to true.
+
+05:18.700 --> 05:29.020
+And in this case we are able to printout the network and we are able to get that by something like this
+
+05:29.360 --> 05:36.810
+is basically printout the bias or nothing special Yeah as you can see that we have bias units and if
+
+05:36.850 --> 05:42.160
+we would like to create two biased units one for the hidden that we're on and one for the output.
+
+05:42.160 --> 05:42.730
+Now we're.
+
+05:42.850 --> 05:46.430
+We just have to create two biased units basically.
+
+05:46.660 --> 05:52.690
+So this is what we are going to talk about in the next lecture in this video we just talk about the
+
+05:52.690 --> 05:55.690
+very very basics of how to construct.
+
+05:55.690 --> 06:00.560
+Now we're on that road with the top of my brain and I'm not sure if I really have implemented now on
+
+06:00.580 --> 06:05.390
+that rogues from scratch but it is much more easier to do so with PI brain.
+
+06:05.620 --> 06:06.440
+Thanks for watching.

@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.540 --> 00:08.110
+High in this video let me tell a few words about the concrete applications of natural networks.
+
+00:08.220 --> 00:14.790
+We have been talking about that it's very very important to know that we don't have to use natural networks
+
+00:14.970 --> 00:22.830
+for problems that can be solved by well-defined algorithms for example numerical methods for example
+
+00:22.890 --> 00:27.520
+RSA encoding for example shortest path algorithms and so on.
+
+00:27.660 --> 00:34.440
+And there are well-defined deterministic algorithms for these kinds of problems but there are other
+
+00:34.440 --> 00:38.160
+problems that cannot be solved so easily.
+
+00:38.160 --> 00:45.760
+For example self-driving cars plus cars that are able to park themselves without human intervention.
+
+00:45.930 --> 00:50.710
+There is no predefined algorithm for doing something like this.
+
+00:50.850 --> 00:58.620
+And now our own network is able to learn how to be able to drive a car how to be able to park themselves
+
+00:58.650 --> 00:59.680
+and so warm.
+
+00:59.970 --> 01:03.880
+Or for example pattern recognition in the health care industry.
+
+01:03.990 --> 01:08.540
+It can detect cancer or IDs orders well in advance.
+
+01:08.640 --> 01:15.670
+It can be used for pattern detection in stock markets in order to predict stock prices.
+
+01:15.690 --> 01:20.640
+It can be used for facial recognition or natural language processing.
+
+01:20.830 --> 01:27.300
+And I think it's quite interesting to know that in the United Arab Emirates artificial intelligence
+
+01:27.300 --> 01:29.770
+has been used to control traffic.
+
+01:29.790 --> 01:35.380
+So our system has been created that intelligently calculates traffic mishaps.
+
+01:35.380 --> 01:39.230
+We are constantly finding solutions to fix them.
+
+01:39.570 --> 01:46.970
+So there may be several situations where a learning system we are now on network can prove to be very
+
+01:47.040 --> 01:48.210
+very important.
+
+01:48.300 --> 01:49.810
+Self-driving cars.
+
+01:49.900 --> 01:56.700
+Natural Language Processing optical correct or recognition or control of traffic in the United Arab
+
+01:56.790 --> 01:57.800
+Emirates.
+
+01:58.050 --> 02:04.210
+We are going to talk a lot more about the concrete applications when we are going to implement them.
+
+02:04.260 --> 02:11.750
+This video I just wanted to show you an overview that what are the applications of now networks banks
+
+02:11.750 --> 02:12.620
+are watching.

@@ -1,0 +1,151 @@
+WEBVTT
+
+00:01.070 --> 00:07.910
+If we want to understand the tropical background for convolutional and our networks first we have to
+
+00:07.910 --> 00:14.490
+consider the main problem as far as machine learning and artificial intelligence are concerned.
+
+00:14.630 --> 00:17.710
+So the main problem is feature selection.
+
+00:17.840 --> 00:24.650
+So what features do you use to build our model no matter we are using support vector machines we are
+
+00:24.650 --> 00:26.780
+using Bazy and classifier.
+
+00:26.780 --> 00:32.040
+We are using Danzy connected nodal networks or convolutional in our own networks.
+
+00:32.120 --> 00:38.270
+These algorithms relies heavily on a given dataset with the given features.
+
+00:38.270 --> 00:45.950
+For example if we are talking about X or logical relationship we have a dataset like this x and y and
+
+00:45.950 --> 00:47.820
+we have the labels accordingly.
+
+00:47.900 --> 00:49.480
+So we have a data set.
+
+00:49.520 --> 00:57.230
+If we are dealing with the IRS data that we have for features sample and set battle with tactile length
+
+00:57.230 --> 00:58.280
+and all we had.
+
+00:58.370 --> 01:00.000
+And there's three classes.
+
+01:00.060 --> 01:04.360
+Iron is vertical or iron is Seto's and so on.
+
+01:04.370 --> 01:11.630
+So we will have features and we will have the labels accordingly in a given dataset and a good question
+
+01:11.750 --> 01:14.770
+is how to choose the best features.
+
+01:14.780 --> 01:21.540
+For example when we are dealing with stock prices it is not that straightforward how to choose features.
+
+01:21.590 --> 01:28.100
+I'm not sure whether you are interested in quantitative finance but if we want to apply machine learning
+
+01:28.100 --> 01:31.570
+techniques on stock market related data.
+
+01:31.670 --> 01:39.410
+First we have to create the features and here in this case we use log daily returns as features.
+
+01:39.530 --> 01:42.920
+But maybe this is not the best features possible.
+
+01:42.920 --> 01:45.470
+Maybe we can come up with better features.
+
+01:45.500 --> 01:53.240
+For example how many people are selling a given stock or how many people are buying a given stock so
+
+01:53.240 --> 01:59.750
+there can be lots of lots of features to consider and we don't know for certain what are the most relevant
+
+01:59.750 --> 02:00.670
+features.
+
+02:00.680 --> 02:07.280
+So as far as human faces are concerned we can pose the question that what features to use in order to
+
+02:07.280 --> 02:15.210
+recognize human faces and there are lots of lots of possible answers such as the location of the nose.
+
+02:15.320 --> 02:23.020
+Such as the distance between the eyes such as eyebrows such as location of mouth ok for us humans.
+
+02:23.060 --> 02:30.320
+It is quite straightforward that this face is a human face but we don't know for certain that how are
+
+02:30.320 --> 02:34.340
+we able to decide whether it is a human face or not.
+
+02:34.370 --> 02:40.550
+We just know that it is a human face and this is the same that what features to use in order to recognize
+
+02:40.640 --> 02:48.050
+a cheetah for example shape of the ears or black pattern under the eyes or the shape of the nose or
+
+02:48.050 --> 02:49.330
+something like this.
+
+02:49.400 --> 02:53.790
+We don't know for certain that what features are the most relevant.
+
+02:53.960 --> 03:00.890
+And this is why convolutional now all networks are working extremely fine because we don't have to know
+
+03:00.890 --> 03:02.730
+the features in advance.
+
+03:02.870 --> 03:10.280
+Convolutional now all networks find the relevant features during the training procedure so we don't
+
+03:10.280 --> 03:16.970
+know that what are going to be the most important features for convolutional and our own network algorithm.
+
+03:17.060 --> 03:24.200
+The algorithm itself is going to find the most relevant features and this is why we like convolutional
+
+03:24.200 --> 03:25.460
+now and that works.
+
+03:25.460 --> 03:32.750
+And this is why convolutional in our networks can outperform support vector machines for example and
+
+03:32.750 --> 03:40.250
+thats why the most important artificial intelligence related algorithm as far as self-driving cars are
+
+03:40.250 --> 03:47.180
+concerned are convolutional in our own networks because these networks are able to find the relevant
+
+03:47.180 --> 03:53.990
+features without human intervention because for us humans it is quite apparent that what is a human
+
+03:53.990 --> 03:59.210
+face or whether it is a cheetah or a lion or a human face or something like this.
+
+03:59.330 --> 04:05.090
+But for a computer if we want to construct an algorithm basically we don't know for certain that how
+
+04:05.090 --> 04:07.980
+are we able to recognize that it is a cheater.
+
+04:08.030 --> 04:10.700
+It is a human face or something like this.
+
+04:10.730 --> 04:17.150
+The convolutional now our own network can find the relevant features during the training procedure.
+
+04:17.150 --> 04:17.990
+Thanks for watching.

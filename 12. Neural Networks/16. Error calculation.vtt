@@ -1,0 +1,238 @@
+WEBVTT
+
+00:00.360 --> 00:05.780
+High in this video we are going to talk about the error calculation.
+
+00:05.940 --> 00:06.490
+OK.
+
+00:06.510 --> 00:13.740
+We have been discussing that the arrow is something like the difference between the ideal output and
+
+00:13.740 --> 00:15.000
+the actual output.
+
+00:15.030 --> 00:20.050
+But we should create the formula for calculating the exact error.
+
+00:20.310 --> 00:21.770
+So we have the input.
+
+00:21.780 --> 00:25.770
+For example 0 0 0 1 1 0 1 1.
+
+00:25.770 --> 00:29.930
+This is what we have been discussing for logical operators.
+
+00:29.940 --> 00:33.630
+We have the idea load boots or the training targets.
+
+00:33.630 --> 00:35.780
+0 1 0 1 0.
+
+00:35.910 --> 00:38.440
+And then we get the actual output.
+
+00:38.490 --> 00:42.050
+What we get we have for now we're on a network.
+
+00:42.060 --> 00:47.400
+So if we Iran or an out of network we import 0 0.
+
+00:47.550 --> 00:53.600
+Then we get for example 0.3 as the output you may pose the question that wait a bit.
+
+00:53.670 --> 01:01.890
+If we use step function as an activation function then we are not going to be able to get numbers unless
+
+01:01.890 --> 01:04.170
+it is minus 1 or plus 1.
+
+01:04.410 --> 01:09.770
+OK but we do not have to use a step function as an activation function.
+
+01:09.780 --> 01:16.770
+In this case we use the sigmoid function and this is the main advantage for the sigmoid activation function
+
+01:17.070 --> 01:22.600
+that there can be resorts in the range 0 and 1 0.3.
+
+01:22.620 --> 01:32.360
+0.2 0.4 0.5 as you can see there's a difference between what we should get and what we get from our
+
+01:32.430 --> 01:33.770
+our network.
+
+01:34.020 --> 01:39.210
+So the airwork term can be defined as the ideal minus the actual.
+
+01:39.240 --> 01:42.780
+But that's not going to be the best solution possible.
+
+01:42.780 --> 01:50.880
+We can define the mean square error or the so-called As each one divided by and basically we average
+
+01:51.030 --> 01:55.350
+the difference between the ideal and actual output.
+
+01:55.500 --> 02:02.150
+And we have to sum up the ideal of the training data minus the actual output.
+
+02:02.220 --> 02:05.840
+And if we have to square a this is the mean square error.
+
+02:05.970 --> 02:08.820
+So what's the ideal it is zero.
+
+02:08.820 --> 02:10.240
+What's the actual.
+
+02:10.260 --> 02:12.330
+It is 0.3.
+
+02:12.330 --> 02:14.510
+What's the difference between the two of them.
+
+02:14.520 --> 02:22.350
+It is 0.3 and we have to square it 0.3 squared words the mean square there or for the next three inning
+
+02:22.360 --> 02:32.890
+game board we have the ideal one and we have the actual 0.1 so ideal minus actual 1 minus 0.2.
+
+02:32.890 --> 02:38.380
+It is 0 that 8 and we have to square it so 0 that 8 squared.
+
+02:38.430 --> 02:42.200
+What's the meaning squared at or for the next training data.
+
+02:42.360 --> 02:53.520
+We have any idea of one actual 0.4 ideal minus actual want a minus 0.4 is 0.6 squared because we have
+
+02:53.520 --> 02:54.820
+to square it.
+
+02:55.290 --> 03:04.080
+Then the last two on 0 as the ideal 0.5 as the actual the difference is 0.5 Square because we have to
+
+03:04.080 --> 03:04.970
+square it.
+
+03:05.160 --> 03:10.250
+Then we have to sum them up and we have to divide it by the number of import.
+
+03:10.250 --> 03:18.000
+So 1 2 3 4 in order to get the average of the error because we have an error or for the first line second
+
+03:18.000 --> 03:22.980
+line or line and the fourth line basically every line is a training data.
+
+03:23.010 --> 03:25.800
+So we have an arrow for the first training data.
+
+03:25.830 --> 03:29.670
+Second training data training data and a force training data.
+
+03:29.820 --> 03:33.800
+And we have to calculate an average for these errors.
+
+03:34.190 --> 03:34.790
+OK.
+
+03:34.860 --> 03:42.180
+So one divide by four because we have it one to four for training data zero minus 0.3 because this is
+
+03:42.180 --> 03:43.140
+the ideal.
+
+03:43.140 --> 03:49.840
+This is the actual end we have to square rate one minus 0.2 wanted minus 0.2 Square.
+
+03:50.160 --> 03:59.040
+One of mine is 0.4 squared plus zero minus 0.5 Square and we have to divide it by 4 because we are looking
+
+03:59.040 --> 04:00.290
+for an average.
+
+04:00.450 --> 04:07.680
+We can define due to mean square there which is the root of the mean square there or basically we just
+
+04:07.680 --> 04:10.230
+have to do a square root operation.
+
+04:10.410 --> 04:18.480
+OK so the R MSE is the square root of the 1 divide by 4 because we have four training times zero minus
+
+04:18.480 --> 04:19.280
+0.3.
+
+04:19.280 --> 04:24.200
+Again we have to take the difference between the ideal and the actual one.
+
+04:24.270 --> 04:27.240
+This is the square root of the mean square there or by the way.
+
+04:27.300 --> 04:33.750
+And what is the intuition the intuition that we keep iterating on and out and that work.
+
+04:33.780 --> 04:39.050
+Basically we change the edges weights and of Iran or out on that floor.
+
+04:39.080 --> 04:44.050
+Again we got the calculated told to boot and we calculate the error term.
+
+04:44.220 --> 04:50.570
+And the ideal situation is that the error term is going to be smaller and smaller.
+
+04:50.580 --> 04:54.610
+So its going to be decreasing in the course of time.
+
+04:54.630 --> 05:01.630
+So in the first iteration there may be a huge error or the next iteration going to be a bit smaller
+
+05:01.710 --> 05:06.220
+or than the next iteration is smaller next iteration next iteration.
+
+05:06.330 --> 05:07.160
+Why.
+
+05:07.410 --> 05:14.880
+Because the difference between the ideal old boot and the actual load put is shrinking in the sense
+
+05:15.210 --> 05:18.000
+that they are converging to each other.
+
+05:18.000 --> 05:25.610
+And if for example this actual old booty 0 0 0 1 it is approximately the same as the ideal of one.
+
+05:25.620 --> 05:28.520
+So it's going to be a very very small term.
+
+05:28.650 --> 05:35.160
+If the actual output for the second training data is approximately one then this is going to be very
+
+05:35.160 --> 05:35.710
+small.
+
+05:35.790 --> 05:39.900
+And this one and this one if they are approximately equal.
+
+05:39.900 --> 05:47.200
+So it means that if the actual output is the same approximately then detraining target then the error
+
+05:47.220 --> 05:48.820
+term will be small.
+
+05:48.840 --> 05:55.490
+So we are looking for a situation where the error term is as small as possible.
+
+05:55.500 --> 05:59.040
+It means that all Nowel network is working fine.
+
+05:59.040 --> 06:03.120
+It makes good predictions for the training data.
+
+06:03.450 --> 06:05.930
+So that's all about the article on.
+
+06:05.970 --> 06:06.850
+Thanks for watching.

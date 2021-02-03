@@ -1,0 +1,277 @@
+WEBVTT
+
+00:01.400 --> 00:05.680
+In the last lecture we have been talking about linear regression.
+
+00:05.810 --> 00:12.440
+And we have come to the conclusion that the aim of linear regression is defined a linear relationship
+
+00:12.440 --> 00:14.240
+between the given features.
+
+00:14.240 --> 00:21.770
+So basically we have to fit a linear line to the data point and a good question is how to find this
+
+00:21.830 --> 00:25.810
+optimal model how to find the optimal green line.
+
+00:25.840 --> 00:30.340
+OK so that's why we have to talk a bit about the means squared error.
+
+00:30.530 --> 00:38.150
+It is the difference between the Y so the actual values present in the data set because it is a supervised
+
+00:38.150 --> 00:39.450
+learning algorithm.
+
+00:39.500 --> 00:42.760
+We have a dataset with the actual values.
+
+00:42.970 --> 00:43.480
+OK.
+
+00:43.490 --> 00:47.690
+In our example divide values are the prices.
+
+00:47.810 --> 00:50.440
+Do we have the prices in the data set.
+
+00:50.480 --> 00:56.240
+Of course we have the prices as the third column in the C yes we file.
+
+00:56.240 --> 01:00.630
+So these are the prices associated with a given house.
+
+01:00.650 --> 01:06.410
+We do give a number of bedrooms number of bathrooms square feet of the living room and so on.
+
+01:06.440 --> 01:09.100
+So we have the prices OK.
+
+01:09.110 --> 01:16.190
+These are the y actual values and we have the age x values predicted by the model.
+
+01:16.190 --> 01:20.960
+OK so the Green Line is going to define the age X model.
+
+01:20.990 --> 01:28.850
+So for example if we have this first data point as you can see the data point is going to be the actual
+
+01:28.850 --> 01:36.920
+value present in the data set and the Green Line is going to be the age x value predicted by the model.
+
+01:36.920 --> 01:39.320
+So of course they are not the same.
+
+01:39.320 --> 01:46.190
+So there is some error term it is the same for the second point in the data set the price is equal to
+
+01:46.220 --> 01:49.390
+two hundred and ninety dollars approximately.
+
+01:49.550 --> 01:55.850
+But according to The Age X model this price is approximately one hundred and ninety dollars.
+
+01:55.850 --> 02:03.560
+So again there is some difference between the actual value in the data set and the value predicted by
+
+02:03.560 --> 02:04.220
+the model.
+
+02:04.370 --> 02:11.090
+Okay so we can define these means squared error or as the differential between the actual values and
+
+02:11.090 --> 02:17.870
+The Age x values predicted by the model we have to calculate the square because we just care about the
+
+02:17.870 --> 02:18.550
+differentials.
+
+02:18.560 --> 02:23.090
+We don't care whether the result is smaller than zero or greater than zero.
+
+02:23.180 --> 02:30.230
+We're just curious about the differential so that's why h x minus y squared it is the cost function
+
+02:30.470 --> 02:36.930
+or the means squared error or even this term is smaller what does it mean that there's a small error
+
+02:36.930 --> 02:43.930
+or it means the model the predictions are very close to the actual values which is good even this term.
+
+02:43.940 --> 02:47.690
+So what is age X minus Y squared is big.
+
+02:47.750 --> 02:50.620
+It means that there is a huge error term.
+
+02:50.720 --> 02:55.820
+So the modal predictions differ from the actual values it is bad.
+
+02:55.960 --> 02:56.400
+OK.
+
+02:56.420 --> 03:05.630
+So we can define the Epsilon 1 Epsilon 2 Epsilon 3 up to Epsilon 8 error terms as you can see the error
+
+03:05.930 --> 03:13.760
+is always the difference between the actual value present in the data set and the value predicted by
+
+03:13.760 --> 03:14.630
+the model.
+
+03:14.630 --> 03:21.260
+OK so this is the Epsilon 1 error term we have an epsilon two error term and if we want to calculate
+
+03:21.260 --> 03:27.920
+mean squared error or we have to some of these error terms and because we are dealing with means squared
+
+03:28.010 --> 03:32.450
+error or we have to calculate the square of these error terms.
+
+03:32.540 --> 03:35.010
+So we just have to some of these error terms.
+
+03:35.090 --> 03:37.520
+And of course the smaller the better.
+
+03:37.610 --> 03:40.380
+So what's the final aim of optimization.
+
+03:40.460 --> 03:48.350
+The final aim is to find the optimal B to zero and b to warm parameters in order to end up with a linear
+
+03:48.350 --> 03:54.100
+modal and a linear relationship between the acts and the age acts were arguable.
+
+03:54.320 --> 04:00.950
+So basically the ax is the house size and age X is the price of that given house.
+
+04:00.950 --> 04:05.700
+So we would like to end up with a linear relationship between these features.
+
+04:05.720 --> 04:06.250
+OK.
+
+04:06.260 --> 04:07.710
+So what do we have to do.
+
+04:07.760 --> 04:14.630
+We just have to calculate the minimum out of the means squared error so this Ajax is the prediction
+
+04:14.630 --> 04:16.350
+from our linear model.
+
+04:16.370 --> 04:23.390
+So basically the linear regression model this Y is the value we know from the training data side because
+
+04:23.420 --> 04:31.050
+it is a supervised learning algorithm and we want to find the minimum by tuning the beta parameters.
+
+04:31.070 --> 04:39.140
+OK there are two options we can use Design matrices in order to solve this optimization problem so we
+
+04:39.140 --> 04:45.170
+can transform the problem into linear equations and use the standard method read the half of matrix
+
+04:45.200 --> 04:53.750
+operations so the optimal beta parameters are going to be the X transpose where x is the matrix constructed
+
+04:53.810 --> 04:56.100
+from the features times.
+
+04:56.120 --> 05:02.810
+So we have to calculate the inverse of this matrix and we have to multiply it by X transpose.
+
+05:02.890 --> 05:07.360
+And finally we have to multiply it by the dependent variable.
+
+05:07.380 --> 05:07.760
+Okay.
+
+05:07.780 --> 05:13.660
+So if you are interested in linear algebra then you can check out this website because here are lots
+
+05:13.660 --> 05:19.790
+of lots of good examples how to deal with the matrix says as far as linear regression is concerned.
+
+05:19.840 --> 05:23.600
+As you can see we are looking for a linear relationship.
+
+05:23.660 --> 05:24.200
+Why.
+
+05:24.250 --> 05:28.300
+R is equals to be the 0 plus B to 1 times x y.
+
+05:28.360 --> 05:34.870
+So we just have to construct matrices out of the data set and then we just have to use the formula we
+
+05:34.870 --> 05:35.700
+have discussed.
+
+05:35.710 --> 05:40.810
+As you can see this is the formula we have discussed in order to get the beta parameters.
+
+05:40.940 --> 05:41.440
+OK.
+
+05:41.440 --> 05:44.010
+The other approach is gradient descent.
+
+05:44.050 --> 05:50.800
+It is a first order iterative optimization algorithm for finding the minimum of a function.
+
+05:50.960 --> 05:54.010
+OK you may pose the question that what is this function.
+
+05:54.010 --> 06:00.070
+The function is the means squared error or as far as low dimensional problems are concerned.
+
+06:00.070 --> 06:04.380
+Using the linear algebra approach is the best one.
+
+06:04.400 --> 06:12.190
+OK so low dimension means few features but usually we have to deal with lots of lots of features and
+
+06:12.190 --> 06:14.320
+lots of lots of data points.
+
+06:14.320 --> 06:21.250
+Basically this is why big data came to be because we have to handle huge data sets and matrix operations
+
+06:21.280 --> 06:24.210
+are quite expensive in a higher dimension.
+
+06:24.220 --> 06:30.900
+So if we want to calculate the inverse of a matrix so we the half of go's Jordan elimination.
+
+06:30.900 --> 06:37.570
+The final time complexity is going to be Aldo and cubed OK by the way we can do better than go with
+
+06:37.580 --> 06:38.920
+Jordan elimination.
+
+06:38.920 --> 06:46.840
+But anyways matrix operations are quite slow so that's why as far as machine learning is concerned we
+
+06:46.840 --> 06:54.580
+don't use linear algebra we use gradient descent instead it is an iterative approach and it works quite
+
+06:54.580 --> 07:02.020
+fine in higher dimensions and usually this is the case we have huge datasets with lots of lots of features
+
+07:02.020 --> 07:03.970
+and lots of lots of values.
+
+07:03.970 --> 07:12.120
+So that's why gradient descent is going to be faster and going to outperform linear algebra approaches.
+
+07:12.130 --> 07:12.560
+OK.
+
+07:12.580 --> 07:17.170
+So in the next lecture we are going to talk about gradient descent.
+
+07:17.170 --> 07:18.060
+Thanks for watching.

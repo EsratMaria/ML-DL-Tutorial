@@ -1,0 +1,286 @@
+WEBVTT
+
+00:00.860 --> 00:09.140
+High in the previous lecture we have been talking about a biological now on networks and basically why
+
+00:09.200 --> 00:13.810
+artificial intelligence has came to be in this lecture.
+
+00:13.820 --> 00:21.650
+We are going to talk about the concrete model of the biological nervous system so we know for certain
+
+00:21.830 --> 00:26.760
+that we are going to have some input and we will have some output.
+
+00:26.780 --> 00:30.560
+This is how biological nodal network works.
+
+00:30.650 --> 00:38.690
+We have some input activation Dandie now we're on is going to fire or not and the X Suns are going to
+
+00:38.690 --> 00:41.160
+transmit this information.
+
+00:41.480 --> 00:45.560
+So this is what we are going to do in our programming algorithm.
+
+00:45.560 --> 00:52.880
+We will have some input values then we will have a huge network of nouns and axons.
+
+00:52.880 --> 01:01.080
+Now Ron is going to be a class in Java for example and the sun can be represented as the Ajay's between
+
+01:01.080 --> 01:06.730
+the now roans because the axons are going to transmit information between now runs.
+
+01:06.740 --> 01:13.740
+So it is absolutely fine to model the actions as the connections between the now runs.
+
+01:14.090 --> 01:20.590
+And of course we will have the output so we will have the network we are going to feed some input to
+
+01:20.600 --> 01:25.360
+values the no road network is going to do something at this moment.
+
+01:25.370 --> 01:31.680
+It is a black box in the sense that we don't know what's happening inside in our own network.
+
+01:31.850 --> 01:36.920
+We know that it's going to do something and it's going to output somewhere else.
+
+01:36.960 --> 01:42.960
+You ok for example this is a hand away 10 image we won't recognize.
+
+01:43.040 --> 01:46.930
+For us humans it is absolutely easy to do it.
+
+01:46.970 --> 01:50.350
+OK it is a number 7 for a computer.
+
+01:50.360 --> 01:56.600
+It's very very hard to design an algorithm that's going to come to the conclusion that this is the number
+
+01:56.600 --> 01:57.650
+seven.
+
+01:57.800 --> 02:02.340
+So we would like to construct an algorithm that can conclude that it is the number seven.
+
+02:02.400 --> 02:07.020
+OK this is why artificial intelligence has came to be.
+
+02:07.250 --> 02:13.540
+And the approach is the same when we would like to recognize pedestrians while driving for example or
+
+02:13.580 --> 02:16.800
+digitalize a hand written book or article.
+
+02:16.880 --> 02:21.760
+So basically this correcta recognition is very very important.
+
+02:22.220 --> 02:22.940
+OK.
+
+02:23.000 --> 02:28.650
+So again now rowans only failure when input is larger than a given threshold.
+
+02:28.760 --> 02:31.750
+So firing doesn't get bigger as a stimulus increases.
+
+02:31.820 --> 02:33.760
+It's an all or nothing arrangement.
+
+02:33.830 --> 02:39.150
+We have already discussed it in the previous lecture and this is why we are going to use activation
+
+02:39.170 --> 02:40.240
+functions.
+
+02:40.520 --> 02:44.920
+But the question is how to model that now the network it south.
+
+02:45.020 --> 02:48.240
+OK we know that it's going to get some output values.
+
+02:48.290 --> 02:55.240
+We know that the natural network is going to output soundwell use but how to model now really network
+
+02:55.240 --> 02:59.840
+it south and a good approach is to use a graph.
+
+02:59.840 --> 03:06.080
+We know it's the nodes are going to be the now rowans and the edges of the graph are going to be the
+
+03:06.080 --> 03:06.990
+axons.
+
+03:07.070 --> 03:09.630
+So this model is quite fine.
+
+03:09.650 --> 03:11.440
+We have the now Network.
+
+03:11.540 --> 03:18.370
+It's going to be a graph as you can see we have the nodes or vertices and the directed edges.
+
+03:18.470 --> 03:23.830
+So basically the connections between now want this is how a graph looks like.
+
+03:23.930 --> 03:29.920
+I'm not sure whether you are familiar with grandfather rhythm's maximum flow algorithm data or algorithm
+
+03:30.110 --> 03:34.260
+but we have been talking about these kinds of graphs in the main.
+
+03:34.280 --> 03:40.370
+So again we are going to have to impute well use and we are going to feed them now.
+
+03:40.390 --> 03:46.990
+And that works with the input values from this direction then our own network is going to do something
+
+03:47.270 --> 03:49.690
+and is going to have an output.
+
+03:49.850 --> 03:53.150
+So again we have the important values here.
+
+03:53.150 --> 03:59.390
+We will have the output where you and then now rail network is going to do the calculations at this
+
+03:59.390 --> 03:59.990
+point.
+
+04:00.110 --> 04:04.250
+We don't need to know that how it's going to make the calculations.
+
+04:04.250 --> 04:10.270
+We know for certain that OK we are going to talk about that propagation we are going to talk about gradiently
+
+04:10.310 --> 04:11.320
+sand okay.
+
+04:11.480 --> 04:18.830
+But what's very important that the now run network is going to be able to do these calculations if we
+
+04:18.830 --> 04:26.460
+have a model like this we the directed Ajay's with actuates and now roans Okay.
+
+04:27.640 --> 04:31.520
+So we have the input layer some hidden layer.
+
+04:31.570 --> 04:37.260
+It's quite important to know by the way that there may be several hidden layers in and out and that
+
+04:37.260 --> 04:37.980
+work.
+
+04:38.200 --> 04:44.150
+At the moment we just have a single hidden layer and we have the output layer.
+
+04:44.360 --> 04:49.400
+Okay so what about the input layer we keep feeding on our own network.
+
+04:49.410 --> 04:51.700
+We date through the input layer.
+
+04:51.700 --> 04:57.490
+For example we have an image of a digit then we convert it to our G-B values.
+
+04:57.520 --> 05:01.510
+So every single pixel will have a numerical value.
+
+05:01.660 --> 05:07.080
+So we have as many input now known as the number of pixels in the image.
+
+05:07.330 --> 05:12.760
+Then the hidden layer it is needed in order to make predictions when we have non-linear problems we
+
+05:12.760 --> 05:16.610
+are going to talk about it and we have the output layer.
+
+05:16.630 --> 05:22.740
+We have the result here for example the predicted digit OK.
+
+05:22.970 --> 05:25.400
+So this is a model for humans.
+
+05:25.420 --> 05:27.330
+We see a handwritten correcter.
+
+05:27.350 --> 05:34.280
+This is the impled basically that we can recognize that correcter that's the output for computers.
+
+05:34.280 --> 05:38.380
+Of course we have to transform the image into numerical data.
+
+05:38.450 --> 05:41.740
+We have to make a prediction was correct or it might be.
+
+05:41.840 --> 05:46.220
+But what's extremely important that if we have some algorithm.
+
+05:46.340 --> 05:47.510
+Machine learning.
+
+05:47.510 --> 05:50.010
+Now all networks supper object are machines.
+
+05:50.060 --> 05:52.750
+Of course we need numerical data.
+
+05:52.940 --> 06:00.460
+So first we have to iterate through basically the images line by line and we have to process the pixels
+
+06:00.890 --> 06:07.940
+and we are going to assign a numerical value to every single cell because the algorithm is going to
+
+06:07.940 --> 06:11.980
+make the computation based on numerical data.
+
+06:12.400 --> 06:13.590
+OK.
+
+06:14.150 --> 06:21.170
+And the last question in this video that we're going to use now networks because several problems can
+
+06:21.200 --> 06:23.540
+be solved with well-defined algorithms.
+
+06:23.540 --> 06:30.140
+This is what we have been discussing that sorting numbers multiplication addition but some problems
+
+06:30.140 --> 06:37.980
+cannot be easily defined with an exact algorithm facial recognition or optical character recognition
+
+06:38.090 --> 06:39.880
+and something like this.
+
+06:39.890 --> 06:46.560
+So most of the problems we try to solve with no real networks are quite trivial to humans.
+
+06:46.610 --> 06:53.990
+So if we have a well-defined algorithm to a given problem we don't have to use now run networks calculating
+
+06:53.990 --> 06:56.110
+the square root of a given number.
+
+06:56.150 --> 06:57.940
+Of course we don't have to use now.
+
+06:57.970 --> 07:05.000
+And that works we can calculate it quite easily but if we have a problem that's not orthodox in the
+
+07:05.000 --> 07:13.520
+sense that there is no predefined algorithm for facial recognition optical correct recognition speech
+
+07:13.520 --> 07:14.780
+recognition.
+
+07:14.780 --> 07:15.970
+In these cases.
+
+07:16.100 --> 07:24.010
+Now real networks can be a good solution so that's all about how to model biological and nervous system.
+
+07:24.020 --> 07:24.910
+Thanks for watching.

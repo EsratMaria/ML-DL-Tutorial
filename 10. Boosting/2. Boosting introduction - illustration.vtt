@@ -1,0 +1,223 @@
+WEBVTT
+
+00:00.930 --> 00:08.820
+Let's see a concrete illustration of how boosting algorithm works so boosting is going to combine several
+
+00:08.850 --> 00:14.880
+very very simple learners in order to end up with a powerful classifier.
+
+00:14.880 --> 00:19.630
+So in this case we had two features x1 and x2.
+
+00:19.650 --> 00:24.680
+So basically we are dealing with points on the two dimensional plane.
+
+00:24.780 --> 00:26.500
+We have two classes.
+
+00:26.610 --> 00:29.340
+The green class and the yellow class.
+
+00:29.490 --> 00:31.600
+So what's the aim of the algorithm.
+
+00:31.650 --> 00:36.960
+We would like to end up with the separation of the green dots and yellow dots.
+
+00:36.960 --> 00:40.120
+By the way decision trees with depth 1.
+
+00:40.170 --> 00:48.000
+So decisions stamps are able to make linear classification so a given learner or in this case is not
+
+00:48.000 --> 00:52.360
+able to separate the dots in a nonlinear manner.
+
+00:52.410 --> 00:55.830
+It is able to separate in a linear manner.
+
+00:55.860 --> 00:58.290
+So we have a linear line.
+
+00:58.290 --> 01:05.520
+So for example in the first iteration of the first week learner tries to separate the green dots from
+
+01:05.520 --> 01:06.630
+the yellow dot.
+
+01:06.690 --> 01:12.070
+Of course we are not able to separate the yellow class from the green cloth.
+
+01:12.080 --> 01:19.020
+We are happy for linear line because it is a nonlinearly separable problem but it is a good guess as
+
+01:19.020 --> 01:19.890
+you can see.
+
+01:19.970 --> 01:20.610
+OK.
+
+01:20.640 --> 01:24.010
+All of the green dots are under the blackline.
+
+01:24.120 --> 01:28.170
+And some of the yellow dots are above the black line.
+
+01:28.170 --> 01:34.230
+So basically it is working quite fine but there are some misclassified items.
+
+01:34.230 --> 01:38.960
+So this yellow dot and this yellow dot are misclassified.
+
+01:39.000 --> 01:46.450
+So in the next iteration boosting algorithm is going to focus on the misclassified items.
+
+01:46.500 --> 01:52.140
+So it comes to the conclusion that these dogs are classified correctly.
+
+01:52.170 --> 01:55.730
+So in the next iteration it is not going to border.
+
+01:55.780 --> 01:58.480
+We correctly classified items.
+
+01:58.570 --> 02:05.790
+We are trying to classify the misclassified items in the previous iteration and basically we are able
+
+02:05.790 --> 02:13.320
+to do it with the half of the weights paramita the algorithm is going to assign a given w weight parameter
+
+02:13.380 --> 02:16.240
+to every single sample in the data set.
+
+02:16.260 --> 02:19.220
+In this case the samples are the door.
+
+02:19.320 --> 02:27.480
+So every single Daut has a double you weight perimeter and does double uate parameter is going to decide
+
+02:27.540 --> 02:32.370
+how important the given sample in the actual iteration.
+
+02:32.370 --> 02:38.000
+So that's why in a given iteration or given the decision stamp makes the classification.
+
+02:38.000 --> 02:44.580
+For example in the Swan And if they are correctly classified items and await weight paramita or for
+
+02:44.610 --> 02:52.560
+these correctly classified items are decrees that and await perimeter for the misclassified items are
+
+02:52.620 --> 02:53.490
+increased.
+
+02:53.490 --> 02:54.480
+Why is it good.
+
+02:54.580 --> 02:58.770
+Because in the next iteration boosting algorithm we all know that.
+
+02:58.800 --> 02:59.510
+OK.
+
+02:59.580 --> 03:03.010
+It has to focus on these data points.
+
+03:03.130 --> 03:10.010
+OK so for example in the next iteration boosting algorithm tries de-classified the misclassified item.
+
+03:10.020 --> 03:12.130
+So this one and this on.
+
+03:12.210 --> 03:19.260
+Of course it is not able to classify all of them at the same time because it is a nonlinearly separable
+
+03:19.260 --> 03:19.880
+problem.
+
+03:20.010 --> 03:23.880
+But as you can see it is able to classify correctly.
+
+03:23.880 --> 03:30.810
+This yellow dot because in this case the yellow dot is on the left side of the decision boundary and
+
+03:30.870 --> 03:35.190
+all the green dots are on the right side of the decision boundary.
+
+03:35.190 --> 03:42.490
+We don't care about these points because in their previous iteration they were classified correctly.
+
+03:42.690 --> 03:43.200
+OK.
+
+03:43.200 --> 03:47.570
+In this iteration at this point it's classified correctly as well.
+
+03:47.670 --> 03:54.830
+So in the next iteration boosting algorithm will focus on the last misclassified item.
+
+03:55.020 --> 03:58.840
+Ok for example where did this decision boundary.
+
+03:58.890 --> 04:03.690
+It is able to separate these Daut from all the other green dots.
+
+04:03.780 --> 04:11.050
+So what is it mean that we have managed to come up with stree very very simple and a weak decision tree
+
+04:11.160 --> 04:16.920
+learners in order to separate all their yellow dots from all the green dots.
+
+04:17.040 --> 04:24.720
+So if we combine these weak classifiers we are able to come up with a known linear decision boundary
+
+04:24.990 --> 04:29.090
+that's able to separate the green dots from the yellow dots.
+
+04:29.250 --> 04:37.020
+And basically as you can see boosting is a sequential algorithm in the first iteration the first classifier
+
+04:37.020 --> 04:39.300
+is going to make a prediction.
+
+04:39.470 --> 04:46.890
+OK it is not the best one possible because it is not able to separate all the yellow dots from all the
+
+04:46.890 --> 04:47.720
+green dot.
+
+04:47.790 --> 04:51.830
+That's why we need further iterations in the next iteration.
+
+04:51.960 --> 04:56.490
+A new week classifier is going to make a decision OK.
+
+04:56.520 --> 04:59.510
+It is able to classify and sample.
+
+04:59.640 --> 05:08.030
+But again we have some misclassified Daut OK in the next iteration boosting algorithm is going to create
+
+05:08.120 --> 05:14.210
+another week learner that's able to de-classified the next misclassified point and so on.
+
+05:14.300 --> 05:21.650
+And finally boosting algorithm is going to combine all of these weak learners in order to come up with
+
+05:21.650 --> 05:29.450
+a strong classifier because it is a strong classifier as you can see it is able to classify green dots
+
+05:29.570 --> 05:30.840
+and yellow dots.
+
+05:31.040 --> 05:31.680
+OK.
+
+05:31.700 --> 05:38.210
+In the next lecture we are going to talk about the concrete mathematical implementation and equations
+
+05:38.270 --> 05:40.420
+as far as boosting is concerned.
+
+05:40.490 --> 05:41.300
+Thanks for watching.

@@ -1,0 +1,217 @@
+WEBVTT
+
+00:01.320 --> 00:06.990
+In this chapter we are going to talk about the theory behind now real networks.
+
+00:07.020 --> 00:14.130
+So if we want to use deep learning for j as a library first of all we have to understand the topology
+
+00:14.340 --> 00:15.750
+of our own networks.
+
+00:15.810 --> 00:19.430
+We have to understand the role of activation functions.
+
+00:19.530 --> 00:25.130
+We have to understand hyper paramita as such as learning great momentum and so on.
+
+00:25.260 --> 00:29.160
+So this is what we are going to talk about in this given chapter.
+
+00:29.160 --> 00:33.710
+So first of all now all networks consists of layers.
+
+00:33.750 --> 00:35.460
+We have an input layer.
+
+00:35.490 --> 00:39.050
+We have a hidden layer and we have an output layer.
+
+00:39.060 --> 00:45.870
+This is what we have been talking about and this is what we have implemented in the second part of artificial
+
+00:45.900 --> 00:47.350
+intelligence course.
+
+00:47.400 --> 00:54.960
+OK so every node is connected to every node in the next layer as we can see the input layer Now drones
+
+00:55.020 --> 00:57.080
+are connected to every single.
+
+00:57.070 --> 01:00.380
+Now we're on in the next layer then the hidden layer.
+
+01:00.380 --> 01:03.420
+Now drones are connected to every single.
+
+01:03.450 --> 01:06.400
+Now we're on in the output layer and so on.
+
+01:06.570 --> 01:14.160
+What's the big picture is that a little change in the W educated results in change in the output.
+
+01:14.160 --> 01:21.270
+So training a network means adjusting the edges weights in the layers so that our and our own network
+
+01:21.480 --> 01:24.120
+is able to make good predictions.
+
+01:24.120 --> 01:30.390
+There are several hyper paramita as we come to such as the learning rate momentum and so on.
+
+01:30.590 --> 01:34.430
+OK a good question is how to calculate the activations.
+
+01:34.470 --> 01:44.250
+We just have to use this simple formula that if we have any activations x 1 x 2 x 3 up to X an and the
+
+01:44.340 --> 01:51.890
+educates accordingly double you on double duty up to double you and that if we want to calculate the
+
+01:51.890 --> 01:58.620
+activation for a given now we're on for example here if we want to calculate the activation of this.
+
+01:58.630 --> 02:06.000
+Now on then we have to consider the activations in the previously years now roans and we have to consider
+
+02:06.000 --> 02:07.860
+the double you edgeways.
+
+02:07.950 --> 02:11.170
+And first of all we have to calculate the sum.
+
+02:11.250 --> 02:19.500
+So the X Sabai times double you subside and we have to sum it up from 0 up to Ann and then we have to
+
+02:19.500 --> 02:21.810
+apply the activation function.
+
+02:21.810 --> 02:27.500
+You may pose the question that why is it important to use the activation function because without the
+
+02:27.500 --> 02:34.590
+activation function it is just the linear combination of the inputs and educates.
+
+02:34.590 --> 02:40.980
+Of course we would like to introduce some non-linearity and that's why we have to use the activation
+
+02:40.980 --> 02:41.790
+function.
+
+02:41.790 --> 02:46.600
+We are going to talk a lot more about activation functions don't worry.
+
+02:46.650 --> 02:51.210
+Okay so what's extremely important that we need a data set.
+
+02:51.240 --> 02:57.960
+It is like a machine learning algorithm that's able to define the relationship between the features
+
+02:58.080 --> 02:59.980
+in the original data set.
+
+03:00.150 --> 03:05.410
+So for example we have the x or logical relationship with two features.
+
+03:05.460 --> 03:12.170
+X and Y zeros and ones and we have the labels x x or y.
+
+03:12.240 --> 03:15.960
+This is going to be the x or logical relationship.
+
+03:16.020 --> 03:19.080
+So we have a training dataset like this.
+
+03:19.080 --> 03:23.470
+We feed the data to the network and check the output accordingly.
+
+03:23.520 --> 03:25.810
+So because we have two features.
+
+03:25.860 --> 03:27.080
+X and Y.
+
+03:27.090 --> 03:34.290
+That's why we have to now Ronan's in the input layer or one in our own for X and the other on our own
+
+03:34.290 --> 03:35.140
+for y.
+
+03:35.220 --> 03:41.190
+Ok the output is going to be the x or logical relationship.
+
+03:41.220 --> 03:46.370
+So we have to feed the data to the network and check the output accordingly.
+
+03:46.380 --> 03:53.460
+There's going to be the resort so the production of our and our network and we know the exact result
+
+03:53.490 --> 03:55.020
+we know from the data.
+
+03:55.080 --> 04:01.380
+So we can define an error or which is the difference between the prediction made by the natural network
+
+04:01.440 --> 04:06.180
+and the veil used in our data set which we know for certain.
+
+04:06.390 --> 04:12.090
+And we can change the actuates according to this error or this is called back propagation.
+
+04:12.090 --> 04:17.720
+This is what we have been discussing in the second part of artificial intelligence course.
+
+04:17.720 --> 04:18.480
+OK.
+
+04:18.720 --> 04:21.930
+Discourse is about to deepen our own networks.
+
+04:21.960 --> 04:22.800
+What does it mean.
+
+04:22.800 --> 04:24.230
+Deep now and that works.
+
+04:24.240 --> 04:31.440
+It means that we have several hidden early years usually 25 hidden layers and because of this that we
+
+04:31.440 --> 04:35.560
+have several hidden layers other problems may arise.
+
+04:35.580 --> 04:42.910
+For example we have to choose the activation function very very carefully if we want to train a deep
+
+04:42.930 --> 04:45.780
+now OWN network for a simple feed forward.
+
+04:45.780 --> 04:52.680
+Now the network with just a single hidden layer we can use the sigmoid activation function but if we
+
+04:52.680 --> 04:59.640
+are dealing with deep now all our networks will wait five to 10 hidden layers sigmoid activation function
+
+04:59.700 --> 05:02.830
+is not going be the best solution possible.
+
+05:02.870 --> 05:07.810
+So this is why we have to take a closer look at activation functions.
+
+05:07.820 --> 05:12.760
+This is why we have to take a closer look at optimization methods and so on.
+
+05:12.830 --> 05:19.510
+So the most important difference between singularly your feet forward now and that works and deepen
+
+05:19.520 --> 05:27.620
+our networks is that deep never real networks contains several He didn't liras five to 10 hidden layers
+
+05:27.920 --> 05:30.960
+and that's why other problems may arise.
+
+05:31.130 --> 05:33.340
+This is what we are going to talk about.
+
+05:33.500 --> 05:34.370
+Thanks for watching.

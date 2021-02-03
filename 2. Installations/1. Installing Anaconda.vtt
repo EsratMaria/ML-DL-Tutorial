@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00.420 --> 00:07.580
+High in this video we are going to talk about how you will be able to run your Python scripts.
+
+00:07.620 --> 00:14.730
+And the first option that you can install several libraries if you have Python already installed on
+
+00:14.730 --> 00:22.770
+your system that is if you are going to use the sickie to learn we are going to use the CPI we are going
+
+00:22.770 --> 00:29.760
+to use non-prime we are going to use panderers we are going to use matplotlib and so on.
+
+00:29.760 --> 00:37.050
+So what I have found it that the most convenient way is to download the Anaconda and Annacone there
+
+00:37.110 --> 00:43.350
+is going to provide a console such as the Windows command line if you are in a Windows operating system
+
+00:43.680 --> 00:51.070
+and you can run your Python scripts as you do it for example on the standard Windows command line.
+
+00:51.210 --> 00:57.750
+But what's very important is that this anaconda contains all the important libraries I have been talking
+
+00:57.750 --> 01:01.540
+about the NUMP pie matplotlib sip pie and so on.
+
+01:01.740 --> 01:09.900
+And the problem I had encountered when I tried to install the CPI library for some reason I wasnt able
+
+01:09.900 --> 01:11.170
+to install it.
+
+01:11.190 --> 01:18.080
+So a much more convenient way is to download the Anaconda and you can do it without any problem.
+
+01:18.090 --> 01:24.610
+I would like to download the anaconda you have to search for it and download an account.
+
+01:24.630 --> 01:31.560
+Now you have to navigate through the site and you can download it for Windows for Mac and for Linux
+
+01:31.560 --> 01:38.770
+as out and after you click on the icons that it is going to be downloaded you have to install it.
+
+01:39.000 --> 01:45.450
+And basically you are able to search for the Anaconda command line as you can see the Anaconda prompt
+
+01:45.690 --> 01:52.110
+is going to be here and you are able to run your Python scripts without any problem.
+
+01:52.350 --> 01:55.020
+But feel free to use whatever you like.
+
+01:55.050 --> 02:01.650
+I mean there are lots of lots of integrated development environments for Python and whatsoever as far
+
+02:01.650 --> 02:02.960
+as I am concerned.
+
+02:03.000 --> 02:07.290
+I found this Annacone to be very very convenient to use.
+
+02:07.290 --> 02:08.280
+Thanks for watching.

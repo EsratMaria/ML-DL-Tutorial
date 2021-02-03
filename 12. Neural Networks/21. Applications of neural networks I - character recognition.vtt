@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00.700 --> 00:08.920
+High in this video we are going to talk about one of the most important applications of our network.
+
+00:08.920 --> 00:13.570
+So this is the optical correct or recognition.
+
+00:13.930 --> 00:21.590
+So let's suppose the situation when we have an image and we want to find out what correcter it is.
+
+00:21.700 --> 00:28.550
+So what's going to be the input layer for an hour on network for example if we have an eight times 8
+
+00:28.570 --> 00:35.560
+pixel image eight times eight is equal to 64 so there's going to be 64 pixels.
+
+00:35.590 --> 00:39.360
+So in this situation we have 64 inputs.
+
+00:39.370 --> 00:40.310
+Now we're on.
+
+00:40.650 --> 00:49.660
+And the output layer we will have 26 output now owns because in the English alphabet there are 26 correctors.
+
+00:49.780 --> 00:53.190
+OK if we want to classify for example digit.
+
+00:53.350 --> 00:55.540
+Of course we will have 10 output.
+
+00:55.540 --> 00:59.930
+Now we ons for the 0 1 2 3 4 up to 9.
+
+01:00.010 --> 01:08.410
+But if we want to classify correctors there are going to be 26 output now owns and it's quite important
+
+01:08.620 --> 01:15.400
+because we can do this optical character recognition where the heart of a single hidden layer we are
+
+01:15.400 --> 01:18.650
+going to implement optical character recognition.
+
+01:18.700 --> 01:19.980
+So we will see.
+
+01:20.260 --> 01:26.590
+So let's suppose that we have something like this one pixel to pixel three four five.
+
+01:26.590 --> 01:29.770
+It is a five times five big so image.
+
+01:29.800 --> 01:35.580
+So there are twenty five pixels in there to get an image and we humans know that.
+
+01:35.600 --> 01:36.030
+OK.
+
+01:36.040 --> 01:37.240
+It's quite easy.
+
+01:37.240 --> 01:40.510
+This is the number nine and you may post a question that.
+
+01:40.540 --> 01:44.470
+OK how are we going to represent this 9.
+
+01:44.530 --> 01:47.320
+We are going to represent it like this one.
+
+01:47.350 --> 01:50.710
+I imagine the array layer by layer.
+
+01:50.770 --> 01:52.920
+It is a zero because it is.
+
+01:53.050 --> 01:56.030
+Let's suppose the faggot is a black and white image.
+
+01:56.050 --> 01:57.300
+So this is white.
+
+01:57.400 --> 01:59.010
+Then the next one is black.
+
+01:59.020 --> 02:05.410
+So that's why this black black and the black again that this is why there are three wands right next
+
+02:05.410 --> 02:06.340
+to each other.
+
+02:06.400 --> 02:10.460
+Then the next pixel is white again the white is the zero.
+
+02:10.480 --> 02:14.110
+The black is the one as you can see then a white again.
+
+02:14.140 --> 02:19.670
+So 0 then black which is 1 and 0 which is white and so on.
+
+02:19.690 --> 02:28.610
+This is how we are going to represent a 5 by 5 pixel image we have of one the image of an array.
+
+02:29.110 --> 02:32.410
+And how are we going to encode the output.
+
+02:32.560 --> 02:39.970
+We are going to encode the output in binary we will have if we want to classify digits for example then
+
+02:39.970 --> 02:47.050
+we have a string of bits basically and the lengths is going to be one to three four five six seven eight
+
+02:47.080 --> 02:54.780
+nine ten because we can classify 10 items 0 1 2 3 4 and so on.
+
+02:54.790 --> 02:57.200
+So the 0 will be encoded like this.
+
+02:57.220 --> 03:08.170
+The first one is one and then 0 0 0 0 1 is going to be the 0 1 0 0 0 2 is going to be 0 0 1 and so on.
+
+03:08.230 --> 03:14.570
+You may pose the question that why don't we assign 0 for example of the 0 Dan or 1 Danny.
+
+03:14.640 --> 03:16.900
+Two and three and so on.
+
+03:16.900 --> 03:19.510
+So why don't we have a single output.
+
+03:19.510 --> 03:20.350
+Now we're on.
+
+03:20.620 --> 03:26.340
+That's because the sigmoid function can have the value in the range 0 and 1.
+
+03:26.440 --> 03:32.570
+And we are going to initialize the edge weights in the range 0 when and won.
+
+03:32.680 --> 03:39.010
+So if we have the edge weights in the range 0 and 1 and if we have the activation function that can
+
+03:39.010 --> 03:44.890
+have the World 0 and 1 of course the output never be greater than one.
+
+03:44.920 --> 03:47.530
+It can be one at the most.
+
+03:47.530 --> 03:53.800
+So that's why we have to encode 1 2 3 4 5 and so 1 in a binary format.
+
+03:53.860 --> 03:56.350
+But it is working very very fine.
+
+03:56.500 --> 03:58.740
+And this is the usual approach.
+
+03:58.780 --> 04:00.610
+This is how scientists do it.
+
+04:00.640 --> 04:01.310
+OK.
+
+04:01.360 --> 04:05.470
+So this is what we are going to implement in the last chapter.
+
+04:05.470 --> 04:06.400
+Thanks for watching.

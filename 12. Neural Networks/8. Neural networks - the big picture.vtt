@@ -1,0 +1,166 @@
+WEBVTT
+
+00:00.480 --> 00:06.030
+Harm so far we have been discussing the biological and our own networks.
+
+00:06.060 --> 00:09.440
+We have been discussing it was going to be the model.
+
+00:09.540 --> 00:17.040
+How are we going to model the biological nervous system how we are going to create Now drones percept
+
+00:17.050 --> 00:20.080
+drones activation functions and so on.
+
+00:20.250 --> 00:26.670
+But let me tell a few words about the big picture how now all networks are working.
+
+00:26.670 --> 00:31.640
+So OK we have several Now rowans with some connections.
+
+00:31.680 --> 00:36.400
+Basically this is how we model X suns with directed edges.
+
+00:36.450 --> 00:44.790
+Of course there may be several layers of that given that work as you can see there are two hidden layers
+
+00:45.090 --> 00:49.220
+an input layer and an output layer of that network.
+
+00:49.260 --> 00:54.620
+We can have just a single hidden layer and we can have no hidden layers at all.
+
+00:54.660 --> 00:58.630
+We can have just input layers and output layer.
+
+00:58.910 --> 00:59.630
+OK.
+
+00:59.730 --> 01:02.580
+So that's all about the number of players.
+
+01:02.670 --> 01:06.650
+And as you can see there are connections between these layers.
+
+01:06.840 --> 01:14.860
+Basically Usually we use feed for Verdon out on networks which means that there are directed edges.
+
+01:15.060 --> 01:18.490
+And basically there is no back over the edge.
+
+01:18.510 --> 01:23.910
+So we have the input layer and there are directed edges in the next layer.
+
+01:23.910 --> 01:29.120
+Then we have this layer and we have directed Ajay's for the next layer.
+
+01:29.130 --> 01:33.730
+There are no edges pointing back to the first layer and so on.
+
+01:33.840 --> 01:35.910
+This is the so-called feedforward.
+
+01:35.910 --> 01:40.680
+Now we're on that for up because they are proved to be working quite fine.
+
+01:40.680 --> 01:44.660
+So this is why we are going to use it in discourse as well.
+
+01:44.710 --> 01:51.840
+And OK you may post a question that how are we going to store the information and the information is
+
+01:51.840 --> 01:54.660
+encoded in the actuates.
+
+01:54.690 --> 02:01.060
+So basically a change in the edge weight is going to cost changing the output.
+
+02:01.170 --> 02:10.350
+So if we change a little bit we the data w this edge weight that we would like to make sure Dandie output
+
+02:10.350 --> 02:14.000
+is going to change by a little amount this data.
+
+02:14.020 --> 02:15.930
+Oh okay.
+
+02:15.990 --> 02:22.010
+And this is what we have been discussing that with step functions as an activation function.
+
+02:22.020 --> 02:28.620
+It's not going to be true that a small change in an aggregate is going to be result in a small change
+
+02:28.620 --> 02:29.760
+in the output.
+
+02:29.760 --> 02:36.930
+This is why we have to use more elaborate activation functions such as sigmoid functions or the hyperbolic
+
+02:36.930 --> 02:39.330
+tangan activation function.
+
+02:39.390 --> 02:46.260
+So the algorithm keeps changing the weights so that for a given inputs there will be the right output
+
+02:46.350 --> 02:48.090
+in the output layer.
+
+02:48.270 --> 02:55.830
+Let's suppose the fact that we have now on a network and if we want to train to learn data and logical
+
+02:55.830 --> 03:07.530
+operator then we have to impute values 0 0 0 1 1 0 1 1 and we are going to change the actuates on every
+
+03:07.530 --> 03:13.770
+iteration so that the output is going to be what's in the training data.
+
+03:13.770 --> 03:21.960
+So if the inputs are 0 0 the output is going to be 0 if the input is 0 1 the output is going to be 0
+
+03:22.110 --> 03:23.950
+if the input is 1 0.
+
+03:24.000 --> 03:30.830
+Output is going to be 0 and if the input is 1 1 then the output is going to be warm.
+
+03:30.900 --> 03:33.440
+This is what we have been discussing for the.
+
+03:33.480 --> 03:40.590
+And logical relation as you can see we have to import and we have a labeled output because this is a
+
+03:40.590 --> 03:43.000
+supervised learning approach.
+
+03:43.320 --> 03:49.950
+So in every direction we change the educates a little bit because we would like to make sure that the
+
+03:50.010 --> 03:52.470
+output is going to change a little bit.
+
+03:52.470 --> 03:53.260
+OK.
+
+03:53.310 --> 04:00.320
+So in every iteration the net for gets a little closer to be able to classify For example the written
+
+04:00.330 --> 04:01.530
+digits.
+
+04:01.530 --> 04:08.820
+And if we repeat the process several times so changing the educates will produce better and better results.
+
+04:08.890 --> 04:12.700
+Hence the network is capable of learning.
+
+04:12.930 --> 04:15.840
+So this is how we design our own networks.
+
+04:15.900 --> 04:23.820
+And this is the main principle that we encode information in the educates and we want to make sure that
+
+04:23.880 --> 04:31.880
+if we change the aggregates on every iteration then the output is going to be altered a little bit.
+
+04:32.220 --> 04:33.150
+Thanks for watching.

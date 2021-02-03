@@ -1,0 +1,316 @@
+WEBVTT
+
+00:00.980 --> 00:06.130
+In the previous lecture we have been talking about bias variance tradeoff.
+
+00:06.230 --> 00:10.610
+And we have come to the conclusion that we need the help of pruning or bagging.
+
+00:10.610 --> 00:15.360
+We are able to decrease the variance of a decision tree classifier.
+
+00:15.490 --> 00:22.160
+OK we have to come to the conclusion that pruning is not the best solution because if we use pruning
+
+00:22.160 --> 00:24.830
+there's going to be some extra bias.
+
+00:24.860 --> 00:27.490
+So bagging is a bit better solution.
+
+00:27.590 --> 00:35.020
+Bagging stands for bootstrap aggregation and the theory behind the bagging is rather counter-intuitive
+
+00:35.150 --> 00:40.910
+because the intuition is that a weak learner is not able to make good predictions.
+
+00:40.940 --> 00:47.810
+A weak learner is just a bit better than a random guess or a coin flip the coin flip has the accuracy
+
+00:47.900 --> 00:49.080
+50 percent.
+
+00:49.100 --> 00:54.460
+So 0.5 is the probability that it is going to make good decisions.
+
+00:54.470 --> 00:59.380
+For example a decision tree we that one is a weak learner.
+
+00:59.390 --> 01:06.080
+So for example when we have been talking about decision trees we had a simple example with just a single
+
+01:06.080 --> 01:12.470
+feature X which was the number of hours the students spent with studying and the target for our table
+
+01:12.480 --> 01:15.370
+is the probability of passing the exam.
+
+01:15.410 --> 01:21.840
+In this case we are able to solve this problem with the help of a decision tree with that one.
+
+01:21.980 --> 01:29.840
+As you can see it has a root node as usual and just two braunches a flat child for fail and the right
+
+01:29.840 --> 01:32.100
+child for passing the exam.
+
+01:32.240 --> 01:36.010
+OK so this is a very very simple decision tree.
+
+01:36.110 --> 01:43.790
+In this case for this given problem it is working quite fine but usually decision trees with that one
+
+01:43.880 --> 01:46.260
+are considered to be learners.
+
+01:46.430 --> 01:53.630
+And it was extremely counter-intuitive that combining the learners can prove to be an extremely powerful
+
+01:53.630 --> 01:54.740
+classifier.
+
+01:54.800 --> 02:01.670
+So basically that's the idea behind begging that if we keep combining lots of lots of weak learners
+
+02:01.910 --> 02:05.450
+we are going to end up with a powerful classifier.
+
+02:05.600 --> 02:08.040
+And it is very similar to the black shorts.
+
+02:08.180 --> 02:14.720
+I'm a huge fan of quantitative finance and black shorts the model is approximately the same in the sense
+
+02:14.720 --> 02:17.600
+that it is rather counter-intuitive as well.
+
+02:17.690 --> 02:23.220
+So too risky positions taken together can effectively eliminate risk south.
+
+02:23.330 --> 02:25.540
+OK so let's get back to begging.
+
+02:25.600 --> 02:28.610
+So bagging stands for bootstrap aggregation.
+
+02:28.790 --> 02:35.840
+It reduces the variance of the learning algorithm and the math behind bagging is that if we have an
+
+02:35.900 --> 02:44.400
+X set of and independent variables X on X to up to X an each variant Suvi.
+
+02:44.540 --> 02:53.500
+So X-1 has variants we X-2 has variants we x and has variants We then the variance of the mean of x.
+
+02:53.500 --> 02:58.750
+So the mean of x x to x and variables is we divide by.
+
+02:58.780 --> 03:06.960
+And as you can see the more x items we have in the X dataset the smaller the final variance.
+
+03:07.070 --> 03:13.220
+So basically we can reduce the variance by averaging a set of observations.
+
+03:13.220 --> 03:21.440
+So a good idea to have multiple training sets and construct a decision tree or weed out pruning on every
+
+03:21.440 --> 03:22.910
+single training set.
+
+03:23.060 --> 03:26.350
+We are going to generate lots of lots of decision trees.
+
+03:26.450 --> 03:30.500
+So we are going to have lots of lots of observations.
+
+03:30.500 --> 03:31.480
+Why is it good.
+
+03:31.580 --> 03:36.910
+Because we can reduce the variance by averaging a set of observations.
+
+03:37.010 --> 03:38.940
+But of course we have a huge problem.
+
+03:38.960 --> 03:41.730
+We don't have several training SATs.
+
+03:41.810 --> 03:47.240
+So the solution is that we should take repeated samples from the single data set.
+
+03:47.240 --> 03:54.110
+So for example when dealing with the iris dataset we have a data set like this with a hundred and fifty
+
+03:54.110 --> 03:58.960
+samples with three output classes with four features and so on.
+
+03:59.000 --> 04:02.710
+So this is the single dataset we are talking about.
+
+04:02.750 --> 04:08.380
+We keep constructing decision trees plots we ever reach all the predictions in the end.
+
+04:08.460 --> 04:09.080
+OK.
+
+04:09.080 --> 04:13.870
+It is extremely important that all of these trees are fully grown.
+
+04:13.930 --> 04:20.450
+Prune the decision trees so we keep constructing decision trees like we have seen for the decision tree
+
+04:20.460 --> 04:22.180
+classifiers section.
+
+04:22.190 --> 04:29.540
+Either way the information gain approach or with the Genie index approach we are going to construct
+
+04:29.630 --> 04:31.640
+decision trees like this.
+
+04:31.640 --> 04:35.210
+So these are fully grown on Prun decision trees.
+
+04:35.320 --> 04:35.990
+OK.
+
+04:36.020 --> 04:39.530
+And in the end we are going to ever reach all the predictions.
+
+04:39.530 --> 04:46.040
+So every single decision tree will have a guess that was going to be the solution and that we just have
+
+04:46.040 --> 04:50.860
+to average all these predictions in order to get the final answer.
+
+04:50.870 --> 04:53.660
+Basically this is the bagging algorithm.
+
+04:53.790 --> 05:02.150
+OK so we have been talking about pruning where Varians decreases but we have some extra us here we can
+
+05:02.150 --> 05:03.650
+reduce the variance.
+
+05:03.650 --> 05:10.500
+We don't act for bias so that's why I have told you that bagging is a better approach than pruning for
+
+05:10.490 --> 05:11.920
+a regression problem.
+
+05:11.930 --> 05:13.480
+We take the average.
+
+05:13.550 --> 05:18.610
+So we have to average all the predictions in the end for classification problems.
+
+05:18.710 --> 05:20.820
+We take the majority vote.
+
+05:20.900 --> 05:21.520
+OK.
+
+05:21.530 --> 05:24.240
+So begging is a bit better than pruning.
+
+05:24.260 --> 05:31.640
+But again we have a huge problem with bagging that deconstructed tree like structures are highly correlated
+
+05:31.880 --> 05:35.420
+and you may pose the question that why do correlation occur here.
+
+05:35.450 --> 05:41.750
+Because every data sat has a strong predictor as far as the iris data set is concerned.
+
+05:41.750 --> 05:49.460
+SEP-IRA Lang Saporta we had that length and Pat al-Bared of course some features are important and some
+
+05:49.460 --> 05:51.230
+features are not.
+
+05:51.230 --> 05:57.200
+Basically that's why we have to calculate the entropy and information gain because the root node in
+
+05:57.200 --> 06:01.550
+a decision tree has something to do with the most important feature.
+
+06:01.550 --> 06:07.770
+So as far as the iris dataset is concerned that petal Lankes is the most relevant feature.
+
+06:07.820 --> 06:11.900
+OK so every data set has a strong predictor or feature.
+
+06:11.900 --> 06:18.680
+This is the most relevant feature in the data set and all the back the trees tend to make the same splits
+
+06:18.740 --> 06:21.700
+because they all share the same features.
+
+06:21.710 --> 06:22.790
+So what does it mean.
+
+06:22.790 --> 06:29.810
+Because of all this all these trees look very very similar to the size of these different decision trees
+
+06:29.810 --> 06:31.410
+will be very very similar.
+
+06:31.550 --> 06:34.310
+Hence they are highly correlated.
+
+06:34.370 --> 06:40.640
+And what does it mean that they are highly correlated that they are going to yield the same result no
+
+06:40.640 --> 06:41.560
+matter what.
+
+06:41.570 --> 06:48.490
+So basically there is no point in generating lots of lots of decision trees and take the average all
+
+06:48.490 --> 06:55.160
+the predictions in the end because all of these trees have the same predictions because of the high
+
+06:55.190 --> 06:56.270
+correlation.
+
+06:56.360 --> 07:04.340
+OK so these trees are highly correlated because we use all the features and the features in the data
+
+07:04.340 --> 07:04.870
+set.
+
+07:04.910 --> 07:12.130
+There's going to be a strong predictor that's going to be the root node of every single decision tree.
+
+07:12.260 --> 07:16.530
+And that's why begging again is not the best solution possible.
+
+07:16.550 --> 07:22.420
+So pruning is a good approach in order to reduce the variance for a decision tree.
+
+07:22.450 --> 07:27.270
+Dan we came to the conclusion that we can do better with the help of begging.
+
+07:27.300 --> 07:34.280
+Begging is going to construct several decision trees and it is going to ever reach all the predictions
+
+07:34.280 --> 07:35.180
+in the end.
+
+07:35.180 --> 07:40.320
+But again there's a huge problem as far as high correlation is concerned.
+
+07:40.460 --> 07:44.580
+And that's why we can pose the question that can we do better than bagging.
+
+07:44.690 --> 07:47.160
+And the answer is yes we can do better.
+
+07:47.170 --> 07:49.330
+We do random for a classifier.
+
+07:49.430 --> 07:54.080
+So in the next lecture we are going to talk about random for us classifier.
+
+07:54.080 --> 07:54.950
+Thanks for watching.

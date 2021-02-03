@@ -1,0 +1,235 @@
+WEBVTT
+
+00:01.880 --> 00:03.170
+So far so good.
+
+00:03.170 --> 00:05.600
+This is how we defined in our own network.
+
+00:05.690 --> 00:11.120
+This is how we define the last function the optimizer and the accuracy metrics.
+
+00:11.120 --> 00:13.090
+And then we just have to fit the model.
+
+00:13.100 --> 00:19.100
+So what does it mean that we are going to train this network and network we have defined here on the
+
+00:19.100 --> 00:20.410
+training data set.
+
+00:20.410 --> 00:27.640
+So the training features and the training target variables we are going to make a thousand approx.
+
+00:27.740 --> 00:28.860
+What is an apple.
+
+00:29.030 --> 00:33.440
+An apple is a full iteration over the entire data set.
+
+00:33.440 --> 00:38.600
+So in this case an apple is when we consider all these samples.
+
+00:38.600 --> 00:41.880
+So 0 0 0 1 1 0 1 1.
+
+00:41.900 --> 00:43.390
+This is the first book.
+
+00:43.600 --> 00:44.150
+Okay.
+
+00:44.150 --> 00:51.620
+In the next book we are going to consider all of these samples again 0 0 0 1 1 0 1 1.
+
+00:51.620 --> 00:52.950
+This is the next Apple.
+
+00:53.000 --> 01:00.680
+So we use a 2000 Apple X which means that we are going to consider the whole dataset A thousand times
+
+01:00.770 --> 01:08.060
+and we are going to use verbose Eco's to two if verbose is zero then its going to be a silent training
+
+01:08.060 --> 01:09.010
+procedure.
+
+01:09.140 --> 01:14.120
+And if we set it to two we are going to get all of the information we need.
+
+01:14.120 --> 01:20.990
+For example the number of apples for example the last function value or the accuracy as far as I am
+
+01:20.990 --> 01:21.630
+concerned.
+
+01:21.650 --> 01:27.570
+I'd like to take a look at the training procedure with the last function values and the accuracy.
+
+01:27.590 --> 01:34.390
+So I like to set verbose to the two and then we can make predictions with the half of our network.
+
+01:34.450 --> 01:40.640
+Okay in this case the task the data set is the same as the training data set because we have a small
+
+01:40.640 --> 01:41.580
+data set.
+
+01:41.600 --> 01:48.430
+So we are going to make predictions on the same data that we have trained in our network.
+
+01:48.530 --> 01:52.500
+Okay and we use around because we are after 0 or 1.
+
+01:52.550 --> 02:00.940
+So if the value is 0 that 99 is going to be wanted because of this round function and the value is 0
+
+02:00.950 --> 02:04.040
+that 0 0 1 it is going to be 0.
+
+02:04.100 --> 02:07.370
+OK because we use lots of lots of hidden layers.
+
+02:07.490 --> 02:13.830
+If we use for example just 10 iterations the final resort is not going to be that accurate.
+
+02:13.850 --> 02:17.190
+Let's wait for Cara's to finish the training operation.
+
+02:17.330 --> 02:26.420
+As you can see the accuracy is 75 percent which is not that fine if we make for example a thousand iterations
+
+02:26.510 --> 02:29.820
+as you can see the binary accuracy is 1.
+
+02:29.900 --> 02:37.460
+So the output is going to be 0 1 1 0 which means that we have a deep knowledge network with several
+
+02:37.460 --> 02:38.570
+hidden layers.
+
+02:38.660 --> 02:44.010
+We are able to learn D-Backs or logical relationships 0 1 1 0.
+
+02:44.060 --> 02:49.040
+After a thousand books the output values are 0 1 1 0.
+
+02:49.040 --> 02:51.090
+This is exactly what we are after.
+
+02:51.170 --> 02:58.400
+Lets use sigmoid functions instead of the array you activation function and we will see that with the
+
+02:58.400 --> 03:00.740
+help of the railway activation function.
+
+03:00.770 --> 03:08.990
+I guess the accuracy was won even when we made for example 500 iterations and let's check whether a
+
+03:08.990 --> 03:11.450
+sigmoid function can do the same.
+
+03:11.450 --> 03:17.900
+So if we make just five hundred iterations with the sigmoid activation functions because we have so
+
+03:17.900 --> 03:25.220
+many hidden layers I guess the accuracy is not going to be as high as where the real activation functions.
+
+03:25.220 --> 03:32.780
+So as you can see with the help of sigmoid activation functions the binary accuracy after 500 iterations
+
+03:32.870 --> 03:34.450
+is 50 percent.
+
+03:34.550 --> 03:35.120
+Why.
+
+03:35.120 --> 03:41.510
+Because we have to train lots of lots of educators because it is a deep nodal network who had seven
+
+03:41.510 --> 03:46.880
+hidden layers and all of the hidden layers contains 16 now rowans.
+
+03:46.910 --> 03:53.570
+So thats why there are lots of lots of edge ways to train and sigmoid function is not the best solution
+
+03:53.570 --> 03:54.710
+in these cases.
+
+03:54.830 --> 03:59.870
+If we use the real you activation function lets say that and lets run it.
+
+03:59.930 --> 04:01.890
+OK let's check the accuracy.
+
+04:02.030 --> 04:05.360
+I guess we are going to get much better results.
+
+04:06.920 --> 04:12.320
+OK so as you can see after 300 iterations the accuracy is 100.
+
+04:12.320 --> 04:16.120
+We just have to make approximately two hundred and fifty iterations.
+
+04:16.130 --> 04:22.070
+We'd rather you activation function in order to end up with 100 percent accuracy.
+
+04:22.070 --> 04:28.250
+So this is why we have to use ralliers activation function instead of sigmoid activation function.
+
+04:28.430 --> 04:34.730
+As far as deep now Real Networks are concerned when dealing with simple feedforward now we're running
+
+04:34.730 --> 04:40.960
+networks with a single hidden layer then sigmoid function is perfect when dealing with the deep and
+
+04:40.990 --> 04:46.270
+that works with lots of lots of hidden layers and lots of lots of hidden now runs.
+
+04:46.340 --> 04:51.920
+We have to use relatively activation function in order to boost D-bag freedom by the way.
+
+04:51.920 --> 04:58.610
+I guess that if we use sigmoid activation function and let's say for example five thousand iterations
+
+04:58.880 --> 05:01.050
+I guess it's going to be the same.
+
+05:01.090 --> 05:08.150
+So sigmoid function is going to learn the relationships but we have to make lots of lots of iterations
+
+05:08.160 --> 05:13.720
+as you can see the accuracy 75 percent after three thousand iterations.
+
+05:13.910 --> 05:19.340
+I guess that is going to take a while to learn the non-linear relationship.
+
+05:19.890 --> 05:20.390
+OK.
+
+05:20.390 --> 05:21.890
+Again it is not good.
+
+05:21.980 --> 05:29.070
+Let's make 10000 iterations with the help of sigmoid activation function after 3000 iterations.
+
+05:29.090 --> 05:33.730
+We have managed to find the non-linear relationships between the features.
+
+05:33.830 --> 05:40.850
+So in this case sigmoid function is going to work fine but as we have seen for the really the activation
+
+05:40.850 --> 05:48.230
+function that we just had to make two hundred iterations in order to learn this X or logical relationship
+
+05:48.440 --> 05:51.640
+for sigmoid we have to make st Townsend.
+
+05:51.700 --> 05:55.300
+OK so this is how we are dealing with deep now Real Networks.
+
+05:55.490 --> 05:59.510
+And usually we have to use ralliers activation functions.
+
+05:59.510 --> 06:00.530
+Thanks for watching.

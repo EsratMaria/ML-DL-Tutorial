@@ -1,0 +1,241 @@
+WEBVTT
+
+00:00.490 --> 00:06.240
+High in this lecture I would like to tell a few words about hierarchical clustering.
+
+00:06.390 --> 00:08.540
+So let's get started.
+
+00:08.550 --> 00:14.610
+We have been talking about Kamins flustering and we have come to the conclusion that huge disadvantage
+
+00:14.640 --> 00:22.700
+of Kamins clustering that we have to specify the K paramita in advance here for Wheeler called clustering.
+
+00:22.770 --> 00:29.660
+We don't have to do so we build a tree like structure out of that data which contains basically all
+
+00:29.670 --> 00:31.640
+the key parameters.
+
+00:32.280 --> 00:39.690
+So in data mining Kyrle clustering is a method of cluster analyzes which seeks to build a hierarchy
+
+00:39.690 --> 00:41.050
+of clusters.
+
+00:41.070 --> 00:43.230
+It is an agglomerated approach.
+
+00:43.290 --> 00:45.190
+So this is a bottom up approach.
+
+00:45.390 --> 00:53.430
+Each observation starts in its own cluster and pairs of clusters are merged as one moves up the hierarchy.
+
+00:53.550 --> 00:58.830
+In general the merges and splits are determined in a greedy manner.
+
+00:58.830 --> 01:02.580
+The results of hierarchical clustering are usually presented.
+
+01:02.580 --> 01:06.930
+This is what we are going to illustrate at the end of this lecture.
+
+01:06.960 --> 01:09.190
+So what about the algorithm.
+
+01:09.190 --> 01:12.470
+The algorithm has three important stops.
+
+01:12.510 --> 01:15.210
+Start each node in its own cluster.
+
+01:15.210 --> 01:22.920
+This is sort of an initialization phase then find the two closest clusters and merge them together and
+
+01:22.930 --> 01:27.440
+repeat the algorithm until all the points are in the same cluster.
+
+01:27.450 --> 01:30.730
+So there is only a single cluster left.
+
+01:30.840 --> 01:34.540
+So the algorithm itself is quite easy and straightforward.
+
+01:34.590 --> 01:39.680
+A good question is how are we able to measure the distance of two clusters.
+
+01:39.750 --> 01:45.680
+We usually calculate the distance of the averages of the Klosters items.
+
+01:46.410 --> 01:50.580
+OK so let's suppose the situation where we have two features.
+
+01:50.580 --> 01:57.480
+The X1 as the X scored and that in this case and x 2 as the y coordinate in the two dimensional plane.
+
+01:57.540 --> 02:00.230
+And we have several data points.
+
+02:00.270 --> 02:05.690
+The distance is going to be the Euclidean distance between two points.
+
+02:05.700 --> 02:12.350
+So this is how we are going to measure the distance between two entities in the dataset.
+
+02:13.220 --> 02:22.110
+OK so we usually use Euclidean distance to observations are similar if the calculated distance is small.
+
+02:22.140 --> 02:28.710
+We could use the correlation based distance as a route that two observations are similar if their features
+
+02:28.770 --> 02:30.630
+are highly correlated.
+
+02:30.630 --> 02:36.980
+In this case we are going to stick to Euclidean distances because we are going to have X scored and
+
+02:37.080 --> 02:43.030
+as the first feature and the y coordinate as the second feature in a two dimensional plane.
+
+02:43.350 --> 02:48.750
+So if we had a data set like this it is an unsupervised learning algorithm.
+
+02:48.750 --> 02:54.630
+So we don't have the labels for the classes we don't know whether it's a green Clausewitz's a blue class
+
+02:54.630 --> 02:59.620
+or so one or algorithm is going to decide the Klosters.
+
+03:00.330 --> 03:07.820
+So basically this is the initialization of face every single data point in the data set in its distinct
+
+03:07.850 --> 03:09.130
+Kastor.
+
+03:09.360 --> 03:17.160
+And then we find the closest data points it is the two and the three and we merge them together basically.
+
+03:17.220 --> 03:19.580
+And we keep building the danto gram.
+
+03:19.680 --> 03:26.970
+So we connect the two door to the two and the three which are the closest pair of points in these two
+
+03:26.970 --> 03:28.450
+dimensional plane.
+
+03:28.560 --> 03:30.540
+OK and we merge them together.
+
+03:30.630 --> 03:32.710
+Then the next step of the algorithm.
+
+03:32.730 --> 03:35.630
+What are the next closest pair of points.
+
+03:35.700 --> 03:39.780
+It is the merged destry point and point four.
+
+03:39.780 --> 03:42.760
+So again we keep merging them together.
+
+03:42.810 --> 03:49.760
+And what's very important that we keep constructing the danto Graham furder so we can add the four and
+
+03:49.800 --> 03:52.260
+merge two and three points.
+
+03:52.410 --> 03:53.330
+OK.
+
+03:53.470 --> 03:56.340
+That was the next two closest pair of points.
+
+03:56.340 --> 03:59.580
+It is the one and the merge two three four.
+
+03:59.580 --> 04:05.190
+So we have to construct the thendo grammar again and we connect the wan we demurred.
+
+04:05.190 --> 04:07.240
+Two three four datapoint.
+
+04:07.350 --> 04:09.360
+And of course we merge them together.
+
+04:09.360 --> 04:13.580
+The last one is the five and the two story for one data point.
+
+04:13.710 --> 04:21.470
+So again we merge them in the sense that we connect the data point five and the merge data set.
+
+04:21.480 --> 04:24.990
+So this is how we keep building the Dandong.
+
+04:25.320 --> 04:27.120
+And OK we merge them together.
+
+04:27.120 --> 04:34.140
+So when we have just a single day to laugh this is when we terminate or algorithm you may pose the question
+
+04:34.440 --> 04:40.830
+why is it important to construct this then program because these then diagram includes all the cases
+
+04:40.830 --> 04:43.940
+we have been discussing for k means clustering.
+
+04:44.190 --> 04:47.140
+When we are looking for k equal to 2.
+
+04:47.160 --> 04:49.380
+So we are looking for two clusters.
+
+04:49.380 --> 04:52.510
+We have to cart the dog ran like this.
+
+04:52.620 --> 04:59.250
+And in this case the 5 is going to be in the same cluster and all of the other data point is going to
+
+04:59.250 --> 05:00.530
+be in a second Gloucester.
+
+05:00.550 --> 05:07.720
+So we have the yellow dots for example and the Green Dot what if we would like to find for Klosters
+
+05:08.070 --> 05:11.100
+then the five is going to be in a single cluster.
+
+05:11.140 --> 05:13.780
+The four is going to be in a single cluster.
+
+05:13.780 --> 05:20.470
+The one is going to be in a single cluster and the two and three dots are going to be in the same cluster.
+
+05:20.470 --> 05:25.760
+So this is how we are able to get the number of clusters from the Nandigram.
+
+05:26.090 --> 05:30.530
+What's very important that descaling off of her idea balls does matter.
+
+05:30.550 --> 05:37.240
+So we should use some way of standardization as we have seen for the K nearest neighbor and of liable
+
+05:37.240 --> 05:42.650
+should be centered to have means zero or scale to have standard deviation warm.
+
+05:42.730 --> 05:49.170
+We have to do it in order to make sure that our hierarchical clustering algorithm works fine.
+
+05:49.510 --> 05:54.940
+So that's all about the hierarchical clustering and what's more important that in this case we keep
+
+05:54.940 --> 06:00.940
+constructing the danto Graham because the dandle crime is going to contain the information that was
+
+06:00.940 --> 06:05.950
+going to be the distant Klosters for the different parameters.
+
+06:05.950 --> 06:07.000
+Thanks for watching.

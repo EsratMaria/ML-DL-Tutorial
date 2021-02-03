@@ -1,0 +1,292 @@
+WEBVTT
+
+00:00.540 --> 00:08.450
+High in this video we are going to talk about how to build an outdoor network that's capable of learning
+
+00:08.460 --> 00:16.590
+the logical relationships and logical relationship the X or logical relationship the logical relationship
+
+00:16.590 --> 00:17.630
+and so on.
+
+00:17.820 --> 00:21.220
+So first I would like to create an that.
+
+00:21.300 --> 00:22.590
+OK let's import.
+
+00:22.590 --> 00:29.010
+By the way these packages supervise data side of build network and back propagation trainer because
+
+00:29.010 --> 00:33.980
+we are going to train or network with the help of back propagation.
+
+00:34.140 --> 00:41.670
+So I would like to build the network way to input on three hidden ones and the single output.
+
+00:41.670 --> 00:42.310
+Now we're on.
+
+00:42.420 --> 00:45.320
+And I would like to use biased nodes.
+
+00:45.610 --> 00:46.400
+OK.
+
+00:46.460 --> 00:54.480
+And I would like to create a data that is equal to supervise data set with two inputs and a single output
+
+00:54.570 --> 00:56.700
+or the target variable.
+
+00:56.760 --> 00:58.540
+And I would like to.
+
+00:59.220 --> 01:03.060
+Sorry for that odd sample.
+
+01:03.330 --> 01:09.340
+And the first one is 0 0 and the output is 0.
+
+01:09.630 --> 01:11.900
+I'm going to copy and paste it.
+
+01:11.910 --> 01:15.730
+So as far as the and logical relation is concerned.
+
+01:15.760 --> 01:27.120
+So this is the and logical relation when the inputs are 0 0 the output is 0 input is 1 0.
+
+01:27.120 --> 01:28.520
+The output is 0.
+
+01:28.530 --> 01:31.780
+The inputs are 0 1 the output is 0.
+
+01:31.920 --> 01:36.610
+And when the inputs are 1 and 1 The output is going to be warm.
+
+01:36.950 --> 01:37.700
+OK.
+
+01:37.860 --> 01:46.200
+So then I'm going to instantiate the back propagation trainer and we have to specify the OWN network
+
+01:46.210 --> 01:47.370
+itself.
+
+01:47.430 --> 01:51.560
+Then we have to specify the data set which is equal to the data.
+
+01:52.050 --> 01:57.080
+So this is the data that we have specified here.
+
+01:57.270 --> 02:06.570
+We have to define the learning rate is equal to 0.01 and we have to define the momentum to be equal
+
+02:06.580 --> 02:09.140
+to 0.06.
+
+02:09.750 --> 02:12.620
+OK so let's see whether it's working fine.
+
+02:12.780 --> 02:19.720
+I'm going to train the now on network in the range you want to for example 10000.
+
+02:19.740 --> 02:23.210
+So we will make 10000 iterations.
+
+02:23.250 --> 02:28.660
+The Arab world is equal to the train or that train.
+
+02:29.660 --> 02:30.970
+OK.
+
+02:32.100 --> 02:41.610
+And if the AI modulo 8000 is equal to zero what does it mean that I would like to printout on every
+
+02:41.610 --> 02:50.940
+thousand's iteration that was the arrow or so I'm going to print that arrow or in iteration.
+
+02:52.350 --> 03:02.360
+And by the time the eye is and by of time the air or OK I think it's going to work just fine.
+
+03:02.390 --> 03:13.610
+Now I would like to pretend that now we're on that over that actually weight on 0 0 for example.
+
+03:13.610 --> 03:15.670
+So we would like to take a look at.
+
+03:15.720 --> 03:16.660
+OK.
+
+03:16.710 --> 03:21.950
+However now the network is working at that moment.
+
+03:22.010 --> 03:35.420
+So zero on one and one and after we did all the 10000 iterations I would like to pretend Final Solution
+
+03:35.540 --> 03:43.910
+and results and I would like the printer again this one so I'm going to copy and paste it.
+
+03:45.400 --> 03:46.400
+OK.
+
+03:46.430 --> 03:48.390
+Something like this.
+
+03:48.500 --> 03:53.510
+Get rid of the unnecessary whitespace as something like this.
+
+03:53.510 --> 03:55.100
+OK let's say that.
+
+03:55.100 --> 03:58.640
+And I think it's going to work just fine.
+
+03:59.030 --> 04:03.530
+I'm going to put a new line corrector there that say that.
+
+04:03.710 --> 04:09.900
+OK so that's wrong the python now on a network for I.
+
+04:09.900 --> 04:14.650
+OK we got an unexpected learning rate of course because it's not cameral Kaysing.
+
+04:14.660 --> 04:16.880
+It's learning rate like this.
+
+04:16.880 --> 04:22.710
+Let's say that I think it's going to work just fine.
+
+04:22.760 --> 04:29.690
+And as you can see we have made a thousand iteration then the 2000 iteration as you can see the arrow
+
+04:29.720 --> 04:35.900
+is keep decreasing which means that on our own network is going to make better and better predictions
+
+04:35.900 --> 04:39.530
+as you can see 0 0 0 0 and approximately 1.
+
+04:39.590 --> 04:45.200
+And this is what we are looking for because in the data that we have specified it we would like to learn
+
+04:45.440 --> 04:47.920
+this and logical relationship.
+
+04:48.050 --> 04:55.580
+And as you can see if we make for example 10000 iteration I would like to make 20000 iteration at the
+
+04:55.580 --> 05:02.170
+end of the procedure or the network is capable of learning this and logical relationship.
+
+05:02.240 --> 05:06.410
+So let's see if we make twice as much iterations.
+
+05:06.410 --> 05:09.500
+Maybe it's going to work even better.
+
+05:09.890 --> 05:10.280
+OK.
+
+05:10.290 --> 05:14.310
+There's a huge error at the beginning as you can see it's not going to work just fine.
+
+05:14.390 --> 05:20.800
+But in the course of training or now all of that work is going to make better and better predictions.
+
+05:20.870 --> 05:24.620
+And of course this is what we are looking for and it's very important.
+
+05:24.620 --> 05:31.700
+OK as you can see it's very very little numbers and algates working just fine as you can see the error
+
+05:31.700 --> 05:34.490
+rate is very very small.
+
+05:34.490 --> 05:41.210
+So the final result is mine they say that six times stand to the power of mind a sudden it is a very
+
+05:41.210 --> 05:47.320
+very little number 0 8 0 0 0 0 0 8 6 and something like this.
+
+05:47.330 --> 05:50.820
+As you can see it is very very close to one.
+
+05:50.840 --> 05:57.090
+So the error is two dots three times ten to the power of minus 12.
+
+05:57.110 --> 05:59.130
+So it's working very very fine.
+
+05:59.150 --> 06:06.830
+Let's see if we would like to learn the X or logical relation that it's going to work fine or not.
+
+06:06.830 --> 06:18.110
+So 0 1 0 1 0 for the targets I'm going to clear the console and rerun it again at the beginning of course
+
+06:18.140 --> 06:26.690
+there's a huge arrow term but in the course of learning as you can see we get the 0 1 1 0 resort and
+
+06:26.690 --> 06:28.300
+this is what we are looking for.
+
+06:28.310 --> 06:34.470
+Now real network is capable of learning the given pattern according to the data set.
+
+06:35.120 --> 06:38.380
+OK let's wait for finishing the learning.
+
+06:38.820 --> 06:44.780
+And as you can see we have the approximately zero approximately one approximately one approximately
+
+06:44.780 --> 06:45.170
+zero.
+
+06:45.170 --> 06:48.060
+So we have managed to learn the Axert operation.
+
+06:48.290 --> 06:51.140
+What about the or logical operation.
+
+06:51.400 --> 06:56.800
+OK so let's read on or an hour on that work training by the way.
+
+06:56.810 --> 07:00.440
+You can see that training in our own network is quite slow.
+
+07:00.440 --> 07:06.340
+It's not going to be as fast as training a logistic regression or training for example or support back
+
+07:06.340 --> 07:13.220
+Bactrim machine training and our network is quite slow compared to other learning techniques.
+
+07:13.220 --> 07:18.300
+So that's where it's going to make good predictions for the logical relations or not.
+
+07:18.410 --> 07:20.150
+As you can see it's going to make.
+
+07:20.150 --> 07:25.430
+We can see that finally resolve this it is approximately zero.
+
+07:25.430 --> 07:26.660
+It is approximately one.
+
+07:26.660 --> 07:27.960
+It is approximately one.
+
+07:27.980 --> 07:29.760
+It is approximately warm.
+
+07:29.810 --> 07:31.220
+So this is what we are after.
+
+07:31.220 --> 07:40.290
+We wanted to learn this pattern and we have managed to learn the and the x or Andy or logical relations.
+
+07:40.370 --> 07:44.850
+So thats all about this very very simple hello world program basically.
+
+07:45.030 --> 07:46.230
+Thanks for watching.

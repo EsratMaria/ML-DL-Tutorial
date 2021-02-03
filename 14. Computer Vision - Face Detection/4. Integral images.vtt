@@ -1,0 +1,226 @@
+WEBVTT
+
+00:02.380 --> 00:09.700
+In the previous lecture we have seen a concrete example of how to calculate the delta value for a given
+
+00:09.970 --> 00:10.830
+feature.
+
+00:10.930 --> 00:16.110
+And the closer the value to on the more likely we have found a Haar feature.
+
+00:16.210 --> 00:24.100
+But we have to sum up lots of lots of values because a feature usually contains lots of lots of pixels.
+
+00:24.190 --> 00:28.840
+So not just 8 pixels but for example thousands of pixels.
+
+00:28.870 --> 00:35.770
+So we have to sum up lots of lots of values and that's why we have to talk about integral images.
+
+00:35.950 --> 00:42.970
+OK so the problem is that we have to calculate the average of a given region several times and calculating
+
+00:42.970 --> 00:49.330
+the average has the running time complexity or the door and squared which is a quadratic running time
+
+00:49.330 --> 00:50.160
+algorithm.
+
+00:50.320 --> 00:54.680
+So we can use integral image approach to achieve or one.
+
+00:54.700 --> 01:01.400
+So constant running time complexity you may pose the question that why are there so many operations.
+
+01:01.540 --> 01:06.730
+Because we have to use harsh features with all possible sizes and locations.
+
+01:06.740 --> 01:13.600
+OK so we have been talking about the feature and the line feature but of course we have to use lots
+
+01:13.600 --> 01:16.310
+of lots of variations of these features.
+
+01:16.420 --> 01:19.110
+So the size of these candles may differ.
+
+01:19.120 --> 01:21.510
+For example this is a line feature.
+
+01:21.520 --> 01:25.320
+This is the same line feature but with different size.
+
+01:25.360 --> 01:29.010
+This is the same line feature but with different sizes and so on.
+
+01:29.110 --> 01:35.770
+So that's why they are going to be lots of lots of operations because we own the Jones algorithm uses
+
+01:35.770 --> 01:37.570
+lots of lots of kernels.
+
+01:37.690 --> 01:42.260
+So the number of features can be as high as two hundred thousand.
+
+01:42.350 --> 01:42.940
+OK.
+
+01:42.940 --> 01:48.900
+And every time we have to use a quadratic algorithm as we have seen in the previous lecture.
+
+01:49.000 --> 01:53.040
+So this is why we need to find a more optimal approach.
+
+01:53.140 --> 01:56.860
+And this is why integral image approach came to be.
+
+01:56.980 --> 02:03.730
+So instead of using the original image we are going to transform this image into the integral image
+
+02:04.030 --> 02:12.190
+and a given pixel in the integral image is the sum of all the pixels to the left and above.
+
+02:12.340 --> 02:22.140
+So one dot two is equal to 0.1 closer 0.1 plus 0.2 plus 0.3 plus 0.1 plus 0.4.
+
+02:22.340 --> 02:30.610
+OK let's take another example for example this pixel is the sum of all the pixels in the original image
+
+02:30.850 --> 02:32.990
+to the left and above.
+
+02:33.130 --> 02:37.900
+So 5.3 is equal to the sum of all of these values.
+
+02:37.990 --> 02:40.760
+And why is it good to use that integral image.
+
+02:40.930 --> 02:47.470
+Because if we want to calculate the sum of these values you may pose the question that OK why are we
+
+02:47.470 --> 02:55.180
+after some of these values because when calculating the similarity to the heart feature we have to sum
+
+02:55.180 --> 02:58.920
+up the pixel intensities for a given region.
+
+02:58.960 --> 03:05.830
+So the average of the pixel intensity for that dark region minus the average of the pixel intensities
+
+03:05.890 --> 03:07.750
+for the bright region.
+
+03:07.750 --> 03:14.560
+So that's why when dealing with hard features and viola and Saadawi them we have to sum up lots of lots
+
+03:14.560 --> 03:16.280
+of numerical values.
+
+03:16.300 --> 03:23.830
+OK and if we use the integral image instead of the original one if we want to calculate the sum of these
+
+03:23.830 --> 03:31.090
+values we don't have to consider all of them because if we sum up all of these in the original approach
+
+03:31.330 --> 03:34.480
+we are going to end up with an ordered though and squared.
+
+03:34.510 --> 03:42.430
+So a quadratic algorithm is that we are going to manipulate the values in the integral image because
+
+03:42.490 --> 03:48.030
+the sum of all these numbers are equal to the value of this peaks.
+
+03:48.130 --> 03:53.340
+So we just have to consider the bottom right pixel of the original image.
+
+03:53.530 --> 03:56.200
+OK this is the pixel we are considering.
+
+03:56.350 --> 04:04.560
+So the sum is equal to 0.7 But here we are going to consider all the pixels to the left and above.
+
+04:04.630 --> 04:11.550
+Of course we have to substract 0.5 because we don't care about these values.
+
+04:11.740 --> 04:16.320
+Ok but again we have a lot of lot of unnecessary values.
+
+04:16.420 --> 04:17.790
+So what do we have to do.
+
+04:17.860 --> 04:20.030
+We have to consider this speaks.
+
+04:20.140 --> 04:22.610
+So that's why plot's 0.2.
+
+04:22.750 --> 04:27.590
+And finally we have to substract the value of this pixel.
+
+04:27.670 --> 04:34.390
+And this is how we are able to end up with the sum of these values if we want to calculate the sum of
+
+04:34.480 --> 04:35.620
+six values.
+
+04:35.620 --> 04:42.460
+Of course we can use the original approach but usually in dealing the viola Jonesey algorithm we have
+
+04:42.460 --> 04:46.980
+to calculate the sum of thousands and thousands of values.
+
+04:47.020 --> 04:54.100
+So that's why this approach is more convenient and we can achieve or the one constant running time complexity
+
+04:54.340 --> 04:56.310
+for handling car features.
+
+04:56.380 --> 05:03.600
+So again what do we have to do if we want to find the some of rectangles like this we just have to consider
+
+05:03.660 --> 05:04.680
+the bottom right.
+
+05:04.680 --> 05:10.950
+So on the integral image OK then we have to subtract these values.
+
+05:11.190 --> 05:17.700
+Ok then we have to audit these values because in the next step we are going to eliminate all of these
+
+05:17.700 --> 05:22.670
+pixel values and we end up with Desam what we are looking for.
+
+05:22.750 --> 05:29.610
+Ok so instead of considering all the values in the rectangle as you can see we just have to use for
+
+05:29.610 --> 05:37.260
+values and we have to consider for pixels on the integral image in order to end up with the sun.
+
+05:37.370 --> 05:41.490
+So there's some way that integral image approach is 1.7.
+
+05:41.640 --> 05:49.680
+And if you sum up these values it is 0.9 1.2 1.5 1.6 and 1.7.
+
+05:49.680 --> 05:52.520
+So as you can see it is working fine.
+
+05:52.560 --> 05:57.970
+We are able to end up with an algorithm where the map of the integral image approach.
+
+05:58.080 --> 06:06.120
+And we are able to reduce quadratic running time complexity to order one constant running time complexity.
+
+06:06.120 --> 06:08.460
+And this is exactly what we are after.
+
+06:08.580 --> 06:15.570
+OK in the next lecture we are going to talk about how to use boosting and added boost in order to end
+
+06:15.570 --> 06:21.660
+up with a powerful classification algorithm capable of detecting human faces.
+
+06:21.660 --> 06:22.530
+Thanks for watching.

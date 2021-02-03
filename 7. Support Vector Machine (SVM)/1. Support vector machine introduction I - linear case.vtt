@@ -1,0 +1,322 @@
+WEBVTT
+
+00:00.500 --> 00:06.060
+High in this chapter we are going to talk about support better machines.
+
+00:06.180 --> 00:08.270
+So let's get started.
+
+00:08.520 --> 00:15.060
+Basically what our support actor machines it is a very very popular and widely used supervised learning
+
+00:15.120 --> 00:17.820
+classification algorithm of course.
+
+00:17.820 --> 00:24.390
+The great benefit of ESSWEIN yams is that it can operate Eithan in infinit dimensions.
+
+00:24.540 --> 00:31.150
+So we have been talking about that for example Navy base is working fine in high demand engines but
+
+00:31.150 --> 00:33.570
+supper Pachter machines are even better.
+
+00:33.600 --> 00:37.260
+They can operate even in infinit dimensions.
+
+00:37.470 --> 00:44.460
+It defines a margin or a boundary between the data points in a multi dimensional space.
+
+00:44.520 --> 00:51.690
+And the goal is to find a flat boundary or a so-called hyperplane that leads to a homogeneous partition
+
+00:51.690 --> 00:52.730
+of the data.
+
+00:52.800 --> 00:59.580
+So a good separation is achieved by the hyperplane that has the largest distance to the nearest training
+
+00:59.580 --> 01:07.140
+data point of any class that has the largest distance to the nearest training data point of any class
+
+01:07.340 --> 01:13.410
+since in general the larger the margin over the generalization and all of the classifier.
+
+01:13.410 --> 01:15.880
+So we have to maximize the margin.
+
+01:16.020 --> 01:22.190
+So what's the margin we are going to talk a bit more about what's the margin it's going to be clear.
+
+01:22.380 --> 01:29.530
+So it can be applied to almost everything for credit scoring for any kind of classification problem.
+
+01:29.610 --> 01:32.260
+Optical correct or recognition and so on.
+
+01:32.370 --> 01:35.810
+So classifications or numerical predictions.
+
+01:35.930 --> 01:38.510
+It is widely used in pattern recognition.
+
+01:38.550 --> 01:46.440
+For example identifying cancer or genetic diseases task classification to classify pacts based on the
+
+01:46.440 --> 01:52.690
+language or detecting rare events earthquakes for example or engine failures.
+
+01:52.800 --> 01:56.100
+So support vector machines are working quite fine.
+
+01:56.220 --> 02:00.200
+So first of all let's talk about the linearity separable problem.
+
+02:00.270 --> 02:06.930
+So let's suppose the fact that we have a two dimensional plane which two features the Axum on and the
+
+02:06.960 --> 02:14.250
+X-2 these features can be the size of the House and the price of the House or the crunchiness of a given
+
+02:14.250 --> 02:17.970
+vegetable and the sweetness parameter for a given vegetable.
+
+02:18.060 --> 02:20.560
+It can be any features basically.
+
+02:20.730 --> 02:25.120
+So we have the X1 and x2 features and some data points.
+
+02:25.170 --> 02:27.310
+It is a supervised learning algorithm.
+
+02:27.420 --> 02:32.390
+So we know the labels we have the green dots and the red dots.
+
+02:32.460 --> 02:36.120
+And of course we have defined a boundary or the hyperplane.
+
+02:36.120 --> 02:37.710
+As I said earlier.
+
+02:37.800 --> 02:43.640
+So as you can see there are several opportunities how to choose the hyperplane.
+
+02:43.830 --> 02:49.780
+But we want to find the hyperplane in this case a line that separates the different data points with
+
+02:49.830 --> 02:51.580
+the maximum margin.
+
+02:51.600 --> 02:58.490
+So we would like to make sure that the way of this margin is going to be as big as possible.
+
+02:58.590 --> 03:04.000
+In this case it's going to separate the green dots and the red dot.
+
+03:04.080 --> 03:10.580
+But maybe we are able to find a solution where the width of the margin is even bigger.
+
+03:10.590 --> 03:14.100
+So for example this one is a bit better maybe.
+
+03:14.160 --> 03:16.990
+But here we have the solution we are looking for.
+
+03:17.010 --> 03:23.400
+This is the maximum margin solution and this is why I support vector machines is usually called the
+
+03:23.490 --> 03:30.590
+maximum Margene classifier because we are looking for a hyperplane or a line in just two dimension that's
+
+03:30.600 --> 03:32.540
+going to separate that door.
+
+03:32.550 --> 03:39.560
+So the green dots and the red dots in a way where the margin is as wide as possible.
+
+03:39.740 --> 03:40.550
+OK.
+
+03:40.590 --> 03:46.770
+And you may pose a question there why do we call it support object or machine because we can define
+
+03:46.770 --> 03:54.420
+Saporta vectors the points from each class that are closest to the maximum margin hyperplane and each
+
+03:54.420 --> 03:58.050
+class have at least one Saporta matter of course.
+
+03:58.050 --> 04:05.100
+So as far as the green dots are concerned this is the support vector because it is the closest point
+
+04:05.160 --> 04:06.460
+to the hyperplane.
+
+04:06.540 --> 04:14.880
+All the other green dots are further away from the hyperplane Dandy's Daut as far as the Red Cross is
+
+04:14.880 --> 04:15.570
+concerned.
+
+04:15.570 --> 04:22.390
+We have to support the vectors because let's suppose that they are equally far away from the hyperplane.
+
+04:22.410 --> 04:26.060
+So basically we are able to find the supporting actors.
+
+04:26.220 --> 04:30.940
+And why is it good to know the support of amateurs because we are two actors alone.
+
+04:30.990 --> 04:36.780
+It is possible to reconstruct the hyperplane and it is a very very good information because it means
+
+04:36.780 --> 04:42.630
+that we can store the classification model even when we have millions of features.
+
+04:42.630 --> 04:48.540
+We don't have to bother about the features we just have to store basically the points.
+
+04:48.540 --> 04:56.060
+So the support vectors and we are able to get the classification of modal according to the supper factors.
+
+04:56.410 --> 05:03.180
+OK so another important question is that how to find hyperplane when the problem is in the OR is separable
+
+05:03.450 --> 05:06.690
+we are able to do it with convex hearts for example.
+
+05:06.750 --> 05:12.520
+So the hyperplane is the perpendicular bisector of the shorter slide between the two hall.
+
+05:12.720 --> 05:15.420
+You may pose a question that OK what's next.
+
+05:15.420 --> 05:21.910
+Hall and KMAX hall smallest complex sat that contains all the points for a given class.
+
+05:22.020 --> 05:30.300
+So we create and construct a KMAX hard for the green class and then for the rat class and the hyperplane
+
+05:30.300 --> 05:34.980
+is the perpendicular sector of the shortest line between the two hall.
+
+05:35.070 --> 05:42.720
+So we find the shortest line between the two hall and the perpendicular sector is going to be the hyperplane
+
+05:42.720 --> 05:44.070
+we are looking for.
+
+05:44.070 --> 05:46.380
+So this is a solution to our problem.
+
+05:46.380 --> 05:50.920
+We are able to define the hyperplane we drop off or weps Halas.
+
+05:51.090 --> 05:55.720
+But we are able to do a bit better with the standard mathematical approach.
+
+05:55.770 --> 06:00.870
+So the equation of a hyperplane in and-I imagines is something like this.
+
+06:00.900 --> 06:07.430
+The W vector times the X factor plus V is equal to zero in two dimensions.
+
+06:07.440 --> 06:16.230
+It is the basic y equal to times x laws of the equation where B is the intercept and and is the slope
+
+06:16.230 --> 06:25.800
+of the given line in and imagines we have the so the way it's W on W2 up to W N and we have the features
+
+06:25.860 --> 06:27.250
+x1 x2.
+
+06:27.250 --> 06:28.580
+Up to axon.
+
+06:28.740 --> 06:36.090
+And we just have to make a dot product basically Plus the equal to zero is going to define the hyperplane
+
+06:36.190 --> 06:42.990
+in and imagines of course the aim of the supper Bactrim machine algorithm is to find a w and awaits
+
+06:43.230 --> 06:46.840
+so that the data points will be separated accordingly.
+
+06:46.950 --> 06:52.150
+We are able to make some classification based on the terrain supporting actor or machine.
+
+06:52.320 --> 06:56.840
+OK so two planes can be defined by the equations.
+
+06:56.850 --> 06:58.970
+So these equations basically.
+
+06:59.040 --> 07:04.800
+And what's very important that we have to make sure that the distance between these two planes is as
+
+07:04.800 --> 07:06.450
+big as possible.
+
+07:06.510 --> 07:14.310
+So Waechter geometric defines that the distance between the two planes is equal to two divided by the
+
+07:14.430 --> 07:21.300
+Euclidean norm of the weights and the Euclidean norm is basically the distance from the zero.
+
+07:21.480 --> 07:25.110
+And we want to make the distance as large as possible.
+
+07:25.140 --> 07:28.680
+So we want to maximize the distance between the two planes.
+
+07:28.740 --> 07:31.860
+Hence the name maximum margin classifier.
+
+07:31.920 --> 07:38.450
+And if we want to maximize a disturbance then it means that we have to minimize this term.
+
+07:38.460 --> 07:46.290
+So and after anything optimization is to minimize the norm of d'arte double use actor and we usually
+
+07:46.290 --> 07:52.650
+minimize the one divide by two times the Euclidean norm of the weights squared.
+
+07:52.650 --> 07:53.240
+Why.
+
+07:53.340 --> 07:58.000
+Because it is mathematically convenient to use this kind of formula.
+
+07:58.050 --> 08:04.800
+If we would like to find the minimum for the weights then the minimum is going to be in the same location
+
+08:05.040 --> 08:10.610
+as we would find the minimum for double you Euclidean norm squared.
+
+08:10.740 --> 08:17.960
+So basically this transformation if we multiply it by 0.5 of course it's not going to change the result.
+
+08:17.970 --> 08:22.390
+So quadratic optimization solves this problem quite easily.
+
+08:22.410 --> 08:28.950
+So how we are able to find the optimal weights basically And if we have the weights then we have this
+
+08:28.950 --> 08:33.030
+equation and this equation is going to define the hyperplane.
+
+08:33.090 --> 08:39.030
+And if we have the equation of the hyperplane then we are able to separate the green dots and the red
+
+08:39.030 --> 08:39.430
+dots.
+
+08:39.450 --> 08:45.170
+So we are able to classify other data points based on the training data.
+
+08:45.180 --> 08:48.590
+So that's all about linearly separable problem.
+
+08:48.810 --> 08:49.730
+Thanks for watching.

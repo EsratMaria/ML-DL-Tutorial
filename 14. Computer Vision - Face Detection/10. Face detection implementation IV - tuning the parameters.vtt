@@ -1,0 +1,109 @@
+WEBVTT
+
+00:00.270 --> 00:06.570
+High in this video we are going to talk about the parent teacher as of a detached Malte scale function
+
+00:06.630 --> 00:08.000
+or method.
+
+00:08.040 --> 00:14.510
+So far we have seen the default configuration where we have we we just have to specify the image itself.
+
+00:14.520 --> 00:24.720
+The gray image become battey the color image to Viji are gray and we made our algorithm on the greyscale
+
+00:24.720 --> 00:31.560
+image so we can satisfy the scale factor the neighbor as the minimum size and whatsoever.
+
+00:31.680 --> 00:33.860
+I just use this configuration.
+
+00:34.050 --> 00:42.660
+And first of all I'm going to run it on the standard image that was working fine to be the default parameters
+
+00:42.690 --> 00:46.850
+as well as you can see it's working fine again.
+
+00:47.070 --> 00:53.700
+But let's see for example I would like to run my algorithm on the first image.
+
+00:54.060 --> 01:03.750
+There are some mismatch if you may recall with the default perimeters OK and there is no mismatch anymore
+
+01:03.870 --> 01:11.220
+although as you can see there is again and undetected face so this algorithm is not always working fine
+
+01:11.280 --> 01:18.600
+but for most of the cases they really should to in the scale paramita so far again and again we should
+
+01:18.600 --> 01:26.040
+make a cross-validation like algorithm which means that we tune every perimeter and we come to the conclusion
+
+01:26.040 --> 01:33.650
+that OK this is the Bassat of parameters and that is Billis solution of let's say for example I would
+
+01:33.650 --> 01:41.700
+like to use on the image Swee if I want it it's quite a complex image with lots of lots of faces
+
+01:45.090 --> 01:48.920
+as you see there's a lot of lots of mismatches right now.
+
+01:49.050 --> 01:50.630
+So maybe I should tune it
+
+01:54.180 --> 02:03.290
+if I set it for example to taen the minimum neighbors and I set a scale factor for example 1 that two
+
+02:06.470 --> 02:09.530
+as you can see that now it is a bit better.
+
+02:09.530 --> 02:16.100
+There is no mismatches at all although there are three phases that hasn't been detected.
+
+02:17.210 --> 02:19.310
+So let's see I'm going to set it back.
+
+02:19.310 --> 02:23.370
+For example 0 1 dart 0 1.
+
+02:23.870 --> 02:31.760
+It's going to be very slow but only after a hand it will be able to detect more faces.
+
+02:37.110 --> 02:38.060
+And let's see.
+
+02:38.120 --> 02:40.770
+OK there are lots of lots of mismatches again.
+
+02:40.950 --> 02:46.210
+So maybe I set it back to one that won that was OK.
+
+02:48.190 --> 02:51.160
+But we have managed to detect these faces.
+
+02:51.190 --> 02:56.090
+This is very hard to detect.
+
+03:04.660 --> 03:08.500
+And as you can see this is quite a fine paramita sat.
+
+03:08.530 --> 03:15.970
+So whenever a scale factor is one that won the mean neighbor is tan and I'm inside is served by 30 then
+
+03:15.970 --> 03:19.860
+we are able to detect most of the faces without any mismatch.
+
+03:20.050 --> 03:25.740
+Of course we have one single undetected phase but it's very very hard to detect.
+
+03:26.200 --> 03:29.580
+So our or our fate it actually really is white working fine.
+
+03:29.590 --> 03:34.600
+We just have to find the tune paramita for it.
+
+03:34.660 --> 03:37.840
+So that's all about these tuning parameters.
+
+03:37.840 --> 03:38.640
+Thanks for watching.

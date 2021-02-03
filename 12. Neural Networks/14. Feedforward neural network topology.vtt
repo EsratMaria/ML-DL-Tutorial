@@ -1,0 +1,244 @@
+WEBVTT
+
+00:00.390 --> 00:07.360
+High in this video that see a concrete illustration for multi-layer and out of network.
+
+00:07.470 --> 00:13.110
+So far we have been discussing that we have just an input layer and an output layer.
+
+00:13.140 --> 00:15.760
+Here we have a hidden layer as well.
+
+00:15.780 --> 00:23.190
+So of course the feedforward now our network is the same in the sense that the edges are pointing in
+
+00:23.190 --> 00:25.490
+the direction of the next layer.
+
+00:25.500 --> 00:27.910
+There is no patch pointing back over.
+
+00:28.110 --> 00:28.960
+OK.
+
+00:29.100 --> 00:33.360
+And it was very important that usually we have a so called bias.
+
+00:33.360 --> 00:34.320
+Now we're on.
+
+00:34.380 --> 00:36.110
+So we always need a bias.
+
+00:36.130 --> 00:42.320
+We don't well you warn we are not able to change the well-you and the activation of these now runs.
+
+00:42.390 --> 00:50.670
+Of course the educates pointing from this bias Snoad can be altered of course so it can be changed and
+
+00:50.670 --> 00:57.900
+we have a bias node pointing for the hidden layer and a bias Snoad pointing for the output layer.
+
+00:57.930 --> 01:01.590
+There is no bias nor Poynting for the input layer.
+
+01:01.590 --> 01:02.870
+And why is it good.
+
+01:02.970 --> 01:09.100
+Because sometimes you want to get known zero out Buddh even if the inputs are all zeros.
+
+01:09.120 --> 01:15.450
+So basically we can shift the activation function whereby as units we have been talking about that if
+
+01:15.450 --> 01:22.730
+the x is 0 and 1 is 0 if we do not have a bias unit the output will be zero.
+
+01:22.770 --> 01:26.560
+No matter what educates are present in the network.
+
+01:26.760 --> 01:33.900
+And this is why this bias now Ron is good even if the inputs are all zeros the output can be different
+
+01:34.020 --> 01:35.040
+from zero.
+
+01:35.130 --> 01:40.190
+So we can shift the activation function with the abayas unit.
+
+01:40.410 --> 01:48.760
+OK so we initialize the weights at random and we assign a double well to every single away international
+
+01:48.850 --> 01:55.730
+network for example wanted to 1.5 to 1 a minus to that 5 and so on.
+
+01:55.740 --> 02:02.460
+So we generate random values for the educators and you may pose the question at OK how are we able to
+
+02:02.460 --> 02:07.250
+compute the values and the activations for the hidden layer and our own.
+
+02:07.380 --> 02:08.700
+And for the output.
+
+02:08.700 --> 02:10.800
+And basically it is the same.
+
+02:10.800 --> 02:16.710
+We have to sum up the nowon well use multiply by the educates accordingly.
+
+02:16.710 --> 02:23.250
+So for example for the A We have to take a look at OK what are the incoming edges.
+
+02:23.300 --> 02:30.300
+There's a need come in get from me here so one time so on plus there's an incoming Gach from the X..
+
+02:30.350 --> 02:39.340
+So the activation of the X node times the adulate Plus we had an incoming ad from the Y NO.
+
+02:39.450 --> 02:45.250
+So the well you for the why not times the edge weight coming from the Whino.
+
+02:45.480 --> 02:52.730
+And for example if we have the input 1 and 0 than the sum on a disk.
+
+02:52.740 --> 02:56.020
+Now Rogne will be a one time zone.
+
+02:56.040 --> 03:00.150
+This is the first term plus one times two.
+
+03:00.210 --> 03:04.620
+This is the second term plus zero times 0.5.
+
+03:04.800 --> 03:06.630
+It's equal to 3.
+
+03:06.660 --> 03:13.560
+Of course we have to use activation functions again to calculate the activation level of the Netherlands.
+
+03:13.590 --> 03:17.250
+It yields better to get on our own to be a failure or not.
+
+03:17.250 --> 03:20.220
+In this case we use the step function.
+
+03:20.220 --> 03:28.140
+So if they're given the sum is greater than zero it's going to have their value plus one anyways minus
+
+03:28.140 --> 03:29.040
+one.
+
+03:29.070 --> 03:34.120
+So we use this stat function as you can see if the input is greater than zero.
+
+03:34.160 --> 03:39.620
+It's cross-wind if the input X is smaller than 0 it has the value minus one.
+
+03:39.780 --> 03:45.440
+OK so because stree is greater than zero it will have the value plus 1.
+
+03:45.450 --> 03:47.770
+So a is equal to arm.
+
+03:47.820 --> 03:49.590
+What about the Node B.
+
+03:49.620 --> 03:57.300
+Again we have to take a look at what are the incoming edges we have from the bias snow from the X and
+
+03:57.300 --> 03:58.380
+from the Y.
+
+03:58.500 --> 04:07.950
+So one times two is the first term then one times one is the second term than is 0 times 2 is the search
+
+04:07.950 --> 04:08.600
+term.
+
+04:08.700 --> 04:10.410
+It's equal to three.
+
+04:10.500 --> 04:13.040
+We apply the activation function.
+
+04:13.050 --> 04:15.150
+Three is greater than zero.
+
+04:15.180 --> 04:17.580
+So it's going to be plus one again.
+
+04:17.580 --> 04:22.650
+What about C we have to take a look at what are the incoming edges.
+
+04:22.860 --> 04:31.650
+And we come to the conclusion that we have to sum them up one times 1.5 or stern one times minus two
+
+04:31.650 --> 04:36.390
+or five second term zero times one is the search term.
+
+04:36.480 --> 04:40.610
+It's equal to minus one minus one is smaller than zero.
+
+04:40.680 --> 04:44.590
+So the step function will return minus one.
+
+04:44.820 --> 04:46.610
+What about the old boot node.
+
+04:46.680 --> 04:47.970
+We have to take a look.
+
+04:47.970 --> 04:50.210
+What are the incoming edges.
+
+04:50.490 --> 04:59.440
+And we come to the conclusion that we have to apply one time on first term plus one times one second
+
+05:00.080 --> 05:06.380
+plus one times to search term and the last term is minus one times 1.5.
+
+05:06.770 --> 05:09.460
+If we sum them up it is 2.5.
+
+05:09.620 --> 05:11.640
+2.5 is greater than zero.
+
+05:11.690 --> 05:14.220
+So the output will be plus 1.
+
+05:14.300 --> 05:21.620
+So are was the conclusion that for DS now and never read a single hidden layer if the first input is
+
+05:21.660 --> 05:26.810
+on the second input is 0 then the output will be plus warm.
+
+05:26.810 --> 05:30.510
+So again it's the same when we were discussing.
+
+05:30.560 --> 05:33.660
+Now all networks are without a hidden layer.
+
+05:33.680 --> 05:40.250
+We just had to emptily are we to now roans and an output layer with a single now we're on it is the
+
+05:40.250 --> 05:40.940
+same.
+
+05:40.940 --> 05:48.500
+We have to sum up the incoming Sino-US we have to apply the activation function and so on and feedforward
+
+05:48.740 --> 05:55.760
+and that work we start at the input layer and we keep feeding the information in the direction of the
+
+05:55.760 --> 05:56.750
+next layer.
+
+05:56.810 --> 06:01.760
+Then we keep feeding the information in the direction of the output layer.
+
+06:01.760 --> 06:03.480
+This is how it works.
+
+06:03.740 --> 06:04.880
+Thanks for watching.

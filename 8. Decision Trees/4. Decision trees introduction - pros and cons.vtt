@@ -1,0 +1,94 @@
+WEBVTT
+
+00:01.450 --> 00:07.600
+Let's talk a bit about the advantages as far as disadvantages of decision trees.
+
+00:07.630 --> 00:12.770
+So first of all decision trees are quite easy to understand and interpret.
+
+00:12.780 --> 00:20.950
+Dan it is one of the best approach is to identify more significant varietals and features and the relationships
+
+00:20.950 --> 00:22.600
+between the variables.
+
+00:22.600 --> 00:29.020
+This is what we have been discussing that with that map of entropy we are able to end up with the information
+
+00:29.020 --> 00:36.700
+gain associated with every single feature in the dataset and the information gain with the highest value
+
+00:36.820 --> 00:38.820
+is the most relevant feature.
+
+00:38.930 --> 00:46.340
+OK so this is one of the best approaches to identify most significant variables and features.
+
+00:46.490 --> 00:49.670
+Dan there is no need for data prep processing.
+
+00:49.720 --> 00:57.730
+So for example decision trees are not influenced by outliers so no need to minimax normalization or
+
+00:57.800 --> 01:05.980
+Z transformation as we have seen for nearest neighbor classifier Because decision trees are not influenced
+
+01:05.980 --> 01:07.450
+by outliers.
+
+01:07.600 --> 01:08.370
+OK.
+
+01:08.410 --> 01:16.180
+One of the most important advantages of decision trees is the fact that they can handle numerical variables
+
+01:16.180 --> 01:24.830
+and features as well as categorical variables categorical variables such as yes or no or sunny or rainy.
+
+01:24.880 --> 01:30.610
+So basically this is what we have been discussing in a previous lecture is that we don't have to transform
+
+01:30.640 --> 01:38.230
+these values into numerical values because decision trees can handle categorical values as well.
+
+01:38.230 --> 01:43.100
+OK so this is a very very important feature of decision trees.
+
+01:43.150 --> 01:44.880
+What about the disadvantages.
+
+01:44.920 --> 01:47.990
+Decision trees have the tendency to overfit.
+
+01:48.010 --> 01:50.020
+There are lots of lots of solutions.
+
+01:50.020 --> 01:52.020
+How we can deal with this problem.
+
+01:52.120 --> 01:58.840
+For example we can Solway it with the help of pruning or for example with random forest classifiers.
+
+01:58.840 --> 02:02.650
+So there are more advanced techniques than decision trees.
+
+02:02.650 --> 02:10.330
+The second problem is that decision trees can be unstable because small variations in the dataset might
+
+02:10.330 --> 02:17.230
+result in a completely different tree being generated and generating the optimal tree like structure
+
+02:17.390 --> 02:19.090
+is complete.
+
+02:19.180 --> 02:26.920
+So how Pristiq solutions are needed such as the greedy approach the IATSE algorithm for example relies
+
+02:26.920 --> 02:29.570
+heavily on these greedy approach.
+
+02:29.830 --> 02:36.120
+OK so in the next lecture we are going to talk about the concrete implementation of decision trees.
+
+02:36.130 --> 02:37.000
+Thanks for watching.

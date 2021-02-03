@@ -1,0 +1,199 @@
+WEBVTT
+
+00:01.430 --> 00:06.370
+In the last lecture we have been talking about the data that we are going to use.
+
+00:06.410 --> 00:10.930
+We have been talking about the most relevant statistical measures Dan..
+
+00:10.970 --> 00:19.000
+We have created features as far as income age and loan are concerned we created that target features
+
+00:19.310 --> 00:26.110
+and we have splitted the data set into our training data set and that test data set.
+
+00:26.210 --> 00:32.640
+We are going to train the model on the training data set and we will test the model on the task that
+
+00:32.640 --> 00:33.600
+data set.
+
+00:33.620 --> 00:39.470
+So we just have to instantiate the largest decreed Rashan class as we have seen in the previous lecture.
+
+00:39.470 --> 00:45.680
+We just have to fit the model and what's very important that we have defeated the model on the training
+
+00:45.680 --> 00:47.830
+data set as you can see.
+
+00:47.870 --> 00:55.430
+We are going to use logistic regression and under the hood maximum likelihood estimator is going to
+
+00:55.430 --> 01:03.220
+estimate the optimal B-D 10 meters below one for income B-D to you for age and Beatty's for loan.
+
+01:03.290 --> 01:10.050
+And then we are able to test whether the model is working fine or not on the past dataset.
+
+01:10.160 --> 01:16.640
+So that's why there's going to be the predictions model that fit that predict we are able to predicate
+
+01:16.670 --> 01:25.250
+this is what we have been discussing about what's going to be the output class whether a 0 or 1 0 if
+
+01:25.250 --> 01:32.510
+the client has defaulted and not able to pay back the loan or warn if the client is able to pay back
+
+01:32.510 --> 01:33.120
+the loan.
+
+01:33.170 --> 01:33.970
+OK.
+
+01:34.070 --> 01:42.860
+So we will predict outcomes 0 or 1 on the test dataset and we store it in the predictions and then we
+
+01:42.860 --> 01:51.410
+can use the confusion matrix on the target set and the predictions in order to compare the actual values
+
+01:51.410 --> 01:58.130
+in the dataset so worn 0 0 0 0 and the predictions made by the model.
+
+01:58.160 --> 02:02.480
+So these predictions Storz the predictions made by the model.
+
+02:02.530 --> 02:05.660
+OK so this is what we are going to compare.
+
+02:05.810 --> 02:10.550
+And then we are able to calculate the accuracy of the algorithm.
+
+02:10.550 --> 02:17.660
+Let's talk a bit more about confusion matrix this confusion matrix has as many rows as the possible
+
+02:17.660 --> 02:23.680
+number of outcomes we have a 0 and the one defaulted and not defaulted.
+
+02:23.780 --> 02:31.610
+And of course as many columns as the number of outputs 0 and 1 so 0 for the fourth and you want when
+
+02:31.610 --> 02:36.960
+the client is able to pay back the loan it is the predictions made by the model.
+
+02:37.040 --> 02:42.890
+And as far as the rows are concerned these are the actual values stored in the data set.
+
+02:42.890 --> 02:49.840
+So we have these data set with the actual values 0 1 0 0 0 0 0 1 and so on.
+
+02:49.940 --> 02:57.050
+Okay so this confusion matrix describes the performance of a classification model the diagonal items
+
+02:57.380 --> 02:59.760
+are the correct classifications.
+
+02:59.810 --> 03:08.060
+So where the modal predicate is 0 and the actual value was 0 or when the model predicted one and the
+
+03:08.060 --> 03:13.500
+actual value was 1 in the original credit data that cxxviii data file.
+
+03:13.580 --> 03:18.210
+Ok so the diagonal items are the correct classifications.
+
+03:18.350 --> 03:22.850
+And of course the diagonal items are the incorrect predictions.
+
+03:22.850 --> 03:31.640
+So when the model predicted one by the actual value 0 0 or when the predicate is 0 and the actual outcome
+
+03:31.640 --> 03:32.540
+was warm.
+
+03:32.570 --> 03:40.070
+So the diagonal items are the correct predictions of diagonal items are the incorrect predictions.
+
+03:40.070 --> 03:45.340
+So if we run the algorithm as you can see this is the confusion matrix.
+
+03:45.350 --> 03:52.920
+Five hundred and ten times logistic regression predicted zero and the actual value was 0 in the data
+
+03:52.920 --> 03:59.390
+set 12 times a logistic regression predicted on bought the correct output was 0.
+
+03:59.390 --> 04:07.880
+So diagonal items are the good classifications and the over diagonal items are the incorrect classifications
+
+04:08.240 --> 04:14.480
+and DIS-EASE the accuracy as you can see we have printed out the accuracy score which is very very close
+
+04:14.480 --> 04:20.560
+to our what does it mean that the precision and accuracy of the model is 93 percent.
+
+04:20.600 --> 04:22.700
+It is working quite fine.
+
+04:22.700 --> 04:29.090
+If you run the algorithm several times by the way as you can see the accuracy is going to be different
+
+04:29.180 --> 04:36.410
+90 percent but it is approximately 90 percent 91 percent which is quite good for a machine learning
+
+04:36.410 --> 04:37.220
+algorithm.
+
+04:37.280 --> 04:40.960
+We will come to the conclusion that we have of deep natural networks.
+
+04:41.060 --> 04:47.180
+We are able to outperform machine learning approaches such as logistic regression or supporting actor
+
+04:47.180 --> 04:47.750
+machines.
+
+04:47.900 --> 04:49.420
+But it is a good start.
+
+04:49.430 --> 04:52.360
+90 percent accuracy is quite good.
+
+04:52.400 --> 04:55.380
+So I don't want to repeat myself over and over again.
+
+04:55.460 --> 04:57.330
+But what's the aim of the model.
+
+04:57.380 --> 05:03.920
+That after we have trained the largest the creation model on the huge data set so the credit data that
+
+05:03.930 --> 05:12.820
+yes the file maximum likelihood method has managed to find a beat is zero between ability and ABDC paramita.
+
+05:12.860 --> 05:17.410
+As for the model which means that we are able to make new predictions.
+
+05:17.460 --> 05:26.370
+So if we have a new dataset with income age and Loan logistic regression model is able to predict whether
+
+05:26.460 --> 05:29.520
+the client is going to default or not.
+
+05:29.520 --> 05:36.450
+And what the accuracy of this model 90 percent accuracy which means that it is working quite fine.
+
+05:36.450 --> 05:44.160
+This logistic regression model is a good model to understand the relationship within the data between
+
+05:44.160 --> 05:49.530
+these features in order to produce better the outcome will be 0 or 1.
+
+05:49.560 --> 05:54.260
+So whether the client will default or will be able to pay back the loan.
+
+05:54.450 --> 05:57.890
+So this is logistically direction it is working quite fine.
+
+05:57.900 --> 05:58.740
+Thanks for watching.

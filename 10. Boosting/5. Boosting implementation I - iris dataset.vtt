@@ -1,0 +1,211 @@
+WEBVTT
+
+00:01.010 --> 00:08.090
+So let's take a look at a concrete example how to use and abuse classifier in order to classify the
+
+00:08.590 --> 00:09.580
+data set.
+
+00:09.800 --> 00:12.480
+So first of all we have to read the data set.
+
+00:12.590 --> 00:19.970
+We have the features and target we are going to use 80 percent of the data for the training procedure
+
+00:20.210 --> 00:24.390
+and 20 percent of the dataset is for testing purposes.
+
+00:24.390 --> 00:31.010
+What's important that we have these added classifier imported from stickit learn and there are lots
+
+00:31.010 --> 00:33.800
+of lots of paramita as we can define.
+
+00:33.830 --> 00:40.750
+So if we take a look at the concrete documentation we can see that we have the base estimator we have
+
+00:40.780 --> 00:45.770
+the number of estimators we have a learning grade and we have an algorithm.
+
+00:45.770 --> 00:50.970
+So the base estimator has a different well you Decision Tree classifier.
+
+00:51.050 --> 00:53.910
+Basically this is the underlying model.
+
+00:53.930 --> 01:00.350
+We are going to use in one of the previous lectures we have been talking about a concrete example for
+
+01:00.350 --> 01:05.080
+boosting and we have used decision trees as the underlying model.
+
+01:05.210 --> 01:14.050
+So boosting in our example uses decision Changs So decision trees we did that one in every iteration.
+
+01:14.090 --> 01:17.530
+So it is going to create the first decision tree.
+
+01:17.600 --> 01:22.220
+The second decision tree classifier disarrayed decision tree classifier.
+
+01:22.220 --> 01:29.780
+And finally it is going to combine these classifiers in order to end up with a strong classification
+
+01:29.780 --> 01:30.430
+algorithm.
+
+01:30.500 --> 01:34.040
+So here the underlying model is decision trees.
+
+01:34.100 --> 01:39.420
+So that's why the default value of the Beys estimator is Decision Tree classifier.
+
+01:39.500 --> 01:42.840
+But basically you can use what ever you prefer.
+
+01:42.860 --> 01:45.970
+You can use for example support vector classifier.
+
+01:46.040 --> 01:52.350
+You can use for example a Navy base classifier but usually a decision tree classifier use.
+
+01:52.430 --> 01:56.860
+So that's why the default value is Decision Tree classifier.
+
+01:56.870 --> 02:01.660
+The second important parameter we have to consider is the number of estimators.
+
+02:01.850 --> 02:08.600
+So the maximum number of estimators Edwidge boosting is terminated in case of a perfect fated learning
+
+02:08.600 --> 02:09.280
+procedure.
+
+02:09.290 --> 02:13.040
+It started early and the default value is 50.
+
+02:13.070 --> 02:17.870
+Basically the number of estimators is equal to the number of iterations.
+
+02:17.990 --> 02:25.370
+So we just have to make lots of lots of iterations and in every iteration boosting algorithm is going
+
+02:25.370 --> 02:31.830
+to use a new age X we cloner in order to end up with the strong classifier.
+
+02:31.850 --> 02:37.750
+So that's why in every iteration we are going to use an additional classifier.
+
+02:37.820 --> 02:45.380
+So the number of estimators is equal to the number of our weekly earner's being used for the final capital
+
+02:45.410 --> 02:46.570
+Ajax model.
+
+02:46.760 --> 02:55.370
+OK so if we make and iterations it means that we are going to use an age X we learners in order to come
+
+02:55.370 --> 02:57.310
+up with a strong classifier.
+
+02:57.390 --> 03:01.670
+OK so the number of estimators default value is 50.
+
+03:01.670 --> 03:10.100
+So there are 50 iterations which means that we are going to combine 50 Lerner's decision tree classifiers
+
+03:10.100 --> 03:15.430
+basically in order to end up with the final strong to classify algorithm.
+
+03:15.610 --> 03:17.780
+OK then we have the learning rate.
+
+03:17.810 --> 03:23.880
+So the learning rate shrinks the country Dushan of each classifier by these learning great Peramivir
+
+03:24.030 --> 03:29.810
+the default is ECOs to 1 in our example we will use one as well.
+
+03:29.900 --> 03:32.870
+So we use number of estimators 100.
+
+03:32.900 --> 03:38.930
+So we will make a hundred iterations bought in case of perfect fit the learning procedure established
+
+03:39.070 --> 03:39.570
+early.
+
+03:39.620 --> 03:40.130
+OK.
+
+03:40.130 --> 03:46.880
+And because we do not specify the estimator that's why decision to reclassify or it is going to be used
+
+03:46.970 --> 03:47.940
+under the hood.
+
+03:47.990 --> 03:50.570
+OK let's talk a bit about the algorithm.
+
+03:50.570 --> 03:59.480
+So there are two algorithms as a M M E and as a M and the data are basically Deezer approaches are very
+
+03:59.480 --> 04:02.180
+very similar to Adebayo stagger rhythms.
+
+04:02.210 --> 04:09.320
+There are one or two additional assumptions and basically these assumptions make sure that the final
+
+04:09.320 --> 04:11.890
+algorithms will converge faster.
+
+04:11.930 --> 04:19.940
+OK by the way these S A and E stands for C command shell additive modeling with the multiclass exponential
+
+04:19.940 --> 04:20.950
+loss function.
+
+04:21.020 --> 04:26.570
+So one of the assumptions is that we are going to use an exponential loss function.
+
+04:26.630 --> 04:27.160
+OK.
+
+04:27.170 --> 04:30.640
+So these are the most relevant features we have to deal with.
+
+04:30.830 --> 04:37.940
+And if we run the algorithm with number of estimators 100 learning rate one and the underlying model
+
+04:38.000 --> 04:40.070
+is going to be decision trees.
+
+04:40.160 --> 04:47.960
+So added bous classifier is going to create a hundred weak classifiers and these weak classifiers are
+
+04:47.960 --> 04:53.230
+a decision tree classifiers in order to solve this iris dataset problem.
+
+04:53.330 --> 04:59.650
+So if we run the algorithm the accuracy can be won which means that 100 percent accuracy.
+
+04:59.780 --> 05:07.550
+So the manages to classify all the samples correctly of course sci fi We ran the algorithm the accuracy
+
+05:07.550 --> 05:11.740
+may reduce it is approximately 97 percent accuracy.
+
+05:11.900 --> 05:19.040
+But what's important that we are able to use a boost in order to come up with a very very strong classification
+
+05:19.040 --> 05:25.040
+algorithm as you can see 97 percent accuracy 100 percent accuracy.
+
+05:25.040 --> 05:33.470
+So it is working quite fine if we keep combining the learners so weak decision tree Changs we are able
+
+05:33.470 --> 05:38.180
+to end up with a strong classification algorithm with high accuracy.
+
+05:38.180 --> 05:39.050
+Thanks for watching.

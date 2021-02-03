@@ -1,0 +1,205 @@
+WEBVTT
+
+00:01.740 --> 00:08.820
+Hoyle in the previous lecture we have been talking about one of the most important unsupervised learning
+
+00:08.820 --> 00:12.990
+clustering algorithms the so-called K means clustering.
+
+00:12.990 --> 00:19.670
+And in this little example I would like to show you how to deal with K means clustering in Python.
+
+00:19.890 --> 00:22.700
+So first of all let's create blobs.
+
+00:22.740 --> 00:31.170
+Basically I would like to generate 100 samples 100 points in the two dimensional plane with five centers.
+
+00:31.170 --> 00:33.210
+This random state is equal to zero.
+
+00:33.210 --> 00:34.900
+It's basically just the seed.
+
+00:34.910 --> 00:42.720
+This make Blorb function uses a random number generator to generate random coordinates on a two dimensional
+
+00:42.720 --> 00:43.340
+plane.
+
+00:43.350 --> 00:45.250
+So that's why we need a seed.
+
+00:45.510 --> 00:49.150
+And we can define a standard deviation of the cluster.
+
+00:49.230 --> 00:52.230
+For example I initialize it to be two.
+
+00:52.410 --> 00:54.630
+Ok then I would like to show we.
+
+00:54.630 --> 01:03.330
+So we have to call the BLT that scatterplot this X is going to store the first coordinate and the second
+
+01:03.330 --> 01:03.870
+coordinates.
+
+01:03.880 --> 01:10.740
+So that's why every single item as far as the first column is concerned and every single item as far
+
+01:10.740 --> 01:12.660
+as the second column is concerned.
+
+01:12.720 --> 01:15.900
+The ass defines the size of the dots.
+
+01:15.930 --> 01:18.890
+So let's see and go to court.
+
+01:19.010 --> 01:22.050
+Say that and let's run this algorithm.
+
+01:22.050 --> 01:25.080
+So k means one data point.
+
+01:25.470 --> 01:28.550
+OK we have managed to generate these points.
+
+01:28.560 --> 01:35.580
+There are a hundred samples or 100 points on these two dimensional plane and we would like to create
+
+01:35.640 --> 01:39.500
+five clusters with the help of k means clustering.
+
+01:39.690 --> 01:42.940
+So we just have to instantiate these k means.
+
+01:43.050 --> 01:47.720
+I guess that we can specify the and samples is equals to 5.
+
+01:47.710 --> 01:50.850
+Maybe it is a bit better because here we can define that.
+
+01:50.850 --> 01:53.470
+How many clusters we are looking for.
+
+01:53.580 --> 01:56.960
+We would like to find for example three clusters.
+
+01:57.030 --> 02:01.550
+We just have to call the estimator that fit on the data set.
+
+02:01.650 --> 02:06.910
+And of course we can predict with the map of the predicate function as usual.
+
+02:06.930 --> 02:11.160
+So we have the data set and we have the predicted labels.
+
+02:11.250 --> 02:16.470
+And that's why in our scatterplot we can use the original data set.
+
+02:16.470 --> 02:23.460
+So basically the points and we can use color codes because we are going to assign different colors to
+
+02:23.460 --> 02:25.140
+different clusters.
+
+02:25.140 --> 02:30.020
+This is the size of the dots OK and basically we would like to use these colors.
+
+02:30.030 --> 02:30.910
+OK.
+
+02:30.930 --> 02:33.560
+And of course we have to call the show method.
+
+02:33.660 --> 02:39.230
+So I'm going to close it and I'm going to run or algorithm.
+
+02:39.300 --> 02:42.830
+What does it mean that we are looking for three clusters.
+
+02:42.840 --> 02:44.350
+We have the data set.
+
+02:44.400 --> 02:45.840
+We doubt any labels.
+
+02:45.840 --> 02:52.020
+This is what we have been discussing it's very important that it is an unsupervised machine learning
+
+02:52.050 --> 02:52.860
+algorithm.
+
+02:52.950 --> 02:58.400
+We just have the data set and the algorithm is going to find the Klosters for us.
+
+02:58.410 --> 03:01.540
+So what are going to be the clusters.
+
+03:01.860 --> 03:02.420
+OK.
+
+03:02.430 --> 03:03.540
+And samples.
+
+03:03.720 --> 03:05.950
+I guess it's not going to be fine.
+
+03:06.120 --> 03:10.920
+And of course already for that because not the samples but the clusters.
+
+03:11.010 --> 03:14.260
+So the number of clusters are equals is.
+
+03:14.470 --> 03:18.030
+Well that's clear the console and we run the algorithm.
+
+03:18.100 --> 03:20.200
+OK this is the data set.
+
+03:20.250 --> 03:25.770
+And as you can see Kamins clustering has managed to found three clusters.
+
+03:25.800 --> 03:29.700
+What if we would like to find for example five clusters.
+
+03:29.760 --> 03:31.660
+It's going to work just fine.
+
+03:31.740 --> 03:34.500
+OK let's rerun the algorithm.
+
+03:34.500 --> 03:36.330
+This is the dataset again.
+
+03:36.420 --> 03:44.560
+And as you can see now k means clustering ghagra them is able to find one two three four five clusters.
+
+03:44.580 --> 03:50.150
+So basically it's very important because we have managed to construct an algorithm the so-called Kamins
+
+03:50.160 --> 03:57.980
+clustering that's capable of analyzing the data and create the Klosters on its own in the next lecture.
+
+03:58.020 --> 04:04.620
+We are going to talk about text clustering and natural language processing and Kamins clustering will
+
+04:04.620 --> 04:11.760
+prove to be very very important because we are able to closter the tax documents articles on the web
+
+04:11.970 --> 04:18.810
+without human intervention and we don't have to make a data set because it is not a supervised learning
+
+04:18.810 --> 04:26.100
+algorithm that needs the training data we the training targets here we just need the data set and the
+
+04:26.100 --> 04:30.320
+algorithm itself is going to create the Klosters accordingly.
+
+04:30.450 --> 04:37.230
+So that's all about K means clustering in the next lecture we are going to talk about tax flustering.
+
+04:37.230 --> 04:38.140
+Thanks for watching.

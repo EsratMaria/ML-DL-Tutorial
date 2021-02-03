@@ -1,0 +1,130 @@
+WEBVTT
+
+00:00.780 --> 00:08.160
+High in this video I would like to tell a few words about the principal component analyzes So let's
+
+00:08.160 --> 00:09.380
+get started.
+
+00:09.780 --> 00:16.620
+Basically the principal component analyzes give us a low dimensional representation of the data that
+
+00:17.040 --> 00:25.260
+it is able to find linear combinations of features or variables that are mutually uncorrelated and basically
+
+00:25.330 --> 00:29.970
+the linearly uncorrelated variables are the principal components.
+
+00:29.970 --> 00:36.140
+So for example we have the haze in centimeter and we have the Haseeno meters.
+
+00:36.300 --> 00:41.010
+They are not independent of course so we can't get rid off a single feature.
+
+00:41.010 --> 00:46.680
+For example we can't get rid of the Haseena centimeter or we can get rid of the Haithem meters because
+
+00:46.680 --> 00:48.080
+they are not independent.
+
+00:48.120 --> 00:55.560
+We don't have to include both of the features so we can get rid of several unnecessary features and
+
+00:55.560 --> 01:02.790
+we can keep the important ones basically principal component and alliances it is also good for visualisation
+
+01:03.120 --> 01:10.290
+because we are able to represent high dimensional data or with low dimensional representation and you
+
+01:10.290 --> 01:13.620
+may pose the question that OK why is it that important.
+
+01:13.620 --> 01:19.440
+For example we have been talking about linear regression and we have come to the conclusion that we
+
+01:19.440 --> 01:24.250
+can use gradient descent and we can use matrix operations.
+
+01:24.330 --> 01:31.170
+But if the number of features are high the matrix operations are not going to be that efficient but
+
+01:31.170 --> 01:37.440
+maybe if we reduce the number of features with the help of principle component analyzes we can use the
+
+01:37.440 --> 01:39.490
+matrix representation as well.
+
+01:39.600 --> 01:45.810
+Or for example we have been talking about supporting actor machines OK supper Raptr machines can handle
+
+01:45.990 --> 01:47.950
+even infinit dimensions.
+
+01:48.060 --> 01:55.700
+But for example logistic regression or name this algorithm are not going to work fine in higher dimensions.
+
+01:55.860 --> 02:01.860
+But if we are able to reduce the number of dimensions and basically if we reduce the number of features
+
+02:02.100 --> 02:09.060
+then we reduce the number of dimensions we can do if with principle component analyzes then we can use
+
+02:09.150 --> 02:14.620
+logistically aggression and made his approach not just some back to our machines.
+
+02:14.850 --> 02:21.540
+So sometimes it can be very important to get rid of the unnecessary features and we can do it with this
+
+02:21.540 --> 02:23.140
+PCA.
+
+02:23.760 --> 02:27.830
+So for example we have two features the X1 and x2.
+
+02:28.020 --> 02:35.130
+And as you can see they are not independent in the sense that even the value of x 1 is small than the
+
+02:35.130 --> 02:37.150
+value for x2 is small.
+
+02:37.170 --> 02:43.990
+OK if the value for x y is great then the well you of x2 will be high as well.
+
+02:44.100 --> 02:47.490
+So there's a linear correlation between the two features.
+
+02:47.580 --> 02:52.970
+And that's why it's going to be the direction of the first principal component.
+
+02:52.980 --> 02:59.270
+So this is the direction and we have another correlation basically in this direction.
+
+02:59.370 --> 03:03.390
+So this is the second principle component direction.
+
+03:03.390 --> 03:05.460
+How are we able to compute it.
+
+03:05.490 --> 03:14.040
+PCA can be done by eigenvalue decomposition of a data covariance or correlation matrix or we can use
+
+03:14.040 --> 03:17.650
+singular value decomposition of the data matrix.
+
+03:17.700 --> 03:19.710
+Usually after means centering.
+
+03:19.710 --> 03:26.130
+So we have to make some data transformation as we have seen for the nearest neighbor algorithm.
+
+03:26.130 --> 03:32.010
+So this is why sometimes it's important to use principal component analyzes because we are able to reduce
+
+03:32.010 --> 03:36.040
+the dimensions how by reducing the number of features.
+
+03:36.090 --> 03:40.710
+And if you have fewer features than our algorithms will be faster.
+
+03:40.710 --> 03:47.010
+Such as linear regression logistic regression or naive the algorithm answer watching.

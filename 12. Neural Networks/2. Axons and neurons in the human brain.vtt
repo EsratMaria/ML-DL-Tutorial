@@ -1,0 +1,304 @@
+WEBVTT
+
+00:01.000 --> 00:08.100
+High in this chapter we are going to talk about the terror at Tikal background for artificial neural
+
+00:08.100 --> 00:09.010
+networks.
+
+00:09.060 --> 00:11.480
+So let's get started.
+
+00:12.090 --> 00:18.960
+Basically you may pose the first question that OK why do we need artificial intelligence or artificial
+
+00:18.970 --> 00:25.460
+now really not at all we have come to the conclusion that computers can solve several problems.
+
+00:25.530 --> 00:32.960
+For example graph related problems how to calculate the shortest path how to create a spanning tree.
+
+00:33.060 --> 00:36.930
+And these algorithms have proved to be very very important.
+
+00:36.930 --> 00:40.210
+For example Google Maps and something like this.
+
+00:40.330 --> 00:47.790
+Then for example sorting arrays or any kind of optimization problems numerical methods and so on we
+
+00:47.790 --> 00:52.530
+know how to do it we know how to solve it with a given algorithms.
+
+00:52.560 --> 00:55.500
+Then why do we need artificial intelligence.
+
+00:55.500 --> 01:02.240
+Because there are other problems that cannot be defined with an exact mathematical algorithm.
+
+01:02.310 --> 01:07.610
+For example facial recognition natural language processing and so on.
+
+01:07.740 --> 01:12.570
+We don't have a well defined algorithm for these kinds of problems.
+
+01:13.020 --> 01:13.780
+OK.
+
+01:13.830 --> 01:20.630
+For humans this problem seems much more easier than graph algorithms or solving differential equations
+
+01:20.640 --> 01:22.680
+for example with longer quote them.
+
+01:22.860 --> 01:30.690
+And this is why artificial intelligence is quite counter-intuitive because for us humans these problems
+
+01:30.750 --> 01:35.140
+are very very easy facial recognition language processing.
+
+01:35.160 --> 01:36.990
+OK it's quite easy.
+
+01:37.230 --> 01:43.500
+But for computers it's much more difficult than for example solving the differential equation because
+
+01:43.500 --> 01:50.500
+for differential equations we have a well-defined numerical algorithms and we just have to program it.
+
+01:50.550 --> 01:54.400
+We just have to implemented in C C++ or Java.
+
+01:54.570 --> 02:01.320
+But for facial recognition we don't have a well-defined algorithm for these kinds of problems.
+
+02:01.350 --> 02:09.210
+And basically this is why artificial intelligence has to be for example how to be able to digitalize
+
+02:09.330 --> 02:17.430
+hand written correctors how to do nature of language processing or how to recognize given faces.
+
+02:17.430 --> 02:19.220
+These are the main problems.
+
+02:19.290 --> 02:22.470
+Why artificial intelligence has came to be.
+
+02:22.530 --> 02:29.910
+And the intuition that if we try to mimic how nervous system of a human works or how a human learns
+
+02:29.920 --> 02:34.710
+saying maybe we are able to achieve these problems with computers as well.
+
+02:34.710 --> 02:39.870
+This is what we have been discussing that for humans these problems are quite easy.
+
+02:39.960 --> 02:47.670
+Then maybe if we mimic how a human learns for example then these algorithms is going to be capable of
+
+02:47.670 --> 02:49.990
+learning these things quite easily.
+
+02:50.220 --> 02:52.690
+And this is why AI has came to be.
+
+02:52.770 --> 02:59.000
+We came to the conclusion that for several problems the orthodox approach is not feasible.
+
+02:59.040 --> 03:03.270
+And if you are familiar with the big data it is very very similar.
+
+03:03.270 --> 03:06.500
+So this is how big data has came to be as well.
+
+03:06.510 --> 03:13.950
+We have huge data sets and the way we handle data sets in the past with relational databases is not
+
+03:13.950 --> 03:15.730
+going to work this time.
+
+03:15.810 --> 03:18.090
+So this is why we need a different approach.
+
+03:18.180 --> 03:23.460
+This is how big data has came to be and it is the same for artificial intelligence.
+
+03:23.460 --> 03:29.400
+We know how to create sorting algorithms a graph related algorithms but we have come to the conclusion
+
+03:29.550 --> 03:37.090
+that for facial recognition natural language processing we have to come up with a different approach.
+
+03:37.110 --> 03:40.370
+We had artificial neural networks for example.
+
+03:40.440 --> 03:47.970
+So as the name suggests narrow networks are inspired by biological and now run networks we represent
+
+03:48.000 --> 03:48.290
+each.
+
+03:48.290 --> 03:48.820
+Now we're on.
+
+03:48.840 --> 03:49.900
+We didn't know that.
+
+03:49.950 --> 03:53.550
+It is basically a directed or an N directed graph.
+
+03:53.550 --> 03:57.430
+So this is the model how we represent an out of network.
+
+03:57.430 --> 04:05.220
+Their design enables them to process information in a similar way to our own biological brains.
+
+04:05.280 --> 04:11.970
+So each edge has a weight and these now all networks are capable of learning by changing the weight
+
+04:12.000 --> 04:13.230
+of their connections.
+
+04:13.230 --> 04:16.850
+We are going to talk a lot more about it don't worry.
+
+04:17.250 --> 04:23.250
+And other approaches the supporting actor machines and the support spectrum machines and other similar
+
+04:23.250 --> 04:31.170
+methods for example linear classifiers and so on gradually over to now Real Networks as far as machine
+
+04:31.170 --> 04:32.880
+learning is concerned.
+
+04:32.880 --> 04:39.630
+So in the past Saporta better machines were considered to be better but with the advent of deep learning
+
+04:39.840 --> 04:43.640
+basically deep learning is a Mythili are now on network.
+
+04:43.770 --> 04:47.650
+Now real networks are becoming more and more popular again.
+
+04:47.850 --> 04:57.480
+And in the 21st century in 2016 2017 now what our networks can do better than supporting actor machines.
+
+04:57.480 --> 05:05.120
+So of course the model is the now so of course the basic building block for a biological in our network
+
+05:05.180 --> 05:07.240
+is that now we're in the south.
+
+05:07.370 --> 05:14.480
+So now we're on the unit with the brain uses to process information and each node can make contact with
+
+05:14.480 --> 05:17.540
+several thousand are now loans.
+
+05:17.540 --> 05:25.220
+So this is a single on our own and we have the Aksenov basically and the axen is going to make the connection
+
+05:25.280 --> 05:27.340
+between two now runs.
+
+05:27.470 --> 05:34.010
+And of course it transmitted the Alak to Ixion or from now on to now we're on CONNECT THE now runs and
+
+05:34.010 --> 05:37.910
+the boundary of the now we're on is the so-called cell membrane.
+
+05:38.000 --> 05:39.720
+There is a war that is.
+
+05:39.830 --> 05:45.500
+The membrane potential between the inside and the outside of the membrane and if the input is large
+
+05:45.500 --> 05:52.760
+enough an action potential is then generated with the help of the axen and with the help of the axen
+
+05:52.880 --> 05:56.060
+it can reach several other now runs.
+
+05:56.060 --> 06:01.510
+So what's more important that OK we don't have to bother about the biological background.
+
+06:01.580 --> 06:08.180
+But what's very very important to see that basically this is the model we are going to implement in
+
+06:08.180 --> 06:16.100
+a programming language that we have now on the now on is going to be a class in Java for example and
+
+06:16.100 --> 06:21.680
+it's going to have the features as we have discussed for the biological and that we're on.
+
+06:21.680 --> 06:28.150
+Then we have the axen basically the axon is the connection between the now roans Here's And now we're
+
+06:28.160 --> 06:34.070
+on here's an hour on and the X and is going to connect both of them.
+
+06:34.160 --> 06:41.600
+We are going to have the connections between the artificial now loans and this is why I said that basically
+
+06:41.720 --> 06:46.070
+in the model in a programming language it's going to be a graph.
+
+06:46.130 --> 06:53.480
+We will have vertices or nodes and we will have the connections or the edges between these Gidon nodes.
+
+06:53.480 --> 07:00.030
+And what's so important that now rose only failure when input is larger than a given threshold.
+
+07:00.230 --> 07:03.990
+So firing doesn't get bigger as the stimulus increases.
+
+07:04.130 --> 07:06.480
+It's an all or nothing arrangement.
+
+07:06.620 --> 07:11.260
+This is what we are going to model with the help of activation functions.
+
+07:11.480 --> 07:18.240
+If they're given input value for the activation function is greater than the threshold than the now
+
+07:18.300 --> 07:20.180
+on is going to fire.
+
+07:20.330 --> 07:25.910
+And if that given activation is smaller than a threshold nothing happens.
+
+07:25.910 --> 07:32.390
+So again I don't want to repeat myself over and over again but it's important to see that we are going
+
+07:32.390 --> 07:39.080
+to take the biological nervous system and we are going to build or model according to the biological
+
+07:39.200 --> 07:40.220
+nervous system.
+
+07:40.220 --> 07:40.820
+Why.
+
+07:40.910 --> 07:46.790
+Because we know for certain that humans can learn these things quite easily.
+
+07:46.790 --> 07:54.710
+We are able to recognize correct as numerical digits we are able to recognize human faces we are able
+
+07:54.710 --> 08:03.290
+to do natural language processing and so on and maybe if we model the biological nervous system then
+
+08:03.320 --> 08:07.890
+or algorithms are going to be able to do these things for us.
+
+08:08.120 --> 08:12.270
+So we are going to have the activation of functions to mimic.
+
+08:12.290 --> 08:19.310
+Now Ron's behavior and we are going to have the now rowans of course and the X is basically the connection
+
+08:19.490 --> 08:21.770
+between the and our own as well.
+
+08:21.770 --> 08:22.700
+Thanks for watching.

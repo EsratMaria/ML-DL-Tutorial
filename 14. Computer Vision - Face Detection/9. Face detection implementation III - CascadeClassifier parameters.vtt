@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00.390 --> 00:08.400
+Buy in this video we are going to talk about the parameters for Phasee action and for these cascade
+
+00:08.400 --> 00:16.200
+classifier as we have discussed earlier we have these cascade classify or detax multi scale and we just
+
+00:16.200 --> 00:23.400
+specify the gray image and we came to the conclusion that OK sometimes it works fine that sometimes
+
+00:23.400 --> 00:24.580
+it does not.
+
+00:24.750 --> 00:27.110
+And that's why we have to tune the perimeter.
+
+00:27.150 --> 00:29.730
+And there are several parameters for the pack.
+
+00:29.750 --> 00:32.420
+With the scale matter or function.
+
+00:33.140 --> 00:39.630
+And first of all the most important one is the so-called scale factor since some faces may be closer
+
+00:39.630 --> 00:46.350
+to the camera they would appear bigger than our faces in the background and a scale factor compensates
+
+00:46.350 --> 00:48.050
+for this a fact.
+
+00:48.090 --> 00:58.100
+So specifying added the scale factor specifies how much the image size is use at each image scale.
+
+00:58.230 --> 01:06.470
+So the model has a fixed sized defined doing the training in a so-called Haret cascade frontal face.
+
+01:06.600 --> 01:10.040
+That X-amount we have discussed in the previous video.
+
+01:10.360 --> 01:19.920
+MRL parameters and by rescaling the input image you can resize a larger face the smaller one making
+
+01:19.920 --> 01:22.520
+it detectable by the algorithm.
+
+01:22.530 --> 01:25.730
+So that's why the scale factor is very important.
+
+01:25.800 --> 01:28.690
+The value has to be greater than one.
+
+01:28.890 --> 01:35.830
+So the standard value is between 1 and 1 to 1 4 so this is the standard region.
+
+01:36.030 --> 01:40.510
+If it's small of course it has to be greater than 1 as I said earlier.
+
+01:40.760 --> 01:47.610
+But if it's small the algorithm will be slow Zane's it is more sorrow if it's high.
+
+01:47.610 --> 01:53.450
+The algorithm will be faster but with the risk of missing some faces altogether.
+
+01:53.670 --> 02:01.290
+So if there are some undetected faces then we should reduce the scale factor.
+
+02:01.440 --> 02:05.380
+We have some other paramita such as the main neighbors.
+
+02:05.430 --> 02:11.310
+It defines the minimum neighbor as the name suggests so specifying how many neighbors each candidate's
+
+02:11.310 --> 02:14.330
+weak tangles should have to retain it.
+
+02:14.520 --> 02:18.210
+This cascade classified allow freedom works.
+
+02:18.370 --> 02:24.540
+It goes from left to right step by step and we have all this main neighbor we specify that how many
+
+02:26.010 --> 02:32.420
+rectangles should have to be painted and a value interval is from 3 to 6.
+
+02:32.430 --> 02:39.020
+The higher the values the lads the actions they are but with higher quality.
+
+02:39.570 --> 02:43.430
+So maybe we should too sometimes the mean neighbor has perimeters.
+
+02:43.710 --> 02:50.100
+The flag stands for it's kind of a hairy stick which reject some image regions that contain too few
+
+02:50.100 --> 02:54.710
+or too much edges and thus cannot contain the search object.
+
+02:54.780 --> 03:00.270
+And if we know it we can skip it without further iterations.
+
+03:00.270 --> 03:07.470
+So it's kind of how restack It's like pruning a tree that we are familiar with again these chests and
+
+03:07.470 --> 03:08.750
+genes and so on.
+
+03:08.910 --> 03:14.670
+But it's kind of a hairy stick we prune and we get rid of things that that we are sure that it's not
+
+03:14.670 --> 03:16.200
+going to be a face.
+
+03:16.230 --> 03:19.950
+And why is it gold because Uralic them will be faster.
+
+03:19.950 --> 03:26.340
+And we have the minimum size and the maximum size them in size they find are the objects smaller than
+
+03:26.420 --> 03:26.810
+a dam.
+
+03:26.820 --> 03:29.450
+This means size will be ignored.
+
+03:29.580 --> 03:34.470
+So we can find one of the smallest objects we want to recognize.
+
+03:34.470 --> 03:36.870
+I think the standard is 30 by 30.
+
+03:37.020 --> 03:38.900
+And of course we have a maximum size.
+
+03:39.060 --> 03:43.060
+So objects larger than the maximum size will be ignored.
+
+03:43.080 --> 03:53.460
+So if we have resample faces huge faces then we should consider that the maximum size should be tuned
+
+03:53.580 --> 03:54.290
+and so on.
+
+03:54.300 --> 04:01.770
+If we have very little face as he wanted the on our images then we should use the minimum size to be
+
+04:01.770 --> 04:03.350
+able to detect it.
+
+04:03.360 --> 04:06.930
+So these are the most important factors and parameters.
+
+04:06.930 --> 04:07.740
+Thanks for watching.

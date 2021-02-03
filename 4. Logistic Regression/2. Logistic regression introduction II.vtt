@@ -1,0 +1,151 @@
+WEBVTT
+
+00:01.540 --> 00:05.400
+Let's talk a bit about maximum likelihood estimator.
+
+00:05.530 --> 00:11.830
+So we have been talking about in the previous lecture that we have to find a better parent leaders such
+
+00:11.860 --> 00:17.820
+as B to zero B to one in order to feed the logistic regression model.
+
+00:17.830 --> 00:24.220
+There are several ways to find these optimal parameters but usually the maximum likelihood method is
+
+00:24.220 --> 00:24.730
+used.
+
+00:24.790 --> 00:31.450
+OK so this is a method of estimating the parameters what parameters that beat up have in meters of a
+
+00:31.450 --> 00:32.920
+statistical model.
+
+00:32.920 --> 00:37.260
+So in this case the statistical model is logistic regression.
+
+00:37.510 --> 00:45.130
+A given observation by finding the parameter values that maximize the likelihood of making the observations
+
+00:45.220 --> 00:46.940
+given the pairing meters.
+
+00:46.960 --> 00:49.120
+So we just need a data set.
+
+00:49.240 --> 00:56.260
+In our example we are going to use this credit data Dotsie as we as you can see there are lots of lots
+
+00:56.260 --> 00:57.290
+of samples.
+
+00:57.370 --> 01:05.200
+Concerning the income age loan loan to income ratio and whether they given the client has defaulted
+
+01:05.230 --> 01:05.980
+or not.
+
+01:06.010 --> 01:11.880
+So that target of triable is going to be the default rate is 0 and 1 avail us.
+
+01:11.890 --> 01:15.220
+So it is a binary classification problem.
+
+01:15.340 --> 01:23.290
+The output can be 0 or 1 0 if the client has defaulted and not able to pay back the loan.
+
+01:23.380 --> 01:26.750
+And one if the client is able to pay back the loan.
+
+01:26.800 --> 01:32.830
+OK so first we have to construct the so-called likelihood function this likelihood function or we'll
+
+01:32.830 --> 01:36.370
+have the BD paramita earth and the x values.
+
+01:36.430 --> 01:44.530
+What about the x values the x values are the balance on the credit card or age gender demographics loan
+
+01:44.530 --> 01:46.430
+to income ratio and so on.
+
+01:46.540 --> 01:52.140
+So these are the x values and of course we have to be the perimeter as we are after.
+
+01:52.180 --> 01:58.480
+Okay by the way we use the logarithm of the likelihood function which is called the log likelihood function
+
+01:58.750 --> 02:05.440
+because it is much more easier to optimize the logarithm of the likelihood function instead of dealing
+
+02:05.440 --> 02:07.940
+with the likelihood function exclusively.
+
+02:08.140 --> 02:12.190
+Okay so the aim is the same as we have seen for linear regression.
+
+02:12.280 --> 02:17.620
+We are after the optimal bead of values that maximize the likelihood function.
+
+02:17.740 --> 02:24.820
+So we are after the are the max as far as the Beatles are concerned for the likelihood function and
+
+02:24.850 --> 02:27.710
+we are after these optimal better parameters.
+
+02:27.790 --> 02:35.770
+Okay by the way we dont have to know about maximum likelihood method because it is going to do everything
+
+02:35.770 --> 02:36.460
+for us.
+
+02:36.460 --> 02:42.940
+We will see during the implementation that using logistic regression and fitting the model with maximum
+
+02:42.940 --> 02:45.380
+likelihood method is quite easy.
+
+02:45.640 --> 02:51.460
+So the likelihood function as far as logistic regression is concerned is something like this.
+
+02:51.580 --> 02:54.190
+We have to deal with the p values.
+
+02:54.310 --> 02:56.050
+What about these p values.
+
+02:56.200 --> 03:01.900
+We just have to use the sigmoid function as we have discussed in the previous lecture one divided by
+
+03:01.900 --> 03:06.630
+one plus each to the power of minus X transpose time in B.
+
+03:06.700 --> 03:09.520
+Basically we are able to express this formula.
+
+03:09.520 --> 03:18.550
+So between 0 plus a B to 1 times X1 applause B two times 2 up to beat and times X and we are able to
+
+03:18.550 --> 03:23.860
+use this formula instead x y prime time is the beat of values.
+
+03:23.860 --> 03:25.720
+OK but it is the same.
+
+03:25.750 --> 03:32.740
+So this estimate is usually obtained by using the iterative algorithm Muto Rosseau math.
+
+03:32.860 --> 03:39.640
+We the map of this numerical method we are able to find the extremum of a given function.
+
+03:39.700 --> 03:44.000
+In this case we would like to maximize the likelihood function.
+
+03:44.200 --> 03:47.170
+Ok so this is what's happening under the hood.
+
+03:47.320 --> 03:50.650
+But Skateland is going to do everything for us.
+
+03:50.650 --> 03:51.610
+Thanks for watching.

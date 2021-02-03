@@ -1,0 +1,148 @@
+WEBVTT
+
+00:00.780 --> 00:06.550
+So far we have seen how to calculate the data for the output node.
+
+00:06.660 --> 00:09.210
+Why is it important to calculate the data.
+
+00:09.240 --> 00:16.110
+Because if we can calculate the gradient and we can decide that how much we should adjust the actuates
+
+00:16.290 --> 00:24.930
+for the national network as you can see we have a completely different equation that in order to be
+
+00:24.930 --> 00:28.490
+able to calculate the data for the hidden layer.
+
+00:28.650 --> 00:34.260
+It's going to be equal minus the derivative of the sigmoid function.
+
+00:34.470 --> 00:42.390
+And of course we have to apply it for the some times the sum of the weights and previously are doubters.
+
+00:42.630 --> 00:49.410
+So because we have a previously or data because this is the output layer we have already calculated
+
+00:49.410 --> 00:49.850
+it.
+
+00:50.010 --> 00:57.320
+And if we want to calculate this node data or data output as we call it for this given now we're on
+
+00:57.540 --> 00:59.680
+we just have to use this equation.
+
+00:59.820 --> 01:00.400
+Okay.
+
+01:00.480 --> 01:06.300
+As I said earlier sometimes this negative value is here sometimes it can be mated.
+
+01:06.390 --> 01:08.880
+It depends on how we define the errors.
+
+01:08.920 --> 01:09.960
+Okay.
+
+01:10.230 --> 01:17.120
+So in this case the data for this node is equal to the derivative of the sigmoid function.
+
+01:17.220 --> 01:18.270
+Was it a sum.
+
+01:18.360 --> 01:21.370
+We have already calculated it because we have the input.
+
+01:21.370 --> 01:23.020
+Now we don't basically.
+
+01:23.180 --> 01:28.960
+And we have already calculated that that was the Sarmad for this given node that suppose that it is
+
+01:28.980 --> 01:30.980
+minus 0.50 one.
+
+01:31.240 --> 01:41.340
+OK times we have to sum up all the educates and no doubt us going to the next Slayer because we have
+
+01:41.340 --> 01:42.880
+just a single edge.
+
+01:42.900 --> 01:52.520
+This is why we can say that we have to multiply the educate minus 0.2 to two times that previously your
+
+01:52.590 --> 02:02.580
+data which is zero darte 1 to 2 and it's going to be equal to 0.00 6 is going to be the data for these
+
+02:02.610 --> 02:04.130
+given now Rawn.
+
+02:04.380 --> 02:11.760
+And we have to calculate it for all that now owns except for the buyers Snoad and except for the input
+
+02:11.760 --> 02:13.160
+nodes.
+
+02:13.170 --> 02:21.600
+So again we have a different equation for the output layer data but after we have calculated it we can
+
+02:21.600 --> 02:27.200
+use this equation for calculating the hidden layers data.
+
+02:27.270 --> 02:31.140
+We just have to use that derivative of the sigmoid function.
+
+02:31.140 --> 02:38.160
+This is why I said that we definitely need that derivative of the activation function when we would
+
+02:38.160 --> 02:40.490
+like to train now and that of Europe.
+
+02:40.650 --> 02:48.060
+We are not able to use an activation function that doesn't have any derivative because we do need the
+
+02:48.060 --> 02:50.550
+derivative of the activation function.
+
+02:50.550 --> 02:55.240
+When we calculate that data is because this is how we calculate the gradient.
+
+02:55.290 --> 02:58.340
+And this is how we use back propagation by the way.
+
+02:58.350 --> 03:01.170
+So this is how we calculate the data.
+
+03:01.440 --> 03:08.300
+Okay what's important that we don't have to calculate the no data for the bias nodes and impot nodes.
+
+03:08.570 --> 03:10.090
+And why do we need it.
+
+03:10.160 --> 03:12.100
+We need no data.
+
+03:12.150 --> 03:17.050
+In order to calculate this basically this is the gradient.
+
+03:17.190 --> 03:25.470
+So the deliberative of the cost function or the mean square error with respect to the W adulate is going
+
+03:25.470 --> 03:28.980
+to be equal to the delta times the import.
+
+03:29.040 --> 03:36.310
+So this is the no data at the output node and this input is the activation of the now on import.
+
+03:36.450 --> 03:37.570
+Why is it good.
+
+03:37.680 --> 03:44.000
+Because we can use this equation when we are dealing with back propagation in the next video.
+
+03:44.040 --> 03:47.860
+We are going to take a look at back propagation.
+
+03:48.120 --> 03:49.170
+Thanks for watching.

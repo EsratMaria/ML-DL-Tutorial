@@ -1,0 +1,238 @@
+WEBVTT
+
+00:01.470 --> 00:07.680
+In the previous chapter we have been talking about Decision Tree classifier and we have come to the
+
+00:07.680 --> 00:14.760
+conclusion that there's a huge problem as far as decision trees are concerned and this problem is that
+
+00:14.820 --> 00:21.140
+every split it makes at each node is optimized for the data that it is fit to.
+
+00:21.270 --> 00:26.390
+So the splitting process will rarely generalize well to other data sets.
+
+00:26.400 --> 00:32.860
+Basically DC scored overfitting that the algorithm works extremely fine on the training data.
+
+00:32.860 --> 00:40.200
+Sad but it does not generalize well to other data sets such as for the past data set.
+
+00:40.200 --> 00:47.350
+So this is the problem of overfitting and decision trees have the tendency to overfit.
+
+00:47.380 --> 00:50.100
+Ok that's why we can use two methods.
+
+00:50.100 --> 00:56.990
+The so-called pruning and the so called begging approach in order to reduce overfitting.
+
+00:57.000 --> 01:01.100
+So first of all was the aim when dealing with the machine learning algorithms.
+
+01:01.290 --> 01:08.800
+We want to choose a model that captures the relationships between the training data set Plass generalizes
+
+01:08.820 --> 01:12.650
+well to Arnstein data such as for the task sap.
+
+01:12.810 --> 01:17.870
+But generally it is impossible to achieve both of them at the same time.
+
+01:17.880 --> 01:21.090
+So this is called bias variance tradeoff.
+
+01:21.150 --> 01:28.560
+We are not able to come up with a model that's working fine on the training data set as well as on the
+
+01:28.560 --> 01:30.090
+test data set.
+
+01:30.090 --> 01:38.010
+So first of all what is abayas and what is Varians bias is the ADD or from mis classifications in the
+
+01:38.010 --> 01:39.410
+learning algorithm.
+
+01:39.510 --> 01:47.550
+Hi bias means that the algorithm misses the relevant relationships between features and the target outputs.
+
+01:47.550 --> 01:49.690
+This is called underfeeding.
+
+01:49.770 --> 01:53.900
+So Banias is the error or due to modal mismatch.
+
+01:53.970 --> 02:01.450
+OK so we have been discussing under fitting when the model hasn't been fitted to the training data set.
+
+02:01.500 --> 02:04.350
+It misses the trends in the training data set.
+
+02:04.500 --> 02:09.450
+And this is usually the case when we use two simple models for the problem.
+
+02:09.480 --> 02:16.560
+So as you can see we have a dataset like this and we use a simple in your regression which is a very
+
+02:16.560 --> 02:18.150
+very simple model.
+
+02:18.180 --> 02:24.960
+This simple model is not able to grasp the trends and relationships between the given features.
+
+02:24.960 --> 02:29.360
+In this case we have two features x1 and x2.
+
+02:29.370 --> 02:34.670
+So this is the problem of under fitting when we use two simple models.
+
+02:34.770 --> 02:40.200
+OK so bias is the air or from misclassification in the learning algorithm.
+
+02:40.210 --> 02:48.130
+Variance is the air or from sensitivity to small changes in the training data set so high variance can
+
+02:48.130 --> 02:49.920
+it goes over a fake thing.
+
+02:49.980 --> 02:56.790
+So in this case the algorithm models do noise in the data set so high bias has something to do with
+
+02:56.880 --> 03:01.550
+under affecting high variance has something to do with overfitting.
+
+03:01.700 --> 03:07.360
+So variance is a variation due to training sample and randomization.
+
+03:07.500 --> 03:15.330
+OK so this is the overfitting problem as you can see we have x1 and x2 features and we use two complex
+
+03:15.330 --> 03:16.180
+modals.
+
+03:16.260 --> 03:22.360
+It means that it is very accurate on the training data set but yields poor results on the Passat.
+
+03:22.380 --> 03:28.920
+This is called overfitting the model learns the noise instead of the actual relationships between the
+
+03:28.920 --> 03:35.520
+variables in the data set and the bias variance straight of principle states that we are not able to
+
+03:35.580 --> 03:43.770
+optimize both bias and variance at the same time if the bias is low then the variance is high.
+
+03:43.800 --> 03:48.160
+If there is no variance then the bias is going to be high.
+
+03:48.210 --> 03:54.870
+So basically we have to make a tradeoff as far as optimizing bias and variance is concerned.
+
+03:55.050 --> 04:01.540
+And it has something to do with modal complexity because if we use a very very simple model there's
+
+04:01.560 --> 04:04.030
+some probability of under fitting.
+
+04:04.080 --> 04:09.330
+If we use a very very complex model there's a chance of overfitting.
+
+04:09.410 --> 04:16.380
+So model complexity and we have the error or OK and we have a bias and variance.
+
+04:16.380 --> 04:22.700
+It is the bias of straight up because the bias is small then the variance is high.
+
+04:22.840 --> 04:27.080
+If the variance is small the bias is going to be high.
+
+04:27.270 --> 04:31.470
+If the bias is high it is the case of under fitting.
+
+04:31.590 --> 04:39.180
+So the modal complexity is rather low which means that we use a very very simple model such as linear
+
+04:39.180 --> 04:42.180
+regression if the bias is low.
+
+04:42.180 --> 04:46.030
+The variance is high such as for decision trees.
+
+04:46.050 --> 04:53.010
+It means that we use a rather complex model and that's why there is some overfitting and with the half
+
+04:53.010 --> 04:59.080
+of the pruning and begging we are able to reduce the variance of a given model.
+
+04:59.150 --> 05:08.340
+OK so usual Asian trees are likely to overfeed the data leading to poor performance loss decision trees
+
+05:08.550 --> 05:16.220
+are unstable classifier if you change the data just a little bit that we might significantly change.
+
+05:16.290 --> 05:21.000
+So there's a low bias but on the other hand a high variance.
+
+05:21.150 --> 05:29.190
+OK if we use smaller trees and fewer splits there's going to be better predictors at the cost of a little
+
+05:29.280 --> 05:30.530
+extra bias.
+
+05:30.630 --> 05:37.280
+So a better solution is to grow a large tree and then prune it back to a smaller subtree.
+
+05:37.290 --> 05:39.810
+This is the weakest link pruning.
+
+05:39.810 --> 05:44.560
+OK so first of all we are going to generate the decision tree.
+
+05:44.580 --> 05:51.540
+For example we have of 60 to learn decision tree classifier and after we have the fully grown decision
+
+05:51.540 --> 05:54.240
+tree we are going to prune it back.
+
+05:54.240 --> 05:58.470
+So this is the decision tree after the pruning operation.
+
+05:58.580 --> 05:59.310
+OK.
+
+05:59.370 --> 06:00.940
+So you may pose the question.
+
+06:01.020 --> 06:03.330
+Why is it good to use pruning.
+
+06:03.330 --> 06:10.020
+Because we are able to reduce the variance of decision tree classifier model because we came to the
+
+06:10.020 --> 06:19.060
+conclusion that decision trees have the tendency to overfit overfitting means low bias and high variance.
+
+06:19.110 --> 06:25.220
+So if we try to decrease the variance we are going to eliminate overfitting.
+
+06:25.260 --> 06:30.510
+So that's why we do the help of pruning we are able to reduce variance.
+
+06:30.600 --> 06:37.430
+And what's the main problem with pruning that there's going to be a little extra bias and that's why
+
+06:37.590 --> 06:40.020
+usually we do not use pruning.
+
+06:40.050 --> 06:45.010
+Instead we use bagging or we use random for us classifier.
+
+06:45.030 --> 06:52.710
+So the first step in order to reduce the variance of the model is to use pruning where we make sure
+
+06:52.800 --> 06:58.080
+that the size of the original decision tree is going to be reduced.
+
+06:58.080 --> 06:58.940
+Thanks for watching.

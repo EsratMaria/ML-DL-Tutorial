@@ -1,0 +1,163 @@
+WEBVTT
+
+00:01.690 --> 00:09.010
+First of all we have to Fadge that given the data sets we have a training data set and we have a task
+
+00:09.060 --> 00:10.040
+data set.
+
+00:10.110 --> 00:16.660
+What's very important that we are going to make some predictions concerning S&amp;P 500.
+
+00:16.780 --> 00:22.650
+So if you search for S&amp;P 500 first of all you can check the prices.
+
+00:22.810 --> 00:30.460
+OK we are going to deal with historical data from 2000 and 10 I guess up to 2000 and 17.
+
+00:30.520 --> 00:33.920
+So this is the time series we are going to handle.
+
+00:33.940 --> 00:42.760
+By the way S&amp;P 500 it stands for Standard and Poor's 500 which is an American stock market index based
+
+00:42.760 --> 00:51.340
+on the market capitalization of the 500 largest companies such as Google Apple Tesla Wal-Mart and so
+
+00:51.340 --> 00:51.660
+on.
+
+00:51.730 --> 00:57.430
+So we are going to forecast future prices of S&amp;P 500 index.
+
+00:57.430 --> 01:02.310
+You can download the data that I have already created a training data set.
+
+01:02.350 --> 01:02.800
+OK.
+
+01:02.800 --> 01:07.400
+The first sample is 2012 January 3rd.
+
+01:07.420 --> 01:15.100
+So this is the first sample we'd open price high price low price close price adjusted closing price
+
+01:15.130 --> 01:16.090
+and volume.
+
+01:16.150 --> 01:23.900
+So this is the first sample in the data set and we have lost sample 2000 and 16 December.
+
+01:24.040 --> 01:24.520
+Okay.
+
+01:24.520 --> 01:31.600
+So this is the training data set we are going to use recurrent now Real Networks and LSD YEM architecture
+
+01:31.630 --> 01:36.230
+in order to find the relationships between the features.
+
+01:36.420 --> 01:36.930
+Okay.
+
+01:36.940 --> 01:39.390
+And we have a test data set.
+
+01:39.490 --> 01:45.080
+We are going to forecast S&amp;P 500 prices for the next month.
+
+01:45.100 --> 01:51.860
+So as you can see the last date in the training data set is the end of 2016.
+
+01:51.920 --> 01:57.170
+I know we are going to make predictions for the January of 2017.
+
+01:57.310 --> 02:01.360
+Okay so we are going to use 20 task's samples.
+
+02:01.360 --> 02:08.200
+So first of all we have the Fadge the training data set and the past data set what's very important
+
+02:08.410 --> 02:14.110
+that we are going to deal with the adjusted closing prices you may pose the question that what does
+
+02:14.110 --> 02:16.140
+it mean adjusted closing price is.
+
+02:16.150 --> 02:19.310
+It is very similar to closing prices of the store.
+
+02:19.340 --> 02:25.040
+But it takes into account factors such as dividend stock and so on.
+
+02:25.150 --> 02:30.930
+So usually adjusted closing price is a more accurate reflection of the stock's value.
+
+02:30.940 --> 02:38.350
+So thats why instead of the open price or the closing price we are going to use adjusted closing price.
+
+02:38.430 --> 02:44.850
+Okay so this is how we read the cxxviii files as far as the training data set.
+
+02:45.010 --> 02:48.240
+And as far as the past dataset is concerned.
+
+02:48.310 --> 02:53.970
+Okay then this is how we get a given color MoVida half of this I lock function.
+
+02:54.070 --> 02:59.520
+So we are after all the rows but we have to define the given column.
+
+02:59.560 --> 03:03.080
+We just want to deal with the adjusted closing price column.
+
+03:03.100 --> 03:06.250
+So thats why we have to define five and six.
+
+03:06.280 --> 03:15.900
+It is going to be the index of adjusted closing price 0 1 2 3 4 5 and 6 5 and 6 as you can see.
+
+03:15.920 --> 03:20.330
+Okay this is how we get the training data set and the test data set.
+
+03:20.530 --> 03:28.660
+If we take a look at verifiable or you can see that the task set is going to be a pie array.
+
+03:28.690 --> 03:35.920
+We had 20 rows and a single column if you double click the tasks that you can take a look at the concrete
+
+03:35.920 --> 03:36.770
+values.
+
+03:36.790 --> 03:41.260
+So as you can see the first value is two thousand two hundred and fifty seven.
+
+03:41.260 --> 03:46.900
+Two hundred and two thousand and fifty seven as you can see the last value is two thousand two hundred
+
+03:46.900 --> 03:47.930
+seventy eight.
+
+03:47.950 --> 03:50.980
+So 2278.
+
+03:51.070 --> 03:56.570
+So this is how we do the test data set and we have the training data set.
+
+03:56.590 --> 03:58.480
+You can double click it as well.
+
+03:58.540 --> 04:05.730
+And these are the values from the training data set we are going to deal with the adjusted closing prices
+
+04:05.760 --> 04:10.420
+exclusively so thats why we have just a single column in this dataset.
+
+04:10.450 --> 04:11.110
+Okay.
+
+04:11.110 --> 04:16.060
+In the next lecture we are going to talk about how to normalize the dataset.
+
+04:16.060 --> 04:16.960
+Thanks for watching.

@@ -1,0 +1,238 @@
+WEBVTT
+
+00:01.810 --> 00:05.100
+OK so let's create the training data set.
+
+00:05.160 --> 00:07.450
+We are after something like this.
+
+00:07.530 --> 00:15.990
+In this case we have three features so sorry stock prices in the past of course in our example we are
+
+00:15.990 --> 00:18.350
+going to have 40 features.
+
+00:18.450 --> 00:28.030
+So x1 x2 x 3 up to x 40 because we are going to press the exact target variable based on 40 stocks of
+
+00:28.040 --> 00:29.550
+values in the past.
+
+00:29.550 --> 00:31.910
+So we are after something like this.
+
+00:31.930 --> 00:37.440
+We have the features so X-1 avail you X-2 they'll you extreme value.
+
+00:37.530 --> 00:40.180
+And we have the target of a valuable accordingly.
+
+00:40.290 --> 00:42.940
+Then we shifted the window Wanstead to the right.
+
+00:42.960 --> 00:50.040
+And again we are going to get the stock prices from the historical data set in order to construct the
+
+00:50.040 --> 00:51.480
+training data set.
+
+00:51.600 --> 00:57.480
+And what's very important because if we shift this window one step to the right there are going to be
+
+00:57.480 --> 01:01.050
+approximately the same values in the training data set.
+
+01:01.050 --> 01:02.160
+So what does it mean.
+
+01:02.250 --> 01:08.970
+We have the first throw and the second row is going to have the same they'll use except for the last
+
+01:08.970 --> 01:09.450
+one.
+
+01:09.570 --> 01:13.920
+So this we want to is the same as P-T one does.
+
+01:13.970 --> 01:21.200
+The one story is the same as the 2 and so on because we shaved the window one step to the right.
+
+01:21.250 --> 01:26.070
+There's going to be the same values as far as the given stock price is concerned.
+
+01:26.130 --> 01:32.560
+So we just have to create a one dimensional array for the features and a one dimensional array for the
+
+01:32.580 --> 01:34.020
+target values.
+
+01:34.020 --> 01:38.050
+We have to create a for loop y to start with 40.
+
+01:38.130 --> 01:41.420
+Basically disvalue is the end of the array.
+
+01:41.520 --> 01:48.450
+So if we take a look at the training sakte we have it one thousand two hundred fifty two rows in the
+
+01:48.450 --> 01:49.920
+training data set.
+
+01:49.920 --> 01:54.610
+So that's why we are going to have this value as the upper bound.
+
+01:54.720 --> 01:56.790
+But why to start with 40.
+
+01:56.790 --> 01:59.610
+Because when we construct the first sample.
+
+01:59.640 --> 02:07.770
+So in this case as you can see the first target variable is going to be the fourth item because we calculate
+
+02:07.770 --> 02:11.190
+the target value based on previous values.
+
+02:11.190 --> 02:13.940
+This is how a machine learning algorithm works.
+
+02:13.950 --> 02:18.170
+We have some training data and we have the target values.
+
+02:18.180 --> 02:25.290
+So in this case the first 40 values are going to be the features and the next item is going to be the
+
+02:25.290 --> 02:26.000
+target.
+
+02:26.040 --> 02:31.340
+OK so we use the previous 40 prices in order to forecast the next one.
+
+02:31.470 --> 02:35.810
+So that's why we get the values from the skilled training set.
+
+02:35.880 --> 02:41.880
+This has something to do with the role we index and it does have something to do with the Carlen index
+
+02:42.150 --> 02:47.790
+the Cullom index is quite straightforward because we just have a single Culham the adjusted closing
+
+02:47.790 --> 02:48.580
+prices.
+
+02:48.630 --> 02:50.220
+That's why we use zero.
+
+02:50.230 --> 02:52.650
+So zero represents the first column.
+
+02:52.740 --> 02:54.430
+We have just a single column.
+
+02:54.540 --> 02:56.960
+OK but what about this one.
+
+02:56.970 --> 03:03.330
+It means that we are going to consider the values as far as our index is concerned.
+
+03:03.330 --> 03:09.520
+So I'm minus 40 who we have to substract 40 because we have 40 features.
+
+03:09.570 --> 03:16.270
+So we are going to handle the items starting from minus 40 up to.
+
+03:16.410 --> 03:22.970
+What is it mean that this is exactly what we are after that the first three items are the features.
+
+03:23.160 --> 03:26.330
+And the next item is the target variable.
+
+03:26.430 --> 03:36.450
+The first 40 items are the training features and the next item is the target of a viable X train is
+
+03:36.450 --> 03:38.020
+the training features.
+
+03:38.090 --> 03:41.500
+Why train is the training target variable.
+
+03:41.520 --> 03:49.540
+So this is how we create these two dimensional array basically for the features and for the target.
+
+03:49.590 --> 03:56.270
+And then we would like to end up with the non-pay arrays so that's why we use pi array on the X Thrain
+
+03:56.500 --> 03:57.780
+and the wine train.
+
+03:57.810 --> 04:04.630
+Then if we want to use SDM architecture we have to reshape these non-pay arrays.
+
+04:04.710 --> 04:08.210
+So we would like to end up with something like this.
+
+04:08.220 --> 04:10.280
+We have three dimensions.
+
+04:10.380 --> 04:18.190
+The number of total samples the number of features and one because we have just a single target variable.
+
+04:18.300 --> 04:21.560
+We would like to predict the stock price to morrow.
+
+04:21.740 --> 04:23.830
+Okay that's why we have one.
+
+04:23.850 --> 04:25.950
+What about the number of features.
+
+04:25.950 --> 04:34.320
+The number of features is equal to 40 but we are able to get it from the X thrain dot shape one is going
+
+04:34.320 --> 04:36.680
+to return the number of features.
+
+04:36.750 --> 04:43.240
+Basically the number of columns as far as the features are concerned here we have three features.
+
+04:43.260 --> 04:48.380
+But as far as the concrete implementation is concerned we have 40 features.
+
+04:48.480 --> 04:48.950
+Okay.
+
+04:48.960 --> 04:54.830
+So this is equal to 40 and this is equal to the total number of samples.
+
+04:54.840 --> 05:01.770
+So in the training data set we have to calculate the number of fros okay and we can get this well you
+
+05:01.880 --> 05:03.610
+with the help of this shape.
+
+05:03.610 --> 05:04.310
+Zero.
+
+05:04.450 --> 05:11.320
+So basically this is the last transformation we have to use in order to use these values with recurrent
+
+05:11.350 --> 05:14.880
+now and that work and Alice YEM architecture.
+
+05:14.950 --> 05:21.200
+So we just have to define the number of samples number of features and the number of target variables.
+
+05:21.220 --> 05:24.600
+This is how we end up with a three dimensional array.
+
+05:24.610 --> 05:29.560
+OK so this is the X Graines So the features for the training data set.
+
+05:29.740 --> 05:37.090
+And we have the target of triable is for the training data sadly adjusted closing prices tomorrow ok
+
+05:37.120 --> 05:42.490
+in the next lecture we are going to talk about how to build the LSD model.
+
+05:42.520 --> 05:43.370
+Thanks for watching.

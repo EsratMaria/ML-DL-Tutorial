@@ -1,0 +1,268 @@
+WEBVTT
+
+00:01.330 --> 00:07.270
+So far we have been talking about the topology of now networks or whether we are dealing with just a
+
+00:07.270 --> 00:13.870
+single hidden layer or we are dealing with lots of lots of hidden layers as far as deep learning is
+
+00:13.870 --> 00:14.670
+concerned.
+
+00:14.680 --> 00:17.370
+Basically the approach is the same.
+
+00:17.470 --> 00:24.460
+So we have to optimize that given last function with the help of gradient descent or has the gradient
+
+00:24.460 --> 00:25.180
+descent.
+
+00:25.390 --> 00:31.520
+So if we have the given adequate Let's suppose the situation that we have just two educates in hour
+
+00:31.550 --> 00:37.820
+an hour and after work w one and a WTU And of course we have the last function.
+
+00:37.930 --> 00:44.570
+If you may recall last function it measures how close the given our network is to the ideal.
+
+00:44.620 --> 00:46.980
+OK so this is the last function.
+
+00:46.990 --> 00:54.280
+So finally we have to make some optimization in order to reduce the error or as much as possible.
+
+00:54.310 --> 00:57.000
+So we have to change the double edged weights.
+
+00:57.070 --> 00:59.440
+This is how we train the national network.
+
+00:59.560 --> 01:05.160
+And if we change the edge weights of course the last function will change as well.
+
+01:05.170 --> 01:12.580
+So the error in our now will and that work will change whether it is going to increase or it is going
+
+01:12.580 --> 01:13.500
+to decrease.
+
+01:13.510 --> 01:20.190
+Of course we are after the double you educate that minimize the LW loss function.
+
+01:20.210 --> 01:26.860
+This is what we have been discussing that the function defines the difference between the actual value
+
+01:26.890 --> 01:33.400
+that we know from our training data set and the prediction made by our now rail network.
+
+01:33.620 --> 01:40.690
+If the last function is approximately zero it means that y is the Coastie y prime.
+
+01:40.720 --> 01:46.800
+So there is no error in our network and that were this is exactly what we are after.
+
+01:46.900 --> 01:52.380
+So we have to change the educate in order to end up with this situation.
+
+01:52.600 --> 01:59.830
+So basically these actuates are going to define a multi dimensional surface and we have to find the
+
+01:59.830 --> 02:01.680
+lowest point possible.
+
+02:01.690 --> 02:09.820
+So higher regions means the networks makes lots of mistakes because the LW loss function there you are
+
+02:09.820 --> 02:17.310
+big lower regions means that the network is making good predictions because the last functions values
+
+02:17.410 --> 02:18.670
+are small.
+
+02:18.670 --> 02:23.960
+So we have defined the low regions as far as the last function is concerned.
+
+02:24.220 --> 02:27.050
+We initialize the W weights at random.
+
+02:27.070 --> 02:30.040
+This is how we implemented our feet forward.
+
+02:30.040 --> 02:35.470
+Now we're on a network from scratch in the second part of this artificial intelligence series.
+
+02:35.500 --> 02:42.910
+So we start from a given point in this landscape because we have W-why N.W.T. we initialize them at
+
+02:42.910 --> 02:43.600
+random.
+
+02:43.720 --> 02:50.500
+So we start from a given point and basically we want to end up with the lowest point possible.
+
+02:50.650 --> 02:57.600
+So we just have to use the negative gradient that's pointing in the direction of the lowest point.
+
+02:57.670 --> 02:59.800
+We just have to follow the gradient.
+
+02:59.830 --> 03:08.020
+So that's why we repeat until convergence W.J. is equal to the W.J. miners the alpha which is the learning
+
+03:08.020 --> 03:14.260
+rate times the gradient the partial derivative of the last function with respect to the double.
+
+03:14.300 --> 03:16.680
+Educate is scored the gradient.
+
+03:16.750 --> 03:23.230
+And this is why we have to use derivatives because the derivative is going to point to the direction
+
+03:23.290 --> 03:24.700
+of the highest point.
+
+03:24.790 --> 03:27.040
+But we are after the lowest point.
+
+03:27.130 --> 03:30.730
+So that's why we have to multiply it by minus 1.
+
+03:30.730 --> 03:35.170
+So this is why it's going to be minus Alpha and the gradient.
+
+03:35.290 --> 03:35.770
+OK.
+
+03:35.770 --> 03:37.980
+So this is called the gradient descent.
+
+03:38.080 --> 03:45.250
+When we start from a given point and we follow the gradient in order to find the given minimum it is
+
+03:45.250 --> 03:47.890
+working fine for cone of X last functions.
+
+03:47.890 --> 03:53.140
+For example like this because this function has just a single minimum.
+
+03:53.320 --> 03:59.390
+But what about this one as we can see we have a local minimum and we have a global minimum.
+
+03:59.440 --> 04:06.070
+So if a gradient descent reaches a local minimum for example here it is effectively trapped.
+
+04:06.100 --> 04:09.030
+And this is one drawback of the algorithm.
+
+04:09.160 --> 04:10.280
+What do you do.
+
+04:10.300 --> 04:17.120
+This is why matter how realistic algorithms came to be such as genetic algorithms or simulated annealing.
+
+04:17.170 --> 04:24.460
+So in artificial intelligence part one we have been talking about matter how eristic approach is simulated
+
+04:24.460 --> 04:28.440
+annealing genetic algorithms and porticos form optimization.
+
+04:28.570 --> 04:35.800
+And this is the main advantage as far as these algorithms are concerned that they are able to avoid
+
+04:35.920 --> 04:40.240
+local monomers and they are able to find the global minimum.
+
+04:40.360 --> 04:44.100
+And when we are training in our own network it is crucial.
+
+04:44.110 --> 04:50.440
+So we would like to avoid local monomers and we would like to end up with the global minimum.
+
+04:50.440 --> 04:56.710
+By the way in normalizing the original data that is usually helpful when we are dealing with machine
+
+04:56.710 --> 05:04.090
+learning approaches or artificial neural networks we can normalization with minimax normalization that
+
+05:04.090 --> 05:05.930
+we have the given sample.
+
+05:06.010 --> 05:10.360
+It is the value in the data set and we use this transformation.
+
+05:10.390 --> 05:14.140
+X minus the minimum out of the samples.
+
+05:14.140 --> 05:17.320
+Divide by the maximum minus the minimum.
+
+05:17.320 --> 05:25.120
+So this is how we use minimax normalization and normalization makes sure gradient descent will converge
+
+05:25.150 --> 05:28.150
+faster and more accurately by the way.
+
+05:28.150 --> 05:31.930
+Gradient descent is working fine for most of the cases.
+
+05:32.080 --> 05:39.190
+If not we have to use matter how eristic algorithms or it is a good approach to use minimax normalization
+
+05:39.190 --> 05:46.620
+at the beginning to make sure that gradient descent will converge faster and it's going to be more accurate.
+
+05:46.690 --> 05:52.050
+OK the other very very popular method is still has the gradient descent.
+
+05:52.120 --> 05:58.960
+So for a gradient descent we calculate the overall loss across all the training data set and then we
+
+05:58.960 --> 06:02.720
+calculate the gradient for stochastic gradient descent.
+
+06:02.830 --> 06:09.340
+We compute the gradient and paramita or vector update after every single training sample.
+
+06:09.370 --> 06:15.860
+If you use a subset of the original training data set it is called many back stochastic gradient descent.
+
+06:16.000 --> 06:20.280
+So what's the difference between these approaches for the gradient descent.
+
+06:20.380 --> 06:26.920
+We are going to use all the values in the data set for still has the gradient descent where we just
+
+06:26.920 --> 06:33.980
+use a single of the value from the data set exclusively and for many batched has the gradient descent
+
+06:34.210 --> 06:38.550
+we are going to use a subset of the original training data set.
+
+06:38.560 --> 06:46.690
+So Grady in the sand Convergys slowly but because of this it is more accurate and it is deterministic.
+
+06:46.690 --> 06:49.810
+It is going to converge to the same minimum.
+
+06:49.840 --> 06:57.550
+If we rerun the algorithm over and over again it is going to find the same minimum still has the gradient
+
+06:57.550 --> 07:02.150
+descent on the other hand is faster because it uses less data.
+
+07:02.230 --> 07:09.200
+Hence it is not that accurate and it is to hasty it not always converges to the same minima.
+
+07:09.220 --> 07:15.640
+So if we rerun the still has the gradient descent over and over again it is going to find different
+
+07:15.730 --> 07:17.490
+values as the minimum.
+
+07:17.590 --> 07:23.170
+So it is stochastic onli gradient descent which is deterministic.
+
+07:23.170 --> 07:24.040
+Thanks for watching.

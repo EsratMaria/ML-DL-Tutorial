@@ -1,0 +1,193 @@
+WEBVTT
+
+00:01.600 --> 00:05.680
+In this lecture we are going to talk about cross-validation.
+
+00:05.680 --> 00:10.990
+So in the previous chapter as we have been talking about linear regression we have been talking about
+
+00:10.990 --> 00:12.400
+logistic regression.
+
+00:12.490 --> 00:20.620
+We have seen how to split the original data set into a training data set and into a test data set.
+
+00:20.740 --> 00:27.850
+So when dealing with credit scoring in the previous lectures we use these train tasks split matter that
+
+00:27.850 --> 00:38.050
+split the regional dataset into our training dataset and to a past dataset the task size 0.3 defined
+
+00:38.050 --> 00:46.300
+at 70 percent of the original dataset is for training purposes and 30 percent of the original data set
+
+00:46.390 --> 00:47.880
+is the task set.
+
+00:47.880 --> 00:55.400
+OK so we have split the regional dataset into a training dataset and into a task data set.
+
+00:55.540 --> 01:00.960
+We feed the model to the training data set and we test the model on the task later sat.
+
+01:01.000 --> 01:07.870
+Which means that we only have information how the model performs to our in sample data.
+
+01:07.960 --> 01:12.800
+But we would like to see the accuracy when dealing with new data sets.
+
+01:13.030 --> 01:20.920
+And before talking about cross-validation Let's talk a bit about overfitting and underfeeding overfitting
+
+01:20.920 --> 01:28.180
+means that the model has range to veil on the training data set which means that it is very accurate
+
+01:28.270 --> 01:33.040
+on the training data set but yields poor results on the test set.
+
+01:33.100 --> 01:36.540
+It is usually because the model is too complex.
+
+01:36.640 --> 01:42.970
+So as you can see we have the data points like this and the fitted model is this Arat curve as you can
+
+01:42.970 --> 01:45.130
+see it is rather complex.
+
+01:45.130 --> 01:47.010
+This is called overfitting.
+
+01:47.050 --> 01:53.590
+When the model has trained to veil which means that the model learns to noise instead of the actual
+
+01:53.590 --> 02:00.400
+relationships between the variables in the data it is a problem because this noise is not present in
+
+02:00.400 --> 02:01.890
+the past dataset.
+
+02:02.020 --> 02:10.030
+So that's why overfit data models have good accuracy on the training data set but performs very very
+
+02:10.030 --> 02:12.500
+poorly on the test data set.
+
+02:12.580 --> 02:15.550
+OK what about underfeeding under 15.
+
+02:15.550 --> 02:21.180
+Is quite on the contrary the model hasn't been fitted well to the training data set.
+
+02:21.190 --> 02:27.820
+So as you can see we have the same data points and instead of a very very complex model we have a very
+
+02:27.820 --> 02:34.800
+very simple model just a simple linear regression which misses the trends in the training data set.
+
+02:34.810 --> 02:39.390
+This is usually the case when we use two simple models for the problem.
+
+02:39.550 --> 02:47.040
+So overfitting when we use two complex models and under-15 when we use two simple models.
+
+02:47.050 --> 02:47.770
+OK.
+
+02:47.860 --> 02:56.110
+So this is why we have to consider K for cross-validation which helps to avoid under affecting and overfitting
+
+02:56.280 --> 03:00.480
+by the way it helps to avoid overfitting more than under effecting.
+
+03:00.520 --> 03:03.330
+But this is how we can deal with these problems.
+
+03:03.430 --> 03:09.790
+The aim is to be able to generalize the model to new data sets with the same accuracy.
+
+03:09.820 --> 03:15.750
+OK and what's extremely important that we use all the data set for training.
+
+03:15.760 --> 03:23.260
+So instead of splitting the dataset into a training data set and test data set we are going to use all
+
+03:23.260 --> 03:29.170
+the data set for training purposes as well as for test purposes.
+
+03:29.170 --> 03:37.780
+So what do we have the original training data set and we are going to split the data into K falls in
+
+03:37.780 --> 03:38.490
+this case.
+
+03:38.500 --> 03:40.020
+Cazy close to 5.
+
+03:40.030 --> 03:50.610
+So we have 1 2 3 4 5 subset that we want at case separate learning experience k minus 1 Fords for training
+
+03:50.740 --> 03:54.170
+and one for testing purposes in this case.
+
+03:54.220 --> 04:00.990
+The first full is the test data set and all the other forwards are the training data sets.
+
+04:01.000 --> 04:08.470
+Okay then in the next iteration This is the task data set and all the other forwards are the training
+
+04:08.470 --> 04:11.350
+data set up in the next iteration.
+
+04:11.350 --> 04:18.010
+This is the test data set and all the other forwards are the training examples in the next iteration.
+
+04:18.040 --> 04:22.570
+This is that tath sat and in the final iteration this is that test set.
+
+04:22.600 --> 04:30.340
+So we wanted case separate learning experience k minus one for for training and one forth for testing
+
+04:30.340 --> 04:36.700
+purposes we average the results from this K experience and it was the it went.
+
+04:36.730 --> 04:44.260
+The advantage that all observations as far as that data set is concerned are used for both training
+
+04:44.350 --> 04:49.150
+and validation plus each observations are used for validation.
+
+04:49.180 --> 04:50.470
+Exactly wons.
+
+04:50.560 --> 04:58.690
+OK so instead of splitting the data into a training data set and test data set every single sample in
+
+04:58.690 --> 05:07.520
+the original dataset we a training example in a given iteration and it's going to be a test sample in
+
+05:07.610 --> 05:08.710
+another one.
+
+05:08.900 --> 05:14.480
+OK so we use K falls and we run it case separate learning experience.
+
+05:14.480 --> 05:21.680
+That's why K for cross-validation is a computational have the operation in the sense data idea agreed
+
+05:21.680 --> 05:23.850
+and will take more time to finish.
+
+05:23.870 --> 05:29.150
+But anyways this is how we are able to deal with underfeeding and overfitting.
+
+05:29.240 --> 05:31.570
+We just have to use K words.
+
+05:31.640 --> 05:38.210
+Hence the name K-4 is cross-validation in the next lecture we are going to take a look at a concrete
+
+05:38.210 --> 05:41.780
+example of how to use K4 course validation.
+
+05:41.780 --> 05:42.560
+Thanks for watching.

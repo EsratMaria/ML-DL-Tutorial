@@ -1,0 +1,349 @@
+WEBVTT
+
+00:01.370 --> 00:05.830
+In this lecture we are going to talk about activation functions.
+
+00:05.840 --> 00:12.730
+So first of all you may pose the question that why is it important why do we need activation functions.
+
+00:12.740 --> 00:18.450
+So the role of activation functions is to make the natural networks non linear.
+
+00:18.560 --> 00:25.540
+So without the activation function the network is just a linear transformation which is not strong enough
+
+00:25.540 --> 00:27.340
+to many kinds of data.
+
+00:27.350 --> 00:32.690
+This is what we have been talking about that if we want to calculate the activation of a given.
+
+00:32.690 --> 00:42.890
+Now we're on we have to sum up the input activations x1 x2 up to X an and the W edge weights W on W2
+
+00:42.980 --> 00:44.370
+up to w n.
+
+00:44.540 --> 00:51.000
+So basically this summer x Sabai times w Sabai is just a linear transformation.
+
+00:51.230 --> 00:57.980
+And we would like to introduce some known linearity because most of the images we want to classify for
+
+00:57.980 --> 01:02.300
+example handwritten digits are highly non-linear.
+
+01:02.360 --> 01:09.740
+So that's why we have to use activation functions in order to cope with the highly nonlinear feature
+
+01:09.830 --> 01:11.410
+of the input data.
+
+01:11.450 --> 01:18.600
+OK the other solution would be ording more paramita to the model instead of using activation functions.
+
+01:18.740 --> 01:24.980
+But it is not a good idea because the training would be slower by the way it is a rule of thumb that
+
+01:25.010 --> 01:28.570
+we don't like modals with lots of lots of paramita.
+
+01:28.670 --> 01:35.810
+So instead of using lots of lots of paramita as we are going to use activation functions in order to
+
+01:35.810 --> 01:43.310
+make the network nonlinear there are lots of lots of activation functions linear activation function
+
+01:43.490 --> 01:51.950
+sigmoid activation function tan age activation function than the so called rectified linear unit activation
+
+01:51.950 --> 01:53.690
+function and so on.
+
+01:53.840 --> 01:56.580
+So what about the linear activation function.
+
+01:56.600 --> 02:00.180
+It is the F X equals to X equation.
+
+02:00.310 --> 02:02.810
+It is the identity operator.
+
+02:02.810 --> 02:06.910
+It means the function parses the sign goes through unchanged.
+
+02:07.070 --> 02:11.870
+So usually we do not change the input when dealing with the input layer.
+
+02:11.930 --> 02:16.840
+So we can say that the input delay or has linear activation function.
+
+02:16.880 --> 02:24.650
+So in the input layer basically we don't change the input values so we can say that we use the linear
+
+02:24.680 --> 02:31.380
+activation function because the linear activation function does not change the data at all.
+
+02:31.430 --> 02:34.410
+OK what about the sigmoid activation function.
+
+02:34.550 --> 02:37.940
+This is what we have used during the feedforward.
+
+02:37.940 --> 02:44.260
+Now what are the next for implementation in the second part of this artificial intelligence series.
+
+02:44.450 --> 02:51.860
+So we like sigmoid transformation because it reduce extreme values and outliers in the data without
+
+02:51.860 --> 02:53.030
+removing them.
+
+02:53.090 --> 02:59.840
+So we don't have to remove outliers because we can deal with these values with Sigma transformation
+
+03:00.170 --> 03:05.640
+because sigmoid function transforms that data in the range of 0 and 1.
+
+03:05.720 --> 03:09.020
+So we can interpret the results as probabilities.
+
+03:09.140 --> 03:16.960
+This is why we prefer logistic regression to linear regression because we can deal with probabilities.
+
+03:17.010 --> 03:17.780
+OK.
+
+03:17.870 --> 03:25.280
+And sigmoid activation function outputs an independent probability for each class so we can say with
+
+03:25.280 --> 03:32.230
+a given probability that the result is a given class for example when we are classifying handwritten
+
+03:32.330 --> 03:42.230
+digits we can say the output is the integer for weighed 95 percent probability of course a 95 percent
+
+03:42.230 --> 03:46.390
+probability is better than 55 percent probability.
+
+03:46.400 --> 03:51.380
+So when we are dealing with classification the probabilities do matter.
+
+03:51.380 --> 03:58.340
+OK what about that 10 page activation function this activation function is very similar to the sigmoid
+
+03:58.340 --> 03:59.040
+function.
+
+03:59.180 --> 04:04.120
+But the range of 10 H is minus 1 up to plus 1.
+
+04:04.250 --> 04:08.890
+So sigmoid function is within the range 0 and 1 10.
+
+04:08.900 --> 04:12.860
+Age is within the range minus 1 and plus 1.
+
+04:13.010 --> 04:16.040
+So it can handle negative values as well.
+
+04:16.130 --> 04:20.990
+And this is the main advantage of Pan age activation function.
+
+04:21.330 --> 04:22.130
+OK.
+
+04:22.130 --> 04:29.200
+The most important activation function as far as the learning is concerned is the rectifiable in your
+
+04:29.210 --> 04:36.520
+activation function which activates a node only if the input is above a certain quantity.
+
+04:36.650 --> 04:42.280
+So if x activation function is equal to the maximum out of 0 and x.
+
+04:42.410 --> 04:46.690
+So this is the Plaut for the really activation function.
+
+04:46.730 --> 04:52.730
+It is very very simple as you can see on the other hand it is the most popular function because the
+
+04:52.730 --> 04:56.130
+gradient is either 0 or constant.
+
+04:56.180 --> 04:59.800
+The gradient is the slope of the function here.
+
+04:59.810 --> 05:04.040
+The gradient zero here the gradient is a constant.
+
+05:04.050 --> 05:10.320
+When we are dealing with the sigmoid the derivative of the sigmoid function is not a constant.
+
+05:10.350 --> 05:15.720
+It is a function again for rectified linear activation function.
+
+05:15.750 --> 05:19.680
+The gradient is either zero or a constant.
+
+05:19.770 --> 05:23.480
+So it can solve the vanishing gradient issue.
+
+05:23.490 --> 05:29.580
+What is this well-wishing gradient issue that the training procedure relies on the derivative of the
+
+05:29.580 --> 05:31.140
+activation function.
+
+05:31.200 --> 05:33.380
+We have implemented a feedforward.
+
+05:33.390 --> 05:39.330
+Now on network network in the second part of this artificial intelligence series and we have come to
+
+05:39.330 --> 05:44.350
+the conclusion that we have to use the derivative of the activation function.
+
+05:44.490 --> 05:50.570
+So each of the neural networks weights receives an update proportional to the gradient of the error
+
+05:50.570 --> 05:55.850
+or function with respect to the current weight in each iteration of the training.
+
+05:56.040 --> 06:01.440
+So the problem is that in some cases the gradient will be when the shingle is small.
+
+06:01.470 --> 06:07.520
+What does it mean that it prevents the weights from changing its values in the first case.
+
+06:07.530 --> 06:12.390
+This may completely stop the neural network from further training.
+
+06:12.390 --> 06:17.670
+OK so if the gradient is very very small it is a problem.
+
+06:17.670 --> 06:23.970
+So when we are dealing with the sigmoid activation function the problem is that here in this region
+
+06:24.210 --> 06:33.000
+where x is greater than five or six or smaller than the minus 6 or minus 5 the gradient to the slope
+
+06:33.000 --> 06:37.220
+of this sigmoid function is very very close to zero.
+
+06:37.230 --> 06:44.250
+And this is the problem because when we train in our network we use the gradient if the gradient is
+
+06:44.250 --> 06:45.550
+very very small.
+
+06:45.570 --> 06:48.970
+It means that we don't change that given actuates.
+
+06:48.990 --> 06:52.650
+Basically this is the formula we are going to talk about.
+
+06:52.740 --> 06:59.110
+So the change in the age weight is proportional to the derivative of the last function.
+
+06:59.280 --> 07:06.660
+If the derivative or the gradient is close to zero it means that we do not change the educates at all
+
+07:06.990 --> 07:09.820
+if we do not change the educates at all.
+
+07:09.840 --> 07:16.610
+It means that we don't train in our own network the NOW road network is going to do the same predictions
+
+07:16.740 --> 07:19.890
+no matter how long we trained in our own network.
+
+07:19.890 --> 07:26.630
+So this is the when the gradient issue and if we use the rectified linear activation function where
+
+07:26.660 --> 07:33.750
+we don't have to deal with this issue because the gradient is not going to be small it's going to be
+
+07:33.750 --> 07:36.660
+zero or it's going to be a constant.
+
+07:36.660 --> 07:43.920
+So this is why we use these Ereli activation function in deep learning the softer Max activation function
+
+07:44.130 --> 07:50.880
+is usually used in the output layer in mathematics the soft max function or the normalized exponential
+
+07:50.880 --> 07:58.060
+function is a generalization of the logistic function as you can see it is the exponential term divided
+
+07:58.070 --> 08:00.690
+by the sum of exponential terms.
+
+08:00.690 --> 08:06.550
+So it transforms the values in the range 0 and one that add up to 1.
+
+08:06.570 --> 08:11.970
+What does it mean that we can assign probabilities to every single output.
+
+08:12.090 --> 08:17.190
+So the soft max function is used in various multiclass classification methods.
+
+08:17.280 --> 08:21.840
+For example when we would like to classify hand-written digits.
+
+08:22.080 --> 08:29.120
+OK so we just have to use the soft Max activation function in the last layer because we want to classify
+
+08:29.210 --> 08:33.530
+hand-written digits and we choose the class with the highest probability.
+
+08:33.600 --> 08:41.010
+So if we are dealing with handwritten digits the output layer is going to contain as many narrowings
+
+08:41.310 --> 08:46.950
+as the number of outputs because we kind of have zero wanted to up to nine.
+
+08:47.100 --> 08:51.950
+There's going to be 10 possible outcomes tiny digits basically.
+
+08:51.960 --> 08:56.690
+So that's why there are going to be 10 now with bones in the output layer.
+
+08:56.820 --> 09:04.860
+And if we use soft Max activation function in the output layer it is going to assign a probability to
+
+09:04.950 --> 09:06.770
+every single class.
+
+09:06.810 --> 09:14.100
+So if we have some input soft Max activation function going to tell us it was the probability that the
+
+09:14.100 --> 09:18.970
+given input is zero was the probability that a given input is a 1.
+
+09:19.080 --> 09:21.950
+What's the probability that a given input is a 2.
+
+09:21.990 --> 09:22.850
+And so on.
+
+09:22.920 --> 09:26.510
+And we just have to choose the one with the highest probability.
+
+09:26.640 --> 09:30.010
+And this is how we can classify handwritten digits.
+
+09:30.090 --> 09:37.740
+OK so these are the two most important activation functions in deep learning already filed in your activation
+
+09:37.740 --> 09:41.870
+function because it can solve one machine gradient issue.
+
+09:42.090 --> 09:49.590
+And the soft Max activation function with this formula because we can assign a probability to every
+
+09:49.590 --> 09:54.540
+single outcome in a malty class classification algorithm.
+
+09:54.540 --> 09:55.350
+Thanks for watching.

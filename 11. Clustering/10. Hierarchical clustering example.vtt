@@ -1,0 +1,223 @@
+WEBVTT
+
+00:01.660 --> 00:06.770
+High in the last lecture we have been discussing hierarchical clustering.
+
+00:06.990 --> 00:11.830
+And in this video I would like to show you a concrete example of how to use it.
+
+00:11.880 --> 00:15.620
+For example we have a one dimensional PI array.
+
+00:15.660 --> 00:20.010
+Basically it's going to represent points in the two dimensional plane.
+
+00:20.010 --> 00:23.160
+So this is the X scored and that this is the y coordinate.
+
+00:23.190 --> 00:24.460
+This is the X school.
+
+00:24.540 --> 00:26.190
+And the why call that again.
+
+00:26.220 --> 00:30.270
+So we will have one two three four five six points.
+
+00:30.460 --> 00:39.460
+OK I'm going to cost savings and let's run this application I'm OK.
+
+00:39.630 --> 00:45.720
+Basically these are the points and we would like to build that then the out out of these points as we
+
+00:45.720 --> 00:48.150
+have discussed in the theoretical section.
+
+00:48.360 --> 00:52.950
+So there are several options we can use the spiled linkage.
+
+00:53.100 --> 01:00.450
+This linkage is going to take these data that basically these points on the two dimensional plane and
+
+01:00.450 --> 01:03.530
+it's going to create the linkage matrix.
+
+01:03.570 --> 01:09.490
+What is it mean single it is the nearest point algorithm according to this formula.
+
+01:09.600 --> 01:15.350
+So it's going to find the closest pair of points on the two dimensional plane.
+
+01:15.540 --> 01:17.300
+Let's take a look at it again.
+
+01:17.370 --> 01:24.210
+So it's going to calculate that was the minimal distance whether it is between these points these points
+
+01:24.210 --> 01:25.240
+or these points.
+
+01:25.440 --> 01:31.500
+I guess that the distance between these two points are the same as the distance between these two points
+
+01:31.560 --> 01:33.300
+and these two points.
+
+01:33.300 --> 01:36.440
+But it's going to calculate the distance for us.
+
+01:36.480 --> 01:44.670
+We can use for example the complete if we use complete it's going to calculate not the minimum but the
+
+01:44.670 --> 01:47.280
+maximum out of the distances.
+
+01:47.280 --> 01:49.470
+Of course we are looking for the minimum.
+
+01:49.500 --> 01:58.830
+So I'm going to rewrite it to single Let's say that and basically let's print out this linkage matrix.
+
+01:58.830 --> 02:02.820
+So print linkage matrix.
+
+02:02.820 --> 02:07.320
+I'm going to get rid of these codes that say it and let's run it.
+
+02:07.320 --> 02:08.640
+I'm going to close it.
+
+02:08.690 --> 02:12.120
+OK let's clear the console and run it.
+
+02:12.360 --> 02:18.840
+And basically this linkage matrix is going to track that to what point had been connected.
+
+02:19.020 --> 02:24.450
+As you can see the algorithm assigns a given integer to every single point.
+
+02:24.600 --> 02:29.070
+0 1 2 3 4 and 5.
+
+02:29.280 --> 02:38.370
+OK we have 6 7 8 and 9 as you can see because if the algorithm merges two points together it's going
+
+02:38.370 --> 02:40.940
+to assign the next integer possible.
+
+02:40.950 --> 02:49.890
+So because we had 0 1 2 3 4 5 as you can see in the Stapp the algorithm merges the first point and the
+
+02:49.890 --> 02:50.760
+second point.
+
+02:50.760 --> 02:53.680
+So with index 0 and index won.
+
+02:53.790 --> 02:54.540
+Why.
+
+02:54.540 --> 03:01.980
+Because the distance was 0.5 between the two of them and this new cluster is going to have the integer
+
+03:01.980 --> 03:02.970
+6.
+
+03:03.250 --> 03:07.230
+Ok then the algorithm merges two and four.
+
+03:07.230 --> 03:16.620
+So 0 1 to this point and this point and it's going to assign the integer 7 to this cluster that has
+
+03:16.800 --> 03:17.640
+this point.
+
+03:17.640 --> 03:18.780
+And at this point.
+
+03:18.810 --> 03:19.710
+OK.
+
+03:19.830 --> 03:27.270
+So basically this linkage matrix is going to track that was going to be the staps merging 0 and 1 then
+
+03:27.270 --> 03:35.520
+merging 2 and 4 because the distance was 0.5 that merging 3 and 5 because the distance was 0.5 then
+
+03:35.520 --> 03:40.410
+merging 7 and 8 and finally merging six and nine.
+
+03:40.410 --> 03:43.380
+So basically this is the linkage matrix.
+
+03:43.390 --> 03:50.170
+I'm going to get rid of this and we just have to build that thendo Graham with the linkage matrix and
+
+03:50.170 --> 03:51.530
+the truncated mode.
+
+03:51.660 --> 03:52.940
+What is this translated mode.
+
+03:52.950 --> 03:56.890
+We can prune the tree like structure with the truncate mode.
+
+03:57.030 --> 04:02.010
+If there's higher Haikal clustering tree like structure would be enormous.
+
+04:02.010 --> 04:06.020
+In this case it's going to be so small that we don't want to prune it.
+
+04:06.030 --> 04:07.960
+We don't want to truncate it.
+
+04:08.430 --> 04:11.430
+So that's why the truncate moders equals to none.
+
+04:11.580 --> 04:18.240
+So let's save it and I'm going to clear the console and let's run the application.
+
+04:18.240 --> 04:19.790
+So these are the points.
+
+04:19.890 --> 04:25.710
+And what's going to be the den program it's going to be the danto grammar's you can see the algorithm
+
+04:25.710 --> 04:34.140
+first merge 0 and 1 then 2 and 4 then 3 and 5 then it's going to merge these two clusters.
+
+04:34.230 --> 04:38.780
+And finally it's going to merge this cluster with this cluster.
+
+04:38.790 --> 04:39.870
+Why is it good.
+
+04:39.930 --> 04:47.170
+Because basically it's going to contain all the solutions that we can get with the help of k means clustering.
+
+04:47.280 --> 04:53.620
+If we want to end up with two clusters we have to take these points and these points.
+
+04:53.640 --> 05:00.890
+So 0 1 basically the first and the second point and all the other points are going to form the second
+
+05:00.890 --> 05:08.370
+the cluster if we want to make three clusters then these points are going to be a single cluster.
+
+05:08.370 --> 05:14.250
+These points are going to be a single cluster and these points are going to be a single cluster again
+
+05:14.460 --> 05:18.740
+so we can decide how many clusters we want to create.
+
+05:18.900 --> 05:22.690
+OK so this is how we create the linkage matrix.
+
+05:22.710 --> 05:29.760
+It's going to store the information what points to merge and then the gram is going to build this tree
+
+05:29.760 --> 05:35.270
+like structure and we can decide how many clusters do we want to end up with.
+
+05:35.430 --> 05:39.840
+OK so that's all about a clustering dance or watching.

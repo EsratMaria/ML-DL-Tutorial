@@ -1,0 +1,178 @@
+WEBVTT
+
+00:01.420 --> 00:02.710
+So far so good.
+
+00:02.710 --> 00:06.960
+We have been talking about the technical background for linear regression.
+
+00:07.030 --> 00:12.960
+We have been talking about the underlying optimization algorithm we have been talking about.
+
+00:12.980 --> 00:19.720
+Gradient descent we have been talking about a concrete implementation how to use linear regression how
+
+00:19.720 --> 00:20.990
+to fit the model.
+
+00:21.040 --> 00:28.720
+And finally how to make predictions we do model but we have to check whether it is going to work fine
+
+00:28.810 --> 00:29.520
+or not.
+
+00:29.560 --> 00:35.700
+So that's why we have to talk about our squared statistic which is defined as follows.
+
+00:35.710 --> 00:40.920
+R-Squared is ECOs to one of minus r s as divided by TS as.
+
+00:40.930 --> 00:46.670
+OK so what is R-squared measures the accuracy of the regression modals.
+
+00:46.780 --> 00:50.460
+It is the square of the correlation coefficient or.
+
+00:50.500 --> 00:56.530
+So it measures how strong a linear relationship is between two variables.
+
+00:56.590 --> 01:04.990
+In this case the two varietals are the size of the House and the price of the house the higher the value
+
+01:05.170 --> 01:11.440
+the better the model fits the data are s as is the residual sum of squares.
+
+01:11.590 --> 01:14.840
+It measures the variability left unexplained.
+
+01:14.860 --> 01:19.460
+After performing the regression basically the residual sum of squares.
+
+01:19.480 --> 01:22.940
+This is what we have been discussing in one of the previous lectures.
+
+01:22.980 --> 01:29.890
+We just have to sum our bodies APS-C loan terms the absolute one it is the difference between the first
+
+01:29.890 --> 01:35.160
+sample as far as the price is concerned and the prediction by the model.
+
+01:35.200 --> 01:40.860
+OK so this is the short term then we can define the error term for the second sample.
+
+01:40.900 --> 01:48.070
+Okay so there is the price of the house in the training data set and we have a prediction by the model.
+
+01:48.220 --> 01:50.870
+And of course there going to be some error term.
+
+01:50.890 --> 01:55.880
+It is true for Epsilon's 3 Absolom for up to absolutely 8.
+
+01:55.900 --> 02:01.240
+So the mean square error or is E-Class did some of these error terms.
+
+02:01.240 --> 02:05.200
+So basically H x minus Y squared.
+
+02:05.200 --> 02:07.510
+It is the main squared error.
+
+02:07.630 --> 02:14.770
+Okay so this is how we calculate this crazy jus a sum of squares age X minus Y squared and we have to
+
+02:14.770 --> 02:22.780
+sum them up and TTSS stands for total sum of squares which measures the total variance in Y.
+
+02:22.930 --> 02:28.300
+So basically y is going to be the prices in the training data set.
+
+02:28.340 --> 02:34.840
+Dimmu is the mean of the house prices in the original dataset and of course we have to calculate the
+
+02:34.840 --> 02:35.560
+variance.
+
+02:35.560 --> 02:41.440
+This is the exact formula how we calculate the variance for a random variable.
+
+02:41.440 --> 02:42.030
+Why.
+
+02:42.100 --> 02:47.900
+Okay so we just have to consider the prices we can get these values from the data set.
+
+02:47.980 --> 02:53.710
+Then we have to calculate the Dimino of these values and this is how we are able to end up with the
+
+02:53.740 --> 02:57.040
+variance for the price in the training data set.
+
+02:57.100 --> 03:04.140
+Okay so this is how we calculate to Yesus total sum of squares and R-Squared is close to 1 of minus
+
+03:04.170 --> 03:06.630
+r s as divided by DSS.
+
+03:06.700 --> 03:10.070
+The higher the better the model fits the data.
+
+03:10.170 --> 03:19.630
+OK so let's check our square the value in our example the R-squared value is 0.2 49 which is very very
+
+03:19.630 --> 03:20.580
+small number.
+
+03:20.670 --> 03:28.540
+Okay the maximum value of R-Squared is equal to 1 which means that we are able to explain the linear
+
+03:28.540 --> 03:33.900
+relationship between two random variables size and price.
+
+03:34.000 --> 03:42.090
+If this value is 0 at 49 basically we can come to the conclusion that there is a high probability that
+
+03:42.160 --> 03:46.080
+there is no linear relationship between the two features.
+
+03:46.090 --> 03:53.080
+Of course there are so huge error terms as you can see which means that lots of lots of points are quite
+
+03:53.080 --> 03:59.920
+far away from the linear line that we can come to the conclusion just taking a closer look at the Plaut
+
+04:00.160 --> 04:07.240
+that this linear regression model is not the best one possible but if we take a look at our square you
+
+04:07.450 --> 04:15.100
+we can make sure again that okay 0.14 nine is so small that we can come to the conclusion that we are
+
+04:15.100 --> 04:22.160
+not able to find a linear relationship between the size of the House and the price of the house.
+
+04:22.390 --> 04:22.990
+Okay.
+
+04:22.990 --> 04:27.570
+So this is how we can use linear regression and making predictions.
+
+04:27.610 --> 04:33.910
+But what's more important is that we are able to analyze the algorithm whether it is working fine or
+
+04:33.910 --> 04:34.310
+not.
+
+04:34.300 --> 04:40.840
+We have both means square there or any we that half of the R-squared value are square the value the
+
+04:40.840 --> 04:45.010
+higher the better it is usually around 1.
+
+04:45.070 --> 04:53.880
+So 0.8 0.9 or 0.75 is still okay but 0 to 49 is quite small.
+
+04:53.920 --> 04:59.830
+So we can come for the conclusion that this linear regression model is not the best one possible.
+
+04:59.830 --> 05:00.720
+Thanks for watching.

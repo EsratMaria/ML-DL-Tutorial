@@ -1,0 +1,187 @@
+WEBVTT
+
+00:02.490 --> 00:09.120
+OK in the previous lecture we have imported the iris data that we have created the features and the
+
+00:09.120 --> 00:10.700
+labels accordingly.
+
+00:10.710 --> 00:12.830
+We have splitted the data set.
+
+00:12.930 --> 00:20.370
+So as you can see 80 percent of the data set is for training and 20 percent of the dataset is for testing
+
+00:20.370 --> 00:21.330
+purposes.
+
+00:21.510 --> 00:25.020
+We have created the now run network model.
+
+00:25.020 --> 00:31.330
+The optimizer is going to be an Adam optimizer with learning Grade 0 0 0 5.
+
+00:31.440 --> 00:33.060
+What about the last function.
+
+00:33.060 --> 00:36.350
+Here we are dealing with classification problems.
+
+00:36.420 --> 00:42.750
+So instead of using mean square error or as a last function we have to use the negative log likelihood
+
+00:42.750 --> 00:49.300
+loss function the negative log likelihood loss function is the same as the cross and propolis function.
+
+00:49.350 --> 00:54.750
+Ok what's the difference between the two of them that the negative log likelihood have something to
+
+00:54.750 --> 00:56.970
+deal with likelihood functions.
+
+00:57.030 --> 01:03.870
+So the likelihood approach is very very popular in physics for example it has something to do with probability
+
+01:03.870 --> 01:07.870
+theory as far as the cross and therapy approach is concerned.
+
+01:07.890 --> 01:13.050
+It has something to do with information theory but they have the same result.
+
+01:13.140 --> 01:19.340
+So we are going to use cross and truculence function because we are dealing with classification problem.
+
+01:19.350 --> 01:25.670
+So that's why it is a categorical across central lost function the optimizer is the atom optimizer.
+
+01:25.770 --> 01:28.480
+And we would like to measure the accuracy.
+
+01:28.540 --> 01:35.360
+OK we feed the model so we are going to train our own network on the training data set.
+
+01:35.400 --> 01:39.490
+We will make a thousand books with a batch size 20.
+
+01:39.540 --> 01:41.340
+Okay what is the bet size.
+
+01:41.340 --> 01:46.510
+We have been talking about bat size when dealing with still has the gradient descent.
+
+01:46.530 --> 01:53.370
+So we came to the conclusion that the sand is going to calculate the overall loss across all the training
+
+01:53.370 --> 02:00.640
+data set and then it calculates the gradient it south as far as hasty gradient descent is concerned.
+
+02:00.750 --> 02:07.320
+We compute the gradient and the paramita vector update after every single training sample.
+
+02:07.320 --> 02:13.820
+So if you use a subset of the original training data set it is schooled many best stochastic gradient
+
+02:13.820 --> 02:14.480
+descent.
+
+02:14.700 --> 02:20.700
+Of course we can use many Bache for any other optimizer or not just so has the gradient descent.
+
+02:20.730 --> 02:23.620
+But for example for the atom optimizer.
+
+02:23.670 --> 02:31.380
+So here we use an atom optimizer and we use a bat size 20 what does it mean that diablerie them is going
+
+02:31.380 --> 02:34.660
+to consider 20 of the training samples.
+
+02:34.770 --> 02:37.800
+So here for example the first 20 items.
+
+02:37.830 --> 02:44.760
+So these items it is going to calculate the gradients and going to update the Parian meters of the now
+
+02:44.760 --> 02:48.580
+we're on networks such as for example the educates and so on.
+
+02:48.660 --> 02:55.920
+So this is called a mini batch instead of considering every single sample in the data set and updating
+
+02:55.920 --> 02:58.270
+the parameters for a mini batch.
+
+02:58.290 --> 03:03.060
+We are going to use just a subset in order to update these parameters.
+
+03:03.150 --> 03:06.920
+OK so this is called the bat size as you can tune the paramita.
+
+03:06.920 --> 03:09.540
+So feel free to change the bat size.
+
+03:09.540 --> 03:12.000
+Feel free to change the number of box.
+
+03:12.150 --> 03:15.620
+The learning rate for the atom optimizer and so on.
+
+03:15.720 --> 03:22.830
+OK we just have to evaluate the model on that test dataset and we can printout the accuracy by the way
+
+03:22.830 --> 03:30.930
+this results with zero when X is going to return the last function value and the index one is going
+
+03:30.930 --> 03:37.430
+to return the accuracy that save it and let's run it let's wait for the algorithm to finish.
+
+03:39.730 --> 03:46.780
+So as you can see the accuracy on the training data set is approximately 98 99 percent which is quite
+
+03:46.780 --> 03:47.200
+good.
+
+03:47.350 --> 03:52.050
+But of course we are going to evaluate the algorithm on the test dataset.
+
+03:52.210 --> 03:57.480
+So it's very important to know that this is the accuracy on the training data set.
+
+03:57.610 --> 04:05.650
+And this is the accuracy on the test data set as you can see 97 percent accuracy I guess we can make
+
+04:05.650 --> 04:11.660
+96 percent accuracy with the help of random for us classifiers or support vector machines.
+
+04:11.680 --> 04:18.770
+So that's why I told you that deep DB Now Real Networks can outperform machine learning algorithms.
+
+04:18.820 --> 04:20.530
+So this is how we deal with it.
+
+04:20.530 --> 04:25.320
+DB Now all the networks in order to classify the Iraqis data set.
+
+04:25.330 --> 04:32.170
+Of course we can tune this algorithm by changing the number of hidden layers by changing the activation
+
+04:32.170 --> 04:34.240
+function changing the number of.
+
+04:34.240 --> 04:40.090
+Now rowans in the hidden layer changing the learning rate changing the number of app box or the bag
+
+04:40.090 --> 04:40.690
+size.
+
+04:40.720 --> 04:42.960
+Feel free to tune these barometers.
+
+04:43.070 --> 04:45.790
+OK so this is how we create DB now.
+
+04:45.840 --> 04:46.990
+And that works.
+
+04:46.990 --> 04:47.960
+Thanks for watching.

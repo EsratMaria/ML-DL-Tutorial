@@ -1,0 +1,127 @@
+WEBVTT
+
+00:01.260 --> 00:07.120
+In this lecture we are going to talk about financial applications of machine learning.
+
+00:07.160 --> 00:11.330
+So we would like to predict stock prices in the future.
+
+00:11.330 --> 00:14.450
+So first of all what are stocks stocks or shares.
+
+00:14.450 --> 00:17.760
+Are the ownership of a small piece of a company.
+
+00:17.900 --> 00:24.880
+So if you have a good idea you can raise capital by selling off future profits in the form of shares.
+
+00:24.890 --> 00:27.450
+This is how most of the startups begin.
+
+00:27.710 --> 00:28.560
+OK.
+
+00:28.640 --> 00:30.590
+Why is it good to buy stocks.
+
+00:30.620 --> 00:34.920
+First of all because of dividends plus any growth in the stock's value.
+
+00:34.940 --> 00:41.690
+So if you expect that the stock will rise in value in the future then you maintain a long position.
+
+00:41.750 --> 00:48.310
+And if you believe the price of the stock will decrease in value then you will maintain a short position.
+
+00:48.380 --> 00:52.510
+That's the main difference between loan position and short position.
+
+00:52.580 --> 00:58.690
+OK so let's suppose the situation that we have the price of the stock this is the Ass t.
+
+00:58.820 --> 01:00.480
+And of course we have the time.
+
+01:00.590 --> 01:03.280
+Of course the price of the stock will fluctuate.
+
+01:03.290 --> 01:09.830
+It can be described by brownian motion or Havener process but this is why machine learning is good because
+
+01:09.830 --> 01:11.830
+we don't have to build a model.
+
+01:11.840 --> 01:15.800
+I mean we don't have to care about standard normal distributions.
+
+01:15.800 --> 01:17.760
+We don't have to care about black issues.
+
+01:17.870 --> 01:24.920
+And so while we just want to build a data set what does it mean that we have to construct features and
+
+01:24.920 --> 01:26.450
+a target variable.
+
+01:26.570 --> 01:34.750
+In this case in our implementation the features are going to be daily returns the daily return yesterday.
+
+01:34.760 --> 01:42.700
+This is the leg one leg two is the daily return two days ago X3 is the daily return at three days ago
+
+01:42.700 --> 01:43.640
+and so on.
+
+01:43.760 --> 01:50.120
+So we have the daily return two days ago one day ago and yesterday and we would like to make a prediction
+
+01:50.260 --> 01:50.780
+later.
+
+01:50.800 --> 01:54.370
+The stock price went up or went down.
+
+01:54.380 --> 01:56.450
+Of course it is historical data.
+
+01:56.480 --> 02:03.230
+So we know the direction in this case it is up what about the next one as you can see we have shifted
+
+02:03.320 --> 02:09.710
+the features once that to the right and we are going to take this item as the day return.
+
+02:09.800 --> 02:13.090
+Two days ago this is the daily return of one day ago.
+
+02:13.130 --> 02:15.230
+This is the daily return yesterday.
+
+02:15.230 --> 02:17.000
+What about that direction.
+
+02:17.060 --> 02:24.460
+Again it is up and this is how we can construct the data set as far as the daily returns are concerned.
+
+02:24.590 --> 02:30.970
+These are going to be the features and the direction which is going to be the target where I am.
+
+02:31.100 --> 02:32.110
+Why is it good.
+
+02:32.120 --> 02:39.230
+Because if we train our Mesrine learning algorithm on a data set like this then we can predict the stock
+
+02:39.230 --> 02:40.230
+price to morrow.
+
+02:40.280 --> 02:48.080
+If we have a lag one like 2 x 3 maybe we are able to approximate whether the stock price will increase
+
+02:48.080 --> 02:50.590
+in value or decrease in value.
+
+02:50.660 --> 02:53.410
+Okay this is what we are going to talk about.
+
+02:53.420 --> 02:54.290
+Thanks for watching.

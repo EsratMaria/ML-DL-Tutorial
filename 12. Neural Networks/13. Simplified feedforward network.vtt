@@ -1,0 +1,325 @@
+WEBVTT
+
+00:00.330 --> 00:07.530
+High in this video we are going to take a little example for how to train a narrow network.
+
+00:07.590 --> 00:12.560
+So we would like to train or and logical relation to bays now the network.
+
+00:12.630 --> 00:17.360
+This is the logical relation we have been talking about it several times.
+
+00:17.490 --> 00:27.060
+The Axert logical relation is something like 0 0 0 Dandie X or well-you 0 0 1 x or a value on 1 0 X
+
+00:27.060 --> 00:31.630
+or evaluates 1 and 1 1 0 is the output.
+
+00:31.920 --> 00:38.040
+OK so let's suppose the fact that we have a now network without a hidden layer.
+
+00:38.130 --> 00:44.110
+So we just have an input layer and we have an output layer with a single now on and we have two edge
+
+00:44.110 --> 00:44.910
+weights.
+
+00:45.150 --> 00:50.860
+We don't know the code actuates in other wants so we initialize it with a random number.
+
+00:50.880 --> 00:54.480
+For example double you want to double you to every story.
+
+00:54.720 --> 00:58.260
+And the threshold for this now we're on is equal to 2.
+
+00:58.290 --> 01:00.730
+We just choose it by random.
+
+01:01.140 --> 01:05.120
+OK so we know that what's the ideal output.
+
+01:05.130 --> 01:09.580
+We take it from this logical relation table 0 0.
+
+01:09.660 --> 01:18.300
+The output should be 0 4 0 1 output should be zero then 0 again and 1 and then we calculate that what's
+
+01:18.300 --> 01:25.870
+going to be the actual output according to the our own network the incoming Cibeles the sum over the
+
+01:25.890 --> 01:27.810
+note on the value times the weight.
+
+01:27.840 --> 01:34.440
+And then we have to check whether that given a value is greater than the threshold value or not if it's
+
+01:34.440 --> 01:35.800
+0 0.
+
+01:35.850 --> 01:37.100
+So X is zero.
+
+01:37.110 --> 01:38.420
+And why is 0.
+
+01:38.430 --> 01:42.610
+Of course the sum is going to be 0 which is smaller than 2.
+
+01:42.630 --> 01:44.440
+So it's going to be zero.
+
+01:44.610 --> 01:53.730
+But if x is equal to zero and Y is equal to on Dan and the sum is going to be 0 times two plus one Times
+
+01:53.730 --> 01:56.790
+story which is Srey greater than two.
+
+01:56.880 --> 02:00.420
+So it's going to be one for the calculated output.
+
+02:00.540 --> 02:08.770
+If the first one so x is equal to one and the Y is equal to zero than one times two plus zero Times
+
+02:08.790 --> 02:11.230
+story it is equal to two.
+
+02:11.280 --> 02:18.780
+We define that threshold that if it's greater or equal to that given some Then it is going to fire two
+
+02:18.840 --> 02:19.960
+is equal to two.
+
+02:20.010 --> 02:23.910
+So the output will be warm and if x is equal to 1.
+
+02:23.940 --> 02:29.600
+Why is equal to 1 1 times two plus one times three equals to five.
+
+02:29.610 --> 02:32.000
+Five is greater than the threshold of value.
+
+02:32.070 --> 02:33.980
+So the output will be won.
+
+02:34.200 --> 02:41.730
+As you can see we do randomly initialized awaits this now and that work is not going to perform well.
+
+02:41.850 --> 02:44.520
+OK we have a single match.
+
+02:44.520 --> 02:51.660
+Basically the first line is going to be zero for the actual on and for the idea of on by the others
+
+02:51.750 --> 02:53.340
+is not going to be the same.
+
+02:53.370 --> 02:54.390
+Ok sorry for that.
+
+02:54.390 --> 02:56.270
+The last line is OK as well.
+
+02:56.370 --> 03:00.750
+So we have a 50 percent error or what do do now.
+
+03:00.810 --> 03:04.020
+Basically we have to calculate the error.
+
+03:04.140 --> 03:08.080
+So first we construct the training data from the logical table.
+
+03:08.100 --> 03:10.850
+We have four pairs with the right answer.
+
+03:10.860 --> 03:14.370
+We can train our network according to day's data.
+
+03:14.430 --> 03:19.000
+Of course if it's 0 0 then the correct answer would be zero.
+
+03:19.080 --> 03:25.110
+But we calculate the error and we come to the conclusion that the expectation should be zero.
+
+03:25.110 --> 03:26.580
+The result is zero.
+
+03:26.580 --> 03:27.870
+The error is zero.
+
+03:27.870 --> 03:28.620
+OK.
+
+03:28.620 --> 03:32.040
+Basically when the error is zero we don't have to do anything.
+
+03:32.130 --> 03:35.440
+But let's take a look how to calculate the error.
+
+03:35.640 --> 03:39.720
+And the simplest algorithm is that we have the right answer.
+
+03:39.720 --> 03:41.300
+What we should get.
+
+03:41.370 --> 03:48.210
+So this right answer is here and we have the actual bomb and the error can be the difference between
+
+03:48.210 --> 03:49.570
+the two of them.
+
+03:49.590 --> 03:57.930
+A better approach is to square them and we run or algorithm until these error terms are very small.
+
+03:57.930 --> 04:03.730
+So the aim of the algorithm is to make sure that the error term is as small as possible.
+
+04:03.750 --> 04:06.780
+What does it mean if the error term is small.
+
+04:06.780 --> 04:13.530
+It means that the right answer we know for certain is approximately the same as we calculate with the
+
+04:13.530 --> 04:15.270
+top of the natural network.
+
+04:15.270 --> 04:22.620
+And of course we keep updating the edge waits until the arrow is not small and wait in the end plus
+
+04:22.620 --> 04:30.060
+one iteration is equal to the weight in the end iteration Plus the input times the error times the learning
+
+04:30.060 --> 04:36.320
+rate where the learning rate is a given number that value is smaller than a warm.
+
+04:36.370 --> 04:37.680
+This is the equation.
+
+04:37.680 --> 04:42.020
+This is what we have to use so why are the error or term is not small.
+
+04:42.030 --> 04:45.850
+We have to adjust the actuates basically this way.
+
+04:45.870 --> 04:47.920
+And plus one minus the weight.
+
+04:47.940 --> 04:50.890
+And is that changing the actual weight.
+
+04:50.940 --> 04:57.630
+If the answer is great we are going to have a great change in the weight if the error rate is zero.
+
+04:57.630 --> 05:02.280
+As you can see there's not going to be changing the actuates.
+
+05:03.030 --> 05:05.670
+So here for example the add on is zero.
+
+05:05.670 --> 05:12.000
+Of course we don't change the actuates because according to this training data the network is working
+
+05:12.000 --> 05:12.740
+fine.
+
+05:12.930 --> 05:20.120
+OK so let's suppose the fact when the Xs on the Y is 0 we expected according to the logical table is
+
+05:20.120 --> 05:20.990
+0.
+
+05:21.030 --> 05:22.540
+The result is so on.
+
+05:22.560 --> 05:26.130
+So there's an error or minus 1 it doesn't matter.
+
+05:26.130 --> 05:32.550
+This is why we usually square it in these terms because we are not curious whether it has plus 1 or
+
+05:32.550 --> 05:34.680
+minus 1 we just curious that.
+
+05:34.680 --> 05:37.380
+OK the short term is not zero.
+
+05:37.380 --> 05:40.090
+So somehow we have to update the edges.
+
+05:40.320 --> 05:44.750
+And basically this is the equation we have been discussing that.
+
+05:44.760 --> 05:45.070
+OK.
+
+05:45.090 --> 05:51.970
+We come to the conclusion that the error term is for example minus 1 danda double you want.
+
+05:52.080 --> 05:58.500
+So this is the updated value for the double you want to educate is equal to the previous state.
+
+05:58.500 --> 06:07.370
+Basically the two plus one while one because the input is equal to one import dives at all times learning
+
+06:07.380 --> 06:08.280
+grade.
+
+06:08.280 --> 06:09.820
+So this is the error.
+
+06:09.960 --> 06:18.210
+And this is the learning grade one time and minus one time zero that one is equal to minus 0.1.
+
+06:18.240 --> 06:26.580
+So we have to update this adulate to minus 0.1 is equal to 1.9 as you can see.
+
+06:26.580 --> 06:34.400
+So we have to decrease the value for this adulate in order to get a better result for the prediction.
+
+06:34.590 --> 06:40.330
+And what about this double to update to you because the input value is 0.
+
+06:40.340 --> 06:48.540
+The updated value for the w 2 is equal to W2 plus 0 times the error times the learning grade.
+
+06:48.630 --> 06:56.610
+But because the input is zero that's why the W2 value is not going to change after the update because
+
+06:57.020 --> 07:02.190
+W2 update is equal to W2 Kozhikode which is the same.
+
+07:02.730 --> 07:07.160
+So basically that's all about the algorithm to solve in the big picture.
+
+07:07.170 --> 07:13.470
+So we calculate the error or we know what we should get we calculate what we get from the now rule and
+
+07:13.470 --> 07:14.060
+that to her.
+
+07:14.190 --> 07:20.550
+And if there's a mismatch in the sense that there is an error or we have to update the adulate according
+
+07:20.550 --> 07:29.300
+to the error and we use this equation it is the same as we have seen here that the input times the error
+
+07:29.340 --> 07:36.370
+times the learning rate if the error is big then we are going to make a big change in the adulate even
+
+07:36.500 --> 07:42.790
+the learning rate is big then we are again going to make a big change in the educators.
+
+07:42.810 --> 07:51.180
+That's why the learning rate is usually 0.1 or 0.3 for example to make sure that we make a little change
+
+07:51.180 --> 07:57.500
+in the actual weight because we don't want to over fate in the sense that we get an even reverse educate.
+
+07:57.600 --> 08:04.560
+So that's why usually this learning rate is very small to make sure that we get a better and better
+
+08:04.620 --> 08:06.440
+updated adulate.
+
+08:06.450 --> 08:07.340
+Thanks for watching.

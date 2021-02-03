@@ -1,0 +1,298 @@
+WEBVTT
+
+00:01.460 --> 00:08.990
+In the previous lecture we have been talking about how to calculate Shannon entropy for a given feature.
+
+00:08.990 --> 00:15.710
+Of course we are interested in the target variable so that's why we have to deal with the Shannon entropy
+
+00:15.920 --> 00:17.540
+of playing golf.
+
+00:17.550 --> 00:23.480
+Okay then we have to calculate the entropy with respect to a given feature.
+
+00:23.480 --> 00:30.320
+As far as the dataset is concerned as you can see we have four features outlook temperature humidity
+
+00:30.380 --> 00:31.070
+and wind.
+
+00:31.250 --> 00:38.120
+And we have a so-called target valuable whether we are going to play golf or we are not going to play
+
+00:38.120 --> 00:38.480
+golf.
+
+00:38.780 --> 00:41.240
+So this is the formula we have to use.
+
+00:41.240 --> 00:45.270
+We have to find out the probability of the given feature.
+
+00:45.380 --> 00:47.750
+We have to multiply it by the entropy.
+
+00:47.960 --> 00:50.400
+And finally we have to sum them up.
+
+00:50.420 --> 00:53.240
+Let's take a look at the outlook feature.
+
+00:53.240 --> 00:57.260
+As you can see there are three possible values of the outlook.
+
+00:57.320 --> 00:59.260
+The outlook can be sunny.
+
+00:59.300 --> 01:03.100
+It can be over costed and it can be rainy.
+
+01:03.110 --> 01:10.130
+So this is why we have sunny overcast and rainy and we have the target valuable whether we are going
+
+01:10.130 --> 01:12.080
+to play golf or not.
+
+01:12.080 --> 01:17.280
+So basically there are two possible values of playing golf yes and no.
+
+01:17.300 --> 01:20.230
+And we just have to count the occurrences.
+
+01:20.240 --> 01:28.030
+So for example whenever the outlook is sunny how many yes and no values are there in the play column.
+
+01:28.070 --> 01:35.300
+So Sunny has the value you know Sunny has the value you know Dan Sunny has the value you know then Sunny
+
+01:35.300 --> 01:36.340
+has the value.
+
+01:36.350 --> 01:36.910
+Yes.
+
+01:36.920 --> 01:39.130
+And finally Sunny has the value yes.
+
+01:39.140 --> 01:45.810
+Which means that there are two yes values and three no values associated with Sunny.
+
+01:45.890 --> 01:52.730
+We have to do the same for overcast and we came to the conclusion that we have for yes values and zero
+
+01:52.730 --> 01:53.790
+no values.
+
+01:53.810 --> 01:55.250
+What about tyranny.
+
+01:55.310 --> 01:59.100
+We have three yes values and two no values.
+
+01:59.180 --> 02:01.570
+So we just have to use this formula.
+
+02:01.610 --> 02:05.970
+We have to calculate the probability of the given the possible values.
+
+02:06.020 --> 02:07.940
+What is the probability of Sunny.
+
+02:08.060 --> 02:15.150
+We have one two three four five six seven eight nine ten eleven twelve thirteen fourteen values all
+
+02:15.140 --> 02:22.850
+together and we have to count the occurance of the sunny one two three four and five.
+
+02:22.880 --> 02:30.350
+So this is why the probability of sunny as far as the outlook feature is concerned is 5 divide by 14
+
+02:30.740 --> 02:38.180
+and we have to calculate the entropy we did these values 2 and 3 this is what we have been talking about
+
+02:38.180 --> 02:45.110
+in the previous lecture that calculating this entropy we just have to use this simple formula this is
+
+02:45.110 --> 02:51.050
+called the Shannon entropy so the probability times the base to logarithm of the probability and we
+
+02:51.050 --> 02:52.230
+have to sum them up.
+
+02:52.250 --> 02:56.450
+So in this case 4 9 and 5 we had something like this.
+
+02:56.450 --> 03:03.110
+Whenever we have 2 and 3 what do we have to do we have to use to divide by 5.
+
+03:03.170 --> 03:11.570
+Base 2 logarithm 2 divide by 5 minus 3 divide by 5 Base 2 logarithm 3 divide by 5.
+
+03:11.810 --> 03:17.660
+So we have to use the same formula as here but of course with we did these values.
+
+03:17.660 --> 03:22.590
+So 2 and 3 and it has a value zero dark 9 7 and 1.
+
+03:22.610 --> 03:30.120
+So basically this is what we have to do what is the probability of overcast we have 14 values altogether
+
+03:30.650 --> 03:39.020
+and we have to count the occurance of the overcast so 1 2 3 and 4 so this is why for the wide by 14
+
+03:39.320 --> 03:47.720
+is the probability that the outlook is over cost data and what is the entropy for 4 and 0 is going to
+
+03:47.720 --> 03:56.030
+be 0 plus the probability of rainy how many rainy values are there in the outlook column we have a one
+
+03:56.030 --> 03:58.760
+two three four and five.
+
+03:58.790 --> 04:05.420
+So that's why 5 divide by 14 is the probability of raining and we have to calculate the entropy with
+
+04:05.480 --> 04:12.680
+3 and to you again we have to use this formula with the Shannon entropy by the way if we sum up the
+
+04:12.690 --> 04:21.170
+probabilities of course we end up with 1 so 5 divide by 14 plus for the wide by 14 plus 5 y by 14 is
+
+04:21.170 --> 04:22.870
+equal to 1 of course.
+
+04:23.040 --> 04:29.750
+Okay so this is how we calculate the entropy we do is back to a given predictor or feature.
+
+04:29.750 --> 04:36.680
+And what about information gain information gain is the most important value as far as decision trees
+
+04:36.680 --> 04:37.550
+are concerned.
+
+04:37.550 --> 04:44.450
+So first of all what is information gain information gain is the decreasing entropy after the data set
+
+04:44.540 --> 04:51.770
+is split on a given attribute or feature feature and attribute with the highest information gain will
+
+04:51.770 --> 04:57.590
+be the root node in the tree in the previous lecture we have managed to construct the decision tree
+
+04:57.620 --> 05:02.590
+but it is a good question that how do we decide what is going to be the root node.
+
+05:02.670 --> 05:06.840
+How do we decide whether we have to split a given node or not.
+
+05:06.840 --> 05:13.980
+This is why we have to deal with information gained so the information gained as far as outlook is concerned
+
+05:14.250 --> 05:21.420
+is the entropy of playing golf minus the entropy of playing golf with respect to outlook.
+
+05:21.510 --> 05:26.900
+Okay so we have calculated the entropy of playing golf which is zero 9 4.
+
+05:27.000 --> 05:34.320
+So this is why we have this value and we have calculated the entropy of playing golf with respect to
+
+05:34.380 --> 05:38.000
+outlook which is zero dot six nine thirty six.
+
+05:38.010 --> 05:38.370
+OK.
+
+05:38.400 --> 05:40.550
+So this is why we use this value.
+
+05:40.680 --> 05:44.160
+And the result is going to be 0 that 2 7 4.
+
+05:44.250 --> 05:49.740
+So it is the information gain of playing golf with respect to outlook.
+
+05:49.740 --> 05:52.890
+And this is what we have to do with all the features.
+
+05:52.890 --> 06:00.630
+So for Outlook temperature humidity and wind and the feature with the highest information gain is going
+
+06:00.630 --> 06:02.720
+to be the root node in the tree.
+
+06:02.730 --> 06:09.660
+We just have to calculate this information gain for all the outer features such as temperature humidity
+
+06:09.750 --> 06:10.500
+and wind.
+
+06:10.680 --> 06:14.520
+And we have to choose the one with the highest value.
+
+06:14.520 --> 06:15.570
+Why is it good.
+
+06:15.600 --> 06:22.620
+Because if we have the feature with the highest information gain we know that it's going to be the root
+
+06:22.650 --> 06:26.880
+node in the decision tree because it is the most relevant feature.
+
+06:27.060 --> 06:33.340
+So this is how we are able to end up with an algorithm capable of constructing a decision tree.
+
+06:33.360 --> 06:33.720
+OK.
+
+06:33.720 --> 06:35.030
+We just have to track that.
+
+06:35.070 --> 06:42.430
+If an entropy for a given branch is greater than the one we have to split the given feature.
+
+06:42.480 --> 06:47.850
+So as far as overcast is concerned we don't have to split any further.
+
+06:48.020 --> 06:56.430
+But as far as humidities concerned we have to split it into high and normal as far as wind is concerned
+
+06:56.430 --> 07:04.400
+as a feature we have to split it further into true or false and the leaf nodes are the target for valuables
+
+07:04.460 --> 07:07.890
+whether we are going to play tennis or not.
+
+07:07.890 --> 07:15.000
+So after constructing the decision tree based on entropy and information gain we just have to traverse
+
+07:15.030 --> 07:16.500
+these three like structure.
+
+07:16.500 --> 07:23.200
+If the outlook is sunny and it is windy then we are going to play golf.
+
+07:23.280 --> 07:27.030
+If the outlook is rainy the humidity is high.
+
+07:27.060 --> 07:29.040
+We are not going to play golf.
+
+07:29.250 --> 07:35.400
+So basically this is the aim of constructing a tree like structure like this because we are able to
+
+07:35.400 --> 07:42.440
+predict the target valuable for given features such as Outlook temperature humidity and wind.
+
+07:42.540 --> 07:42.980
+OK.
+
+07:42.990 --> 07:49.190
+In the next lecture we are going to talk about the advantages and disadvantages of decision trees.
+
+07:49.260 --> 07:54.200
+And finally we are going to take a look at the concrete implementation.
+
+07:54.210 --> 07:55.110
+Thanks for watching.

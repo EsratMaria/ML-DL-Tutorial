@@ -1,0 +1,268 @@
+WEBVTT
+
+00:01.510 --> 00:05.950
+Okay in the last lecture we have been talking about artistic progression.
+
+00:05.950 --> 00:08.290
+We work very simple example.
+
+00:08.410 --> 00:15.580
+And in this case we are going to use this credit data that yes we in order to make credit scoring with
+
+00:15.580 --> 00:17.740
+the help of logistic regression.
+
+00:17.860 --> 00:26.260
+So we have the data set the data set has several columns as you can see income age low on loan to income
+
+00:26.260 --> 00:30.260
+ratio and whether the client has defaulted or not.
+
+00:30.400 --> 00:37.000
+That's why it is a binary classification problem is 0 or 1 default or not.
+
+00:37.090 --> 00:40.530
+OK so this is the dataset we are going to use.
+
+00:40.570 --> 00:43.650
+First of all we are able to analyze the data set.
+
+00:43.660 --> 00:51.100
+So if we run this algorithm as you can see already the data that had is going to print out the first
+
+00:51.100 --> 00:53.290
+few lines of the data set.
+
+00:53.320 --> 01:01.030
+So as you can see the first five samples as far as the client id the income the age the loan the loan
+
+01:01.030 --> 01:04.070
+to income ratio and the default is concern.
+
+01:04.150 --> 01:11.020
+So this is the credit data that had described so credit data that describe is going to printout the
+
+01:11.020 --> 01:17.920
+most relevant statistics related features such as the mean such as the standard deviation the minimum
+
+01:18.080 --> 01:19.710
+term the maximum item.
+
+01:19.720 --> 01:26.160
+So as you can see there are 2000 training samples in the credit data that ESV file.
+
+01:26.360 --> 01:33.190
+OK we have the mean of the income meaning of the age meaning of the loan meaning of the loan to income
+
+01:33.190 --> 01:34.000
+ratio.
+
+01:34.030 --> 01:39.850
+We have the standard deviation and we have all of the standard deviation we are able to calculate the
+
+01:39.850 --> 01:40.710
+variance.
+
+01:40.840 --> 01:49.030
+Okay then we have the minimum item and the maximum item and then we are able to calculate the correlation
+
+01:49.120 --> 01:50.300
+between the features.
+
+01:50.320 --> 01:57.820
+So as you can see this correlation is going to be a matrix with as many rows as the number of features
+
+01:57.850 --> 02:05.350
+and as many columns as the number of features and every single value in this matrix is going to be a
+
+02:05.350 --> 02:08.150
+correlation between two features.
+
+02:08.310 --> 02:08.820
+OK.
+
+02:08.830 --> 02:10.660
+Just to summarize it quickly.
+
+02:10.750 --> 02:15.260
+Let's talk a bit about the variance covariance and correlation.
+
+02:15.280 --> 02:21.750
+The mean is the expected value of an X random variable in the population.
+
+02:21.760 --> 02:23.500
+So this is how we can calculate it.
+
+02:23.500 --> 02:28.860
+For example if we are dealing with the role of a die we just have to calculate this formula.
+
+02:28.960 --> 02:36.820
+We just have to sum up the X Sabai times the P where P is the probability of that given x Sabai random
+
+02:36.820 --> 02:37.480
+variable.
+
+02:37.480 --> 02:43.910
+So that's why the probability of these outcomes as far as the roll of a dice concern is a one divided
+
+02:43.930 --> 02:51.310
+by six so one times won't divide by six plus two times one divide by six and so on 3.5 it's going to
+
+02:51.310 --> 02:54.110
+be the expected value of x.
+
+02:54.190 --> 03:02.320
+Ok what about the variance the variance or sigma squared is equal to the expected value of X minus the
+
+03:02.320 --> 03:04.240
+mean of x squared.
+
+03:04.240 --> 03:10.140
+This is the variance and the square root of the variance is the standard deviation.
+
+03:10.310 --> 03:12.580
+OK what about the covariance.
+
+03:12.580 --> 03:18.040
+We are able to define the covariance for two random variables x and y.
+
+03:18.160 --> 03:22.780
+It is a measure of the joint variability of two random variables.
+
+03:22.840 --> 03:26.840
+It is a diamond all measure and it is not normalized.
+
+03:26.860 --> 03:31.070
+It is hard to compare data sets with large differences in the sprad.
+
+03:31.090 --> 03:39.760
+So that's why correlation is preferred and correlation is the covariance divide by the standard deviations.
+
+03:39.760 --> 03:46.270
+So this is the covariance as you can see and we have to divide it by Sigma X and sigma Y which is the
+
+03:46.270 --> 03:50.750
+standard deviation of X and the standard deviation of y.
+
+03:50.950 --> 03:57.600
+This correlation is of value within the range minus 1 and plus 1 if it is greater than zero.
+
+03:57.610 --> 04:01.630
+It means positively in your relationship between variables.
+
+04:01.720 --> 04:08.800
+If it is smaller than 0 there is a negative relationship between the variables and if it is 0 it means
+
+04:08.830 --> 04:11.250
+no relationship between the variables.
+
+04:11.350 --> 04:15.900
+OK so these values within the range minus 1 and plus 1.
+
+04:15.970 --> 04:20.880
+Of course the feature with itself south has correlation Plosser one.
+
+04:20.890 --> 04:25.490
+So that's why all the values in the diagonal equals to warm.
+
+04:25.660 --> 04:30.580
+But as you can see there are lots of lots of features that are positively correlated.
+
+04:30.570 --> 04:33.710
+Lots of lots of features that are negatively correlated.
+
+04:33.900 --> 04:39.270
+OK so we are able to analyze the data set with the help of these.
+
+04:39.440 --> 04:41.190
+Describe and had.
+
+04:41.590 --> 04:47.430
+OK we are able to get the features and we are able to get the target varietals.
+
+04:47.440 --> 04:54.880
+So there are going to be three features in our example which means that it is going to be a multinomial
+
+04:54.880 --> 04:58.060
+logistic regression we will use income.
+
+04:58.090 --> 05:06.080
+We will use H and we will use it as features and basically it means that when dealing with the sigmoid
+
+05:06.080 --> 05:14.030
+function and logistic regression in the xponent we will have for better paramita as beat is 0 plus veto
+
+05:14.040 --> 05:24.430
+one BD 2 and be just 3 bita 1 times X-1 where X-1 is that income between two times X-2 our X-2 is the
+
+05:24.430 --> 05:29.530
+age Bilas three times x 3 x 3 is the loan.
+
+05:29.630 --> 05:31.860
+So we have three features.
+
+05:31.910 --> 05:40.160
+That's why there are going to be 3 x varietals X1 x 2 x 3 income age and loan.
+
+05:40.250 --> 05:44.030
+Then of course the dependent variable is the default.
+
+05:44.030 --> 05:53.240
+So we would like to handle income values age values and loan values in order to credit default or whether
+
+05:53.240 --> 05:56.500
+the client is able to pay back the loan or not.
+
+05:56.510 --> 06:03.530
+So the default is going to be the output variable then we are going to create some training data set
+
+06:03.620 --> 06:05.350
+and test data set.
+
+06:05.390 --> 06:12.200
+So this is the usual case as far as machine learning algorithms are concerned that we are going to use
+
+06:12.380 --> 06:20.510
+some portion of the original dataset for training purposes and then we will use the last 30 percent
+
+06:20.510 --> 06:23.450
+of the data sat for test purposes.
+
+06:23.540 --> 06:30.470
+So what does it mean exactly that if we have these income age and Loan features we are going to use
+
+06:30.470 --> 06:33.690
+the logistic regression to predict the outcome.
+
+06:33.710 --> 06:40.790
+So whether the client has defaulted or not and we have this value in the original dataset because it
+
+06:40.790 --> 06:43.050
+is a supervised learning algorithm.
+
+06:43.280 --> 06:50.620
+So thats why we are able to measure the accuracy and precision of the model because we have the values
+
+06:50.630 --> 06:56.210
+we know for certain present in the data set and we have the prediction by the model.
+
+06:56.210 --> 07:03.250
+Okay so we are going to use this crane task split imported from Italy and that was validation.
+
+07:03.260 --> 07:09.250
+We just have to define the features and the targets and the size is going to be serve the person.
+
+07:09.260 --> 07:14.880
+What does it mean that 70 percent of the dataset is for training purposes.
+
+07:14.990 --> 07:22.730
+So we are going to train the algorithm on 70 percent of the data and we are going to test the accuracy
+
+07:22.730 --> 07:29.600
+of the algorithm on 30 percent of the data in the next lecture we are going to talk about the concrete
+
+07:29.600 --> 07:35.000
+implementation logistic regression and how to measure the precision of the algorithm.
+
+07:35.000 --> 07:35.840
+Thanks for watching.

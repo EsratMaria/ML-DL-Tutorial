@@ -1,0 +1,397 @@
+WEBVTT
+
+00:00.340 --> 00:06.010
+High in this video we are going to talk about mathematical related stuff.
+
+00:06.030 --> 00:13.920
+So if you do not interested in optimization techniques and the mathematics behind our networks feel
+
+00:13.920 --> 00:22.260
+free to skip it basically in the end we are going to find a way to make these rather complex equations
+
+00:22.590 --> 00:24.540
+into a very very simple ones.
+
+00:24.630 --> 00:30.040
+But if you are interested in these kinds of optimization techniques Let's get started.
+
+00:30.390 --> 00:37.470
+So the problem is that we usually use X as a factor to denote the training in boats.
+
+00:37.470 --> 00:44.970
+So we have this X Factor x1 x2 up to X and and these are basically the features.
+
+00:45.080 --> 00:51.520
+Or does it mean that for example for the end a logical relation we have to x ribose.
+
+00:51.530 --> 00:52.140
+OK.
+
+00:52.230 --> 00:54.600
+I'd noted that with X and Y.
+
+00:54.750 --> 00:59.520
+But basically these are the input data the x and y.
+
+00:59.690 --> 01:05.300
+Ok so it is a vector because it can have as many items as we want.
+
+01:05.610 --> 01:13.410
+And we don't know the corresponding desired output by a y vector and it is the function of the X of
+
+01:13.410 --> 01:14.060
+course.
+
+01:14.100 --> 01:23.070
+So the output depends on the X inputs of course because if we have for example 0 0 then this is going
+
+01:23.070 --> 01:26.970
+to be the output for 0 1 it is 0 as well.
+
+01:26.970 --> 01:31.280
+But if we have a one on one then the output is going to be won.
+
+01:31.410 --> 01:38.300
+So as you can see that debt outputs are not independent from the input varietals.
+
+01:38.310 --> 01:40.420
+Of course it is not that staggering.
+
+01:40.530 --> 01:48.040
+So for example of the logical operator training data is like this we have the X and we have the Y vectors.
+
+01:48.220 --> 01:48.790
+OK.
+
+01:48.810 --> 01:53.300
+And now roll that over as we have discussed several times.
+
+01:53.430 --> 02:01.950
+We keep changing the edge weights so that the output from the older network approximates this function
+
+02:02.250 --> 02:05.270
+because this is the output we know for certain.
+
+02:05.400 --> 02:12.990
+And we train or now on a network that in the end we would like to end up with the same outputs as we
+
+02:12.990 --> 02:14.330
+know for certain.
+
+02:14.370 --> 02:20.760
+Of course this is the main theory behind super wise learning algorithms that we know that what should
+
+02:20.760 --> 02:27.960
+be the result and if we keep training the algorithm until we get the same result as we should get.
+
+02:27.960 --> 02:33.170
+So we kind of measure how we are achieving the goal of this approximation.
+
+02:33.180 --> 02:39.180
+What is this approximation that basically we are going to get an output from the our network.
+
+02:39.270 --> 02:42.120
+And we have an output from the training data.
+
+02:42.150 --> 02:44.000
+What we know for certain.
+
+02:44.220 --> 02:51.980
+And basically we approximate the output we know for certain we do happen of the now on network output.
+
+02:52.500 --> 02:58.350
+So we can measure how we are achieving the goal of this approximation with a cost function and this
+
+02:58.350 --> 03:01.990
+cost function can be constructed something like this.
+
+03:02.100 --> 03:09.060
+Of course it is the function of the educators because if we change the educates Ford in our network
+
+03:09.300 --> 03:11.990
+of course the output will change.
+
+03:12.030 --> 03:17.680
+So one divided by two times and where the end is the size of the input data.
+
+03:17.760 --> 03:25.660
+So how many training data we have for example for the and logical relation we have one two three four
+
+03:25.710 --> 03:30.990
+training data and the why Prime is the output from the now run network.
+
+03:30.990 --> 03:37.460
+So this is the y prime the F X is the output we know from the training data.
+
+03:37.470 --> 03:43.580
+So this is the x x basically DS outputs 0 0 0 1.
+
+03:43.590 --> 03:46.880
+This is what we know from certain from the training data.
+
+03:47.060 --> 03:54.750
+OK so if we calculate something like this that what we should get and what we get from the note on that
+
+03:54.750 --> 04:01.350
+were the difference between the two of them is something like the cost function or the mean square error
+
+04:01.350 --> 04:07.720
+or we square it because we dont bother whether this is greater and this is smaller or twice.
+
+04:07.800 --> 04:08.390
+Doesn't matter.
+
+04:08.400 --> 04:11.830
+Usually we construct a cost function like this.
+
+04:11.940 --> 04:19.800
+And you may guess that it has something to do with the end or term because this cost function is going
+
+04:19.800 --> 04:21.050
+to be big.
+
+04:21.090 --> 04:30.000
+So its going to have a higher value if the now run network is going to output the different values that
+
+04:30.030 --> 04:35.900
+we should get if these f x function is approximately equal to the Y price.
+
+04:35.890 --> 04:42.690
+What does it mean that the output from the now our network is approximately equal to what we should
+
+04:42.690 --> 04:47.670
+get then the difference between them is going to be approximately zero.
+
+04:47.790 --> 04:52.530
+If it's zero it means that the cost function has a very very low value.
+
+04:52.770 --> 04:59.130
+So we can come to the conclusion that if we construct the cost function like this we just have to minimize
+
+04:59.130 --> 05:07.690
+the cost run by changing the educates and where these cost function has a global minimum doughs educates
+
+05:07.840 --> 05:10.980
+will be that good educates for an hour on that over.
+
+05:11.140 --> 05:18.310
+If we use those educates for an hour on that work then it's going to make predictions.
+
+05:18.340 --> 05:19.590
+So what's the intuition.
+
+05:19.730 --> 05:21.460
+FC is huge.
+
+05:21.460 --> 05:26.500
+It means there are huge errors in the sense that are now and that work doesn't produce the results we
+
+05:26.500 --> 05:28.370
+know from the data set.
+
+05:28.480 --> 05:32.820
+If these little means that the no run network is making good productions.
+
+05:32.830 --> 05:36.830
+So we have defined the minima for the cost function.
+
+05:37.150 --> 05:45.430
+And for example if we have to import varietals and hands to edge weights we'll end up with something
+
+05:45.430 --> 05:46.180
+like this.
+
+05:46.180 --> 05:48.500
+It is a three dimensional plot.
+
+05:48.550 --> 05:54.770
+We have a dependent variable double you want and second dependent variable W2.
+
+05:54.850 --> 05:58.150
+And basically this x axis is the error term.
+
+05:58.200 --> 05:59.640
+This cost function.
+
+05:59.890 --> 06:03.200
+And as you can see that we have to find the minimum.
+
+06:03.250 --> 06:06.460
+So we have to minimize the cost function.
+
+06:06.550 --> 06:11.140
+Of course its going to be the function of the weights in this case.
+
+06:11.140 --> 06:19.730
+We have just to educate and we have to basically change the educates so that we end up paying the minimum.
+
+06:19.870 --> 06:28.080
+What is it to mean that we are at a global minimum that we have given adequate W won and W to have this
+
+06:28.080 --> 06:30.600
+cost function has a minimum value.
+
+06:30.850 --> 06:39.520
+What is it mean if it has a minimum value it means that basically this term is approximately zero facts
+
+06:39.670 --> 06:40.600
+is the output.
+
+06:40.600 --> 06:44.800
+We know why Prime is the output from the now network.
+
+06:44.830 --> 06:48.070
+It means that they are approximately the same.
+
+06:48.070 --> 06:50.010
+This is what we are looking for.
+
+06:50.020 --> 06:57.730
+We want to end up with an out of network that's capable of learning that when the input is 0 0 the output
+
+06:57.730 --> 07:05.850
+is 0 0 1 0 1 0 0 1 1 1 and when it does is the training data.
+
+07:05.850 --> 07:07.510
+What we know for certain.
+
+07:07.570 --> 07:15.450
+These are the outputs that AF X basically and the y prime is going to be the result of the now on network.
+
+07:15.640 --> 07:20.090
+And the best solution would be that they are exactly the same.
+
+07:20.230 --> 07:22.520
+So this 0 0 0 0 1.
+
+07:22.570 --> 07:28.870
+As the training data what we know for certain and the output of going out on that network should be
+
+07:28.930 --> 07:32.400
+0 0 0 1 it should be exactly the same.
+
+07:32.560 --> 07:36.400
+So this is why we have to construct the cost function.
+
+07:36.400 --> 07:38.240
+We define it like this.
+
+07:38.320 --> 07:44.240
+It is working fine as we have seen and we have to make sure that the arrow is a minimum.
+
+07:44.260 --> 07:51.070
+So that's why we have to minimize the cost function and that's why usually we end up with something
+
+07:51.070 --> 07:51.740
+like this.
+
+07:51.820 --> 07:58.450
+OK if we have several educates that is going to be a hyperplane in higher dimensions and we are not
+
+07:58.450 --> 08:05.070
+able to view straighted by the intubation is the same that we have to find the global minimum and the
+
+08:05.080 --> 08:11.290
+educates at the global minimum will be the optimal actuates for the network and that work and how to
+
+08:11.290 --> 08:13.940
+find the minima of a cost function.
+
+08:13.960 --> 08:17.680
+I'm not sure whether you are familiar with partial derivatives.
+
+08:17.830 --> 08:20.590
+Basically this is the gradient descent approach.
+
+08:20.680 --> 08:26.920
+We have to know the partial derivative of the mean square error and go to the direction of the gradient
+
+08:27.160 --> 08:32.690
+because the gradient is going to point to the direction of the global minimum.
+
+08:32.830 --> 08:40.650
+We are standing here that the gradient is going to point into the direction of the actual global minimum.
+
+08:40.660 --> 08:44.400
+So basically the gradient is the partial derivative.
+
+08:44.470 --> 08:46.460
+It's going to be a vector by the way.
+
+08:46.510 --> 08:53.020
+So we have to calculate the derivative of the mean square error or cost function with respect to double
+
+08:53.020 --> 08:58.400
+you on danda derivative of the cost function with respect to W2.
+
+08:58.480 --> 09:04.570
+And if we have an edge weights in the network of course we have to calculate the partial derivatives
+
+09:04.660 --> 09:11.020
+with respect to every single adulate and basically we can construct a Waechter out of these partial
+
+09:11.020 --> 09:17.980
+derivatives and thats going to be the Waechter pointing to the direction of the global minimum because
+
+09:17.980 --> 09:24.520
+we should end up with the global minimum in order to make sure that all now what our network will produce
+
+09:24.630 --> 09:27.700
+good results and the back propagation.
+
+09:27.730 --> 09:30.600
+It is a gradient descent implementation thats about.
+
+09:30.730 --> 09:37.030
+But we have to make sure that we match two requirements and basically be the happily back propagation.
+
+09:37.030 --> 09:43.390
+We can simplify these equations and when we implement back propagation we dont have to calculate these
+
+09:43.630 --> 09:45.120
+partial derivatives.
+
+09:45.280 --> 09:50.020
+So where the cost function can be defined as the average of all the cost functions.
+
+09:50.020 --> 09:54.070
+So we assign Of course function to every single training example.
+
+09:54.280 --> 10:00.750
+And of course function can be transformed into a form that it will be a function of the output activations
+
+10:01.070 --> 10:05.010
+if it can be done then we are able to use back propagation.
+
+10:05.010 --> 10:06.860
+I'm not going to prove it.
+
+10:06.960 --> 10:10.620
+Just take it for granted that we met these requirements.
+
+10:10.620 --> 10:13.080
+So we are able to use back propagation.
+
+10:13.080 --> 10:19.260
+For now we're on network training and it's quite staggering because you may guess that OK then there
+
+10:19.260 --> 10:23.080
+must be a very very complicated back propagation algorithm.
+
+10:23.100 --> 10:25.790
+How are we going to implement it in Java.
+
+10:25.820 --> 10:27.730
+Do we have to use derivatives.
+
+10:27.730 --> 10:31.900
+And so no we don't have to use any kinds of partial derivatives.
+
+10:31.950 --> 10:35.720
+We have to apply numbers and we have to divide some numbers.
+
+10:35.790 --> 10:38.940
+It's going to be very very easy in the end.
+
+10:39.210 --> 10:40.060
+Thanks for watching.

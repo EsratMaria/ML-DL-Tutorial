@@ -1,0 +1,148 @@
+WEBVTT
+
+00:00.540 --> 00:08.370
+High in this video I would like to tell a few words about deep now all networks and people are earning.
+
+00:08.490 --> 00:10.840
+So let's get started.
+
+00:11.250 --> 00:19.200
+Basically what is deep learning in the 1990s support vector machines proved to be better solutions for
+
+00:19.200 --> 00:20.760
+learning algorithms.
+
+00:20.760 --> 00:27.150
+This is what we have been discussing in one of the first lectures because there wasn't any efficient
+
+00:27.240 --> 00:30.820
+algorithms out there to train in our own network.
+
+00:31.080 --> 00:37.650
+But since 2000 and six several now on network training algorithms that are created.
+
+00:37.770 --> 00:44.580
+And that's why no we're days now that networks outperform any other machine learning techniques such
+
+00:44.580 --> 00:49.670
+as supporting actor or machine render for as classifiers and so on.
+
+00:49.710 --> 00:56.640
+For example in optical correct or recognition because scientists have came to the conclusion and I think
+
+00:56.640 --> 01:03.870
+it's quite counter-intuitive that if we have a complex Zubairy very sophisticated algorithm it's not
+
+01:03.870 --> 01:05.550
+going to be good.
+
+01:05.610 --> 01:13.950
+Sometimes a simple learning algorithm plus a good training data can outperform or very very complex
+
+01:14.040 --> 01:16.130
+and elaborate algorithm.
+
+01:16.230 --> 01:18.510
+And this is what Nelse network do.
+
+01:18.630 --> 01:23.040
+If we have a good training data then a very very simple rule.
+
+01:23.130 --> 01:29.120
+And basically the main concept behind in our network is not that complicated.
+
+01:29.250 --> 01:33.900
+And that's why it can outperform any other learning algorithm.
+
+01:33.900 --> 01:40.260
+For example we use the plural name for face recognition and it proves to be well very good for this
+
+01:40.260 --> 01:41.150
+purpose.
+
+01:41.250 --> 01:46.720
+OK we have been discussing that the deep now and that it is kind of in our own network.
+
+01:46.860 --> 01:53.090
+So that works with the many layers structure two or more hidden layers are called deep.
+
+01:53.090 --> 02:00.420
+Now all networks new techniques are allowed to train five to ten hidden layers and these are that deep.
+
+02:00.420 --> 02:08.400
+Now that I've worked with for example 10 hidden layers it turns out that these deep nodal networks perform
+
+02:08.430 --> 02:12.900
+far better on many problems than shallow now run networks.
+
+02:12.930 --> 02:19.000
+We are going to implement for example now on networks with a single hidden layer.
+
+02:19.020 --> 02:26.300
+We can do several good things with the help of a single hidden layer for example logical operators I
+
+02:26.430 --> 02:30.960
+data set classification or optical correct recognition.
+
+02:30.990 --> 02:38.040
+But scientists have came to the conclusion that if we have more hidden layers for example up to 10 hidden
+
+02:38.040 --> 02:42.570
+layers then these neural networks can be very very very good.
+
+02:42.690 --> 02:49.170
+And this is the deep learning concept that we have to create more and more hidden layers that school
+
+02:49.190 --> 02:49.980
+the deep.
+
+02:49.980 --> 02:54.330
+Now we're on that for us and this is the deep learning concept.
+
+02:54.330 --> 03:00.480
+So as you can see here we have a single input layer a single output layer.
+
+03:00.570 --> 03:03.070
+But we have several hidden layers.
+
+03:03.180 --> 03:07.660
+In this case we have 4 1 2 3 4 hidden layers.
+
+03:07.740 --> 03:10.890
+And this is basically a deep in our own network.
+
+03:10.920 --> 03:15.070
+Of course there are some problems concerning the now run network.
+
+03:15.150 --> 03:22.310
+For example we are not able to use the same techniques as we have seen for the shallow on our own networks.
+
+03:22.350 --> 03:28.910
+The first layer or the last hidden layer can be trained but not the others because of the well-wishing
+
+03:28.920 --> 03:30.430
+gradient problem.
+
+03:30.600 --> 03:38.250
+The gradient has the tendency to became smaller and smaller for the hidden layers and the gradient is
+
+03:38.250 --> 03:39.100
+small.
+
+03:39.120 --> 03:45.420
+What does it mean that the change in the edge weights are going to be very small and that means that
+
+03:45.420 --> 03:52.500
+the training mechanism is not going to be that efficient the solution can be not to use sigmoid function
+
+03:52.560 --> 03:54.360
+as an activation function.
+
+03:54.360 --> 04:01.390
+But basically there are more elaborate concepts for training a deep now on that were on the other hand.
+
+04:01.500 --> 04:10.060
+They are going to perform well rebury good for example for facial recognition or optical correct recognition.
+
+04:10.080 --> 04:11.160
+Thanks for watching.

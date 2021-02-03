@@ -1,0 +1,253 @@
+WEBVTT
+
+00:01.530 --> 00:07.680
+Let's talk about the concrete implementation of linear regression we are going to use several libraries
+
+00:07.680 --> 00:14.010
+such as the NAM pie and panderers and what's more important then seeking to learn is going to contain
+
+00:14.010 --> 00:20.610
+the machine learning related algorithms such as linear regression logistic regression support vector
+
+00:20.610 --> 00:22.300
+classifier and so on.
+
+00:22.320 --> 00:27.180
+Of course in this case we are going to talk about linear regression implementation.
+
+00:27.180 --> 00:33.070
+So that's why we have to import seeking to learn linear modal linear regression.
+
+00:33.310 --> 00:41.190
+OK so first of all we have to Fadge the data set and we have to use the Pandurs that read C-s we in
+
+00:41.190 --> 00:42.900
+order to read the dataset.
+
+00:42.930 --> 00:46.080
+OK so this is the data that we are talking about.
+
+00:46.080 --> 00:52.950
+We have lots of lots of columns such as date price number of rooms number of bathrooms.
+
+00:52.950 --> 00:59.970
+What's important is that in our implementation we are dealing with a single linear regression which
+
+00:59.970 --> 01:07.010
+means that we are going to predict the house prices based on square feet leaving feature.
+
+01:07.080 --> 01:11.940
+Ok so first we read the data that it is going to be a data frame.
+
+01:11.940 --> 01:14.390
+So we get the columns accordingly.
+
+01:14.460 --> 01:20.530
+Well we just curious about the size and we are just curious about the price.
+
+01:20.750 --> 01:21.530
+Okay.
+
+01:21.570 --> 01:26.420
+Because machine learning algorithms handle arrays and not data frames.
+
+01:26.430 --> 01:30.680
+That's why we have to transform and reshape these values.
+
+01:30.810 --> 01:36.150
+So let's print out size and the price before the reshape operation.
+
+01:36.230 --> 01:38.980
+Ok for example let's print out the size.
+
+01:39.000 --> 01:47.020
+If we run it it's going to be a one dimensional array but as you can see it contains the IDs as well.
+
+01:47.130 --> 01:55.200
+So we use this Nahm PI array that reshape minus one plus one in order to end up with the following data
+
+01:55.200 --> 01:57.750
+structure that's printed out as well.
+
+01:57.750 --> 01:59.700
+So let's print out x.
+
+01:59.700 --> 02:03.670
+It is going to be the reshape size as you can see.
+
+02:03.840 --> 02:10.570
+I'm going to get rid of this because we are going to deal with the x and y parameters.
+
+02:10.630 --> 02:12.580
+These are the x values.
+
+02:12.630 --> 02:19.620
+As you can see we have managed to get rid of the ids and there are the veil used exclusively.
+
+02:19.690 --> 02:20.300
+OK.
+
+02:20.400 --> 02:28.610
+So after the NUMP by array shape we have the x and y values the X are the sizes.
+
+02:28.860 --> 02:32.200
+And why are the prices accordingly.
+
+02:32.340 --> 02:36.280
+We just have to instantiate a linear regression class.
+
+02:36.360 --> 02:40.240
+It is imported from seeking to learn that linear model.
+
+02:40.280 --> 02:42.340
+Then we have defeated the model.
+
+02:42.360 --> 02:51.120
+What does it mean if we call this fate on x and y basically under the hood the gradient descent algorithm
+
+02:51.270 --> 02:55.950
+is going to make the optimization problem what does it mean exactly.
+
+02:55.950 --> 03:02.610
+This is what we have been discussing in Antarctica lectures that we have defined the optimal B to zero
+
+03:02.640 --> 03:04.570
+and B to 1 perimeters.
+
+03:04.620 --> 03:12.180
+OK so the optimization problem is to minimize the mean square error which is the difference between
+
+03:12.180 --> 03:17.270
+the predicted values and the actual values present in the data set.
+
+03:17.340 --> 03:23.730
+We have to square area because we don't care about what paramita or is greater We just care about the
+
+03:23.730 --> 03:25.980
+difference so that's why we square it.
+
+03:26.040 --> 03:29.610
+So we want to find the minimum by tuning.
+
+03:29.910 --> 03:36.740
+Dieter paramita urs OK and gradient descent is going to use these equations.
+
+03:36.780 --> 03:43.960
+So this partial derivatives in order to find the optimal beat is 0 and B to 1 parameters.
+
+03:44.100 --> 03:51.330
+OK so this is how we feel the model and find the optimal parameters concerning linear regression with
+
+03:51.390 --> 03:53.500
+the map of the mean square error.
+
+03:53.520 --> 03:59.970
+As you can see we have imported Skeete learn metrics means square arrow or we are able to calculate
+
+03:59.970 --> 04:03.000
+the mean squared error and R squared avail you.
+
+04:03.090 --> 04:06.130
+We are going to talk about it in the next lecture.
+
+04:06.180 --> 04:14.220
+What's very important that we are able to get beat is zero and the better one Peramivir diabetes 0 is
+
+04:14.220 --> 04:21.030
+going to be the modal Kohath 0 and intersect with index 0 as well.
+
+04:21.030 --> 04:23.550
+What does it mean this beat is 0.
+
+04:23.550 --> 04:25.690
+Is the intercept basically.
+
+04:25.830 --> 04:28.160
+And in between is the slope.
+
+04:28.230 --> 04:35.030
+So between 0 is going to define the intersect between the Green Line and the y axis.
+
+04:35.160 --> 04:41.020
+So the price x is and the slope is going to be the slope of this given line.
+
+04:41.070 --> 04:44.080
+So the model contains these parameters.
+
+04:44.120 --> 04:50.680
+OK we are able to visualize the data that we drop off matplotlib that by plot.
+
+04:50.760 --> 04:58.950
+OK we are going to use green dots as you can see and linear regression line will have the color black
+
+04:59.340 --> 05:07.830
+linear regression will be the title of the plot the X label or the x axis are the sizes and or y axes
+
+05:07.930 --> 05:13.450
+are the prices accordingly and the BLT that show is going to show the plot.
+
+05:13.480 --> 05:14.790
+As you can see.
+
+05:14.920 --> 05:15.630
+OK.
+
+05:15.640 --> 05:20.560
+And then after training the model we are able to make new predictions.
+
+05:20.590 --> 05:26.680
+This is exactly what we have been discussing that first we had a data that we are going to train the
+
+05:26.680 --> 05:33.310
+algorithm on a despotically or data set which means finding the linear relationship between the age
+
+05:33.340 --> 05:35.200
+X and X variables.
+
+05:35.320 --> 05:40.110
+So gradient descent is going to find the beat is 0 and a B to 1 para meters.
+
+05:40.240 --> 05:48.130
+And after we have trained the modal and found the optimal bit of values we are able to make new predictions.
+
+05:48.130 --> 05:56.710
+So in this case we would like to predict the price of the house where the size is equal to 2000 square
+
+05:56.710 --> 05:57.240
+foot.
+
+05:57.270 --> 05:57.850
+OK.
+
+05:57.850 --> 06:05.780
+And as you can see prediction by the model it is going to be the price associated with this size.
+
+06:05.890 --> 06:06.470
+OK.
+
+06:06.480 --> 06:12.730
+In the next lecture we are going to talk about a mean square error and R-squared A-Whale you because
+
+06:12.790 --> 06:20.020
+after fitting the model OK we can't make predictions but somehow we have to check whether this model
+
+06:20.080 --> 06:26.050
+is going to work fine in the sense that whether it is going to make good predictions or not.
+
+06:26.230 --> 06:29.040
+As you can see it is not a good model.
+
+06:29.080 --> 06:36.630
+So we are not able to find a linear relationship between the size and price of the house.
+
+06:36.790 --> 06:44.010
+As you can see lots of lots of points are very very far away from the linear line we have found to be
+
+06:44.020 --> 06:45.370
+linear regression.
+
+06:45.430 --> 06:52.420
+So maybe it is not the best model possible and this is what we are going to talk about in the next lecture.
+
+06:52.420 --> 06:53.260
+Thanks for watching.

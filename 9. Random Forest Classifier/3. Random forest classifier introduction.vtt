@@ -1,0 +1,211 @@
+WEBVTT
+
+00:01.030 --> 00:07.240
+In the previous lecture we have been talking about bagging and we have come to the conclusion that the
+
+00:07.240 --> 00:14.710
+problem as far as bagging is concerned that deconstructed that decision trees are highly correlated.
+
+00:14.830 --> 00:16.970
+So are there any solutions.
+
+00:17.020 --> 00:24.600
+Of course that's why random forest classifiers came to be so it is better than begging this algorithm
+
+00:24.610 --> 00:28.700
+DeCola is the single decision trees that has been constructed.
+
+00:28.810 --> 00:36.310
+So this is the main advantage of random forest classifier that constructed decision trees are not going
+
+00:36.310 --> 00:41.940
+to be correlated which reduces the variance even more of an ever reaching the trees.
+
+00:41.980 --> 00:44.480
+So it is very very similar to begging.
+
+00:44.500 --> 00:52.030
+We keep constructing decision trees on the training data but on every split in the tree a random selection
+
+00:52.030 --> 00:55.610
+of features is chosen from the full feature set.
+
+00:55.690 --> 01:02.560
+So as far as begging is concerned when we have constructed the decision trees in every single decision
+
+01:02.560 --> 01:11.610
+tree we have used all the features so one had all the features 3:2 had all the features desired.
+
+01:11.680 --> 01:18.910
+We had all the features and so on as far as random for us classify or Wisconsin on every split in the
+
+01:18.910 --> 01:19.540
+tree.
+
+01:19.630 --> 01:24.570
+A random selection of features is chosen from the full feature set.
+
+01:24.610 --> 01:31.270
+OK a good question is how to define how many features to consider the number of features.
+
+01:31.270 --> 01:38.250
+Consider it a given split is approximately equal to the square root of the total number of features.
+
+01:38.290 --> 01:45.190
+So for begging the algorithm searches over all the features to find the best feature that best splits
+
+01:45.220 --> 01:52.930
+the data at death no for random Firdous classifier the algorithm searches over a random or square root
+
+01:52.990 --> 01:55.750
+and features to find the best one.
+
+01:55.810 --> 02:02.260
+And because the algorithm is still has a stake in the sense that it is going to search over a random
+
+02:02.260 --> 02:06.950
+number of features hands that name random for us classifier.
+
+02:07.150 --> 02:11.870
+OK so we have the original dataset with several features.
+
+02:11.890 --> 02:19.030
+For example when dealing with the iris dataset we have four features sample length Seppala with pattern
+
+02:19.030 --> 02:22.240
+length and pattern here and on every split.
+
+02:22.330 --> 02:26.580
+A random number of features is going to be selected.
+
+02:26.630 --> 02:29.430
+What's going to be the random number of features.
+
+02:29.470 --> 02:33.730
+The square root of N where N is the number of features.
+
+02:33.730 --> 02:36.470
+Square root of 4 is equal to 2.
+
+02:36.550 --> 02:44.470
+Which means that on every split the algorithm is going to sell at two random features in the first split
+
+02:44.560 --> 02:48.700
+sample Langston Seppala with are going to be the features.
+
+02:48.780 --> 02:54.200
+Then people are weird and sample rate for example than Pat Palenque and sub-Planck.
+
+02:54.310 --> 03:01.030
+So instead of using all the features as we have seen for begging random for us classifier on the other
+
+03:01.030 --> 03:05.100
+hand is going to use just a subset of the features.
+
+03:05.140 --> 03:08.410
+OK so we have the X original data set.
+
+03:08.420 --> 03:12.080
+Again we are going to construct several decision trees.
+
+03:12.220 --> 03:19.570
+But instead of using all the features every single decision tree is going to use just a subset of the
+
+03:19.570 --> 03:26.970
+original features and want features and features and ESRI features and for features and so on.
+
+03:27.040 --> 03:31.950
+And that's why these decision trees are going to be uncorrelated.
+
+03:32.110 --> 03:35.230
+So the first three is going to make a decision.
+
+03:35.230 --> 03:39.800
+For example the prediction based on the first decision tree is Clauss.
+
+03:39.800 --> 03:43.890
+See the second decision tree is going to make a decision.
+
+03:44.500 --> 03:51.470
+The dessert tree is going to make a decision a Class B and Class C for the final decision tree.
+
+03:51.490 --> 03:56.960
+Random forest classifier is going to vote according to these predictions.
+
+03:57.100 --> 04:01.720
+And because we have just a single class the a single clause B.
+
+04:01.800 --> 04:06.890
+But as you can see we have two predictions as far as a class C is concerned.
+
+04:07.030 --> 04:10.470
+The final class is going to be the Class C.
+
+04:10.510 --> 04:13.810
+So this is how random for s classifier works.
+
+04:13.900 --> 04:15.130
+And why is it good.
+
+04:15.190 --> 04:21.220
+Because if one or a few features are very strong predictors for the response variety all these features
+
+04:21.250 --> 04:26.980
+will be selected in many of the decision trees so eventually they will become correlated.
+
+04:26.980 --> 04:28.690
+But it is not a huge problem.
+
+04:28.720 --> 04:33.390
+We would like to avoid every single decision tree to be correlated.
+
+04:33.400 --> 04:39.700
+Of course there are going to be several decision trees that's going to correlate with each other but
+
+04:39.700 --> 04:42.840
+not all the trees are going to be correlated.
+
+04:42.970 --> 04:47.960
+OK so the huge advantage that at some point the variance starts decreasing.
+
+04:48.040 --> 04:52.290
+No matter how many more trees we are to our Random forest.
+
+04:52.420 --> 04:55.770
+So it is not going to produce overfitting.
+
+04:55.780 --> 05:03.960
+So finally with the help of a random forest classifier we are to reduce variance hands we are able to
+
+05:03.960 --> 05:05.790
+reduce overfitting.
+
+05:05.820 --> 05:08.350
+So the first step is to use pruning.
+
+05:08.480 --> 05:09.090
+OK.
+
+05:09.120 --> 05:11.200
+We can do better with begging.
+
+05:11.340 --> 05:13.240
+Begging is a good approach.
+
+05:13.290 --> 05:16.620
+But all the decision trees will be correlated.
+
+05:16.650 --> 05:21.320
+That's why random for plastic classifier is the best solution possible.
+
+05:21.450 --> 05:26.690
+It's going to make sure that these trees are going to be correlated.
+
+05:26.700 --> 05:31.670
+That's why it's going to be the best solution possible in the coming lectures.
+
+05:31.740 --> 05:38.180
+We are going to see lots of lots of examples as far as random for us classifier is concerned.
+
+05:38.190 --> 05:39.030
+Thanks for watching.

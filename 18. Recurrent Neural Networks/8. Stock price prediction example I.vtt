@@ -1,0 +1,211 @@
+WEBVTT
+
+00:01.830 --> 00:09.640
+Incoming lectures we are going to use deep learning and LSD architecture in order to forecast stock
+
+00:09.640 --> 00:10.630
+prices.
+
+00:10.630 --> 00:17.350
+So first of all let's talk a bit about the difference between time series analyzes and a deep learning
+
+00:17.350 --> 00:21.010
+approach as far as time series analyzes is concerned.
+
+00:21.040 --> 00:23.370
+We have quite complex models.
+
+00:23.410 --> 00:30.340
+So there's the random Valke model as the basis of Time series analyzes data we can do a bit better with
+
+00:30.430 --> 00:33.700
+our two regressive or moving average models.
+
+00:33.760 --> 00:40.600
+We are able to combine these models in order to end up with the out or aggressive moving average model.
+
+00:40.600 --> 00:46.750
+Dan RBD better approach is the so called out or aggressive integrated moving average model.
+
+00:46.750 --> 00:48.920
+And we are able to combine it.
+
+00:49.000 --> 00:54.310
+We'd better whiskers stick more tools in order to account for the volatility clustering.
+
+00:54.310 --> 00:59.660
+Okay so these are the arch and Gottsch models combining these motiveless.
+
+00:59.680 --> 01:06.530
+So every memorial we digitalize out or aggressive hetero's scholastic model is working quite fine on
+
+01:06.530 --> 01:10.330
+the 4 X or when we try to predict stock prices.
+
+01:10.330 --> 01:17.260
+So what's very important that for time series analyzes we have quite complex modals with underlying
+
+01:17.290 --> 01:24.610
+parameters such as the volatility and so on the huge advantage of Time series analyzes methods that
+
+01:24.670 --> 01:31.670
+they can deal with volatility clustering and that's why they are working quite fine during crisis.
+
+01:31.720 --> 01:39.700
+So for example if we take a look at the Dow Jones Index focusing on the 2008 financial crisis as you
+
+01:39.700 --> 01:43.330
+can see there's been a huge volatility clustering here.
+
+01:43.330 --> 01:47.850
+What does it mean that volatility had a huge variance here.
+
+01:47.850 --> 01:54.090
+Volatility is approximately constant but here volatility has been changed a lot.
+
+01:54.250 --> 02:00.460
+And with the cap of time series analyze these methods for example of the combined Arima Gottsch model
+
+02:00.670 --> 02:05.050
+we are able to make good predictions even in these situations.
+
+02:05.040 --> 02:13.210
+So for example the 2008 financial crisis or for example at the beginning of 2018 there's been a huge
+
+02:13.210 --> 02:17.570
+volatility clustering as far as S&amp;P 500 is concerned.
+
+02:17.590 --> 02:22.380
+As you can see there's a huge volatility clustering here in this region.
+
+02:22.390 --> 02:29.350
+There has been little changes as far as the price and the value of S&amp;P 500 is concerned.
+
+02:29.350 --> 02:32.180
+So volatility is approximately constant.
+
+02:32.200 --> 02:38.980
+But here in this region there's been a huge volatility clustering and a time series analyze these related
+
+02:38.980 --> 02:47.040
+methods are working fine in this situation only or our hand deep learning and SDMI architecture is a
+
+02:47.040 --> 02:48.430
+black box model.
+
+02:48.460 --> 02:51.870
+So there are no underlying parameters to learn.
+
+02:51.940 --> 02:58.990
+We just care about the relationships between the features and in this case the features are the possed
+
+02:58.990 --> 03:00.250
+stock prices.
+
+03:00.400 --> 03:04.910
+So it is working fine in the main but not during the crisis.
+
+03:05.060 --> 03:12.430
+A good algorithmic trading strategy is to combine both time theories analyze his methods and deep learning
+
+03:12.430 --> 03:13.110
+methods.
+
+03:13.240 --> 03:18.500
+By the way combining assets is the best way to go as far as I am concerned.
+
+03:18.610 --> 03:24.960
+For example back it's model or statistical arbitrage approaches are working extremely fine.
+
+03:25.000 --> 03:28.270
+So I'm a huge fan of market neutral strategies.
+
+03:28.300 --> 03:35.620
+If you search for LTE CMS so long term capital management you can take a look at the Sharpe ratio the
+
+03:35.620 --> 03:39.270
+Sharpe ratio has something to do with the risk and return.
+
+03:39.430 --> 03:45.390
+As you can see out his was quite successful they were making lots of lots of money.
+
+03:45.400 --> 03:51.400
+We are happy of combining assets such as Blackshaw is moral or statistical arbitrage.
+
+03:51.460 --> 03:55.160
+So that's why in my opinion it is the best way to go.
+
+03:55.270 --> 04:02.410
+Anyways in the coming lectures we are going to use deep learning and SDM architecture in order to predict
+
+04:02.410 --> 04:03.600
+stock prices.
+
+04:03.730 --> 04:10.390
+OK so in this chart we have time and we have the price of the store denoted by asty.
+
+04:10.420 --> 04:13.680
+So we just have to construct the training data set.
+
+04:13.720 --> 04:16.960
+For example we are going to use 40 features.
+
+04:16.960 --> 04:24.640
+So basically 40 stock prices in the past and price tomorrow is going to be the target variable.
+
+04:24.640 --> 04:31.750
+So the training means that we use an Alice D.M. architecture in order to detach the relationships between
+
+04:31.750 --> 04:33.220
+these 40 features.
+
+04:33.310 --> 04:40.200
+So between the prices in the past and as far as the production is concerned we have a 40 features.
+
+04:40.270 --> 04:47.490
+So basically the price is in the past and we would like to make a prediction as far as price to morrow
+
+04:47.500 --> 04:48.510
+is concern.
+
+04:48.640 --> 04:53.170
+So you may pose the question that how to construct the training data set.
+
+04:53.260 --> 04:57.910
+We just have to use a given window in this case we have three features.
+
+04:57.910 --> 05:05.260
+So three stock prices in the past and we have a single target voluble the stock price tomorrow.
+
+05:05.420 --> 05:08.870
+OK then we have to shift the window one step to the right.
+
+05:08.900 --> 05:15.740
+And again we had three features so Street stock prices in the past and the stock price tomorrow.
+
+05:15.920 --> 05:21.870
+Again we have to shift to the window and we have to use these street stock prices in the past.
+
+05:22.040 --> 05:25.100
+And a single target we're triable and so on.
+
+05:25.100 --> 05:30.480
+This is how we construct the training data set out of historical data.
+
+05:30.620 --> 05:31.800
+And why is it good.
+
+05:31.850 --> 05:37.780
+Because if we want to predict the stock price tomorrow we just have to use the previous stock prices.
+
+05:37.850 --> 05:45.110
+So these are stock prices in the past and we are able to predict the stock price tomorrow based on these
+
+05:45.170 --> 05:47.740
+long short term memory architecture.
+
+05:47.840 --> 05:51.310
+So this is what we are going to implement in the coming lectures.
+
+05:51.470 --> 05:52.320
+Thanks for watching.

@@ -1,0 +1,136 @@
+WEBVTT
+
+00:01.710 --> 00:09.460
+OK let's talk about how to use carrots and Tanzer flow as a backhand in order to implement recurrent.
+
+00:09.470 --> 00:10.830
+Now that networks networks.
+
+00:10.870 --> 00:12.780
+Alice T.M. architecture.
+
+00:12.820 --> 00:19.360
+So we are going to use the C conventual model as usual and we are going to have several layers.
+
+00:19.450 --> 00:22.010
+The first layer is going to be an Alice.
+
+00:22.040 --> 00:22.380
+Yes.
+
+00:22.420 --> 00:26.130
+So long short term memory way to 100 units.
+
+00:26.200 --> 00:32.190
+And because we are going to use another ISTM layer right after this one.
+
+00:32.260 --> 00:39.880
+That's why we have to set a return sequence to be true if we do not use any less SDMI layer right after
+
+00:39.880 --> 00:40.970
+the actual one.
+
+00:41.050 --> 00:44.250
+We don't have to specify return sequences.
+
+00:44.460 --> 00:47.610
+OK we are going to use a drop out.
+
+00:47.640 --> 00:53.430
+We'd probably do 0.5 the probability 0.3 and probability 0.3.
+
+00:53.430 --> 00:57.220
+Finally of course in the end we will have a densely connected.
+
+00:57.220 --> 01:00.300
+Now we're all in that circle with just a single unit.
+
+01:00.370 --> 01:01.680
+What's very important data.
+
+01:01.720 --> 01:04.620
+This is going to be a regression problem.
+
+01:04.690 --> 01:11.640
+So we are not going to end up with losses where the stock price went up or went down.
+
+01:11.650 --> 01:14.440
+We are going to predict stock prices.
+
+01:14.500 --> 01:16.400
+So numerical values.
+
+01:16.510 --> 01:19.850
+That's why we are going to solve a regression problem.
+
+01:19.900 --> 01:26.140
+With the help of recurrent our own networks and of course for the first layer we have to define the
+
+01:26.140 --> 01:26.950
+shape.
+
+01:26.950 --> 01:33.400
+So the shape is going to be the X-Trace that shape where the next one and the one because we had just
+
+01:33.400 --> 01:35.490
+a single target are-I about.
+
+01:35.660 --> 01:36.470
+Okay.
+
+01:36.520 --> 01:39.340
+So this is the architecture we are going to use.
+
+01:39.430 --> 01:43.870
+By the way feel free to modify the number of units and dropout.
+
+01:43.930 --> 01:50.740
+Maybe you can achieve higher accuracy if you use multiple Alice T.M. layers in this implementation or
+
+01:50.740 --> 01:57.020
+we just use Srey Alice T.M. layers with a single handedly connected now all network.
+
+01:57.310 --> 02:03.880
+OK what's very important that we use Adam as an optimizer and because it is a regression problem.
+
+02:04.030 --> 02:08.070
+We are going to use mean square error or as the last function.
+
+02:08.080 --> 02:13.810
+So this is what we have been discussing in one of the previous lectures that we use means square air
+
+02:13.850 --> 02:17.610
+or so this cost function of dealing with regression.
+
+02:17.680 --> 02:23.890
+And we use negative Loek likelihood loss function or cross entropy loss function in other terms when
+
+02:23.890 --> 02:26.520
+dealing with classification problems.
+
+02:26.560 --> 02:27.010
+OK.
+
+02:27.010 --> 02:33.470
+By the way as far as optimizers are concerned when dealing with recurrent now running networks and Alice
+
+02:33.480 --> 02:38.710
+D.M. architecture are prop optimizer is working extremely fine.
+
+02:38.800 --> 02:46.630
+But because the Adam optimizer is a combination of r.m.r sprawl and momentum approach that's why Adam
+
+02:46.750 --> 02:48.720
+is the best approach possible.
+
+02:48.730 --> 02:53.440
+But of course feel free to change optimizer what ever you prefer.
+
+02:53.500 --> 03:00.430
+OK we are going to use a hundred app box with a bat size certitude in the next lecture we are going
+
+03:00.430 --> 03:02.470
+to test the algorithm.
+
+03:02.470 --> 03:03.310
+Thanks for watching.

@@ -1,0 +1,367 @@
+WEBVTT
+
+00:01.740 --> 00:09.650
+While in this lecture we are going to class third tacts and we are going to use that 20 news groups
+
+00:09.690 --> 00:18.420
+dataset is 20 news groups dataset is a collection of approximately 20000 newsgroup documents partitioned
+
+00:18.450 --> 00:21.920
+evenly across 20 different news groups.
+
+00:21.960 --> 00:24.420
+We have graphics related topics.
+
+00:24.420 --> 00:26.810
+We have Politiques related topics.
+
+00:26.880 --> 00:29.070
+We have science related topics.
+
+00:29.160 --> 00:32.690
+We have religion related topics and so on.
+
+00:32.700 --> 00:38.700
+So this is what we are after that we are going to have a given sentence or a given document or a given
+
+00:38.700 --> 00:46.650
+article and after the training operation we would like to be able to classify whether that given article
+
+00:46.710 --> 00:51.140
+is about politics or religion science and so on.
+
+00:51.300 --> 00:55.570
+So basically we just have to import that 20 news groups.
+
+00:55.640 --> 01:02.970
+Count vectorize or the TFI the transformer the mood in army or navy base classifiers and so on.
+
+01:03.180 --> 01:06.690
+So we are going to have just four categories.
+
+01:06.750 --> 01:14.750
+We are going to handle all these categories out at Hazm religion graphics science and so on.
+
+01:14.790 --> 01:17.840
+We have to Thach these 20 news groups.
+
+01:17.880 --> 01:20.590
+It's going to be the training data set.
+
+01:20.700 --> 01:25.820
+We are going to have the categories we have defined here and we would like to shuffle it.
+
+01:25.830 --> 01:27.090
+OK.
+
+01:27.090 --> 01:31.260
+We are able to print for example the first dataset.
+
+01:31.290 --> 01:32.280
+Let's try it.
+
+01:32.280 --> 01:43.030
+I would like to print out first 10 lines of the first data and what's going to be the label.
+
+01:43.030 --> 01:50.220
+So it's very important that this time it's going to be a supervised learning algorithm in the sense
+
+01:50.280 --> 01:53.200
+that we have the training labels as well.
+
+01:53.400 --> 01:57.750
+OK I'm going to get rid of these.
+
+01:57.810 --> 02:07.530
+I'm going to say that I guess that we need something like this at the beginning and at the end.
+
+02:08.220 --> 02:13.320
+So let's say that and let's run around with them as you can see.
+
+02:13.380 --> 02:16.410
+This is going to be the first tanlines.
+
+02:16.470 --> 02:24.830
+Does anyone know of a good way to convert if I am GPDA fires into laserjet format and so on.
+
+02:24.840 --> 02:32.500
+So it has something to do with graphics as you can see this is the label of the target is computer graphics.
+
+02:32.550 --> 02:36.750
+So this is the training data and this is the label accordingly.
+
+02:36.870 --> 02:40.090
+So we are going to have a data set like this.
+
+02:40.130 --> 02:44.540
+What about the second article in the dataset of that same weight.
+
+02:44.580 --> 02:45.660
+And let's run it.
+
+02:45.660 --> 02:49.430
+I'm going to clear the console.
+
+02:49.650 --> 02:50.820
+I have a problem.
+
+02:50.850 --> 02:54.040
+I hope some of the gurus kind of help me solve this problem.
+
+02:54.160 --> 02:54.910
+OK.
+
+02:54.960 --> 02:58.610
+This has something to do with computer graphics as well.
+
+02:58.650 --> 03:03.040
+I would like to print out the first certain lines of the article.
+
+03:03.390 --> 03:10.050
+Let's run it again as you can see that the article itself is this.
+
+03:10.170 --> 03:15.040
+So the background of the problem or rectangular rectangular mash in a U-V domain.
+
+03:15.240 --> 03:15.660
+OK.
+
+03:15.660 --> 03:18.500
+It has something to do with the graphics as well.
+
+03:18.570 --> 03:22.560
+So basically we have the training set and the labels.
+
+03:22.560 --> 03:30.500
+But instead of dealing with numerical values here we have articles strings tax and so on.
+
+03:30.810 --> 03:35.110
+So that's all about the training data and the labels.
+
+03:35.430 --> 03:36.940
+And what do we have to do.
+
+03:36.990 --> 03:44.230
+We could use the T.F. ID vectorize or directly but I would like to show you that that T.F. idea for
+
+03:44.220 --> 03:50.860
+vectorize is equal to the count vectorize or plus the T.F. IDF transformer.
+
+03:51.030 --> 03:58.360
+So here we use the Count vectorize are you just going to use tokenize And what does it mean that it's
+
+03:58.380 --> 04:03.710
+going to count the occurrence of every single word in the article.
+
+04:03.720 --> 04:11.160
+Basically it's going to end up with the documentor matrix for the first article second article and so
+
+04:11.160 --> 04:13.310
+on instead of sentences.
+
+04:13.440 --> 04:19.080
+Here we are dealing with concrete articles with lots of lots of sentences.
+
+04:19.320 --> 04:23.030
+But the result is the same that document to them a matrix.
+
+04:23.160 --> 04:28.770
+OK so we have discount vectorize or we use the training data data.
+
+04:28.860 --> 04:36.630
+The data is going to contain that tax as we have discussed and then we can use that DFI be not DFI the
+
+04:36.630 --> 04:37.840
+vectorize are.
+
+04:37.890 --> 04:45.930
+But this time we use the DFI B-F transformer that is going to transform the count vectorize or into
+
+04:45.990 --> 04:48.050
+DFI the yes work the riser.
+
+04:48.050 --> 04:54.480
+Basically this is what we have been discussing in a topical section that counting the clearance according
+
+04:54.480 --> 05:01.110
+to tokenized is not going to work fine because we should get rid of these birds that do not contain
+
+05:01.470 --> 05:09.510
+information and a better approach is that T.F. IDF term frequency Ivar's document frequency approach.
+
+05:09.510 --> 05:10.860
+So this is how we use it.
+
+05:10.860 --> 05:19.350
+We have the idea IDF transformer and we fit transform on the X train count which is basically a matrix
+
+05:19.440 --> 05:27.340
+which is going to store the counters that how many times the given Verd appear in a given article.
+
+05:27.570 --> 05:35.400
+OK so we have this T.F. IDF Matrix and we would like to make some prediction with that half of an algorithm
+
+05:35.640 --> 05:42.410
+this time we are not going to use Kamins clustering but we are going to use the Navy base classifier.
+
+05:42.420 --> 05:48.130
+That's why we fit the X-raying TFI the half way the training data target.
+
+05:48.180 --> 05:51.730
+It's very important that we are able to use Navy base.
+
+05:51.810 --> 05:58.380
+And we don't have to use K means clustering because in this case we have the target says about not just
+
+05:58.380 --> 06:01.200
+the data but we have the targets.
+
+06:01.260 --> 06:07.360
+So it's going to be a supervised learning algorithm when we are dealing with Kamins clustering.
+
+06:07.440 --> 06:13.620
+We are going to talk about how to closter articles with the help of Kamins clustering.
+
+06:13.650 --> 06:17.100
+It's going to be an unsupervised learning algorithm.
+
+06:17.200 --> 06:18.890
+We doubt that targets.
+
+06:18.900 --> 06:24.670
+But in this case we have the targets as of out so we can use naval base classifier.
+
+06:24.900 --> 06:29.480
+And we have some test data for example these sentences.
+
+06:29.490 --> 06:32.550
+This has nothing to do with church or religion.
+
+06:32.610 --> 06:36.980
+Of course it's going to belong to the religion cluster.
+
+06:37.040 --> 06:39.040
+What about this sentence.
+
+06:39.090 --> 06:42.830
+Software engineering is getting hotter and hotter nowadays.
+
+06:43.050 --> 06:47.410
+It's going to do something with computers or science.
+
+06:47.580 --> 06:54.570
+OK so we just have to transform that given sentences with the count vectorize or then we just have to
+
+06:54.570 --> 07:03.140
+use the TGF ideas transformer in order to transform the counter-act arise or into TFI diethyl values
+
+07:03.420 --> 07:09.570
+and then we can make some predictions with the help of the model What's the model the model is going
+
+07:09.570 --> 07:13.770
+to be the model constructed by DNA based classifier.
+
+07:13.910 --> 07:14.390
+Okay.
+
+07:14.400 --> 07:20.630
+And then we have to iterate through the document then the category and we just have to print at what's
+
+07:20.640 --> 07:22.360
+going to be the prediction.
+
+07:22.500 --> 07:24.930
+So let's save it and let's run it.
+
+07:24.930 --> 07:32.850
+I'm going to clear the console and if we run it it's going to make the prediction that it has something
+
+07:32.850 --> 07:34.370
+to do with religion.
+
+07:34.410 --> 07:36.630
+OK it is quite a good guess.
+
+07:36.630 --> 07:38.280
+What about the next sentence.
+
+07:38.280 --> 07:39.630
+The next article.
+
+07:39.720 --> 07:42.300
+It has something to do with computers.
+
+07:42.330 --> 07:43.720
+It is a good guess.
+
+07:43.920 --> 07:51.630
+So basically or not if basic classifier did a pretty good job after the training procedure because we
+
+07:51.630 --> 08:00.210
+had a huge dataset with 20000 articles we are able to make new predictions on the last data set.
+
+08:00.240 --> 08:03.740
+In this case we have two past sentences.
+
+08:03.750 --> 08:09.330
+This has nothing to do with church and religion and software engineering is getting hotter and hotter
+
+08:09.360 --> 08:10.350
+no days.
+
+08:10.350 --> 08:17.370
+And as you can see now you've base classifier makes a pretty good approximation that this sentence has
+
+08:17.370 --> 08:19.270
+something to do with religion.
+
+08:19.410 --> 08:23.390
+And this sentence has something to do with computer science.
+
+08:23.510 --> 08:32.490
+OK so what's very important that in this case these twenty news groups dataset has data as well as Target
+
+08:32.550 --> 08:33.500
+variables.
+
+08:33.540 --> 08:40.140
+So it's going to be a supervised learning algorithm when we are going to discuss clustering Gogg rhythms
+
+08:40.140 --> 08:42.080
+such as Kamins clustering.
+
+08:42.210 --> 08:49.500
+We are going to talk about how to deal with tax classification and natural language processing if we
+
+08:49.500 --> 08:50.830
+do not have the target.
+
+08:50.840 --> 08:51.740
+Where are you us.
+
+08:51.840 --> 08:55.970
+And usually this is the case we would like to build the Web.
+
+08:56.030 --> 09:03.760
+Crowder that's going to take a look at certain articles and going to make the classification and clustering
+
+09:03.990 --> 09:10.950
+without human intervention that we don't know the target the algorithm itself is going to come up with
+
+09:10.950 --> 09:16.830
+the given Klosters better it has something to do with religion whether it has something to do with computer
+
+09:16.830 --> 09:17.850
+science.
+
+09:17.850 --> 09:22.470
+But if we have the target we're able to we can use neither of these classifier.
+
+09:22.470 --> 09:28.850
+And basically this is how we make natural language processing and text classification with Navy base
+
+09:28.870 --> 09:32.800
+adrià them on the 20 news groups dataset.
+
+09:32.820 --> 09:33.830
+Thanks for watching.

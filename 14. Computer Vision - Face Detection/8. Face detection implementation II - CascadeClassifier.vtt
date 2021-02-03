@@ -1,0 +1,301 @@
+WEBVTT
+
+00:00.240 --> 00:04.520
+High in this video we are going to implement phase detection together.
+
+00:04.710 --> 00:06.140
+So let's get started.
+
+00:06.150 --> 00:15.830
+First of all I'm going to import the open CD we have of this import data CB2 and then first of all I
+
+00:15.830 --> 00:21.890
+am going to reference an image and image path for example.
+
+00:21.960 --> 00:34.930
+As far as I am concerned my image is that the user is that user of desktop you don't see
+
+00:43.850 --> 00:44.990
+bashing on arning
+
+00:48.890 --> 00:51.110
+face action.
+
+00:53.500 --> 00:57.190
+And first of all for example the image that J.
+
+00:57.190 --> 00:58.140
+Ag.
+
+00:58.470 --> 01:05.800
+OK then we are going to need a cascade classifier.
+
+01:06.640 --> 01:12.810
+And these classic it can classify Early's is just the path that we are going to reference an axiom or
+
+01:12.820 --> 01:20.200
+file and this Exham of file is going to contain all the features that our algorithm needs to know in
+
+01:20.200 --> 01:27.670
+order to be able to be tax human faces of course we have to define that what is a face like.
+
+01:28.000 --> 01:35.710
+And that is exactly why the cascade classifier ACSM Antheil is going to define for us and froggery them
+
+01:37.030 --> 01:46.900
+it is in our users user by the way I'm going to upload it so you can use it without any problem.
+
+01:47.110 --> 01:51.540
+NASCAR hartis Qaeda
+
+01:54.730 --> 01:55.670
+frontal face.
+
+01:55.670 --> 02:01.210
+And you as you may guess that it is able to detect frontal faces.
+
+02:01.290 --> 02:08.200
+It's very important because we can train open sea to detect for example trees to detect pedestrians
+
+02:08.200 --> 02:10.470
+to detect cars and so on.
+
+02:10.530 --> 02:17.350
+It's very important for example lots of lots of modern cars have these kinds of algorithms and it is
+
+02:17.350 --> 02:20.410
+able to detach that Pat Pat as we have for example.
+
+02:20.530 --> 02:26.510
+Or it is able to be hacked cars and it can be when it crashes.
+
+02:26.530 --> 02:36.420
+And so OK so frontal face out that XM al.
+
+02:36.530 --> 02:41.030
+So this is the cascade classifier.
+
+02:41.250 --> 02:48.100
+Is to see the two dark cascade classifier.
+
+02:48.310 --> 02:53.880
+We are going to instantiated and of course we have to set the past.
+
+02:54.190 --> 03:02.920
+So our task classifier is able to work because we have specified with the half of this arc Esky frontal
+
+03:02.920 --> 03:08.470
+face are that X-amount that water feature is that it's going to look for.
+
+03:09.400 --> 03:10.170
+OK.
+
+03:12.320 --> 03:21.950
+Then I'm going to read the image so I have the image is equal to CB2 dot image lead.
+
+03:22.070 --> 03:24.980
+Of course I have to specify the path.
+
+03:25.820 --> 03:29.240
+And then I'm going to convert to greyscale image.
+
+03:29.270 --> 03:35.700
+So it is going to be easy to that CTT color.
+
+03:36.350 --> 03:46.250
+Of course the image is what I want to transform and color I BGR.
+
+03:46.430 --> 03:52.580
+I'm not sure but I'm open to see the work suite not RBD read.
+
+03:52.610 --> 03:53.820
+R r r g d.
+
+03:53.840 --> 03:57.540
+Sorry but BGR blue green and red.
+
+03:57.590 --> 04:00.720
+So BGR to grayscale.
+
+04:00.910 --> 04:01.570
+OK.
+
+04:01.640 --> 04:08.310
+So we have the great image and we want to run or detection algorithm on this in ages.
+
+04:08.720 --> 04:24.540
+So the faces that detected faces just to be clear detected face as is equal to cascade classifier.
+
+04:24.830 --> 04:25.220
+Yeah.
+
+04:25.310 --> 04:31.070
+This is what we are talking about the cascade classifier data intact.
+
+04:31.630 --> 04:32.940
+Mukhi scale
+
+04:35.930 --> 04:40.160
+and we have to specify the image on which we want to run around them.
+
+04:40.290 --> 04:46.850
+It's very important that this method has several paramita as we are going to talk about it in the next
+
+04:46.850 --> 04:49.300
+video because sometimes it's very important.
+
+04:49.460 --> 04:55.320
+But in most other situations the standard paramita errors are just OK.
+
+04:55.340 --> 04:57.390
+We don't have to manipulate it.
+
+04:57.470 --> 05:04.790
+So this is the classic classifier that detect more detail it is able to we provide an image with faces
+
+05:04.790 --> 05:12.920
+on it and with the help of this line we are able to detach the faces and we get detected faces.
+
+05:13.420 --> 05:17.340
+And I would like to have a for loop.
+
+05:18.880 --> 05:27.450
+X y it is just the coordinates with and the hay indeed the tactile faces.
+
+05:27.940 --> 05:34.590
+And I would like to draw for example the red rectangles around the tactile faces.
+
+05:34.900 --> 05:45.490
+So I will have a CV to dot rectangle and I would like to draw rectangles of course I have to specify
+
+05:45.490 --> 05:51.080
+the image I have to specify the starting point x and y.
+
+05:52.440 --> 05:59.390
+Do I have to specify the kind of points X class with y class.
+
+05:59.630 --> 05:59.990
+Hey
+
+06:03.500 --> 06:06.200
+And of course I have to specify a color.
+
+06:06.440 --> 06:12.590
+And because it is B.G. are blue green and red instead of red green blue.
+
+06:12.590 --> 06:15.030
+I would love to have a.
+
+06:15.050 --> 06:20.050
+So that's why it is 00 and it is not 55.
+
+06:20.060 --> 06:23.820
+It is the Ardi LGB components of color.
+
+06:24.370 --> 06:24.760
+OK.
+
+06:24.770 --> 06:30.030
+And the color with that I would like to have a tan.
+
+06:30.460 --> 06:31.170
+OK.
+
+06:31.230 --> 06:34.550
+I mean sorry another color Well not the line the in.
+
+06:34.970 --> 06:35.830
+OK.
+
+06:37.490 --> 06:42.610
+And then I'm just going to print it out so Impe right.
+
+06:42.770 --> 06:45.680
+I'm going to have to resort that to G.
+
+06:45.840 --> 06:50.490
+Jake pad and of course on the image
+
+06:53.910 --> 06:54.510
+OK.
+
+06:54.550 --> 07:05.210
+So I'm going to detect faces on the greyscale image but I'm going to print rectangles owned colorful
+
+07:05.230 --> 07:08.440
+image and I'm going to write it out to a file
+
+07:13.860 --> 07:15.710
+ok x is not defined.
+
+07:15.750 --> 07:18.580
+Sorry it's not Ciba x.
+
+07:18.750 --> 07:20.750
+Ok.
+
+07:21.290 --> 07:24.020
+Hope there's no other errors.
+
+07:26.180 --> 07:26.700
+OK.
+
+07:26.760 --> 07:28.530
+So let's see the result.
+
+07:28.590 --> 07:36.780
+And as you can see this is the image we have one two three four five six six faces and the fourth perimeter
+
+07:36.780 --> 07:41.540
+is these they attacked cascade classifier that detect move the scale.
+
+07:41.550 --> 07:49.450
+We didn't untuned apparently terms we just gave the image on which you want to run or algorithm.
+
+07:49.620 --> 07:52.410
+And as you can see it is quite working fine.
+
+07:52.410 --> 07:53.680
+We did that one face.
+
+07:53.700 --> 08:00.300
+OK two face three four five which are working fine because we have a face an undetected face and we
+
+08:00.300 --> 08:01.470
+have some mismatch.
+
+08:01.480 --> 08:07.080
+There's a little red rectangle and there there's no face at all.
+
+08:07.080 --> 08:11.120
+So let's run this algorithm on another image.
+
+08:15.050 --> 08:16.540
+OK.
+
+08:17.610 --> 08:22.630
+Because sometimes these standard parameters work exactly fine.
+
+08:22.710 --> 08:24.540
+So that's what we are looking for now.
+
+08:25.690 --> 08:32.680
+So as you can see an image like this the standard parameters without any tuning is working perfectly
+
+08:32.680 --> 08:33.660
+fine.
+
+08:33.700 --> 08:38.280
+We have four phases and we are able to detect all of them.
+
+08:38.410 --> 08:41.370
+So sometimes we need to tune the parameters.
+
+08:41.440 --> 08:43.000
+Sometimes we don't.
+
+08:43.040 --> 08:47.490
+So in the next video we are going to talk about the Tunie perimeters.
+
+08:47.500 --> 08:48.340
+Thanks for watching.

@@ -1,0 +1,175 @@
+WEBVTT
+
+00:00.920 --> 00:07.170
+In the previous lecture we have seen how to use edibles classifier and it does give them a lecture.
+
+00:07.170 --> 00:13.260
+We are going to use grid search cross-validation in order to find the best barometers for the number
+
+00:13.260 --> 00:19.940
+of estimators and the learning rate in this example we are going to use the wine a dataset.
+
+00:19.980 --> 00:27.180
+You can download the data sets at the last chapter and we are going to use this wind CSB file.
+
+00:27.180 --> 00:30.370
+So let's talk a bit about the data set itself.
+
+00:30.510 --> 00:38.310
+The dataset is going to contain lots of lots of features such as the fixed assiduity Davola tile assiduity
+
+00:38.430 --> 00:42.230
+density ph sulphates and so on.
+
+00:42.390 --> 00:49.840
+And the target variable is going to be the quality parameter which is a score between 0 and 10.
+
+00:49.950 --> 00:54.200
+OK so if we take a look at the data set it is something like this.
+
+00:54.240 --> 01:02.730
+We have lots of lots of features and we have a target valuable 6 5 7 8 and so on.
+
+01:02.730 --> 01:05.730
+So basically values between 0 and 10.
+
+01:05.820 --> 01:09.390
+So what does it mean that it is a regression problem.
+
+01:09.450 --> 01:13.590
+We are going to transform it into a classification problem.
+
+01:13.710 --> 01:19.820
+So that's why we are going to have this is Tastee function that's going to take the quality.
+
+01:19.890 --> 01:23.520
+So the target values 6 7 8 5.
+
+01:23.580 --> 01:33.750
+So the values within 0 went down and it is going to transform it into binary classes 1 or 0 1 if the
+
+01:33.750 --> 01:38.100
+given line is tasty and 0 if it is not.
+
+01:38.100 --> 01:41.300
+OK so first we have to import the data.
+
+01:41.400 --> 01:47.280
+What's very important that if you take a look at the data set it contains these semi-colons.
+
+01:47.310 --> 01:52.120
+So that's why we have to define that the separator is going to be the semi-colons.
+
+01:52.260 --> 01:57.650
+OK we are able to printout statistics so we can describe the quality.
+
+01:57.660 --> 02:01.680
+So what about distribution of the target are arguable.
+
+02:01.680 --> 02:06.110
+What about the value count the value count is going to return.
+
+02:06.330 --> 02:12.390
+Distribution of the target variable that for example how many six values are there.
+
+02:12.420 --> 02:13.110
+How many.
+
+02:13.110 --> 02:13.600
+Five.
+
+02:13.620 --> 02:16.150
+They always are there seven and so on.
+
+02:16.170 --> 02:20.650
+So we can get a good grasp as far as the data set is concerned.
+
+02:20.820 --> 02:28.440
+OK so we have the features that data and we have to specify the column names the column names are fixed
+
+02:28.530 --> 02:31.450
+assiduity volatile acidity and so on.
+
+02:31.560 --> 02:34.620
+So that's why we use these features.
+
+02:34.770 --> 02:43.440
+OK density ph fate and so on and we have the target variable which is going to be data quality.
+
+02:43.500 --> 02:50.520
+But of course we have to apply that is Tastee function in order to end up with a classification problem.
+
+02:50.520 --> 02:57.360
+So we would like to make sure that in the end the target variables will be either one if the wine is
+
+02:57.360 --> 02:59.200
+Tastee or 0.
+
+02:59.250 --> 03:01.500
+If the wine is not tasty.
+
+03:01.500 --> 03:05.390
+So if the quality is greater Southern it is tasty.
+
+03:05.430 --> 03:07.920
+Otherwise it is not tasty.
+
+03:07.950 --> 03:12.260
+So this tasty perimeter is going to be the target variable.
+
+03:12.480 --> 03:15.170
+Ok we are going to split the dataset.
+
+03:15.240 --> 03:22.910
+So 80 percent of the dataset is for training and 20 percent of the dataset is for testing.
+
+03:22.910 --> 03:28.920
+Then we find the paramita as because we don't know at the beginning that was paramita is to use for
+
+03:28.920 --> 03:30.660
+the number of estimators.
+
+03:30.660 --> 03:42.630
+So how many iterations we should use 50 100 or 200 and what learning rate to use 0.01 0.05 0.1 0.3 or
+
+03:42.640 --> 03:49.440
+1 with the help of this great search cross-validation the estimator is the added boost classifier and
+
+03:49.440 --> 03:56.430
+the parent grid is the parent Diest the cross-validation is standard so we will use taen falls as far
+
+03:56.430 --> 04:02.970
+as cross-validation is concerned and with the help of grid search to learn is going to find the optimal
+
+04:02.970 --> 04:03.730
+paramita.
+
+04:03.780 --> 04:06.090
+As far as the number of estimators.
+
+04:06.180 --> 04:09.030
+And as far as the learning rate is concerned.
+
+04:09.030 --> 04:16.170
+So we just have to fit the model with the training features and training target variables and then we
+
+04:16.170 --> 04:23.070
+can make predictions on that task dataset and we can print out the confusion matrix and the accuracy
+
+04:23.070 --> 04:30.280
+score as you can see the accuracy is 80 percent that's what we can do it at a boost classifier.
+
+04:30.330 --> 04:38.190
+We are able to achieve 80 percent accuracy but we are able to use grid search cross-validation in order
+
+04:38.190 --> 04:40.550
+to find the optimal parameters.
+
+04:40.680 --> 04:46.710
+Okay so this is how we can use edibles classifier and this is how we can tune the perimeters with the
+
+04:46.710 --> 04:49.400
+help of grid search cross-validation.
+
+04:49.410 --> 04:50.460
+Thanks for watching.

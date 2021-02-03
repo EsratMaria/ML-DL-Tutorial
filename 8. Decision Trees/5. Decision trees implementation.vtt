@@ -1,0 +1,292 @@
+WEBVTT
+
+00:01.370 --> 00:07.570
+In this lecture we are going to talk about the concrete implementation of decision trees.
+
+00:07.570 --> 00:11.090
+So first of all we have to read the CXXVI file.
+
+00:11.140 --> 00:15.030
+We are going to talk about classifying the iris data set.
+
+00:15.040 --> 00:19.100
+So we are going to have one hundred and fifty samples.
+
+00:19.150 --> 00:20.840
+So this is the data set.
+
+00:20.850 --> 00:28.240
+Again we have four features set parler length Seppala with Potala length and pet hardware and the class
+
+00:28.240 --> 00:30.800
+is going to be the target.
+
+00:30.940 --> 00:32.440
+I'll do Seto's.
+
+00:32.590 --> 00:39.420
+This is the first class the second class is Iris versicolor and we have iris virginica.
+
+00:39.520 --> 00:44.420
+OK so these are the features and these are the output classes.
+
+00:44.470 --> 00:51.970
+We just have to define the data features as the data and we have to define the columns in the dataset
+
+00:52.270 --> 00:54.150
+because we have four features.
+
+00:54.220 --> 00:57.400
+That's why we define the columns accordingly.
+
+00:57.430 --> 01:03.580
+As you can see SEP-IRA length Seppala with a pattern of length and petrolhead is going to be the column
+
+01:03.580 --> 01:08.810
+names in the dataset and the class is going to be the target variable.
+
+01:08.830 --> 01:13.670
+That's why the data the target is equal to the data in that class.
+
+01:13.840 --> 01:19.970
+OK so this is how we end up with the features and the output target variable.
+
+01:20.080 --> 01:29.130
+We are going to split the data set into a training data set and test data set the test sizes 0.2.
+
+01:29.140 --> 01:37.300
+As you can see our 0.2 which means that 80 percent of the original data set is for training purposes
+
+01:37.510 --> 01:42.030
+and 20 percent of the original dataset is for testing.
+
+01:42.170 --> 01:42.620
+OK.
+
+01:42.640 --> 01:49.810
+So we have the training data set that test data said we just have to instantiate a decision tree classifier
+
+01:50.020 --> 01:56.340
+as you can see it is imported from seeking to learn that tree and we have to define that the criterion
+
+01:56.410 --> 02:03.430
+is E-Class to entropy because we would like deconstruct the decision tree based on entropy and information
+
+02:03.460 --> 02:04.050
+again.
+
+02:04.270 --> 02:10.380
+If we do not define this good theory and dandy Gini Index approach is going to be used.
+
+02:10.510 --> 02:17.080
+We are going to talk about death algorithm but in this concrete implementation we are going to focus
+
+02:17.140 --> 02:19.870
+on entropy and information gain.
+
+02:19.900 --> 02:25.480
+If you take a look at the documentation as you can see there are lots of lots of parameters such as
+
+02:25.480 --> 02:26.520
+this criterion.
+
+02:26.620 --> 02:34.920
+As you can see entropy is for information gain and the default value is journey for Geany impurity.
+
+02:35.140 --> 02:39.790
+OK we can define the splitter we can define the maximum depth.
+
+02:39.790 --> 02:44.290
+Basically the maximum that has something to do with the size of the tree.
+
+02:44.290 --> 02:50.570
+OK so in this case the depth of the tree is 1 2 3 and 4.
+
+02:50.590 --> 02:52.550
+Basically the number of layers.
+
+02:52.630 --> 02:57.880
+The deeper our decision tree the more branches and morally it has.
+
+02:57.970 --> 03:03.920
+So basically with the help of the maximum that we are able to control the size of the tree.
+
+03:04.000 --> 03:10.270
+OK we can define the minimum sample split we can define the minimum samples leaf and so on.
+
+03:10.300 --> 03:14.200
+In our implementation it is just going to be fine.
+
+03:14.200 --> 03:21.820
+We just set the criteria anti-B entropy and all the default settings are OK so we just have to fit this
+
+03:21.820 --> 03:24.040
+model on the training data set.
+
+03:24.040 --> 03:31.510
+So the feature train and target terrain and then we are able to make predictions we the map of decision
+
+03:31.510 --> 03:32.060
+tree.
+
+03:32.080 --> 03:38.150
+So that's why modal that fitted that predicate we would like to predicate the values for the test data
+
+03:38.160 --> 03:38.710
+set.
+
+03:38.740 --> 03:45.420
+So if we call this fit method what's happening in the background Second learn is going to take the data
+
+03:45.410 --> 03:50.350
+set and it is going to construct a decision tree like this.
+
+03:50.500 --> 03:57.620
+OK of course it is going to deal with the entropy Ajax as we have discussed in the previous lecture.
+
+03:57.640 --> 04:02.850
+It is going to calculate the entropy for a given target variable.
+
+04:02.950 --> 04:09.340
+Then it is going to use this formula is equal to the sum of p x times e x.
+
+04:09.340 --> 04:16.930
+This is how scalar is going to calculate the entropy with respect to a given feature or predictor in
+
+04:16.930 --> 04:23.620
+order to be able to calculate the information gain and the information again is the entropy minus the
+
+04:23.620 --> 04:24.400
+eveil you.
+
+04:24.400 --> 04:27.490
+This is what we have been discussing in a previous lecture.
+
+04:27.550 --> 04:30.110
+OK so when do we call this fit method.
+
+04:30.140 --> 04:33.070
+Seeking to learn is going to do everything for us.
+
+04:33.070 --> 04:39.700
+It is going to calculate the entropy values it is going to calculate the information gain values and
+
+04:39.790 --> 04:46.510
+according to these values it is going to construct the decision tree and if we have the decision tree
+
+04:46.600 --> 04:50.370
+we are able to make new predictions on the past dataset.
+
+04:50.380 --> 04:54.530
+So let's check the confusion matrix and the accuracy score.
+
+04:54.580 --> 04:57.730
+So let's run the algorithm as you can see in this case.
+
+04:57.730 --> 04:59.290
+The accuracy is 1.
+
+04:59.290 --> 05:07.500
+What does it mean that the them is able to classify the given samples with a 100 percent accuracy.
+
+05:07.540 --> 05:12.970
+Of course if we rerun the or read them the accuracy is not going to be 100 percent.
+
+05:12.970 --> 05:14.820
+So it is 93 percent.
+
+05:14.830 --> 05:19.530
+If you run again it's going to be approximately 97 percent.
+
+05:19.660 --> 05:25.610
+OK so let's use cross-validation in order to end up with a more reliable result.
+
+05:25.720 --> 05:32.860
+OK so let's say that and let's run it as you can see with the map of cross-validation the final result
+
+05:32.860 --> 05:35.790
+is 95 percent accuracy.
+
+05:35.930 --> 05:36.410
+OK.
+
+05:36.430 --> 05:37.900
+Let's rerun again.
+
+05:37.960 --> 05:44.200
+It's going to be 96 percent with the help of cross-validation so we can come to the conclusion that
+
+05:44.230 --> 05:47.950
+using decision trees is definitely a good idea.
+
+05:47.950 --> 05:49.650
+It is working quite fine.
+
+05:49.650 --> 05:53.010
+The accuracy is approximately 96 percent.
+
+05:53.170 --> 05:57.260
+But there's a huge problem as far as decision trees are concerned.
+
+05:57.340 --> 06:04.600
+So the most significant problem when dealing with decision trees that every split it makes at each node
+
+06:04.810 --> 06:08.360
+is optimized for the dataset It is 52.
+
+06:08.470 --> 06:14.790
+So what does it mean that this splitting process will rarely generalize well to other data set.
+
+06:14.920 --> 06:16.080
+And what does it mean.
+
+06:16.120 --> 06:18.960
+This is the typical case of overfitting.
+
+06:19.000 --> 06:22.790
+So decision trees has the tendency to overfit.
+
+06:22.820 --> 06:25.370
+OK so that's why we have to reconsider.
+
+06:25.400 --> 06:31.920
+Bit more complex architectures such as random forest classifiers or boosting.
+
+06:32.070 --> 06:39.340
+OK so this is how we are able to use decision tree classifier on the Iraqis data sat and read the map
+
+06:39.340 --> 06:41.780
+of the entropy and information.
+
+06:41.800 --> 06:46.790
+Again seeking to learn is going to construct a tree like structures like this.
+
+06:46.810 --> 06:49.080
+We have three output classes.
+
+06:49.150 --> 06:53.810
+I always said Tozer either is versey color and Iowas virginica.
+
+06:53.950 --> 07:01.140
+And as you can see the feature or predicter with the higher entropy is going to be the Roueche No.
+
+07:01.180 --> 07:09.030
+OK as far as the iris dataset is concerned the path length is the feature with the highest entropy.
+
+07:09.040 --> 07:10.670
+That's why it is the root node.
+
+07:10.810 --> 07:18.130
+If the land is smaller than 2.40 file then it is the iron Seto's the output class.
+
+07:18.280 --> 07:21.750
+If it is forwards then we have to make our own decisions.
+
+07:21.760 --> 07:25.110
+So this is the decision preconstructed by Sacket learn.
+
+07:25.120 --> 07:29.650
+It uses entropy and information gain as you can see.
+
+07:29.650 --> 07:30.520
+Thanks for watching.

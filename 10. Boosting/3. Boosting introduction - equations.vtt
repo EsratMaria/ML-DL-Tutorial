@@ -1,0 +1,244 @@
+WEBVTT
+
+00:01.060 --> 00:05.800
+Let's talk about concrete equations as far as boosting is concerned.
+
+00:05.920 --> 00:11.890
+So in the previous lecture we have been talking about a concrete example a concrete illustration of
+
+00:11.890 --> 00:14.070
+how Boorstein Gabbidon works.
+
+00:14.080 --> 00:21.260
+The basic principle is that we keep combining the learners and we are going to the no Ds weak learner
+
+00:21.300 --> 00:23.280
+learners we age x.
+
+00:23.410 --> 00:29.230
+So each learners knows just a little fraction of the space what does it mean exactly.
+
+00:29.230 --> 00:35.770
+This is what we have been talking about in the previous lecture that for example the first age X classifier
+
+00:35.980 --> 00:40.140
+is able to separate these yellow dots from the green dot.
+
+00:40.180 --> 00:49.630
+So it knows this region of the space the next age X week learner knows another region of the space basically
+
+00:49.630 --> 00:54.720
+it knows how to separate this yellow dot from all the other green dots.
+
+00:54.820 --> 01:02.260
+OK then the next week learner knows this region of the space which means that it knows how to separate
+
+01:02.350 --> 01:05.630
+this yellow dot from all the green dots.
+
+01:05.650 --> 01:13.610
+So the final capital Ajax model which is a strong classifier is equal to the sum of the learners.
+
+01:13.690 --> 01:20.550
+OK we use some outer parameters in order to be able to control these age X we learners.
+
+01:20.650 --> 01:30.060
+So if Alpha II equals to zero it means that we don't care about age sub X we learner if Alpha Sabai
+
+01:30.090 --> 01:31.410
+is equals to 1.
+
+01:31.510 --> 01:38.620
+It means that these age Sabai x week learner is an important classifier and of course we have to use
+
+01:38.620 --> 01:47.230
+this sine function which is plus 1 if x is greater than zero and the minus 1 if X is smaller than 0
+
+01:47.320 --> 01:49.510
+you may pose the question at why is it good.
+
+01:49.540 --> 01:57.570
+Because usually we are not dealing with colors as labels so we don't have yellow color and green color.
+
+01:57.610 --> 02:01.670
+We have plus 1 and minus small labels instead.
+
+02:01.720 --> 02:08.710
+OK so we can assign a plus 1 and minus one for the output classes instead of yellow and green.
+
+02:08.770 --> 02:15.300
+And that's why this sine function can prove to be very important because it is going to return EDAR
+
+02:15.330 --> 02:19.610
+plus one or minus one such as the output classes.
+
+02:19.660 --> 02:21.980
+OK so this is the final formula.
+
+02:22.000 --> 02:29.520
+We have to use that strong the classifier capital Ajax is equal to the sum of the week learners.
+
+02:29.590 --> 02:35.120
+And we have to use some outer perimeters in order to control these week learners.
+
+02:35.400 --> 02:39.010
+OK then we are going to have D-Wade parameters.
+
+02:39.100 --> 02:46.120
+This is what we have been discussing as well that we are going to assign a w weight parameter to every
+
+02:46.120 --> 02:53.110
+single sample in the data set because we would like to make sure that the boosting algorithm will know
+
+02:53.260 --> 02:55.650
+that what are the important samples.
+
+02:55.690 --> 03:02.820
+So for example in this iteration boosting algorithm will increase double you weight paramita for four
+
+03:02.870 --> 03:03.280
+days.
+
+03:03.310 --> 03:06.340
+Misclassified item and why is it good.
+
+03:06.400 --> 03:12.130
+Because in the next iteration boosting we'll know that this is the important sample.
+
+03:12.220 --> 03:19.840
+So it is going to classify this sample and it is not going to bother with all the other samples.
+
+03:19.930 --> 03:22.430
+We did louvered uate paramita.
+
+03:22.480 --> 03:29.110
+So this is why we have to assign a w weight parameter to every single sample in the dataset.
+
+03:29.260 --> 03:36.220
+OK so it is extremely important to see that outer parameters have something to do with the age X we
+
+03:36.250 --> 03:43.960
+learners we are going to assign an alpha parameter to every single week learner and we are going to
+
+03:43.970 --> 03:51.520
+assign a double you wait Peramivir to every single sample in the data set of course at the beginning
+
+03:51.520 --> 03:57.970
+we are going to initialize all the W parameter as we want to divide by an hour.
+
+03:58.000 --> 04:04.930
+Another important fact is that we have to make sure that some of these double I wait paramita as is
+
+04:04.930 --> 04:05.970
+E-Class do on.
+
+04:06.070 --> 04:09.430
+So we make sure that this is a distribution.
+
+04:09.710 --> 04:17.230
+OK then we are able to calculate the error which is going to be the sum of double you educates as far
+
+04:17.230 --> 04:20.520
+as the misclassify data points are concerned.
+
+04:20.590 --> 04:26.630
+OK so for example in the first iteration there are two misclassified yellow dots.
+
+04:26.650 --> 04:29.790
+So basically we just have to get the W.
+
+04:29.800 --> 04:37.540
+Wait parameter of this item the W weight parameter of this item and the sum of the weight parameter
+
+04:37.540 --> 04:43.050
+is of the misclassified items is going to yield the error rate.
+
+04:43.210 --> 04:51.900
+OK so the error is equal to the sum of W Sabai as far as the misclassified data samples are concerned.
+
+04:52.030 --> 04:54.560
+OK so reargue rhythm is rather simple.
+
+04:54.610 --> 04:57.420
+We have to initialize the weights at the beginning.
+
+04:57.420 --> 05:03.460
+This is what we have been discussing that we don't know what our important samples and not that important
+
+05:03.460 --> 05:09.910
+sample so that's why every single sample in the dataset will have double you all you want.
+
+05:09.910 --> 05:15.110
+Divide by N where N is the number of samples in the original dataset.
+
+05:15.160 --> 05:20.930
+Then we have to pick an age X week learner that minimizes the error term.
+
+05:20.950 --> 05:27.360
+So the error is equal to the sum of the weights as far as the misclassified items are concerned.
+
+05:27.460 --> 05:33.200
+And we have to pick this age X we learner with the smallest error term.
+
+05:33.350 --> 05:34.130
+OK.
+
+05:34.270 --> 05:38.670
+If we have this error term we are able to calculate the Alpha.
+
+05:38.800 --> 05:42.960
+And this is the formula we have to use our first sup T.
+
+05:42.960 --> 05:51.440
+So Alpha in that t iteration is equal to 1 divided by 2 logarithm of one liners the error term.
+
+05:51.490 --> 05:58.330
+Divide by the error term you may pose the question that why do we have to use this indices because these
+
+05:58.330 --> 06:01.430
+are the values in that the iteration.
+
+06:01.600 --> 06:07.600
+So we have to calculate the alpha then we have to updated the W weight parameters.
+
+06:07.690 --> 06:14.220
+What extremely important is that this Alpha has something to do with the age x a week learner.
+
+06:14.230 --> 06:20.830
+So this is the coefficients right next to the Ajax week learner and double your weight has something
+
+06:20.830 --> 06:23.610
+to do with the samples in the dataset.
+
+06:23.830 --> 06:26.500
+And this is the formula we have to use.
+
+06:26.530 --> 06:29.580
+We are going to talk about that in the coming lectures.
+
+06:29.710 --> 06:37.060
+What's very important that on every iteration we order a new age X we learner to the final model.
+
+06:37.090 --> 06:42.360
+This is exactly what we have been discussing in a previous lecture in the first iteration.
+
+06:42.460 --> 06:49.230
+We used the first age X we learner then in the next iteration we have another week learner.
+
+06:49.270 --> 06:56.710
+Then in the next iteration we have another week learner and finally we have to combine these weak classifiers
+
+06:56.950 --> 07:00.810
+in order to end up with a stronger classification algorithm.
+
+07:00.900 --> 07:08.940
+OK so basically we just have to use some iteration in order to update the ADD or value the alpha value
+
+07:09.040 --> 07:10.510
+and the way to value.
+
+07:10.660 --> 07:13.990
+This is what we are going to talk about in the next lecture.
+
+07:13.990 --> 07:14.810
+Thanks for watching.

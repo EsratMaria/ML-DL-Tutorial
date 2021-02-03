@@ -1,0 +1,148 @@
+WEBVTT
+
+00:00.990 --> 00:06.920
+In this lecture we are going to talk about how to fetch data from Yahoo Finance.
+
+00:06.920 --> 00:13.190
+So you may pose the question that where they find you these financial related data for example was the
+
+00:13.190 --> 00:14.650
+price of apples.
+
+00:14.720 --> 00:17.400
+What's the price of IBM stock and so on.
+
+00:17.540 --> 00:20.550
+You can look it up on Yahoo Finance.
+
+00:20.550 --> 00:28.520
+So for example if we search for the Apple stock price as you can see there's a summary for Apple's stock.
+
+00:28.640 --> 00:33.810
+In this case the price of Apple's stock is approximately $160.
+
+00:33.950 --> 00:38.610
+If you click on historical data this is what we are going to download.
+
+00:38.690 --> 00:44.960
+As you can see you can download the data and we could import it with the help of Python but we are able
+
+00:44.960 --> 00:51.760
+to download it directly from Yahoo Finance and of course there are several paramita such as the open
+
+00:51.760 --> 00:57.550
+price high priced low price closing price and adjusted closing price.
+
+00:57.560 --> 01:02.010
+And of course the volume we are going to deal with adjusted closing price.
+
+01:02.150 --> 01:07.220
+So you may pose the question What is this adjusted closing price adjusted closing price.
+
+01:07.220 --> 01:09.450
+Has something to do with closing price.
+
+01:09.560 --> 01:15.080
+But it takes into account factors such as dividends stock later and so on.
+
+01:15.170 --> 01:20.180
+So that's why I adjusted close price is a more accurate reflection of the stock's value.
+
+01:20.270 --> 01:27.460
+And usually quantitative analysts using adjusted closing price instead of the standard closing price.
+
+01:27.470 --> 01:31.410
+So that's why we are going to use adjusted closing price as well.
+
+01:31.460 --> 01:32.210
+Okay.
+
+01:32.270 --> 01:36.290
+So downloading the data from Yahoo Finance it's quite easy.
+
+01:36.290 --> 01:40.330
+You just have to import that Pandurs they iterator data.
+
+01:40.490 --> 01:45.490
+We are going to use it as the web and we just have to call the data reader.
+
+01:45.560 --> 01:47.530
+We have to define the given stock.
+
+01:47.630 --> 01:51.620
+In this case it is the Apple store the data source is the Yahoo.
+
+01:51.620 --> 01:55.170
+Because we would like the fact that data from Yahoo Finance.
+
+01:55.190 --> 02:02.470
+We have to define a start date and end date and we are going to deal with adjusted closing price down
+
+02:02.480 --> 02:05.480
+we are going to calculate that daily returns.
+
+02:05.480 --> 02:10.800
+Basically the daily return is the stock price today minus the stock price yesterday.
+
+02:10.820 --> 02:13.240
+Divide by the stock price yesterday.
+
+02:13.430 --> 02:15.810
+OK we can move typified by a hundred.
+
+02:15.830 --> 02:22.260
+If we are after a percentage sometimes we use the logarithm of the daily returns instead of the actual
+
+02:22.270 --> 02:24.880
+price is because of normalization.
+
+02:24.920 --> 02:28.900
+Now we are going to talk about a standard daily returns.
+
+02:28.970 --> 02:36.350
+OK so we just have to calculate the daily return as the data and the data that shift to 1 minus 1 this
+
+02:36.350 --> 02:37.880
+is how we can calculate it.
+
+02:37.910 --> 02:38.550
+Okay.
+
+02:38.660 --> 02:45.740
+Then we are able to create a histogram in order to check whether the daily returns have some distribution
+
+02:45.830 --> 02:46.760
+or not.
+
+02:46.760 --> 02:49.160
+And if we run despite unswept.
+
+02:49.260 --> 02:57.680
+So the fact that the normal the assumption is that the daily returns have normal distribution.
+
+02:57.680 --> 03:01.680
+And as you can see it is very very similar to a normal distribution.
+
+03:01.850 --> 03:07.210
+Okay we are not interested in quantitative finance we are going to do Mesrine learning approaches.
+
+03:07.370 --> 03:15.200
+But most of the financial related models assume that the distribution of daily returns is approximately
+
+03:15.290 --> 03:19.060
+a normal distribution as you can see it is approximately normal.
+
+03:19.070 --> 03:26.130
+It doesn't matter what's important in our Spack that we can download the data from Yahoo Finance.
+
+03:26.210 --> 03:28.020
+With this line of code.
+
+03:28.040 --> 03:31.150
+So it is quite easy and quite convenient.
+
+03:31.160 --> 03:33.970
+This is what we are going to use in the coming lectures.
+
+03:34.220 --> 03:35.060
+Thanks for watching.

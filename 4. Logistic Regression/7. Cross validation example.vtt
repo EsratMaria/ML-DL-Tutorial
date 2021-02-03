@@ -1,0 +1,82 @@
+WEBVTT
+
+00:01.360 --> 00:06.530
+Let's take a look at a concrete implementation of k it's cross-validation.
+
+00:06.550 --> 00:13.470
+So we have the same data set credit scoring so credit they did not see yesterday we have the same features
+
+00:13.480 --> 00:20.360
+so income age and loan we have the same target variable as default so 0 and 1.
+
+00:20.500 --> 00:28.150
+And instead of splitting the data with the half of the train task split we are going to use this cross-validation.
+
+00:28.180 --> 00:34.050
+So we just have to instantiate the logistic regression model and we just have to import the seeking
+
+00:34.050 --> 00:38.560
+to learn import cross-validation and then we just have to call the function.
+
+00:38.560 --> 00:43.600
+So cross-validation that cross surveiled predicate we have to define the model.
+
+00:43.690 --> 00:45.600
+We have to define the features.
+
+00:45.670 --> 00:53.440
+So income age and loan we have to define the target variable which is the default so 0 and 1 and we
+
+00:53.440 --> 01:01.420
+are going to use 10 forwards you can use what ever you prefer if you do not specify this CV which defines
+
+01:01.420 --> 01:02.800
+the number of forwards.
+
+01:02.920 --> 01:06.110
+I guess the default is equal to 3.
+
+01:06.130 --> 01:08.720
+So there are going to be three falls.
+
+01:09.010 --> 01:15.680
+OK we calculate the predicate there and then we are able to measure the accuracy of our model.
+
+01:15.700 --> 01:21.620
+So if we run this algorithm the accuracy of the model is ninety one person.
+
+01:21.700 --> 01:27.280
+So basically it is approximately the same as we have seen for autistic regression but it is extremely
+
+01:27.280 --> 01:29.290
+important to know the difference.
+
+01:29.350 --> 01:36.370
+Here we have a training data set and that has the data that we train logistic regression model on the
+
+01:36.370 --> 01:41.940
+training data set and then we make predictions on that task the data set.
+
+01:41.940 --> 01:48.370
+Here we use K forward's cross-validation because we would like to make sure to use all the training
+
+01:48.370 --> 01:55.310
+samples for training purposes and use all the samples for testing as well.
+
+01:55.420 --> 02:00.420
+So this is why we have to use K for its validation who weighed ten fold.
+
+02:00.520 --> 02:02.940
+And this is how we are able to implement it.
+
+02:02.950 --> 02:09.370
+This is why sooky to learn and basically machine learning in Python is extremely powerful and very very
+
+02:09.370 --> 02:10.350
+convenient.
+
+02:10.480 --> 02:16.300
+OK so this is how we are dealing with credit scoring with the happen through Taoistic regression.
+
+02:16.300 --> 02:17.140
+Thanks for watching.

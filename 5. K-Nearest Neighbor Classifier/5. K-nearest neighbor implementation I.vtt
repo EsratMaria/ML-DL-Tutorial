@@ -1,0 +1,118 @@
+WEBVTT
+
+00:01.490 --> 00:07.160
+Let's take a look at a concrete implementation of K nearest neighbor classifier.
+
+00:07.160 --> 00:11.980
+OK so first of all we are going to use a very very simple example.
+
+00:12.020 --> 00:14.240
+So we will have two classes.
+
+00:14.300 --> 00:20.090
+Blue class and race class as you can see and of course we have two features.
+
+00:20.150 --> 00:24.490
+The x scored an x and y coordinates of a given point.
+
+00:24.500 --> 00:33.040
+So every single point on these two dimensional plane can be identified by two parameters x and y.
+
+00:33.200 --> 00:39.290
+OK so these are the values as you can see we have the x and y values.
+
+00:39.290 --> 00:45.040
+The Y is the target of a valuable 0 or 1 0 for the Blue Claws.
+
+00:45.260 --> 00:53.120
+And the one for the red class we just have to import Hitler neighbors import K nearest neighbor classifier
+
+00:53.390 --> 00:57.260
+as you can see we just have to specify the number of neighbors.
+
+00:57.350 --> 01:04.820
+So this is the key value we initialize it to be 3 at the beginning and we just have to call the classifier
+
+01:04.870 --> 01:06.980
+that fit method as usual.
+
+01:07.040 --> 01:07.760
+OK.
+
+01:07.880 --> 01:10.080
+We are able to make new predictions.
+
+01:10.130 --> 01:17.170
+The half of that classifier that predict when the X is 3 the y value is 5.
+
+01:17.330 --> 01:24.430
+So this is the Green Dot what is going to be the output Clauss whether it is 0 or 1.
+
+01:24.590 --> 01:25.430
+Let's run it.
+
+01:25.550 --> 01:28.570
+And as you can see the solution is 1.
+
+01:28.730 --> 01:36.260
+So according to the nearest neighbor classifier when dealing with this street nearest item in the data
+
+01:36.260 --> 01:40.020
+set this green door belongs to the rat class.
+
+01:40.100 --> 01:45.140
+OK let's change the x value when the X is equals to 1.
+
+01:45.140 --> 01:47.940
+What does it mean that it is something here.
+
+01:47.990 --> 01:53.750
+Of course it's going to be long the Blue Claws So it's going to be 0.
+
+01:53.870 --> 01:54.660
+OK.
+
+01:54.710 --> 02:02.060
+The X is great for example fire we are something here which means that these green dots will belong
+
+02:02.060 --> 02:07.990
+to the Red Cross so let's run it as you can see the green dot belongs to the Ragavan.
+
+02:08.000 --> 02:12.570
+So this is how easy it is to use K neighbors classifier.
+
+02:12.590 --> 02:17.840
+There is one parameter the K value we have to define in advance.
+
+02:17.900 --> 02:20.650
+But basically then we just have to feed the model.
+
+02:20.660 --> 02:26.090
+What's very important this is what we have been talking about that basically we don't have a model at
+
+02:26.180 --> 02:30.590
+all because this K neighbors classifier is lazy learner.
+
+02:30.620 --> 02:31.990
+There is no model.
+
+02:32.030 --> 02:34.490
+There are no parent yours to learn.
+
+02:34.490 --> 02:42.290
+This algorithm is going to calculate the Euclidean distance between the green dot and every other dot
+
+02:42.530 --> 02:44.360
+in the training data set.
+
+02:44.450 --> 02:51.620
+And it is going to consider the screen nearest one in order to make the decision whether this green
+
+02:51.620 --> 02:55.610
+door belongs to the blue class or belongs to the rat class.
+
+02:55.730 --> 03:03.100
+So 0 or 1 accordingly we are going to talk about a more complex problem in the next lecture.
+
+03:03.200 --> 03:04.070
+Thanks for watching.

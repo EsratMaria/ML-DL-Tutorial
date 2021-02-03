@@ -1,0 +1,208 @@
+WEBVTT
+
+00:02.530 --> 00:09.160
+In the previous lectures we have been talking about how to use the now and that works with Cara's framework
+
+00:09.490 --> 00:14.470
+in order to solve the X or logical relation problem in this lecture.
+
+00:14.470 --> 00:17.450
+We are going to talk about classification.
+
+00:17.500 --> 00:21.940
+So in the Ivory's data set we have three output classes.
+
+00:22.030 --> 00:24.050
+We have the iron Seto's.
+
+00:24.190 --> 00:28.330
+We have iris versicolor and we have iris virginica.
+
+00:28.330 --> 00:31.060
+So there are three output classes.
+
+00:31.240 --> 00:37.550
+Ok so first of all we can unload the iris data set with the help of Skeat learned data sets.
+
+00:37.860 --> 00:41.670
+This dataset is going to contain the four features.
+
+00:41.680 --> 00:47.150
+So in this case we have sample and support we had that talent and packed away.
+
+00:47.320 --> 00:49.370
+And of course we have the classes.
+
+00:49.420 --> 00:53.470
+So these are the target variables we are going to reshape it.
+
+00:53.470 --> 00:55.620
+So let's print out the features.
+
+00:55.750 --> 00:58.000
+As you can see these are the features.
+
+00:58.120 --> 01:06.220
+So we are going to use a two dimensional array and every single row in this data frame is going to contain
+
+01:06.250 --> 01:09.250
+the four features for a given sample.
+
+01:09.250 --> 01:10.500
+And of course we have.
+
+01:10.630 --> 01:12.480
+Why target variables.
+
+01:12.610 --> 01:15.060
+So let's say that and let's run it.
+
+01:15.210 --> 01:15.630
+OK.
+
+01:15.640 --> 01:24.100
+So these are the target variables as you can see we have three classes and this target is going to contain
+
+01:24.190 --> 01:33.130
+integers 0 for the first output class 1 for the second output class and 2 for the surd output class.
+
+01:33.250 --> 01:40.030
+So we have I suppose as the first class I always versicolor as the second the class is virginica as
+
+01:40.030 --> 01:41.140
+the Surt class.
+
+01:41.140 --> 01:42.210
+So far so good.
+
+01:42.230 --> 01:46.890
+But the most popular approach is the so-called one Haught representation.
+
+01:46.900 --> 01:54.940
+So instead of dealing with integers like this 0 1 and 2 for representing the output classes we are going
+
+01:54.940 --> 02:02.350
+to use this one what encoder in order to transform these target features or the labels into something
+
+02:02.350 --> 02:03.160
+like this.
+
+02:03.190 --> 02:10.870
+So this is the one representation that the output classes are going to be represented with a one dimensional
+
+02:10.930 --> 02:18.490
+array the size of this one dimensional array is the number of output classes because we have three output
+
+02:18.490 --> 02:19.280
+classes.
+
+02:19.350 --> 02:23.860
+I is virginica I read Seto's and I use versicolor.
+
+02:23.860 --> 02:29.890
+That's why as you can see the size of this one dimensional array is going to be three.
+
+02:30.070 --> 02:36.430
+And we are going to represent the three classes we 0 0 0 for the first class.
+
+02:36.430 --> 02:41.540
+0 1 0 for the second class and 0 0 1 for the search class.
+
+02:41.620 --> 02:45.910
+You may pose the question that why do we have to use something like this.
+
+02:45.910 --> 02:49.640
+We have the output label that is 0 1 and 2.
+
+02:49.690 --> 02:51.450
+Why do we bother with this one.
+
+02:51.450 --> 02:52.590
+Hold in Khoder.
+
+02:52.600 --> 02:56.690
+And the answer has something to do with activation functions.
+
+02:56.710 --> 03:03.700
+So if we take a look at the sigmoid activation function for example this activation function transforms
+
+03:03.700 --> 03:07.110
+the data within the range 0 and 1.
+
+03:07.180 --> 03:14.440
+What does it mean that if we use sigmoid activation function the output is not going to be two because
+
+03:14.440 --> 03:17.930
+the values are within the range 0 and warm.
+
+03:17.980 --> 03:25.780
+So that's why the best solution is to use something like this 1 0 0 for the first class 0 1 0 for the
+
+03:25.780 --> 03:29.070
+second class 0 0 1 for the cert class.
+
+03:29.200 --> 03:35.380
+By the way if we are dealing with a hand with 10 digit classification where the output classes or the
+
+03:35.380 --> 03:43.720
+number of labels are and as you can see we assign a one dimensional array with 10 integers to a given
+
+03:43.810 --> 03:53.030
+output class 1 0 0 0 0 4 0 0 1 0 0 0 0 0 4 1 0 0 1 0 0 4 2 and so on.
+
+03:53.110 --> 03:59.530
+So this is the so called the one hot representation of the output classes and it is important because
+
+03:59.530 --> 04:06.340
+we have to deal with activation functions and usually activation functions are going to transform the
+
+04:06.340 --> 04:09.420
+values within the range 0 and 1.
+
+04:09.430 --> 04:12.160
+So this is how we can get the target variables.
+
+04:12.220 --> 04:18.710
+Then we just have to split the original dataset into a training data set and that task sat.
+
+04:18.940 --> 04:25.740
+And we have to build a model as we have seen for the X or logical relation problem let's instantiate
+
+04:25.740 --> 04:32.710
+a seeker and show we are going to use three hidden layers and every single hidden layer will contain
+
+04:32.770 --> 04:39.260
+tiny hidden now rowans the number of inputs is equal to 4 because we have four features.
+
+04:39.310 --> 04:44.240
+So that's why in the input layer there is going to be for now roans.
+
+04:44.320 --> 04:46.890
+So the architecture is something like this.
+
+04:46.990 --> 04:52.800
+OK we have several hidden layers but the input layer contains four.
+
+04:52.810 --> 05:00.190
+Now rowans because we have four features sample length sample we the path length and tactile bed and
+
+05:00.190 --> 05:07.770
+the output layer is contain extreme now we're on because we transform the labels into three integers
+
+05:07.780 --> 05:14.710
+1 0 0 1 0 0 or 0 0 1 so 0 0 1.
+
+05:14.710 --> 05:18.430
+That's why the output layer we will have three output.
+
+05:18.430 --> 05:26.420
+Now lawn's OK we will use ralliers activation functions and we use an atom optimizer with the learning
+
+05:26.410 --> 05:34.330
+grade 0 0 0 5 in the next lecture we are going to talk about the optimizer and the last function and
+
+05:34.330 --> 05:36.460
+we ran the algorithm.
+
+05:36.460 --> 05:37.280
+Thanks for watching.

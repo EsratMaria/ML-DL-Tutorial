@@ -1,0 +1,187 @@
+WEBVTT
+
+00:01.950 --> 00:08.850
+Hoyle in the previous lecture we have been talking about tax clustering and natural language processing
+
+00:09.180 --> 00:17.700
+and we have been talking about the IDF rectors and we are able to use the IDF vectorize or it's in the
+
+00:17.760 --> 00:20.960
+secret learned feature extraction taxed.
+
+00:21.000 --> 00:22.670
+We just have to import it.
+
+00:22.830 --> 00:31.140
+And with the help of these IDF vectorize are we are able to analyze sentence's articles and documents
+
+00:31.380 --> 00:38.670
+and basically we are able to pose the question that was the similarity of two articles for example or
+
+00:38.700 --> 00:40.140
+two sentences.
+
+00:40.360 --> 00:40.800
+OK.
+
+00:40.800 --> 00:47.850
+In this case we are not going to handle articles but we are going to deal with single sentences.
+
+00:48.120 --> 00:51.180
+I like machine learning and clustering algorithms.
+
+00:51.180 --> 00:53.030
+This is the first sentence.
+
+00:53.040 --> 00:56.820
+Apples oranges and any kind of fruits are healthy.
+
+00:56.820 --> 00:58.600
+This is the second sentence.
+
+00:58.800 --> 01:01.630
+Is it feasible with machine learning algorithm.
+
+01:01.680 --> 01:03.260
+This is the third sentence.
+
+01:03.420 --> 01:05.190
+And we have the last sentence.
+
+01:05.310 --> 01:08.720
+My family is happy because of the Seafoods.
+
+01:08.820 --> 01:16.800
+We don't have to use the IDF Well the riser to decide that what are going to be the similar sentences.
+
+01:16.800 --> 01:23.660
+These sentences have something to do with computer science machine learning and plastering gargled Adams
+
+01:23.880 --> 01:30.600
+machine learning algorithm in this sentence and the sentence is the second sentence and the last sentence
+
+01:30.800 --> 01:35.100
+has something to do with health and lifestyle as you can see.
+
+01:35.100 --> 01:41.100
+Apples oranges are healthy by family happy because of healthy fruit.
+
+01:41.160 --> 01:48.370
+So basically these sentences have something to do with health and fruits and something like this.
+
+01:48.690 --> 01:49.390
+OK.
+
+01:49.470 --> 01:57.960
+So if we printout the IDF in a matrix form we should end up something like that document to them a matrix.
+
+01:58.020 --> 02:04.570
+So it's just going to take all that this thing diverts and it is going to calculate the Kieran's.
+
+02:04.680 --> 02:11.720
+Of course not the appearance of one in zero but it's going to calculate the ATF IBF well use.
+
+02:11.760 --> 02:14.880
+OK so let's take a look at it.
+
+02:14.910 --> 02:17.210
+It's going to return the matrix.
+
+02:17.250 --> 02:19.700
+This is for the first sentence.
+
+02:19.770 --> 02:21.820
+This is for the second sentence.
+
+02:21.900 --> 02:23.930
+This is for the third sentence.
+
+02:23.970 --> 02:25.930
+And this is for the last sentence.
+
+02:26.010 --> 02:31.450
+But basically we humans do not understand these ideas well.
+
+02:31.590 --> 02:37.010
+So that's why if we want to measure similarity we have to use something like this.
+
+02:37.030 --> 02:43.200
+The idea of Matrix times the TFI the matrix transpose in a matrix form.
+
+02:43.290 --> 02:44.430
+Let's see that.
+
+02:44.520 --> 02:48.080
+And let's clear the console and run it again.
+
+02:48.120 --> 02:55.950
+It's going to yield us the similarity matrix we have as many rows and as many columns as the number
+
+02:55.950 --> 03:03.270
+of sentences or documents as you can see the first line of the matrix is going to tell us that was the
+
+03:03.270 --> 03:08.360
+similarity between the first sentence and every other sentence.
+
+03:08.400 --> 03:11.910
+Of course the first sentence is similar to its south.
+
+03:11.910 --> 03:16.950
+It's not that similar to the second sentence but it's very similar to the sort of sentence.
+
+03:16.950 --> 03:21.800
+So these sentences the first one and the third one are very similar.
+
+03:21.810 --> 03:24.150
+Of course this is what we are after.
+
+03:24.150 --> 03:26.150
+What about the second sentence.
+
+03:26.190 --> 03:32.700
+Of course the diagonal they'll use will contain a wands because every single sentence is similar to
+
+03:32.700 --> 03:33.570
+the south.
+
+03:33.570 --> 03:38.190
+So as you can see the second sentence is very similar to the last sentence.
+
+03:38.260 --> 03:41.910
+OK the second sentence is similar to the last sentence.
+
+03:42.000 --> 03:44.680
+The third sentence let's take a look at it.
+
+03:44.760 --> 03:49.090
+The third sentence is very similar to the first sentence.
+
+03:49.170 --> 03:51.950
+OK this is what we have been discussing.
+
+03:52.140 --> 03:56.340
+And the last sentence is very similar to the second sentence.
+
+03:56.370 --> 03:57.230
+OK.
+
+03:57.330 --> 04:01.370
+As far as I am concerned this is why it is good in the past.
+
+04:01.380 --> 04:07.630
+These are great games on small data sets because we can get a good grasp what's happening in the background.
+
+04:07.680 --> 04:16.290
+So when that happens these IDF vectorize or we are able to compare sentences and we are able to calculate
+
+04:16.290 --> 04:24.800
+the similarity matrix in order to measure the similarity of two sentences or two articles or two documents.
+
+04:24.930 --> 04:32.120
+So basically this is how we can use T.F. idea where the riser in the next lecture we are going to cluster
+
+04:32.160 --> 04:33.330
+documents.
+
+04:33.330 --> 04:34.260
+Thanks for watching.

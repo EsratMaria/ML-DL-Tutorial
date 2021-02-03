@@ -1,0 +1,343 @@
+WEBVTT
+
+00:01.630 --> 00:08.860
+Let's talk a bit about gynie index approach so far we have been talking about how to construct a decision
+
+00:08.860 --> 00:12.710
+tree with the help of entropy and information gain.
+
+00:12.760 --> 00:17.970
+There are lots of lots of other approaches such as this genie index approach.
+
+00:18.070 --> 00:25.600
+OK this is the so-called cart algorithm which stands for classification and a regression tree algorithm
+
+00:25.930 --> 00:32.630
+and this algorithm uses GINI index to decide how to make displayed for a given decision tree.
+
+00:32.740 --> 00:39.400
+So using Gini Index approach is a bit better than calculating the information again and entropy because
+
+00:39.400 --> 00:46.610
+when dealing with entropy we have to calculate logarithmic functions which are computationally expensive.
+
+00:46.750 --> 00:52.900
+So that's why we prefer Gini Index approach because it is a bit faster algorithm.
+
+00:52.960 --> 01:01.150
+OK so if you may recall when calculating the Shannon entropy we have to deal with this formula the probability
+
+01:01.180 --> 01:08.470
+times the logarithm of the probability and calculating the logarithm function is quite expensive.
+
+01:08.560 --> 01:11.560
+That's why we pay for this genie index approach.
+
+01:11.680 --> 01:18.220
+But what extremely important that the two algorithms are approximately the same they are calculating
+
+01:18.220 --> 01:26.800
+the same values Gini Index approach does not rely heavily on entropy and it is the huge advantage for
+
+01:26.800 --> 01:32.820
+this approach because calculating the logarithm functions are computationally expensive.
+
+01:33.160 --> 01:36.210
+OK so we just have to deal with this formula.
+
+01:36.220 --> 01:41.620
+The genie index is ECOs to want a minus the sum of the probabilities.
+
+01:41.650 --> 01:45.590
+We just have to sum up the probabilities for every single class.
+
+01:45.730 --> 01:54.370
+So N is the number of our good classes for credit scoring D and easy close to because the output value
+
+01:54.370 --> 01:56.180
+can be 0 or 1.
+
+01:56.200 --> 02:02.890
+The client has the false data or the client is able to pay back the loan when dealing with the IRS data
+
+02:02.890 --> 02:05.140
+set and is ECOs Destry.
+
+02:05.290 --> 02:06.700
+I always said Tozer.
+
+02:06.730 --> 02:12.410
+Iris versicolor and Iris virginica as far as the output losses are concerned.
+
+02:12.550 --> 02:21.130
+OK so after calculating the G x GINI index values we just have to use this formula in order to calculate
+
+02:21.130 --> 02:24.570
+the E values and we split the feature.
+
+02:24.610 --> 02:26.890
+We the law was GINI index.
+
+02:26.890 --> 02:32.460
+So we search for the lowest eveil you and that's the feature we have displayed.
+
+02:32.530 --> 02:36.610
+So it is very very similar to the information again approach.
+
+02:36.640 --> 02:43.960
+Here we are not going to deal with Shannon entropy but we are going to deal with this formula when calculating
+
+02:43.960 --> 02:45.210
+the genie index.
+
+02:45.300 --> 02:45.760
+OK.
+
+02:45.760 --> 02:52.420
+So for example we are able to calculate the genie index for a given target voluble as far as playing
+
+02:52.420 --> 02:53.800
+golf is concerned.
+
+02:53.950 --> 02:59.180
+Nine times the output value is yes four five times it is no.
+
+02:59.320 --> 03:07.600
+So the djinni index is going to be one minus the probability of yes square and minus the probability
+
+03:07.660 --> 03:09.700
+of no square.
+
+03:09.790 --> 03:17.390
+This is what we have been discussing this is the formula 1 minus the sum of the X sobeit Square.
+
+03:17.410 --> 03:22.020
+So here we have two output classes yes or no.
+
+03:22.060 --> 03:24.520
+The probability of Yes is nine.
+
+03:24.520 --> 03:28.330
+Divide by 14 which is 0.60 4.
+
+03:28.360 --> 03:34.720
+We have to square it minus the probability of no which is 5 divided by 14.
+
+03:34.840 --> 03:37.390
+0.30 6 squared.
+
+03:37.390 --> 03:40.790
+And the final result is zero dot 46.
+
+03:40.940 --> 03:45.560
+OK so this is how we calculate the index for a given target voluble.
+
+03:45.640 --> 03:52.320
+But of course we have to calculate these eveil you in order to know what features to split.
+
+03:52.330 --> 04:00.250
+So if we have a gender that can be male or female and for example we are dealing with the credit scoring
+
+04:00.260 --> 04:01.190
+dataset.
+
+04:01.210 --> 04:09.280
+So the target variable is 0 or 1 whether the client has the false data or the client is able to pay
+
+04:09.280 --> 04:10.230
+back the loan.
+
+04:10.330 --> 04:19.420
+As far as males are concerned there are three yes values in the target variable and two no values as
+
+04:19.420 --> 04:21.760
+far as females are concerned.
+
+04:21.910 --> 04:26.190
+There are four yes values and zero no values.
+
+04:26.200 --> 04:32.500
+First of all we have to calculate the genie index as far as the target of triable is concerned which
+
+04:32.500 --> 04:33.770
+is the default.
+
+04:33.790 --> 04:41.830
+So one minus the probability of yes which is seven because we have a sweep loss for yeses and we have
+
+04:41.830 --> 04:44.380
+to divide it by all the answers.
+
+04:44.560 --> 04:50.530
+So we have seven yes values to no values seven plus two is nine.
+
+04:50.530 --> 04:52.900
+That's why we have to divide it by nine.
+
+04:53.020 --> 05:00.610
+So this is the probability that the default value is yes we have to square it minus the probability
+
+05:00.610 --> 05:04.790
+that default value is no it is to divide by 9.
+
+05:04.860 --> 05:09.720
+And of course we have to square it because this is the formula we are using.
+
+05:09.780 --> 05:18.860
+All is ECOs to 0.30 for Dan who we have to calculate the genie indices as far as the splits are concerned.
+
+05:18.930 --> 05:24.450
+So first of all we have to calculate the genie indices for the given braunches.
+
+05:24.540 --> 05:32.430
+So the gender feature can be splitted into a male branch and the female branch the genie index for the
+
+05:32.430 --> 05:41.370
+male branch is the one minus the probability of yes in that given branch stree divide by 5 3 because
+
+05:41.370 --> 05:45.470
+we have three yes values as far as male is concerned.
+
+05:45.610 --> 05:54.220
+And there is three plasty values as far as all the values are concerned for male 2:03.
+
+05:54.240 --> 06:00.050
+So that's why we divide by 5 squared minus the probability of no.
+
+06:00.060 --> 06:07.840
+For males it is to divide by all the values for male which is to divide by five square.
+
+06:08.010 --> 06:10.070
+This is the genie index for male.
+
+06:10.170 --> 06:13.770
+Then we have to calculate the same for the other branch.
+
+06:13.770 --> 06:17.270
+So that gender can be split into male and female.
+
+06:17.310 --> 06:22.760
+So the genie index of female is 1 minus the probability of yes.
+
+06:22.770 --> 06:28.370
+For females for divide by four square and minus the probability of no.
+
+06:28.380 --> 06:33.780
+For a female 0 divided by four square it is equal to zero.
+
+06:33.780 --> 06:39.940
+This is how we calculate the genie in this says and we have multiplied by the probabilities.
+
+06:40.080 --> 06:48.770
+So that's why the final evil is going to be equal to the G.T. which is the genie index of default.
+
+06:48.780 --> 06:54.070
+This is what we have already calculated so it is approximately 0.30 for.
+
+06:54.150 --> 07:00.420
+So 0.30 for minors the probability of male was the probability of male.
+
+07:00.540 --> 07:02.280
+It is three plus two.
+
+07:02.280 --> 07:05.010
+So that's why five divided by nine.
+
+07:05.010 --> 07:10.830
+Because there are nine samples no matter that the person is male or female.
+
+07:10.890 --> 07:14.830
+2:03 plus four plus 0 is equal to 9.
+
+07:14.850 --> 07:20.540
+So 5 divided by 9 is the probability that a given person is male.
+
+07:20.550 --> 07:29.490
+Times the genie index of male which is 0.30 for again minus the probability that the given person is
+
+07:29.490 --> 07:30.390
+female.
+
+07:30.420 --> 07:36.330
+It is for the white by nine times the genie index of gender female.
+
+07:36.440 --> 07:37.880
+OK which is zero.
+
+07:37.890 --> 07:42.060
+That's why the final e value is 0.15.
+
+07:42.060 --> 07:43.410
+Ok sorry for that.
+
+07:43.440 --> 07:47.070
+I have managed to miscalculate almost every single values.
+
+07:47.250 --> 07:54.750
+So as far as the genie index of the male is concerned it is equal to zero or 48 as far as the genie
+
+07:54.750 --> 07:58.050
+index of female is concerned it is zero.
+
+07:58.170 --> 08:07.140
+And as far as the evil you is concerned it is the G where T is the target of triable it is 0.30 for
+
+08:07.200 --> 08:13.680
+OK minus 5 divided by non-meat is the probability that the gender is male times.
+
+08:13.770 --> 08:20.880
+The genie index of male minors the probability of female times the genie index of female.
+
+08:20.910 --> 08:25.820
+So the final result for the evil you is 0 0 7.
+
+08:25.860 --> 08:27.930
+Sorry for the inconvenience.
+
+08:27.930 --> 08:35.220
+We just have to calculate this event for all the features and we split the feature away.
+
+08:35.370 --> 08:37.230
+No worse GINI index.
+
+08:37.260 --> 08:44.010
+So this is how we can calculate the index and we just have to select the lowest one in order to decide
+
+08:44.070 --> 08:46.070
+what feature to split.
+
+08:46.140 --> 08:52.710
+OK and by the way the implementation is quite easy because we just have to define the criteria and is
+
+08:52.710 --> 08:58.050
+not going to be the entropy but it is going to be the genie index approach.
+
+08:58.080 --> 09:00.570
+So if we save it and run it.
+
+09:00.720 --> 09:06.110
+I guess that the accuracy is going to be approximately the same as you can see.
+
+09:06.120 --> 09:08.150
+This is the cross validated result.
+
+09:08.160 --> 09:11.060
+Approximately 95 percent accuracy.
+
+09:11.070 --> 09:18.100
+This is the accuracy as far as splitting the dataset into training data set and test data set.
+
+09:18.270 --> 09:25.020
+So this is how we can use decision tree classifiers with the help of entropy and with the help of the
+
+09:25.020 --> 09:31.730
+Genie index approach we prefer the genie index approach because it is a faster algorithm.
+
+09:31.740 --> 09:37.890
+There's no need to calculate the logarithm of the probability when dealing with the Shannon entropy.
+
+09:38.040 --> 09:41.250
+This is why the genie index approach is preferred.
+
+09:41.250 --> 09:42.120
+Thanks for watching.

@@ -1,0 +1,220 @@
+WEBVTT
+
+00:01.020 --> 00:07.590
+So far we have been talking about the convolutional operation but let's take a look at a concrete example
+
+00:07.860 --> 00:12.450
+that we have the image all the images can be represented as matrices.
+
+00:12.450 --> 00:14.410
+This is what we have been discussing.
+
+00:14.520 --> 00:20.340
+And of course we have the feature detector that can be represented as a matrix as well.
+
+00:20.460 --> 00:26.400
+So we have to make some convolutional operation with the half of these two matrices.
+
+00:26.400 --> 00:34.090
+And basically we just have to consider as many items as the number of items in the feature detector
+
+00:34.410 --> 00:37.840
+and we have to multiply the items accordingly.
+
+00:37.860 --> 00:40.910
+The first item would be the first item.
+
+00:40.980 --> 00:48.090
+The second item with the second item search item with the third item fourth item with the fourth item
+
+00:48.090 --> 00:48.980
+and so on.
+
+00:49.110 --> 00:51.250
+OK here we have all zeros.
+
+00:51.330 --> 00:54.490
+So that's why the solution to me will be zero.
+
+00:54.660 --> 00:59.460
+And we have to shift the given feature detector one step to the right.
+
+00:59.490 --> 01:04.690
+We can define it how many steps to shift after each operation.
+
+01:04.780 --> 01:08.510
+In these given example we shift just a single pixel.
+
+01:08.520 --> 01:16.200
+So we take one step to the right and again we are going to multiply the items one by one as we can see
+
+01:16.290 --> 01:19.870
+all the items are zeros except for the last one.
+
+01:19.950 --> 01:23.590
+So one time the one is equals to arm.
+
+01:23.850 --> 01:25.650
+Ok then we shift again.
+
+01:25.840 --> 01:35.190
+0 times 1 plus 0 times 0 plus 0 0 times 0 plus 0 times 1 and so on again we have to move to apply the
+
+01:35.190 --> 01:36.590
+items accordingly.
+
+01:36.660 --> 01:40.930
+And we have to sum them up one times one is equal to one again.
+
+01:40.980 --> 01:43.570
+Here the result will be zero.
+
+01:43.590 --> 01:46.760
+So we have to shift again and 0 again.
+
+01:46.950 --> 01:49.230
+OK let's consider the next throw.
+
+01:49.230 --> 01:56.730
+In this case the result is a 1 dentistry because one times Warum plus one times one plus one times one
+
+01:56.730 --> 01:58.110
+is close to three.
+
+01:58.110 --> 01:59.410
+Let's continue.
+
+01:59.550 --> 02:02.660
+It is a one down one than is zero.
+
+02:02.760 --> 02:03.240
+OK.
+
+02:03.240 --> 02:14.010
+Again we keep shifting the feature detector and we keep multiplying the items accordingly to 0 0 2 2
+
+02:14.370 --> 02:20.730
+2 0 0 1 0 2 and 0 again.
+
+02:20.730 --> 02:26.340
+So this is how we can issue the original image with the feature detector.
+
+02:26.340 --> 02:33.570
+And we just have to move the plies the items accordingly as we can see we have managed to end up with
+
+02:33.570 --> 02:34.990
+the feature map.
+
+02:34.990 --> 02:36.570
+This is called the feature map.
+
+02:36.570 --> 02:43.590
+So after applying the feature detector on the regional image we end up with the feature map and the
+
+02:43.590 --> 02:48.990
+size of the feature map is smaller than the size of the regional image.
+
+02:49.020 --> 02:53.650
+This is how we can reduce the size of the training examples.
+
+02:53.730 --> 03:00.860
+And eventually this is how we are able to boost our algorithm because this is our main problem.
+
+03:00.870 --> 03:01.710
+We did dance.
+
+03:01.710 --> 03:08.730
+Now the networks that there are lots of lots of adulate So lots of lots of connections and that's why
+
+03:08.730 --> 03:11.520
+the training is going to be very slow.
+
+03:11.640 --> 03:18.990
+If we are able to reduce the number of features the number of inputs basically we drop off a kernel
+
+03:18.990 --> 03:20.640
+function for example.
+
+03:20.640 --> 03:25.080
+It is good because our training procedure will be faster.
+
+03:25.110 --> 03:27.400
+And this is exactly what we are after.
+
+03:27.510 --> 03:34.560
+OK so we have the image and with the map of the feature detector we can end up with a feature a map
+
+03:34.740 --> 03:38.970
+that size is going to be smaller than the original image.
+
+03:39.030 --> 03:45.930
+Of course we have been discussing that we dont know at the beginning what feature detectors to use and
+
+03:45.930 --> 03:49.930
+thats why we are going to use several feature detectors.
+
+03:50.130 --> 03:57.330
+And if we apply the feature detector on a given image we end up with a feature map that we use another
+
+03:57.410 --> 04:00.820
+cannel another feature detector on the same image.
+
+04:00.840 --> 04:07.050
+Thats why we will have another feature amap Dan with another kernel we will have another feature map
+
+04:07.260 --> 04:14.550
+and thats why we will have lots of lots of feature maps out of the same image because we use different
+
+04:14.610 --> 04:20.170
+feature detectors so of several feature maps because of severals feature detectors.
+
+04:20.280 --> 04:28.160
+So this is the first stop that we apply the given feature detectors or filters or kernel's on the image.
+
+04:28.230 --> 04:31.570
+But we don't know for certain what kernels to use.
+
+04:31.620 --> 04:38.010
+That's why we use lots of lots of different channels and that's why we end up with lots of lots of feature
+
+04:38.010 --> 04:42.260
+maps how to calculate the values in the feature map.
+
+04:42.300 --> 04:48.100
+We just have to make a matrix operation and multiply the items accordingly.
+
+04:48.210 --> 04:55.740
+As far as the image and as far as the feature detectors values our concern was extremely important that
+
+04:55.770 --> 05:02.320
+we'd have to apply the rectifies linear unit activation function because we would like to introduce
+
+05:02.380 --> 05:06.050
+some nonlinearity in our in our own network.
+
+05:06.250 --> 05:10.730
+So we have to use the feature detectors on the given image.
+
+05:10.780 --> 05:17.590
+We are going to have lots of lots of feature maps because we have lots of lots of feature detectors
+
+05:18.070 --> 05:25.500
+and we have to use the rectifier linear unit activation function on every single feature map.
+
+05:25.510 --> 05:26.180
+OK.
+
+05:26.260 --> 05:31.960
+So this is the first two steps as far as convolutional now and that rocks are concerned.
+
+05:32.080 --> 05:36.190
+We have to use the Karina's in order to end up in the feature map.
+
+05:36.190 --> 05:42.420
+Dan we have to use the relic activation function in order to introduce some non-linearity.
+
+05:42.460 --> 05:47.370
+OK in the next lecture we are going to talk about the pooling operation.
+
+05:47.530 --> 05:48.440
+Thanks for watching.

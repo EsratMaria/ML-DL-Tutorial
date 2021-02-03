@@ -1,0 +1,244 @@
+WEBVTT
+
+00:00.960 --> 00:05.040
+In this lecture we are going to talk about the pooling operation.
+
+00:05.040 --> 00:05.700
+OK.
+
+00:05.730 --> 00:12.780
+So was the main problem the main problem is that if we want to recognize for example cats on a given
+
+00:12.780 --> 00:20.000
+image there are lots of lots of possibilities here for example that cat is in the middle of the image.
+
+00:20.100 --> 00:23.670
+Here it is in the upper section of the image.
+
+00:23.760 --> 00:27.210
+Here it is on the left side of the image.
+
+00:27.250 --> 00:31.610
+We don't want to care about the given location of the cat.
+
+00:31.650 --> 00:38.370
+We just want to end up with an algorithm that's capable of finding the most relevant features as far
+
+00:38.370 --> 00:40.070
+as a cat is concerned.
+
+00:40.230 --> 00:45.680
+We don't care about the location of the cat we don't care about the facial expression.
+
+00:45.840 --> 00:53.280
+So this is what we want to achieve with our convolutional in our network which is called spatial invariance.
+
+00:53.310 --> 01:01.200
+So we would like to make sure to tag the same object no matter where it is located on the image or whether
+
+01:01.200 --> 01:06.420
+it is rotated or transformed for example it is a bit rotated.
+
+01:06.510 --> 01:08.730
+But again it is a cat.
+
+01:08.820 --> 01:14.590
+It is a bit transformed image of a cat but we know for certain that it is a cat.
+
+01:14.760 --> 01:19.950
+So the location on the image doesn't matter or whether it is rotated or transform.
+
+01:20.010 --> 01:23.110
+We would like to deal with spatial invariance.
+
+01:23.160 --> 01:26.950
+OK so this is why we have to use maximum pooling.
+
+01:27.060 --> 01:30.770
+So with maximum pulling we select the most relevant features.
+
+01:30.840 --> 01:37.200
+This is how we deal with spatial invariance we just care about the most relevant features and that's
+
+01:37.200 --> 01:45.000
+why we have to calculate the maximum values out of the feature map so we can reduce dimension of the
+
+01:45.000 --> 01:52.530
+image in order to end up with a data set containing the important pixel values we Daudi unnecessary
+
+01:52.530 --> 01:53.120
+noise.
+
+01:53.160 --> 01:58.530
+So it means that we don't care about the background we don't care about whether it is rotated or not
+
+01:58.560 --> 02:05.700
+or it is transformed or not we just care about the features that makes that cat look like a cat such
+
+02:05.700 --> 02:06.380
+as the cat.
+
+02:06.420 --> 02:13.380
+I guess it is the most relevant feature for a cat or the shape of the ears or the shape of the mouth
+
+02:13.410 --> 02:14.340
+and so on.
+
+02:14.430 --> 02:15.290
+OK.
+
+02:15.300 --> 02:17.960
+And of course we use a number of para meters.
+
+02:18.030 --> 02:24.750
+This is how we can reduce overfitting Soler feature math contains several values where the half of the
+
+02:24.750 --> 02:31.800
+maximum tooling we are going to get rid of lots of lots of unnecessary values so we reduce the number
+
+02:31.800 --> 02:35.450
+of barometers hands we reduce overfitting.
+
+02:35.550 --> 02:42.630
+So for maximum pulling again we have to use of the window in this given example the pooling window is
+
+02:42.750 --> 02:43.310
+too big.
+
+02:43.310 --> 02:45.340
+So times to pixel.
+
+02:45.390 --> 02:55.560
+So we are going to consider four pixels and then we have to choose the maximum value 0 1 0 1 2 was the
+
+02:55.560 --> 02:57.200
+maximum it is 2.
+
+02:57.210 --> 03:02.150
+So that's why the value after using maximum tool link will be two.
+
+03:02.160 --> 03:09.690
+In this case then we have to shift the pooling window to staps to the right to status because the pooling
+
+03:09.690 --> 03:12.070
+window with that is equal to two step.
+
+03:12.070 --> 03:17.290
+So in this case we are not going to make just a simple step to the right.
+
+03:17.340 --> 03:22.940
+We are going to consider the next four items was the maximum value.
+
+03:22.940 --> 03:24.460
+Again it is two.
+
+03:24.600 --> 03:27.360
+Then we have to calculate the next four items.
+
+03:27.420 --> 03:32.660
+But because this is the end of the image we just have two items 0 and 1.
+
+03:32.790 --> 03:34.840
+So the maximum is 1.
+
+03:34.980 --> 03:38.490
+Then we have to consider the next four items was the maximum.
+
+03:38.520 --> 03:40.780
+It is wanted was the maximum.
+
+03:40.800 --> 03:42.180
+It is skree.
+
+03:42.270 --> 03:42.990
+The maximum.
+
+03:42.990 --> 03:45.230
+It is 0 was the maximum.
+
+03:45.240 --> 03:47.460
+It is 0 was the maximum.
+
+03:47.460 --> 03:49.710
+It is one and it was the maximum.
+
+03:49.710 --> 03:51.210
+It is zero again.
+
+03:51.210 --> 03:58.950
+So we the cap of maximum pooling again we can transform the feature map into a smaller dataset with
+
+03:58.950 --> 04:01.580
+the relevant features exclusively.
+
+04:01.650 --> 04:07.990
+By the way we can use average pooling instead of maximum pooling it is popular as well.
+
+04:08.100 --> 04:14.970
+Instead of choosing the maximum value we calculate the average of the values present in the subset maximum
+
+04:14.970 --> 04:21.690
+pooling is a better approach because we would like to keep the most relevant features not the average
+
+04:21.780 --> 04:23.780
+of the features we are after.
+
+04:23.790 --> 04:26.870
+The most relevant features and why is it good.
+
+04:26.940 --> 04:32.370
+This is how we can achieve spatial invariants after applying maximum pooling.
+
+04:32.370 --> 04:37.430
+We can come to the conclusion that we dont care about the background for example.
+
+04:37.530 --> 04:43.980
+We dont care about the flour we dont care about the legs of the cat we just care about the most relevant
+
+04:43.980 --> 04:44.690
+features.
+
+04:44.730 --> 04:52.190
+As far as a cat is concerned just the shape of the ears just the eyes just the mouth and so on.
+
+04:52.290 --> 04:52.760
+OK.
+
+04:52.770 --> 04:59.820
+So this is why we have to apply maximum pooling to every single feature map in the previous layer.
+
+04:59.940 --> 05:05.170
+So we have the image we are going to use several of feature detectors.
+
+05:05.170 --> 05:08.380
+And that's why we will have several feature maps.
+
+05:08.380 --> 05:15.490
+Then we have to provide the really activation function and then we have to apply maximum pooling to
+
+05:15.490 --> 05:17.610
+every single feature map.
+
+05:17.650 --> 05:26.260
+So we are going to have as many layers after the Mac spooling operation as the number of feature maps
+
+05:26.500 --> 05:31.350
+because we just want to calculate the maximum values for a single feature map.
+
+05:31.450 --> 05:38.050
+But we have to do the same for every single feature map so that's why we will have as many layer after
+
+05:38.050 --> 05:42.760
+the Mac spooling as the number of feature maps in the previous layer.
+
+05:42.900 --> 05:43.390
+Okay.
+
+05:43.390 --> 05:49.360
+In the next lecture we are going to talk about the last step as far as convolutional now and that folks
+
+05:49.360 --> 05:50.590
+are concerned.
+
+05:50.590 --> 05:51.540
+Thanks for watching.

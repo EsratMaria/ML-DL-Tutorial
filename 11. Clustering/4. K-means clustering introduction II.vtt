@@ -1,0 +1,151 @@
+WEBVTT
+
+00:00.300 --> 00:01.950
+So let's continue.
+
+00:01.960 --> 00:07.910
+Or k means clustering introduction and tries to find the key parent teacher.
+
+00:07.950 --> 00:14.590
+Sometimes we have some apriori knowledge and we know how many clusters we are looking for.
+
+00:14.610 --> 00:22.080
+And basically this is the case for most of the times but we don't any apriori knowledge K is approximately
+
+00:22.080 --> 00:25.800
+equal to the square root of and divide by 2.
+
+00:25.800 --> 00:34.050
+Where n is the number of items in the dataset and we have the album method because OK it is a good approximation
+
+00:34.260 --> 00:36.870
+but we can do better with the elbow method.
+
+00:36.960 --> 00:42.840
+So we monitor the change of home again Itay within the clusters with different key values.
+
+00:42.990 --> 00:50.220
+So we run or K means clustering Venky's equal to warn them for equal to to them for easy destry and
+
+00:50.220 --> 00:51.230
+so on.
+
+00:51.360 --> 00:57.600
+It looks at the percentage of Iranians explained as a function of the number of clusters.
+
+00:57.620 --> 01:03.540
+To choose a number of clusters so that adding another cluster doesn't give much better modeling of the
+
+01:03.540 --> 01:04.400
+data.
+
+01:04.410 --> 01:11.760
+So we have to find the Albo point at A-plot if we make this plot that a number of clusters so the k's
+
+01:11.780 --> 01:20.250
+equal to 1 2 3 4 5 6 7 8 up to 9 and the per cent of the Ryons explain then we should end up with a
+
+01:20.250 --> 01:21.770
+situation like this.
+
+01:21.900 --> 01:23.370
+And there's the alto.
+
+01:23.460 --> 01:26.920
+So in this case they should be four.
+
+01:27.990 --> 01:34.090
+So what's the advantages and disadvantages as far as Kamins clustering is concerned.
+
+01:34.110 --> 01:41.670
+The advantage is that it relies on simple principles to identify clusters and it is a very important
+
+01:41.670 --> 01:49.560
+fact scientists have came up with that we had the intuition in the past that very very complex algorithms
+
+01:49.650 --> 01:51.830
+are better than simple ones.
+
+01:51.930 --> 01:53.460
+And this is not the case.
+
+01:53.570 --> 01:54.350
+Nobody is.
+
+01:54.350 --> 01:59.350
+We like seeing black rhythms we have been talking about K nearest neighbor.
+
+01:59.430 --> 02:06.780
+It is very very simple not that complex that logistic regression but on the other hand an algorithm
+
+02:06.780 --> 02:11.710
+performs better on credit scoring than the complex logistic regression.
+
+02:11.850 --> 02:17.300
+So this is why I usually like simple approaches and simple algorithms.
+
+02:17.490 --> 02:20.980
+It's very flexible and it's very efficient.
+
+02:21.000 --> 02:24.280
+On the other hand there are some disadvantages as well.
+
+02:24.300 --> 02:29.640
+It's not that sophisticated because it uses an element of random chance.
+
+02:29.640 --> 02:37.740
+It is not guaranteed to find the optimal set of clusters and we don't like modals we'd paramita is basically
+
+02:37.890 --> 02:43.560
+we are going to talk about now and on networks and it usually we don't know that what's going to be
+
+02:43.560 --> 02:47.490
+these parameters what's going to be the learning rate or the momentum.
+
+02:47.490 --> 02:52.730
+For now what are the networks or what's going to be the parameters for Kamins clustering.
+
+02:52.860 --> 02:59.130
+So we have to know when it was how many clusters are we want to find or if we do not know it then we
+
+02:59.130 --> 03:06.170
+can use the Abbo method or we can approximated with the square root and divide by two formula.
+
+03:06.240 --> 03:07.320
+But it's not the same.
+
+03:07.320 --> 03:10.620
+We don't like these black perimeters basically.
+
+03:11.160 --> 03:14.900
+So what's the difference between clustering and classification.
+
+03:14.910 --> 03:21.240
+The clustering is different from classification or Americal productions because the classification or
+
+03:21.240 --> 03:27.760
+regression The result is a model that relates features to an outcome clustering.
+
+03:27.870 --> 03:36.210
+We create new data so only all the examples are given the cluster label and inferred entirely from the
+
+03:36.210 --> 03:38.640
+relationships within the data.
+
+03:38.670 --> 03:46.320
+So it's very important that we clustering we create new data we are going to assign a cluster label
+
+03:46.440 --> 03:52.190
+to every single data point in our training data set basically for classification.
+
+03:52.200 --> 03:57.040
+The result is a model that relates features to an outcome here for clustering.
+
+03:57.060 --> 03:59.280
+We create new data.
+
+03:59.610 --> 04:01.950
+So that's all about Kamins mustering.
+
+04:02.100 --> 04:03.130
+Thanks for watching.

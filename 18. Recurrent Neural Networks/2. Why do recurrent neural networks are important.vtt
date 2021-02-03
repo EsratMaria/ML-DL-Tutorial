@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00.840 --> 00:05.550
+In this given chapter we are going to talk about recurrent now Real Networks.
+
+00:05.700 --> 00:11.960
+But first of all let's talk about the concrete applications of recurrent our own networks.
+
+00:12.120 --> 00:19.770
+So this architecture is extremely important in nature to language processing or modeling languages.
+
+00:19.980 --> 00:25.200
+So for example Google translator relies heavily on current our own networks.
+
+00:25.290 --> 00:33.780
+So all well-trained returned now real network is able to detect a given language and it is able to translate
+
+00:33.780 --> 00:36.750
+that given taxed into an other language.
+
+00:36.750 --> 00:45.210
+So for example I have on Garion corpus and Google translator is able to translate this Hungarian text
+
+00:45.510 --> 00:46.470
+into English.
+
+00:46.470 --> 00:48.860
+So thank you for your attention.
+
+00:49.080 --> 00:55.100
+OK so first of all Google Translate to relies heavily on recurrent real networks.
+
+00:55.230 --> 01:02.640
+But we can use retardent now Real Networks in order to make predictions as far as time series are concerned.
+
+01:02.670 --> 01:06.250
+For example we are able to predict stock prices.
+
+01:06.270 --> 01:09.730
+We have both deep recurring now Real Networks.
+
+01:09.730 --> 01:16.770
+OK so in the last example of this chapter we are going to talk about how to make predictions on the
+
+01:16.770 --> 01:17.910
+stock market.
+
+01:17.910 --> 01:27.000
+So we have a huge historical data set containing the stock prices of Apple and we would like to predict
+
+01:27.150 --> 01:30.050
+the future prices of Apple stocks.
+
+01:30.180 --> 01:37.950
+OK so this is an application of recurrent now that networks that we are able to make time series analyzes.
+
+01:37.980 --> 01:44.540
+The last one and basically the most important applications of recurring now were all networks our language
+
+01:44.540 --> 01:45.230
+Immortal's.
+
+01:45.240 --> 01:49.220
+So first of all let's discuss Turing Test.
+
+01:49.260 --> 01:51.210
+Peter passes the Turing test.
+
+01:51.240 --> 01:57.170
+If a human is unable to distinguish the computer from a human in a blind test.
+
+01:57.300 --> 02:04.440
+So if we do not know that we are talking to a computer we are unable to distinguish the computer from
+
+02:04.440 --> 02:06.340
+a human and recurring.
+
+02:06.340 --> 02:13.080
+Now real networks are able to pause this task which means that a well trained now real network is able
+
+02:13.080 --> 02:16.100
+to understand English for example.
+
+02:16.140 --> 02:23.020
+So recurrent now real networks are extremely important in language models and nature the language processing
+
+02:23.020 --> 02:23.720
+in domain.
+
+02:23.790 --> 02:30.200
+OK so for example we would like to make sure that the network is able to learn connections in the data.
+
+02:30.230 --> 02:33.140
+It will when they are far away from each other.
+
+02:33.150 --> 02:39.050
+So for example the first sentence in the given taxed is that I am from Hungary.
+
+02:39.180 --> 02:43.140
+Then there are lots of lots of other irrelevant sentences.
+
+02:43.290 --> 02:51.360
+And the last sentence is I speak fluent and the return normal network are able to deal with relationships
+
+02:51.360 --> 02:58.980
+far away from each other and thats why it is able to get the last word that if this guy from Hungary.
+
+02:59.040 --> 03:02.550
+Of course he speaks fluent Hungarian.
+
+03:02.670 --> 03:09.930
+So basically we would like to make sure that our recurrent now rail network is able to detach the connections
+
+03:09.930 --> 03:18.390
+between items far away from each other no matter that there are several sentences because this guy from
+
+03:18.390 --> 03:19.300
+Hungary.
+
+03:19.350 --> 03:22.560
+That's why he speaks fluent Hungarian.
+
+03:22.560 --> 03:25.460
+We have all feet forward now and that works.
+
+03:25.500 --> 03:32.950
+We are not able to make connections between items and entities that are far away from each other.
+
+03:33.030 --> 03:39.720
+So that's why recurrent now real networks are better than feedforward now real networks in days given
+
+03:39.850 --> 03:40.450
+aspect.
+
+03:40.470 --> 03:44.120
+Ok then we are able to generate image descriptions.
+
+03:44.110 --> 03:46.910
+We have both return now real networks.
+
+03:47.040 --> 03:53.520
+Of course it is a good approach to combine a convolutional now and that works that are able to detach
+
+03:53.550 --> 03:58.730
+the most relevant features on a given image with recurrent now real networks.
+
+03:58.740 --> 04:06.750
+So as you can see it is working quite fine in the last image we see a woman in a white dress standing
+
+04:06.750 --> 04:14.560
+with a tennis racket and in the background there are people in green T-shirts behind the tennis player.
+
+04:14.640 --> 04:17.200
+So it is working extremely fine.
+
+04:17.220 --> 04:22.710
+If we combine it convolutional now were all networks we are current Now road networks.
+
+04:22.710 --> 04:26.000
+Its going to be a very very powerful approach.
+
+04:26.160 --> 04:31.290
+So thats why we have to deal with current Now all the networks and this is what we are going to talk
+
+04:31.290 --> 04:33.300
+about in the coming lectures.
+
+04:33.300 --> 04:34.210
+Thanks for watching.

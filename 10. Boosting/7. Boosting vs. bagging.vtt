@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00.970 --> 00:04.340
+So let's talk a bit about boosting and begging.
+
+00:04.390 --> 00:12.190
+So as far as these approaches are concerned both of them use and learners and yields more stable models
+
+00:12.520 --> 00:20.530
+as far as bagging is concerned we use several independent decision trees and all of these decision trees
+
+00:20.620 --> 00:28.090
+are going to make some predictions and then random forest classifier which is a form of bagging is going
+
+00:28.090 --> 00:32.200
+to choose the final clause based on majority voting.
+
+00:32.380 --> 00:39.580
+As far as boosting is concerned again we are going to combine several vehicles earners in order to end
+
+00:39.580 --> 00:42.450
+up with the final strong the classifier.
+
+00:42.520 --> 00:49.910
+OK so both of them use these and learners and yields more stable models as far as bagging is concerned.
+
+00:49.930 --> 00:54.880
+Every item has the same probability to appear in a new data set.
+
+00:54.930 --> 01:01.850
+On the other hand for boosting the samples are weighted so some of them will acquire more often.
+
+01:01.900 --> 01:09.160
+So basically this is why we assign a w weight to every single sample in the dataset because boosting
+
+01:09.160 --> 01:17.020
+is going to increase the W weight for misclassified items and decrease the weight for correctly classified
+
+01:17.020 --> 01:17.800
+items.
+
+01:17.830 --> 01:24.640
+What does it mean that in the next iteration the next week learner is going to focus on samples with
+
+01:24.640 --> 01:25.990
+higher weights.
+
+01:26.020 --> 01:28.710
+OK so that's why the samples are weighted.
+
+01:28.810 --> 01:31.620
+So some of them will acquire more often.
+
+01:31.660 --> 01:34.720
+We can use parallelization for bagging.
+
+01:34.720 --> 01:37.090
+So there's a parallel training stage.
+
+01:37.090 --> 01:43.190
+So this is what we have been talking about at random for us classifier which is a form of begging.
+
+01:43.330 --> 01:50.500
+We can say that the number of jobs as you can see here and if it is set to minus one the number of jobs
+
+01:50.590 --> 01:57.640
+is set to the number of processor cores so because these decision trees are independent of each other
+
+01:57.880 --> 02:04.300
+that's why we are able to construct it in a parallel manner for boosting the final decision is the weighted
+
+02:04.300 --> 02:06.250
+average of B and learners.
+
+02:06.250 --> 02:09.340
+So better classifiers have higher weights.
+
+02:09.340 --> 02:09.840
+OK.
+
+02:09.850 --> 02:16.630
+So this is why we have to use this outer perimeter this outthought is going to control the H x week
+
+02:16.630 --> 02:17.340
+learners.
+
+02:17.380 --> 02:24.190
+On the other hand for example random forest classifiers are going to create several independent decision
+
+02:24.190 --> 02:31.520
+trees and with the help of voting it is going to make a prediction as far as the final Clauss is concerned.
+
+02:31.540 --> 02:34.250
+So here we do not use any weights.
+
+02:34.270 --> 02:38.380
+So basically the final decision is the average of the learners.
+
+02:38.410 --> 02:44.560
+But what's the most important difference between bagging and boosting is that bagging reduces variance
+
+02:44.830 --> 02:52.640
+and it solves overfitting only error and boosting reduces bias but increases overfitting a bit.
+
+02:52.780 --> 02:55.650
+And that's why bagging is the preferred way.
+
+02:55.690 --> 03:02.830
+So usually with the help of bagging we are able to achieve higher accuracy and a better model.
+
+03:02.860 --> 03:09.490
+So both of these algorithms can prove to be very very useful but bagging is preferred in the main.

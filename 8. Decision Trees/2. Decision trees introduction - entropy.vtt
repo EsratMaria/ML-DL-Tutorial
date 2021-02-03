@@ -1,0 +1,367 @@
+WEBVTT
+
+00:01.550 --> 00:07.940
+In the previous lecture we have been talking about the concrete or texture and why is it good to use
+
+00:07.940 --> 00:09.070
+decision trees.
+
+00:09.080 --> 00:16.880
+The only problem we have to solve is how to decide what modes and what features are important and what's
+
+00:16.880 --> 00:17.630
+not.
+
+00:17.630 --> 00:20.230
+So for example what should be the root node.
+
+00:20.330 --> 00:23.850
+How many branches are there for a given node and so on.
+
+00:23.850 --> 00:28.730
+So there are lots of lots of questions we can pose when dealing with decision trees.
+
+00:28.850 --> 00:36.590
+And we are going to use information theory and Shannon entropy in order to construct a decision tree.
+
+00:36.670 --> 00:37.110
+OK.
+
+00:37.130 --> 00:40.420
+So first of all let's talk about the dataset we have.
+
+00:40.430 --> 00:47.130
+We have four features in our data set Outlook temperature humidity and wind.
+
+00:47.330 --> 00:50.030
+And we have a single target variable.
+
+00:50.030 --> 00:51.040
+The last column.
+
+00:51.080 --> 00:54.520
+So whether we are going to play golf or not.
+
+00:54.590 --> 01:03.150
+And as you can see this data set it doesn't contain any numerical values it contains categorical variables.
+
+01:03.170 --> 01:08.210
+So as you can see the outlook can be sunny overcast or rainy.
+
+01:08.330 --> 01:11.960
+Temperature can be Haught mild or cold.
+
+01:12.050 --> 01:14.870
+Humidity can be high or normal.
+
+01:14.870 --> 01:21.590
+So basically we have to deal with categorical varietals and this is why we like decision trees because
+
+01:21.590 --> 01:28.570
+they have the tendency to deal with both categorical variables and numerical values as well.
+
+01:28.780 --> 01:29.530
+OK.
+
+01:29.660 --> 01:35.540
+So we would like to end up with a tree like structure like this the root node is the outlook.
+
+01:35.600 --> 01:42.470
+And because there are street types as far as Outlook is concerned as you can see Sunny overcast and
+
+01:42.470 --> 01:46.420
+rainy that's why the root node has three branches.
+
+01:46.460 --> 01:52.350
+Sunny overcast and rainy then the overcast has a single leaf known.
+
+01:52.400 --> 01:57.870
+So if the weather is overcast as you can see we are going to play tennis.
+
+01:57.950 --> 02:01.430
+As you can see over of cost and play is yes.
+
+02:01.610 --> 02:04.050
+If it's overcast the place.
+
+02:04.070 --> 02:11.210
+Yes we have two more overcast values and all of them has the target of a fireball Yes.
+
+02:11.210 --> 02:16.820
+So if the outlook is over costed then we are going to play tennis.
+
+02:16.820 --> 02:19.560
+So this is the decision tree we are after.
+
+02:19.580 --> 02:26.320
+But of course somehow we have to decide what is going to be the root node how many branches do we have
+
+02:26.320 --> 02:27.340
+and so warm.
+
+02:27.350 --> 02:31.600
+So this is why we have to define the so-called Shannon entropy.
+
+02:31.760 --> 02:33.090
+So this is right.
+
+02:33.170 --> 02:36.060
+Rhythm is used to build decision trees.
+
+02:36.080 --> 02:44.570
+It is a top down greedy search of possible branches and it uses entropy and information gain in order
+
+02:44.570 --> 02:46.440
+to build the decision tree.
+
+02:46.610 --> 02:55.010
+So we can define this age as Shannon entropy or for discrete random variable X where X can have possible
+
+02:55.010 --> 03:04.040
+they'll use X on X to up to x An And there's a probability mass function P X and we can define the Shannon
+
+03:04.130 --> 03:06.980
+entropy with the help of this formula.
+
+03:07.100 --> 03:17.020
+It is minus the sum from our equals to one up to N P x by time is the logarithm of p x Sabai.
+
+03:17.210 --> 03:20.330
+OK so we just have to deal with the probability.
+
+03:20.360 --> 03:26.560
+As you can see as far as the given possible values of x are concerned.
+
+03:26.690 --> 03:28.850
+So there is a good example on Wikipedia.
+
+03:28.850 --> 03:29.780
+By the way.
+
+03:29.780 --> 03:38.360
+So if you navigate to Wikipedia and search for entropy as far as information theory is concerned there
+
+03:38.360 --> 03:42.890
+is a good example for how to calculate Shenan entropy.
+
+03:42.980 --> 03:48.220
+So let's suppose a situation that we are considering heads or tails.
+
+03:48.290 --> 03:52.840
+In this case heads and tails had equal probability 1.
+
+03:52.850 --> 03:54.310
+Divide by two.
+
+03:54.470 --> 03:59.830
+And that's why if we calculate Shenan entropy based on this definition.
+
+03:59.900 --> 04:07.870
+So minus the sum of P X times the logarithm of p x we are going to end up something like this.
+
+04:07.880 --> 04:10.310
+Our musical's to own up to 2.
+
+04:10.330 --> 04:11.100
+Why.
+
+04:11.210 --> 04:13.720
+Because there are two outcomes.
+
+04:13.820 --> 04:15.540
+Heads or tails.
+
+04:15.560 --> 04:18.760
+So that's why we just have to deal with two actions.
+
+04:18.920 --> 04:26.090
+And because heads and tails both have equal probability 1 divided by two we just have to calculate one
+
+04:26.090 --> 04:32.610
+divide by two times the logarithm of one divided by two and it's going to be 1.
+
+04:32.690 --> 04:40.470
+OK so as far as fair coins are concerned the entropy is equal to on if we are dealing with it.
+
+04:40.520 --> 04:42.020
+Not fair coins.
+
+04:42.110 --> 04:44.830
+The entropy is going to be smaller than 1.
+
+04:44.960 --> 04:52.940
+So if we have some of the probability of heads and AQ probability for tails we just have to use the
+
+04:52.940 --> 04:55.250
+same formula as you can see.
+
+04:55.250 --> 05:00.160
+So the sum of the X Sabai times the logarithm of B Exabyte.
+
+05:00.320 --> 05:04.190
+As you can see here we are dealing with probability and probability.
+
+05:04.180 --> 05:11.110
+Q Because they are not the same so the probability of heads and tails are not the same it is not equal
+
+05:11.140 --> 05:12.690
+to 1 divided by 2.
+
+05:12.790 --> 05:15.530
+It is p and q accordingly.
+
+05:15.580 --> 05:19.560
+So thats why the total entropy is going to be smaller than 1.
+
+05:19.690 --> 05:22.440
+So this is how we are dealing with entropy.
+
+05:22.630 --> 05:28.920
+Basically if you want to understand decision trees you dont have to know everything about Shannon entropy
+
+05:29.020 --> 05:34.410
+but its good to talk a bit about it because this is exactly what's happening in the background.
+
+05:34.480 --> 05:42.680
+OK so for completely home again is data that the entropy is zero and even the data set is equally divided.
+
+05:42.730 --> 05:46.840
+So there are the same amount of true values and force values.
+
+05:46.960 --> 05:48.930
+Then the entropy is one.
+
+05:49.120 --> 05:55.100
+OK so as you can see the value of the entropy is within the range 0 and 1.
+
+05:55.180 --> 05:56.690
+And why do we bother.
+
+05:56.710 --> 06:02.470
+We check on entropy because a branch with entropy more than 1 needs splitting.
+
+06:02.470 --> 06:06.900
+So basically this is how we can define the number of branches.
+
+06:07.030 --> 06:13.840
+And the most relevant feature as the root node for the decision tree you just have to deal with Shannon
+
+06:13.900 --> 06:19.570
+and drop is OK by the way the root node has the maximum information gain.
+
+06:19.570 --> 06:25.660
+So the maximum entropy reduction and the leaf nodes have entropy zero.
+
+06:25.750 --> 06:32.170
+So this is how we can decide what's going to be a root node and what's going to be leafnode.
+
+06:32.260 --> 06:35.780
+We just have to calculate the given Shannon entropy.
+
+06:35.920 --> 06:41.300
+OK so for example we would like to calculate the entropy of playing golf.
+
+06:41.350 --> 06:45.470
+So we are able to calculate the entropy for a given feature.
+
+06:45.490 --> 06:49.890
+In this case we are after the entropy of the target variable.
+
+06:50.000 --> 06:57.550
+Ok so if we calculate the number of nos and the number of usas we can come to the conclusion that we
+
+06:57.550 --> 07:00.280
+are playing golf non-New times.
+
+07:00.280 --> 07:01.940
+So there are nine.
+
+07:01.990 --> 07:02.700
+Yes.
+
+07:02.710 --> 07:07.090
+In this column and five nos in this column.
+
+07:07.120 --> 07:12.100
+So nine times we play golf and five times we do not play golf.
+
+07:12.130 --> 07:18.610
+If we want to calculate Shannon entropy we just have to use the formula we have discussed in the previous
+
+07:18.610 --> 07:19.350
+slide.
+
+07:19.360 --> 07:25.930
+So we just have to calculate the probability of X Y multiply by the logarithm of the probability of
+
+07:25.960 --> 07:28.810
+X Y and if we just have to sum them up.
+
+07:29.050 --> 07:36.500
+OK so in this case the Shannon entropy of playing golf is the Shannon entropy of nine and five.
+
+07:36.580 --> 07:41.460
+Because playing golf can have two values yes or no.
+
+07:41.560 --> 07:45.730
+Yes four nine times and no four five times.
+
+07:45.730 --> 07:47.240
+What's the probability of.
+
+07:47.260 --> 07:47.870
+Yes.
+
+07:48.010 --> 07:49.920
+We just have to divide 9.
+
+07:49.960 --> 07:58.080
+Divide by 14 because we have 14 samples in the data set and nine of them are.
+
+07:58.120 --> 07:58.780
+Yes.
+
+07:58.900 --> 08:00.330
+So what's the probability of.
+
+08:00.340 --> 08:05.410
+Yes it is 9 divide by 14 which is 0.60 4.
+
+08:05.410 --> 08:14.140
+So we just have to use this equation in order to end up with zero dot 94 so 0 that 64 times logarithm
+
+08:14.140 --> 08:16.470
+0.60 for minus.
+
+08:16.570 --> 08:18.760
+We have to deal with the other possible.
+
+08:18.770 --> 08:21.350
+Well you for playing golf.
+
+08:21.420 --> 08:21.840
+OK.
+
+08:21.840 --> 08:28.000
+In the data set we have five no values 5 divide by 14.
+
+08:28.030 --> 08:32.040
+Why 14 because we have 14 items all together.
+
+08:32.110 --> 08:40.930
+So basically it is the probability of you know zero that 36 times the logarithm of 0.30 is 6 and it
+
+08:40.930 --> 08:43.330
+is equal to zero the 94.
+
+08:43.330 --> 08:49.140
+So this is how we are able to calculate the Shannon entropy of a given feature.
+
+08:49.270 --> 08:56.920
+And basically it is the most important step as far as calculating the importance of a given feature.
+
+08:56.920 --> 09:00.610
+So this is what we are going to talk about in the next lecture.
+
+09:00.610 --> 09:01.480
+Thanks for watching.

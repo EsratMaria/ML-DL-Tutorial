@@ -1,0 +1,229 @@
+WEBVTT
+
+00:01.540 --> 00:07.640
+In this chapter we are going to talk about another machine learning related algorithm the so called
+
+00:07.660 --> 00:10.170
+K nearest neighbor classifier.
+
+00:10.330 --> 00:18.670
+So this K nearest neighbor or K and then a classifier can classify examples by assigning them the class
+
+00:18.670 --> 00:21.600
+of the most similar labeled examples.
+
+00:21.750 --> 00:24.130
+Ok so it is a very very simple.
+
+00:24.160 --> 00:30.730
+But on the other hand extremely powerful algorithm we will see that when we are talking about machine
+
+00:30.730 --> 00:37.720
+learning algorithms in finance these K nearest neighbor classifier is the best one possible.
+
+00:37.750 --> 00:40.650
+So it outperforms support rector machines.
+
+00:40.660 --> 00:44.370
+It outperforms a random forest classifier and so on.
+
+00:44.380 --> 00:53.350
+So it is a very very simple but extremely Parver approach and is Vail's suited for classification tasks.
+
+00:53.450 --> 00:59.830
+They are the relationship between the features are quite complex and hard to understand.
+
+00:59.860 --> 01:07.390
+Again it is a supervised learning algorithm which means that there is a training data set with examples
+
+01:07.390 --> 01:10.440
+that are classified into several categories.
+
+01:10.510 --> 01:16.660
+In the previous chapter we have been talking about logistic regression and we have come to the conclusion
+
+01:16.720 --> 01:19.750
+that it is for binary classification.
+
+01:19.810 --> 01:29.470
+So when there are two outcomes zero or one for example the email is spam or not the client is Hathi
+
+01:29.560 --> 01:30.250
+or not.
+
+01:30.250 --> 01:33.190
+Here we came nearest neighbor classifier.
+
+01:33.220 --> 01:36.080
+There can be several output classes.
+
+01:36.100 --> 01:42.610
+Ok so thats why we say that these examples are classified into several output classes.
+
+01:42.730 --> 01:50.290
+And if we have a new example with the same number of features as the training data this KNM algorithm
+
+01:50.350 --> 01:59.800
+identifies Caye items in the training data set that are the nearest similarity and the only test example
+
+01:59.830 --> 02:04.900
+is assigned to the class of the majority of the K nearest neighbors.
+
+02:05.050 --> 02:12.130
+So basically the scale and an algorithm is going to analyze the credit risk data that it is going to
+
+02:12.130 --> 02:15.020
+search for the most similar entities.
+
+02:15.130 --> 02:21.610
+So where age low end income is very very similar to the actual test sample.
+
+02:21.670 --> 02:29.740
+And basically it is going to track the output in the training example as far as the most similar items
+
+02:29.740 --> 02:30.780
+are concern.
+
+02:30.880 --> 02:38.000
+And according to this information it is going to decide whether the client will default or not.
+
+02:38.080 --> 02:44.920
+So what were very important that came nearest neighbor classifier is looking for the most similar items
+
+02:45.130 --> 02:47.510
+in order to make the final decision.
+
+02:47.560 --> 02:55.690
+OK so for example we have several ingredients such as Apple bacon banana carrot and cheese which two
+
+02:55.690 --> 03:03.850
+features sweetness and crunchiness of course machine learning algorithms can deal with numerical values
+
+03:03.940 --> 03:04.980
+exclusively.
+
+03:05.080 --> 03:13.260
+So somehow we have to transform these sweetness and crunchiness feature parameters into numerical values.
+
+03:13.410 --> 03:21.130
+OK so as far as these parameters are concerned we are going to use integers within the range one up
+
+03:21.190 --> 03:22.090
+to 10.
+
+03:22.210 --> 03:26.250
+And this is what we are going to assign to these ingredients.
+
+03:26.290 --> 03:28.930
+For example Apple is quite sweet.
+
+03:28.960 --> 03:32.430
+Thats why the sweetness meter will be tan.
+
+03:32.500 --> 03:34.080
+It is quite crunchy.
+
+03:34.120 --> 03:37.120
+So thats why the crunchiness parameter will be 9.
+
+03:37.210 --> 03:43.290
+But as far as cheese is concerned it is not that sweet so thats why the sweetness paramita is wanted
+
+03:43.540 --> 03:45.930
+and it is not crunchy at all.
+
+03:45.940 --> 03:49.560
+So thats why the crunchiness barometer is worn as well.
+
+03:49.690 --> 03:52.270
+And these are the labels accordingly.
+
+03:52.390 --> 03:56.910
+So if the sweetest paramita is Dan the crunchiness or a meter is nine.
+
+03:56.920 --> 03:58.140
+It is the apple.
+
+03:58.190 --> 04:00.950
+The type of this entity is fruit.
+
+04:00.970 --> 04:07.440
+So as you can see we have several output classes fruits proteins vegetables.
+
+04:07.450 --> 04:15.300
+So in this case there are three output clauses and the and I them is going to analyze this data set
+
+04:15.490 --> 04:22.780
+and we are able to make new predictions that if we have a tomato with sweetness paramita or six and
+
+04:22.780 --> 04:28.120
+crunchiness barometer for what's going to be the type of this given entity.
+
+04:28.210 --> 04:30.670
+So this is what we are after all.
+
+04:30.730 --> 04:38.380
+We are able to plot these ingredients on a two dimensional plane because we have two features sweetness
+
+04:38.440 --> 04:47.230
+and the crunchiness that's why there's going to be the x axes as sweetness and or y axes as crunchiness.
+
+04:47.230 --> 04:49.920
+So we have several output clauses.
+
+04:49.930 --> 04:53.070
+This is what we have been discussing that these are the labels.
+
+04:53.080 --> 04:55.140
+Basically we have fruits.
+
+04:55.150 --> 04:57.910
+We have proteins and we have vegetables.
+
+04:57.930 --> 04:59.580
+These are the vegetables.
+
+04:59.620 --> 05:01.090
+These are the fruit.
+
+05:01.170 --> 05:03.140
+And these are the proteins.
+
+05:03.230 --> 05:03.650
+OK.
+
+05:03.660 --> 05:05.510
+I know cheese is not a protein.
+
+05:05.520 --> 05:09.020
+But anyways it is just for demonstration purposes.
+
+05:09.170 --> 05:15.930
+OK and what's the aim of the algorithm that if we have a new sample of such as tomato we did sweetness
+
+05:15.960 --> 05:21.030
+and crunchiness parameters we should be able to classify this new sample better.
+
+05:21.030 --> 05:26.040
+It is a fruit whether it is vegetable or it is a protein.
+
+05:26.040 --> 05:32.490
+So basically what we need to construct is a so called a distance function to be able to classify the
+
+05:32.490 --> 05:33.610
+new data.
+
+05:33.720 --> 05:41.700
+So how are we able to measure the distance between the new entity and all the other items in the data
+
+05:41.700 --> 05:42.350
+set.
+
+05:42.360 --> 05:45.740
+For example we have both Euclidean distances.
+
+05:45.870 --> 05:49.800
+So this is what we are going to talk about in the next lecture.
+
+05:49.800 --> 05:50.660
+Thanks for watching.

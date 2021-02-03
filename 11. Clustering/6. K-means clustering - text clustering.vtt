@@ -1,0 +1,265 @@
+WEBVTT
+
+00:01.790 --> 00:09.050
+HOY In the previous lectures we have been talking about unsupervised clustering algorithms focusing
+
+00:09.110 --> 00:14.090
+on K means clustering and basically we have of Kamins clustering.
+
+00:14.180 --> 00:19.620
+We are able to make an algorithm that's capable of classifying articles.
+
+00:19.700 --> 00:25.480
+So basically we are able to use Kamins clustering for natural language processing.
+
+00:25.520 --> 00:31.820
+And if you may recall we have been talking about natural language processing and tax clustering.
+
+00:31.820 --> 00:38.840
+When we were talking about native base logarithm there we had been talking about how to classify the
+
+00:38.840 --> 00:44.690
+20 news groups dataset when we had that taxed and the labels accordingly.
+
+00:44.690 --> 00:48.530
+Now in this case we are not going to have the labels.
+
+00:48.560 --> 00:55.490
+The algorithm is going to decide how to closter given sentence's articles and documents.
+
+00:55.580 --> 01:03.620
+For example we are going to classify these sentences as you can see we are going to have sentences concerning
+
+01:03.620 --> 01:04.550
+science.
+
+01:04.580 --> 01:07.490
+Quantum physics is quite important in science.
+
+01:07.480 --> 01:10.520
+Nowhere does it has something to do with physics.
+
+01:10.520 --> 01:12.190
+Physics is a science.
+
+01:12.200 --> 01:16.950
+Software engineering is hotter and hotter topic in the silicon Wally.
+
+01:16.970 --> 01:19.540
+It has something to do with computer science.
+
+01:19.610 --> 01:24.740
+So basically these two sentences have something to do with science.
+
+01:24.740 --> 01:31.790
+These three sentences has something to do with investment and trading investing in stock and trading
+
+01:31.790 --> 01:33.790
+with them are not that easy.
+
+01:33.830 --> 01:37.250
+Forex is the stock market for trading currencies.
+
+01:37.250 --> 01:40.390
+Warren Buffett is famous for making good investments.
+
+01:40.460 --> 01:42.140
+He knows the stock market.
+
+01:42.230 --> 01:49.130
+So basically these articles and sentences are about stock market investment trading.
+
+01:49.190 --> 01:50.020
+OK.
+
+01:50.150 --> 01:57.050
+So we are going to have to closter as we are looking for two clusters and we are able to analyze these
+
+01:57.050 --> 02:01.470
+sentences with the help of natural language processing.
+
+02:01.610 --> 02:02.910
+What do we have to do.
+
+02:02.930 --> 02:09.490
+This is what we have been discussing that we need to measure tax similarity and then we need a clustering
+
+02:09.670 --> 02:12.640
+logarithm such as gamins clustering.
+
+02:12.650 --> 02:15.330
+First of all we have to talk in the words.
+
+02:15.380 --> 02:22.400
+So basically we have to make sure that the sentences are going to be transformed into a one dimensional
+
+02:22.460 --> 02:24.050
+array of strains.
+
+02:24.380 --> 02:30.440
+But it's not that good because there's a problem we should get rid of words that do not contain much
+
+02:30.470 --> 02:38.530
+information such as my the is you and this is why the IDF approach came to be.
+
+02:38.570 --> 02:43.040
+So this is what we are going to use with the app of gamins clustering.
+
+02:43.040 --> 02:51.180
+So first of all we have this method tokenizer it's going to use the word tokenizer from the A.T. k.
+
+02:51.230 --> 02:54.630
+It has something to do with nature will lend which tool kit.
+
+02:54.680 --> 02:58.640
+OK so first we have to tokenized these stacks.
+
+02:58.730 --> 03:01.630
+The text is basically a given sentence.
+
+03:01.670 --> 03:02.470
+OK.
+
+03:02.510 --> 03:10.500
+So this verse tokenizer is going to take quantum physics is quite important.
+
+03:10.520 --> 03:17.420
+So it's going to take a given sentence and it's going to return a one dimensional array of streams.
+
+03:17.420 --> 03:19.320
+Basically the given words.
+
+03:19.390 --> 03:26.780
+Ok then we have this stammer because it is a good approach as far as natural language processing is
+
+03:26.780 --> 03:29.370
+concerned to deal with the standard.
+
+03:29.390 --> 03:36.110
+What is it mean that if we have for example phisher it's going to be transformed to fish if we had the
+
+03:36.110 --> 03:44.150
+word finished it's going to be transformed to fish if we have learned fishing it's going to be transformed
+
+03:44.150 --> 03:45.200
+to fish.
+
+03:45.200 --> 03:47.930
+So this is what this portrays stammered Dadds.
+
+03:48.050 --> 03:51.150
+It's going to take several different verbs.
+
+03:51.260 --> 03:54.880
+But as you can see the stand is the same fish.
+
+03:54.920 --> 03:55.850
+OK.
+
+03:56.000 --> 03:59.610
+So this is what we are going to do with the porter Stemmer.
+
+03:59.780 --> 04:04.220
+And it was very important that we are going to deal with the birds.
+
+04:04.280 --> 04:06.970
+That's not an invalid stop Verd.
+
+04:07.010 --> 04:08.940
+What is an English Stop word.
+
+04:09.140 --> 04:15.820
+This is what we have been discussing that we have to get rid of words that do not contain much information.
+
+04:15.890 --> 04:25.040
+My the is you and so on and Python is quite convenient in this sense because top words as you can see
+
+04:25.040 --> 04:33.890
+we are able to import Stoppard's from and LDK that corpus is going to store every word concerning English
+
+04:34.100 --> 04:39.120
+that do not contain information on you is the.
+
+04:39.170 --> 04:40.350
+And so on.
+
+04:40.550 --> 04:47.450
+So for the tokens if t is not in the Stoppard's we are not going to consider stop words because they
+
+04:47.450 --> 04:54.890
+do not contain information then we just have to use the CFIT vectorize or the tokenizer is equal to
+
+04:54.890 --> 04:57.200
+the tokenizer or we can define it.
+
+04:57.230 --> 05:00.790
+Then we have to stop verbs and we don't have to collect them.
+
+05:00.820 --> 05:04.740
+So you don't have to create a one dimensional array for example.
+
+05:04.750 --> 05:16.990
+Mine is you and so on because we are able to import it from and LDK that corpus OK and then we just
+
+05:16.990 --> 05:23.830
+have to fit transform the given sentences we have to instantiate k means clustering and we would like
+
+05:23.830 --> 05:27.200
+to create as many clusters as we define.
+
+05:27.370 --> 05:31.300
+OK then we have to feed the Kamins clustering model as well.
+
+05:31.320 --> 05:37.790
+And basically we just have to differentiate the good and sentencings located in different clusters.
+
+05:38.010 --> 05:45.370
+OK so here we have the sentences here we have the number of clusters we just cluster the sentences and
+
+05:45.370 --> 05:51.480
+we just iterate through and basically print out the plasterers and the sentences accordingly.
+
+05:51.490 --> 05:56.120
+So let's see as we have discussed earlier we have five sentences.
+
+05:56.200 --> 05:59.150
+Two of them have something to do with science.
+
+05:59.260 --> 06:04.000
+And three of them have something to do with the stock market and investment.
+
+06:04.030 --> 06:09.950
+OK so I'm going to clear the console and let's run.
+
+06:10.180 --> 06:12.030
+Taxed OK means that.
+
+06:12.160 --> 06:19.000
+And as you can see or algorithm is working fine in this case it is an unsupervised learning algorithm
+
+06:19.210 --> 06:25.420
+because we just have the sentences we don't have any labels that this sentence has something to do with
+
+06:25.420 --> 06:26.220
+science.
+
+06:26.230 --> 06:32.350
+This sentence has something to do with science and so what it is an honest super wide learning algorithm.
+
+06:32.500 --> 06:40.090
+And as you can see k means clustering has managed to find two clusters one with quantum physics and
+
+06:40.090 --> 06:47.310
+software engineering and the second cluster contains investing in stocks for x is the stock market and
+
+06:47.310 --> 06:49.620
+the Warren Buffett related sentence.
+
+06:49.690 --> 06:52.810
+So basically it is working quite fine.
+
+06:52.810 --> 06:58.780
+So this is how we make tax clustering with the help of the Kamins machine learning algorithm.
+
+06:58.780 --> 06:59.700
+Thanks for watching.

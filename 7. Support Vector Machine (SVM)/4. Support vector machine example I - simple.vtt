@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00.390 --> 00:07.010
+High in this video I would like to show you a very very little example again for soccer.
+
+00:07.020 --> 00:08.440
+Back to the machines.
+
+00:08.460 --> 00:15.960
+So basically we have just two dimensional dots blue dots and red dots and we have to merge training
+
+00:15.960 --> 00:22.740
+data set basically the zero represents the Blue Claws the one represents the rugrat class.
+
+00:22.800 --> 00:29.160
+So the plot is something like this we have two blue dots we have the red dots and we would like to make
+
+00:29.160 --> 00:30.500
+some predictions.
+
+00:30.570 --> 00:37.440
+After the training that was going to be this green door is going to belong to the Red Cross or the Blue
+
+00:37.440 --> 00:38.190
+Cross.
+
+00:38.310 --> 00:42.440
+Of course as you may guess it's going to belong to the Arat class.
+
+00:42.490 --> 00:47.970
+And what's more important that we have the support vector machine which is coming from the secret to
+
+00:47.970 --> 00:55.350
+learn and we have these as we see stands for supper to act or a classifier and there are two important
+
+00:55.350 --> 01:01.830
+perimeters for the supper Traktor classifier the gamma paramita Aranda see we don't have to define it
+
+01:01.980 --> 01:03.950
+but usually we define it.
+
+01:04.110 --> 01:12.540
+So that gamma defines how far the influence of a single in example reaches if it has a low value then
+
+01:12.540 --> 01:14.790
+the influence reaches far.
+
+01:14.850 --> 01:20.030
+If gamma has a higher value then the influence reaches close.
+
+01:20.040 --> 01:23.780
+So of course there's an optimal value for the Gamma.
+
+01:23.790 --> 01:25.070
+What about the sea.
+
+01:25.110 --> 01:30.780
+This is the same as what we have discussed in that particular section that when we have a nonlinearly
+
+01:30.780 --> 01:38.190
+separable problem as you can see we are not able to separate these green dots from the red dots with
+
+01:38.190 --> 01:39.990
+the help of a linear line.
+
+01:40.050 --> 01:45.140
+In this case we are going to have some misclassify data points.
+
+01:45.450 --> 01:50.020
+And this is the term for the misclassified items basically.
+
+01:50.130 --> 01:55.110
+So is the cost parameter to all points that waylays the constrains.
+
+01:55.110 --> 02:03.240
+So if C is very large the algorithm tries to find a 100 percent separation and if we slow down the wider
+
+02:03.270 --> 02:07.720
+overall margin is allowed with the more misclassify data points.
+
+02:08.070 --> 02:14.940
+So this is what I wrote here that if C has a lower value then the hyperplane will be very simple.
+
+02:14.970 --> 02:18.620
+Of course they may be more misclassified items.
+
+02:18.750 --> 02:24.920
+If the C parameter has a high value then all the training examples classified correctly.
+
+02:24.990 --> 02:29.130
+But the hyperplane surface will be more complex.
+
+02:29.340 --> 02:36.050
+So as you can see if we have just a linear line than the surface of this hyperplane is very very simple
+
+02:36.210 --> 02:38.590
+but we have some misclassification.
+
+02:38.930 --> 02:41.370
+If we would like to separate all the dots.
+
+02:41.370 --> 02:46.950
+For example something like this if the hyperplane is something like this a non-linear curve.
+
+02:46.950 --> 02:53.920
+Basically we are able to separate the two classes by the hyperplane surface will be complex.
+
+02:54.090 --> 02:55.510
+So this is the tradeoff.
+
+02:55.650 --> 03:00.060
+But let's see whether it's working fine so I would like to make some prediction.
+
+03:00.300 --> 03:05.690
+So after fitting the model I would like to make some prediction.
+
+03:05.730 --> 03:07.580
+So let's run it.
+
+03:07.640 --> 03:12.050
+And as you can see it's going to have the class Swane was the one.
+
+03:12.050 --> 03:19.150
+It is the right class of course because it is basically in the neighborhood of the red dots or what.
+
+03:19.160 --> 03:31.010
+For example I say that it is 2.5 on the X-axis and for that find him on the y axis So 2.5 and 4.5 here
+
+03:31.010 --> 03:35.280
+as well 2.5 and for that 5.
+
+03:35.380 --> 03:44.210
+I am going to say that I close it and let's run it again.
+
+03:45.790 --> 03:47.410
+So here's our data point.
+
+03:47.410 --> 03:50.240
+I think it's going to belong to the Blue Cross.
+
+03:50.350 --> 03:54.970
+So the prediction is that it has the zero value was the zero where you react.
+
+03:55.000 --> 03:56.280
+It is the blue class.
+
+03:56.440 --> 04:00.240
+So this is how we are able to use the Sukhothai factor classifier.
+
+04:00.280 --> 04:06.010
+Of course in the current videos we are going to talk about more complex datasets.
+
+04:06.010 --> 04:06.900
+Thanks for watching.

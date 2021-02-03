@@ -1,0 +1,466 @@
+WEBVTT
+
+00:01.030 --> 00:08.410
+OK so as far as phase detection is concerned Viola Jones algorithm is the most important approach.
+
+00:08.490 --> 00:13.750
+So this algorithm tries to find the most relevant features for a human face.
+
+00:13.860 --> 00:21.220
+By the way we can use Viola Jones algorithm to detect for example pedestrians to detect animals and
+
+00:21.240 --> 00:26.900
+to detect any kinds of object but usually use it for phase detection.
+
+00:27.150 --> 00:34.260
+OK so this algorithm tries to find the most relevant features for a human face when we are dealing with
+
+00:34.260 --> 00:40.770
+phase detection and a good question is What are the most relevant features as far as phase detection
+
+00:40.770 --> 00:41.790
+is concerned.
+
+00:41.850 --> 00:48.800
+For example every human has two eyes a single nose lips forehead and so on.
+
+00:48.840 --> 00:55.590
+So we can come up with more shallow than features that can differentiate the human face from an animal
+
+00:55.620 --> 00:57.520
+or any other objects.
+
+00:57.690 --> 01:02.470
+OK so we can construct an algorithm based on the most relevant features.
+
+01:02.670 --> 01:09.210
+And if the algorithm doesn't find one of these features it can come to the conclusion that there is
+
+01:09.210 --> 01:12.510
+no human face on that region of the image.
+
+01:12.590 --> 01:13.080
+OK.
+
+01:13.080 --> 01:20.370
+It is very very important to see that we have to scan the whole image on a step by step basis because
+
+01:20.400 --> 01:26.760
+this is what we have been discussing that several regions of the image do not contain a human face at
+
+01:26.760 --> 01:27.080
+all.
+
+01:27.120 --> 01:34.560
+So for example here as you can see we have four faces but otherwise this image doesn't contain any human
+
+01:34.560 --> 01:35.500
+faces.
+
+01:35.550 --> 01:42.840
+There are lots of lots of other objects for example of watch for example a shirt for example a table
+
+01:43.050 --> 01:45.860
+mineral voters microphone and so on.
+
+01:45.870 --> 01:48.100
+But these are not human faces.
+
+01:48.210 --> 01:53.790
+OK what's extremely important that this algorithm handles grayscale images.
+
+01:53.790 --> 02:00.220
+So the first step of the algorithm is to convert the image into grayscale soda's.
+
+02:00.270 --> 02:08.820
+Viola Jones algorithm was formulated by Paul Viola and Michael Jones in 2000 and won it is a machine
+
+02:08.820 --> 02:12.480
+learning algorithm in the sense that it needs a training.
+
+02:12.660 --> 02:18.690
+So there's going to be a training phase and there's a testing phase of course when we try to detect
+
+02:18.690 --> 02:20.900
+faces on a new image.
+
+02:20.910 --> 02:28.230
+What's extremely important that the algorithm needs positive images so images of faces as you can see
+
+02:28.290 --> 02:30.330
+these are the images on the left.
+
+02:30.450 --> 02:32.700
+So we have a face of a girl.
+
+02:32.760 --> 02:34.360
+We have a face of a man.
+
+02:34.440 --> 02:38.180
+We have a face of another girl a face of a guy and so on.
+
+02:38.250 --> 02:47.220
+So we have positive images so images of faces and the algorithm needs negative images as well so images
+
+02:47.310 --> 02:54.990
+without faces such as an image of of course an image of a car an image of an airplane.
+
+02:54.990 --> 03:02.100
+So this is how Viola Jones algorithm learns the most relevant features whether the image contains a
+
+03:02.100 --> 03:06.510
+human face or the image doesn't contain a human face.
+
+03:06.630 --> 03:11.820
+So this is what we have been talking about that that's the main difference between supervised learning
+
+03:11.970 --> 03:14.940
+when we have positive image exclusivity.
+
+03:14.970 --> 03:23.610
+So images of the handwritten digits for example these dataset doesn't contain any negative images on
+
+03:23.610 --> 03:30.540
+the other hand when dealing with computer vision and face detection we need positive images so images
+
+03:30.600 --> 03:38.910
+of human faces and negative images so images with our faces as we can see the images on the right in
+
+03:38.910 --> 03:43.570
+order to be able to detect the human faces on a new image.
+
+03:43.650 --> 03:51.390
+So if we have a greyscale image we have to define a window size with a given faith and are given with
+
+03:51.660 --> 03:57.600
+of course these are going to be the parameters of the algorithm and if we just have to check on every
+
+03:57.600 --> 04:04.850
+duration whether the given window contains the most relevant features What are these features.
+
+04:04.950 --> 04:08.830
+Eyes nose lips forehead and so on.
+
+04:09.000 --> 04:12.740
+OK you may pose the question that how to construct these features.
+
+04:12.750 --> 04:16.670
+Basically this is what we are going to talk about in the next lectures.
+
+04:16.680 --> 04:19.660
+So now let's focus on the big picture.
+
+04:19.710 --> 04:26.220
+So we have a window like this and diagram them is going to look for the most relevant features.
+
+04:26.280 --> 04:32.370
+Are there any eyes nose lips forehead or something like this on this image.
+
+04:32.370 --> 04:32.990
+No.
+
+04:33.060 --> 04:37.050
+So we keep shifting the window one step to the right.
+
+04:37.230 --> 04:37.770
+OK.
+
+04:37.770 --> 04:41.000
+Are there any eyes nose or lips.
+
+04:41.010 --> 04:41.710
+No.
+
+04:41.770 --> 04:44.780
+OK we shift the window one step to the right.
+
+04:44.850 --> 04:49.320
+OK diag rhythm can come to the conclusion that there's a single eye.
+
+04:49.530 --> 04:54.720
+And it is something like a nose but we are looking for two eyes.
+
+04:54.750 --> 04:56.360
+We are looking for a nose.
+
+04:56.400 --> 04:58.230
+We are looking for the lips.
+
+04:58.230 --> 05:04.620
+So this window doesn't contain flips so the algorithm can come to the conclusion that it is not a human
+
+05:04.620 --> 05:05.340
+face.
+
+05:05.550 --> 05:08.190
+OK let's take another step to the right.
+
+05:08.190 --> 05:15.450
+It is something like a human face because there are two eyes there's a forehead there's a nose but the
+
+05:15.450 --> 05:16.940
+lips are missing.
+
+05:17.100 --> 05:17.580
+OK.
+
+05:17.580 --> 05:21.760
+So this is not a human face let's shave the window again.
+
+05:21.900 --> 05:22.250
+OK.
+
+05:22.260 --> 05:29.330
+We have a single eye and a nose a we Dowdle lips and OK it is something like the human eye.
+
+05:29.400 --> 05:31.250
+It is the left side of the image.
+
+05:31.260 --> 05:33.510
+So it is not that straightforward.
+
+05:33.600 --> 05:36.660
+OK let's shift the window one step to the right.
+
+05:36.810 --> 05:38.630
+OK there's one eye.
+
+05:38.670 --> 05:41.350
+There is no nose there's no lips.
+
+05:41.410 --> 05:43.170
+There's just a half forehead.
+
+05:43.200 --> 05:45.770
+So it is definitely not a human face.
+
+05:46.030 --> 05:52.920
+Ok then we have to re-initialize the window in the sense that again we are going to scan the whole image
+
+05:53.160 --> 05:59.340
+on a horizontal manner but we have to increment in a vertical manner as well.
+
+05:59.460 --> 06:04.500
+So that's why we are going to shift the window one step downwards.
+
+06:04.590 --> 06:07.620
+And again we have to scan the whole image.
+
+06:07.710 --> 06:14.540
+Ok this window doesn't contain the most relevant features so let's take one step to the right.
+
+06:14.700 --> 06:17.460
+Again the most relevant features are missing.
+
+06:17.580 --> 06:19.310
+Let's take one step to the right.
+
+06:19.420 --> 06:21.600
+OK there's one human eye.
+
+06:21.600 --> 06:23.090
+There is no nose.
+
+06:23.100 --> 06:25.120
+It is something like human lips.
+
+06:25.200 --> 06:27.450
+Ok but it is not a human face.
+
+06:27.450 --> 06:29.380
+Let's take one step to the right.
+
+06:29.430 --> 06:36.780
+And as you can see the algorithm is going to find all the relevant features as far as a human face is
+
+06:36.780 --> 06:37.710
+concerned.
+
+06:37.750 --> 06:39.360
+There are two eyes.
+
+06:39.440 --> 06:41.000
+There's a single nose.
+
+06:41.070 --> 06:42.670
+There's some forehead.
+
+06:42.750 --> 06:44.740
+There are the lips and so on.
+
+06:44.820 --> 06:50.330
+So the agony then will come to the conclusion that the window contains a human face.
+
+06:50.460 --> 06:52.860
+OK so that's why there's a green box.
+
+06:52.860 --> 06:59.070
+Let's take another step to the right and the algorithm again will come to the conclusion that the next
+
+06:59.070 --> 07:05.610
+window contains a human face as well as you can see we have all the relevant feature as our eyes nose
+
+07:05.610 --> 07:06.460
+lips.
+
+07:06.740 --> 07:09.230
+OK let's take one step to the right.
+
+07:09.240 --> 07:12.790
+There's no human face because we don't have all the features.
+
+07:12.870 --> 07:20.390
+OK so let's shave the window in a vertical manner and let's scan the image again horizontally.
+
+07:20.590 --> 07:24.230
+OK this window doesn't contain the most 11 features.
+
+07:24.240 --> 07:26.300
+So we take one step to the right.
+
+07:26.370 --> 07:30.950
+Again there are no relevant features again and no relevant features.
+
+07:31.020 --> 07:35.270
+OK we have lips we have the nose but we don't have the eyes.
+
+07:35.370 --> 07:36.910
+We don't have the forehead.
+
+07:36.990 --> 07:39.740
+We don't have the eyebrows and so on.
+
+07:39.780 --> 07:40.280
+OK.
+
+07:40.290 --> 07:41.580
+So let's go on.
+
+07:41.580 --> 07:44.650
+This window doesn't contain the most relevant features.
+
+07:44.760 --> 07:47.070
+And this is the end of the image.
+
+07:47.190 --> 07:54.190
+We have managed to consider all the sub regions as far as this window is concerned of the given image
+
+07:54.480 --> 08:01.830
+and we have come to the conclusion that with high probability this is a human face because it contains
+
+08:01.890 --> 08:03.680
+all the relevant features.
+
+08:03.810 --> 08:10.350
+So this is how Viola Jones rhythm works in the background and maybe you pose the question that OK we
+
+08:10.350 --> 08:16.200
+know that we have to deal with the most relevant features but how to detect these relevant features.
+
+08:16.380 --> 08:23.080
+How do computers able to detect eyes eyebrows nose lips and so on.
+
+08:23.220 --> 08:27.520
+And this is why Harvill lots and hard features came to be.
+
+08:27.570 --> 08:32.360
+OK so far so good but we have a huge problem with this approach.
+
+08:32.400 --> 08:39.540
+For example in this image the size of the head or the face is quite large but there may be situations
+
+08:39.750 --> 08:44.030
+where the size of the face on the given image is much smaller.
+
+08:44.130 --> 08:48.840
+So the problem with this approach that the size of the faces may differ.
+
+08:48.840 --> 08:50.020
+Why is it a problem.
+
+08:50.100 --> 08:55.780
+Because the window size may be too small to include all the relevant features of the face.
+
+08:55.890 --> 09:02.790
+So the algorithm will not work fine for example if we have an image like this with a smaller window
+
+09:02.790 --> 09:03.270
+size.
+
+09:03.270 --> 09:06.480
+For example the window size is like this data.
+
+09:06.510 --> 09:12.460
+Of course this window size is not big enough to include all the relevant features.
+
+09:12.540 --> 09:14.600
+It may detract one of the eyes.
+
+09:14.670 --> 09:21.000
+Then in the next iteration it will detect some part of the nose then in the next iteration it will detect
+
+09:21.180 --> 09:22.280
+the right eye.
+
+09:22.350 --> 09:27.510
+Then in one of the next iterations it will detect some part of the lips and so on.
+
+09:27.600 --> 09:34.920
+But there's not going to be a case when the window includes all the relevant features so the algorithm
+
+09:34.920 --> 09:39.530
+may come to the conclusion that there is no human face on the image.
+
+09:39.600 --> 09:41.180
+And of course it's not true.
+
+09:41.280 --> 09:44.550
+The problem is that the window size is too small.
+
+09:44.680 --> 09:51.900
+OK so somehow we have to make sure that these images and the size of the faces will be transformed to
+
+09:51.900 --> 09:53.920
+approximately the same size.
+
+09:54.030 --> 09:54.480
+OK.
+
+09:54.480 --> 09:58.890
+And basically this is why these scale factor is present in open C.v.
+
+09:58.890 --> 10:02.370
+So this feature compensates for this issue.
+
+10:02.440 --> 10:08.350
+So the issue is that some faces may be closer to the camera which means they appear bigger than our
+
+10:08.360 --> 10:09.880
+faces in the background.
+
+10:09.880 --> 10:15.990
+OK so we have been talking about that Viola Jones algorithm is a machine learning algorithm.
+
+10:16.120 --> 10:20.450
+So it has a training phase and in that training procedure.
+
+10:20.470 --> 10:25.660
+Viola Jones algorithm uses 24 by 24 pixels images.
+
+10:25.780 --> 10:29.190
+So we have to rescale the input image as well.
+
+10:29.290 --> 10:36.540
+So we can resize a larger face to a smaller one and there is not going to be problems like this.
+
+10:36.550 --> 10:43.720
+OK so this is why we have to use this scale factor in order to make sure that all the faces will have
+
+10:43.720 --> 10:51.340
+approximately the same size and it's going to enable Viola Jones algorithm to the tag defaces on a new
+
+10:51.430 --> 10:52.450
+image.
+
+10:52.450 --> 10:53.320
+Thanks for watching.

@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.390 --> 00:07.860
+High in this video we are going to talk about another application for now on networks and this is how
+
+00:07.860 --> 00:10.830
+to forecast stock market basically.
+
+00:11.070 --> 00:18.330
+So let's suppose the situation where we have a plot like this we have a given stalk and we monitored
+
+00:18.330 --> 00:22.220
+the price of that given stock in the range of time.
+
+00:22.470 --> 00:22.950
+OK.
+
+00:22.950 --> 00:26.300
+And of course it's kind of a stochastic process.
+
+00:26.340 --> 00:28.420
+I'm not sure whether you were familiar with.
+
+00:28.500 --> 00:34.950
+So has Dick process's it all integral power to solve still has the differential equations and something
+
+00:34.950 --> 00:35.510
+like that.
+
+00:35.550 --> 00:36.630
+What ever.
+
+00:36.630 --> 00:43.110
+Basically now the networks approach has nothing to do with these kinds of mathematical models because
+
+00:43.110 --> 00:51.330
+we try to find a pattern within a stock market data we drop off on our own network we drop a learning
+
+00:51.330 --> 00:52.810
+algorithm basically.
+
+00:53.160 --> 00:57.900
+And what's the intuition that we construct the training data.
+
+00:57.900 --> 01:00.020
+For example three data points.
+
+01:00.050 --> 01:04.150
+OK it can be four five 10 or 100 or whatever.
+
+01:04.170 --> 01:08.970
+In this example we use three data points plus the next one.
+
+01:09.120 --> 01:15.840
+And if we want to make prediction if we have three points what will be the stock price tomorrow for
+
+01:15.840 --> 01:16.980
+example.
+
+01:16.980 --> 01:19.120
+So let's create that data.
+
+01:19.140 --> 01:27.270
+Basically the training data that we have the first price second prize cert price and then we have their
+
+01:27.270 --> 01:28.500
+production.
+
+01:28.590 --> 01:30.220
+This is the first price.
+
+01:30.240 --> 01:31.580
+This is the second price.
+
+01:31.590 --> 01:33.050
+This is a surprise.
+
+01:33.150 --> 01:40.920
+And if we know that we have this surprise the surprise and the surprise was the next price we know for
+
+01:40.920 --> 01:43.450
+certain this is the historical data.
+
+01:43.470 --> 01:51.420
+So we have this Plaut we know for certain that these capital P one is going to be the price here.
+
+01:51.420 --> 01:58.560
+If we have these three previous prices what's going to be the second line in the training data.
+
+01:58.710 --> 02:06.490
+Basically the next two on this one we know days and days we just have to get these data from the plot.
+
+02:06.630 --> 02:07.890
+And what's the next step.
+
+02:07.890 --> 02:11.030
+It's going to be the production team and so on.
+
+02:11.030 --> 02:15.300
+Next one next one next one what's the price here.
+
+02:15.300 --> 02:23.370
+If we have these as the previous prices of course as you make gas it is quite redundant in the sense
+
+02:23.370 --> 02:28.740
+that this we want to is the same as DSP P2 on.
+
+02:28.950 --> 02:34.340
+And this the one sorry is the same as this P2 2.
+
+02:34.460 --> 02:35.270
+Okay.
+
+02:35.460 --> 02:41.670
+Because this is how we construct or data set and what is it good because if we have lots of lots of
+
+02:41.670 --> 02:48.510
+data like this we trained and out of network in this case you may guess that we have street input now
+
+02:48.570 --> 02:57.390
+owns 1 to 3 and we have a single output now and on and now and that work is going to learn that if this
+
+02:57.390 --> 03:00.890
+was the price and this and this this is the output.
+
+03:01.050 --> 03:05.960
+If it was the price this and this then this was the old wood and so on.
+
+03:06.060 --> 03:11.870
+Why is it good because maybe we are able to train our now and that to work on these data set.
+
+03:12.030 --> 03:19.130
+And if we provide an x y Zad three previous values it may predicate the stock price tomorrow.
+
+03:19.180 --> 03:19.970
+OK.
+
+03:20.010 --> 03:27.170
+So this is how we can construct an algorithm now and that we're basically for stock markets.
+
+03:27.180 --> 03:29.160
+Of course it is not that simple.
+
+03:29.220 --> 03:33.060
+If you do something like this it's not going to work that fine.
+
+03:33.060 --> 03:40.950
+I have tried it several times and lots of lots of stock market related algorithms relies heavily on
+
+03:40.950 --> 03:48.150
+our networks but we have to find other stocks for example and measure the correlation between the two
+
+03:48.150 --> 03:48.840
+of them.
+
+03:48.900 --> 03:51.150
+And basically we have to use.
+
+03:51.160 --> 03:56.010
+And now we're on a network to learn other features and other para meters.
+
+03:56.160 --> 03:58.100
+Concerning the stock market.
+
+03:58.200 --> 04:04.260
+But I think it is very very good example of how we can use in their role in that work and it is quite
+
+04:04.260 --> 04:09.110
+interesting as far as I am concerned this is one of my favorites.
+
+04:09.120 --> 04:10.230
+Thanks for watching.

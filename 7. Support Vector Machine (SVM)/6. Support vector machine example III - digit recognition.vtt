@@ -1,0 +1,268 @@
+WEBVTT
+
+00:01.720 --> 00:08.860
+Horn in this lecture we are going to talk about optical correcter recognition and we are going to deal
+
+00:08.860 --> 00:11.060
+with the digital data set.
+
+00:11.080 --> 00:16.490
+So we are going to use this skill to learn that dataset that low digits.
+
+00:16.600 --> 00:25.770
+Of course there are going to be 10 classes because it contains numbers 0 1 2 3 4 5 6 up to 9.
+
+00:25.900 --> 00:32.560
+OK so we have 10 classes and each data point is an 8 by 8 image.
+
+00:32.560 --> 00:38.540
+So basically there are going to be 64 features and sixty four dimensions.
+
+00:38.680 --> 00:44.450
+And basically this is the main advantage as far as support vector machines are concerned.
+
+00:44.500 --> 00:51.220
+This is what we have been discussing in a topical section that it operates quite fine even in higher
+
+00:51.220 --> 00:52.510
+dimensions.
+
+00:52.510 --> 00:54.640
+It has 64 dimensions.
+
+00:54.640 --> 00:57.700
+This is why we like support vector machines.
+
+00:57.910 --> 00:58.690
+OK.
+
+00:58.810 --> 01:07.450
+And because there are approximately 100 and 80 samples per class that's why we are going to have approximately
+
+01:07.560 --> 01:09.430
+18 hundred samples.
+
+01:09.430 --> 01:10.160
+OK.
+
+01:10.180 --> 01:13.740
+So this is the Deja's data set we are going to consider.
+
+01:13.810 --> 01:20.230
+First of all we have to import the most Plaut label we have to import the dataset from the secret learn
+
+01:20.320 --> 01:24.830
+as well as the support vector machine classifier and the matrices.
+
+01:25.120 --> 01:32.380
+And we have to import the accuracy score because we would like to find out that how accurate or classification
+
+01:32.410 --> 01:33.750
+algorithm is.
+
+01:33.980 --> 01:34.350
+Okay.
+
+01:34.360 --> 01:41.050
+So first of all we have to load the digits data that we can do it with the help of data sets that low
+
+01:41.050 --> 01:44.560
+digits we can printed for us humans.
+
+01:44.560 --> 01:46.140
+It is not that useful.
+
+01:46.210 --> 01:52.570
+And basically we can get the images and the labels because the digits contains the images.
+
+01:52.660 --> 01:59.910
+We can get it with digits data images and it has the target were arguable as digits the target.
+
+01:59.950 --> 02:02.970
+Again it is a supervised learning algorithm.
+
+02:03.070 --> 02:06.880
+So every single image is a sign with a label.
+
+02:06.910 --> 02:09.600
+We know that what's going to be the result.
+
+02:09.760 --> 02:13.330
+Let's check the first six items.
+
+02:14.350 --> 02:21.610
+OK let's say that I'm going to cart all the other code because for now we are just curious about the
+
+02:21.610 --> 02:25.380
+data set as you can see we have an image like this.
+
+02:25.480 --> 02:27.530
+And this is the target label.
+
+02:27.550 --> 02:34.940
+It is the 0 then the next image is wanted the next image is two then three four five.
+
+02:35.050 --> 02:37.960
+So this is why it is a supervised learning algorithm.
+
+02:38.020 --> 02:44.490
+We have the data sets the age by a bit images and the target will use accordingly.
+
+02:44.530 --> 02:45.330
+OK.
+
+02:45.430 --> 02:53.160
+So that's all about the data that I'm going to comment it out because we have already seen how it looks.
+
+02:53.770 --> 02:54.850
+Okay.
+
+02:55.030 --> 03:01.700
+And of course we just have to get the number of samples as we have discussed are approximately eighteen
+
+03:01.700 --> 03:07.750
+hundred images in the dataset that we have the data that data is the digits that images.
+
+03:07.840 --> 03:09.560
+And we have to reshape it.
+
+03:09.580 --> 03:10.600
+OK.
+
+03:10.840 --> 03:17.170
+Then we have the support Waechter classifier and we are going to instantiate it like this.
+
+03:17.280 --> 03:24.790
+Then as usual for supervised learning algorithms we have to define the training data and that has data.
+
+03:24.820 --> 03:34.860
+75 percent of the data set will be for training purposes and 25 percent is going to be for test purposes.
+
+03:34.870 --> 03:41.330
+So that's why we are going to fight and train our supper to vector a machine on the training data so
+
+03:41.340 --> 03:48.130
+they in fact start with zero add up to the train test splayed and the target will use again.
+
+03:48.130 --> 03:52.480
+So we have to separate the training data and the test data.
+
+03:52.480 --> 03:59.320
+Then we have to make some predictions as far as the test data set is concerned so that's why this is
+
+03:59.320 --> 04:00.510
+the expected.
+
+04:00.550 --> 04:03.910
+What we know for certain from the data set.
+
+04:03.930 --> 04:04.850
+OK.
+
+04:04.960 --> 04:10.700
+And this is the predicted what the model the support vector machine the model predicts for us.
+
+04:10.780 --> 04:19.000
+OK so if we want to create the confusion matrix we just have to use something like this with the expected
+
+04:19.090 --> 04:23.790
+and predicted this is what we know for certain from the data set.
+
+04:23.800 --> 04:29.560
+And this is what we predict with the model and we are able to calculate an accuracy score.
+
+04:29.560 --> 04:33.700
+So let's see whether it's going to work fine or not.
+
+04:33.700 --> 04:35.900
+I'm going to say that.
+
+04:35.950 --> 04:38.170
+OK so let's run around agree them.
+
+04:38.230 --> 04:45.230
+And as you can see this is the confusion matrix and the accuracy is approximately 97 percent.
+
+04:45.250 --> 04:46.620
+It's very very good.
+
+04:46.630 --> 04:53.600
+This is why we have been talking about in a theoretical section that Saporta back to a machine outperformed
+
+04:53.670 --> 04:55.420
+even now with all networks.
+
+04:55.450 --> 05:01.980
+But with the advent of deep knowledge networks mobile networks know what these are able to make better
+
+05:01.980 --> 05:02.970
+predictions.
+
+05:03.030 --> 05:08.670
+For example deep now Real Networks can achieve 99 percent accuracy.
+
+05:08.730 --> 05:16.590
+As you can see it is approximately 97 percent so deep nodal networks are better but five to 10 years
+
+05:16.590 --> 05:19.720
+ago will support vector machines ver better.
+
+05:19.740 --> 05:24.730
+And as you can see 97 percent accuracy is very very fine.
+
+05:24.750 --> 05:32.840
+So lets see a concrete example for example what's the image as far as the last image is concerned.
+
+05:32.940 --> 05:34.550
+And what's the prediction.
+
+05:34.710 --> 05:43.110
+Okay let's say that I'm going to clear the console and the last image in the task that is this it is
+
+05:43.170 --> 05:49.660
+approximately an 8 as you can see and or algorithm predicted that integer 8.
+
+05:49.800 --> 05:53.770
+OK what about minus 2.
+
+05:53.880 --> 05:55.930
+The image before the last one.
+
+05:55.950 --> 06:02.110
+OK let's say that let's close it and let's rerun it again.
+
+06:04.380 --> 06:06.010
+I guess it is a 9.
+
+06:06.030 --> 06:12.850
+This is the image in the digits dataset and it was the prediction according to our support vector machine.
+
+06:12.860 --> 06:14.860
+It is the digit 9.
+
+06:14.910 --> 06:23.100
+And as you can see it is making quite good predictions and we use 75 percent of the data set for training
+
+06:23.100 --> 06:23.920
+purposes.
+
+06:24.090 --> 06:27.330
+And 25 percent for testing purposes.
+
+06:27.330 --> 06:34.420
+So that's why the last images are not in the training data support vector the machine made the prediction.
+
+06:34.470 --> 06:37.310
+And as you can see it's working quite fine.
+
+06:37.350 --> 06:43.900
+It predicted nine and this is the image which is I guess that in the journal 9.
+
+06:43.950 --> 06:50.940
+So basically we are able to achieve 97 percent accuracy which is very very good for a machine learning
+
+06:50.940 --> 06:52.110
+algorithm.
+
+06:52.110 --> 06:53.010
+Thanks for watching.
